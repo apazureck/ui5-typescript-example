@@ -2,6 +2,11 @@
 import Controller    from "sap/ui/core/mvc/Controller";
 import History       from "sap/ui/core/routing/History";
 import MyUIComponent from "typescript/example/ui5app/Component";
+import Router from "sap/ui/core/routing/Router";
+import UIComponent from "sap/ui/core/UIComponent";
+import Model from "sap/ui/model/Model";
+import View from "sap/ui/core/mvc/View";
+import ResourceModel from "sap/ui/model/resource/ResourceModel";
 
 @UI5("typescript.example.ui5app.controller.BaseController")
 export default class BaseController extends Controller
@@ -11,8 +16,8 @@ export default class BaseController extends Controller
      * @public
      * @returns {sap.ui.core.routing.Router} the router for this component
      */
-    public getRouter(): sap.ui.core.routing.Router {
-        return (<sap.ui.core.UIComponent>this.getOwnerComponent()).getRouter();
+    public getRouter(): Router {
+        return (<UIComponent>this.getOwnerComponent()).getRouter();
     }
 
     /**
@@ -21,7 +26,7 @@ export default class BaseController extends Controller
      * @param {string} sName the model name
      * @returns {sap.ui.model.Model} the model instance
      */
-    public getModel<T extends sap.ui.model.Model = sap.ui.model.Model>(sName?: string): T {
+    public getModel<T extends Model = Model>(sName?: string): T {
         return <T>this.getView().getModel(sName);
     }
 
@@ -32,7 +37,7 @@ export default class BaseController extends Controller
      * @param {string} sName the model name
      * @returns {sap.ui.core.mvc.View} the view instance
      */
-    public setModel(oModel: sap.ui.model.Model, sName?: string|undefined): sap.ui.core.mvc.View {
+    public setModel(oModel: Model, sName?: string|undefined): View {
         let view = this.getView();
         view.setModel(oModel, sName);
         return view;
@@ -43,8 +48,8 @@ export default class BaseController extends Controller
      * @public
      * @returns {sap.ui.model.resource.ResourceModel} the resourceModel of the component
      */
-    public getResourceBundle(): typeof jQuery.sap.util.ResourceBundle {
-        let resourceModel = <sap.ui.model.resource.ResourceModel>this.getOwnerComponent().getModel("i18n");
+    public getResourceBundle(): jQuery.sap.util.ResourceBundle {
+        let resourceModel = <ResourceModel>this.getOwnerComponent().getModel("i18n");
         //TODO: decide what to do when a method return T|Promise<T>
         return <any>resourceModel.getResourceBundle();
     }
@@ -57,16 +62,6 @@ export default class BaseController extends Controller
      */
     public getOwnerComponent(): MyUIComponent {
         return <MyUIComponent>super.getOwnerComponent();
-    }
-
-    /**
-     * Convenience method for getting an typed element by Id.
-     * @public
-     * @override
-     * @returns the element
-     */
-    public byId<T extends sap.ui.core.Element>(sId: string): T {
-        return <T>super.byId(sId);
     }
 
     /**

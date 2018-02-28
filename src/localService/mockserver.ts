@@ -29,7 +29,7 @@ export default {
         //TODO|ui5ts: generate constructors (with overloads when there is an optional parameter followed by a required one)
         oMockServer = new MockServer({
             rootUri : sMockServerUrl
-        });
+        } as any);
 
         // configure mock server with a delay of 1s
         MockServer.config({

@@ -1,8 +1,9 @@
 import UIComponent  from "sap/ui/core/UIComponent";
-import Device       from "sap/ui/Device";
+import * as Device  from "sap/ui/Device";
 import models       from "typescript/example/ui5app/model/models";
 import ListSelector from "typescript/example/ui5app/controller/ListSelector";
 import ErrorHandler from "typescript/example/ui5app/controller/ErrorHandler";
+import Model from "sap/ui/model/Model";
 
 @UI5("typescript.example.ui5app.Component")
 export default class Component extends UIComponent
@@ -58,7 +59,7 @@ export default class Component extends UIComponent
     public getContentDensityClass(): string {
         if (this._sContentDensityClass === undefined) {
             // check whether FLP has already set the content density class; do nothing in this case
-            if (jQuery(document.body).hasClass("sapUiSizeCozy") || jQuery(document.body).hasClass("sapUiSizeCompact")) {
+            if ($(document.body).hasClass("sapUiSizeCozy") || $(document.body).hasClass("sapUiSizeCompact")) {
                 this._sContentDensityClass = "";
             } else if (!Device.support.touch) { // apply "compact" mode if touch is not supported
                 this._sContentDensityClass = "sapUiSizeCompact";
@@ -76,7 +77,7 @@ export default class Component extends UIComponent
      * @override
      * @returns the model of the component
      */
-    public getModel<T extends sap.ui.model.Model>(sName?: string): T {
+    public getModel<T extends Model>(sName?: string): T {
         return <T>super.getModel(sName);
     }
 }

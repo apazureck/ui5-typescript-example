@@ -1,10 +1,11 @@
 import BaseObject   from "sap/ui/base/Object";
 import Sorter       from "sap/ui/model/Sorter";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 @UI5("typescript.example.ui5app.model.GroupSortState")
 export default class GroupSortState extends BaseObject
 {
-    private _oViewModel: sap.ui.model.json.JSONModel;
+    private _oViewModel: JSONModel;
     private _fnGroupFunction: Function;
 
     /**
@@ -18,7 +19,7 @@ export default class GroupSortState extends BaseObject
      * @param {function} fnGroupFunction the grouping function to be applied
      * @alias typescript.example.ui5app.model.GroupSortState
      */
-    constructor(oViewModel: sap.ui.model.json.JSONModel, fnGroupFunction: Function) {
+    constructor(oViewModel: JSONModel, fnGroupFunction: Function) {
         super();
         this._oViewModel = oViewModel;
         this._fnGroupFunction = fnGroupFunction;
@@ -30,7 +31,7 @@ export default class GroupSortState extends BaseObject
      * @param {string} sKey - the key of the field used for grouping
      * @returns {sap.ui.model.Sorter[]} an array of sorters
      */
-    sort(sKey: string): sap.ui.model.Sorter[] {
+    sort(sKey: string): Sorter[] {
         var sGroupedBy = this._oViewModel.getProperty("/groupBy");
 
         if (sGroupedBy !== "None") {
@@ -48,7 +49,7 @@ export default class GroupSortState extends BaseObject
      * @param {string} sKey - the key of the field used for grouping
      * @returns {sap.ui.model.Sorter[]} an array of sorters
      */
-    group(sKey: string): sap.ui.model.Sorter[] {
+    group(sKey: string): Sorter[] {
         var aSorters = [];
 
         if (sKey === "UnitNumber") {

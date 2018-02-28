@@ -11,18 +11,15 @@
         "sourceMap": true,
         "baseUrl": "./",
         "paths": {
-            "typescript/example/ui5app/*": [ "./src/*" ],
-            "sap/*": [ "./node_modules/ui5ts/exports/sap/*" ]
+            "typescript/example/ui5app/*": [ "./src/*" ]
         }
     },
     "files": [
-        "node_modules/ui5ts/ui5ts.d.ts",
-        "node_modules/ui5ts/ui5-types/1.48/sap.d.ts",
-        "node_modules/ui5ts/ui5-types/1.48/jQuery.d.ts"
+        "node_modules/ui5ts/ui5ts.d.ts"
     ],
     "include": [
-        "src/**/*",
-        "node_modules/@types"
+        "src",
+        "typings"
     ],
     "exclude": [
         "node_modules",

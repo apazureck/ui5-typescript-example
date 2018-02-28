@@ -1,14 +1,17 @@
 import UI5Object        from "sap/ui/base/Object";
-import MessageBox       from "sap/m/MessageBox";
+import * as MessageBox       from "sap/m/MessageBox";
 import MyUIComponent    from "typescript/example/ui5app/Component";
+import ResourceModel from "sap/ui/model/resource/ResourceModel";
+import ODataModel from "sap/ui/model/odata/v2/ODataModel";
+import Event from "sap/ui/base/Event";
 
 @UI5("typescript.example.ui5app.controller.ErrorHandler")
 export default class ErrorHandler extends UI5Object
 {
-    private _oResourceModel: sap.ui.model.resource.ResourceModel;
-    private _oResourceBundle: typeof jQuery.sap.util.ResourceBundle;
+    private _oResourceModel: ResourceModel;
+    private _oResourceBundle: jQuery.sap.util.ResourceBundle;
     private _oComponent: MyUIComponent;
-    private _oModel: sap.ui.model.odata.v2.ODataModel;
+    private _oModel: ODataModel;
     private _bMessageOpen: boolean;
     private _sErrorText: string;
 
@@ -29,12 +32,12 @@ export default class ErrorHandler extends UI5Object
         this._bMessageOpen = false;
         this._sErrorText = this._oResourceBundle.getText("errorText");
 
-        this._oModel.attachMetadataFailed((oEvent: sap.ui.base.Event) => {
+        this._oModel.attachMetadataFailed((oEvent: Event) => {
             var oParams = oEvent.getParameters();
             this._showServiceError(oParams.response);
         }, this);
 
-        this._oModel.attachRequestFailed((oEvent: sap.ui.base.Event) => {
+        this._oModel.attachRequestFailed((oEvent: Event) => {
             var oParams = oEvent.getParameters();
             // An entity that was not found in the service is also throwing a 404 error in oData.
             // We already cover this case with a notFound target so we skip it here.
@@ -66,7 +69,7 @@ export default class ErrorHandler extends UI5Object
                 onClose : () => {
                     this._bMessageOpen = false;
                 }
-            }
+            } as any
         );
     }
 }

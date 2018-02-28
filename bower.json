@@ -1,0 +1,25 @@
+{
+  "name": "ui-typescript-example",
+  "description": "An example application to use UI5 with typescript",
+  "main": "src/index.html",
+  "authors": [
+    "Andreas Pazureck <andreas.pazureck@ifm.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "UI5",
+    "typescript"
+  ],
+  "homepage": "https://github.com/apazureck/ui5-typescript-example",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "openui5-sap.ui.core": "^1.52.7"
+  }
+}

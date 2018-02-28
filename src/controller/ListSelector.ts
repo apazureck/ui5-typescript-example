@@ -1,12 +1,16 @@
 import BaseObject from "sap/ui/base/Object";
+import List from "sap/m/List";
+import ListItemBase from "sap/m/ListItemBase";
+import Event from "sap/ui/base/Event";
+import { ListMode } from "sap/m/library";
 
 @UI5("typescript.example.ui5app.model.ListSelector")
 export default class ListSelector extends BaseObject
 {
-    private _oList: sap.m.List
-    private _fnResolveListHasBeenSet: (oList: sap.m.List) => void;
-    private _oWhenListHasBeenSet: Promise<sap.m.List>;
-    private oWhenListLoadingIsDone: Promise<{ list: sap.m.List, firstListitem: sap.m.ListItemBase }>;
+    private _oList: List
+    private _fnResolveListHasBeenSet: (oList: List) => void;
+    private _oWhenListHasBeenSet: Promise<List>;
+    private oWhenListLoadingIsDone: Promise<{ list: List, firstListitem: ListItemBase }>;
 
     /**
      * Provides a convenience API for selecting list items. All the functions will wait until the initial load of the a List passed to the instance by the setBoundMasterList
@@ -17,7 +21,7 @@ export default class ListSelector extends BaseObject
      */
     constructor() {
         super();
-        this._oWhenListHasBeenSet = new Promise((fnResolveListHasBeenSet: (oList: sap.m.List) => void) => {
+        this._oWhenListHasBeenSet = new Promise((fnResolveListHasBeenSet: (oList: List) => void) => {
             this._fnResolveListHasBeenSet = fnResolveListHasBeenSet;
         });
         // This promise needs to be created in the constructor, since it is allowed to
@@ -25,9 +29,9 @@ export default class ListSelector extends BaseObject
         this.oWhenListLoadingIsDone = new Promise((fnResolve, fnReject) => {
             // Used to wait until the setBound masterList function is invoked
             this._oWhenListHasBeenSet
-                .then((oList: sap.m.List) => {
+                .then((oList: List) => {
                     oList.getBinding("items").attachEventOnce("dataReceived",
-                        (oEvent: sap.ui.base.Event) => {
+                        (oEvent: Event) => {
                             if (!oEvent.getParameter("data")) {
                                 fnReject({
                                     list : oList,
@@ -59,10 +63,10 @@ export default class ListSelector extends BaseObject
     /**
      * A bound list should be passed in here. Should be done, before the list has received its initial data from the server.
      * May only be invoked once per ListSelector instance.
-     * @param {sap.m.List} oList The list all the select functions will be invoked on.
+     * @param {List} oList The list all the select functions will be invoked on.
      * @public
      */
-    public setBoundMasterList(oList: sap.m.List): void {
+    public setBoundMasterList(oList: List): void {
         this._oList = oList;
         this._fnResolveListHasBeenSet(oList);
     }
@@ -79,9 +83,9 @@ export default class ListSelector extends BaseObject
         this.oWhenListLoadingIsDone.then(
             () => {
                 var oList = this._oList,
-                    oSelectedItem: sap.m.ListItemBase;
+                    oSelectedItem: ListItemBase;
 
-                if (oList.getMode() === sap.m.ListMode.None) {
+                if (oList.getMode() === ListMode.None) {
                     return;
                 }
 
@@ -93,7 +97,7 @@ export default class ListSelector extends BaseObject
                     return;
                 }
 
-                oList.getItems().some((oItem: sap.m.ListItemBase) => {
+                oList.getItems().some((oItem: ListItemBase) => {
                     //TODO|openui5: getPath's argument must be optional
                     if (oItem.getBindingContext() && oItem.getBindingContext().getPath("") === sBindingPath) {
                         oList.setSelectedItem(oItem, true);
@@ -138,7 +142,7 @@ export default class ListSelector extends BaseObject
      */
     public detachListSelectionChange(fnFunction: Function, oListener: any): ListSelector {
         this._oWhenListHasBeenSet.then(() => {
-            this._oList.detachSelectionChange(fnFunction, oListener);
+            this._oList.detachSelectionChange(fnFunction as any, oListener);
         });
         return this;
     }

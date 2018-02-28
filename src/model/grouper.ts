@@ -1,3 +1,5 @@
+import ResourceModel from "sap/ui/model/resource/ResourceModel";
+
 /*
 * Use this file to implement your custom grouping functions
 * The predefined functions are simple examples and might be replaced by your more complex implementations
@@ -14,9 +16,9 @@ export default {
      * @param {sap.ui.model.resource.ResourceModel} oResourceBundle the resource bundle of your i18n model
      * @returns {Function} the grouper function you can pass to your sorter
      */
-    groupUnitNumber(oResourceBundle: sap.ui.model.resource.ResourceModel): (oContext: jQuery.sap.util.ResourceBundle) => { key: string, text: string } {
-        return (oContext: jQuery.sap.util.ResourceBundle) => {
-            var iPrice = oContext.getProperty("UnitNumber"),
+    groupUnitNumber(oResourceBundle: jQuery.sap.util.ResourceBundle): (oContext: ResourceModel) => { key: string, text: string } {
+        return (oContext: ResourceModel) => {
+            var iPrice = (oContext as any).getProperty("UnitNumber"),
                 sKey,
                 sText;
 
