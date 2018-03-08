@@ -1,15 +1,14 @@
-declare module 'sap/ui/core/Fragment' {
-    import Metadata from "sap/ui/base/Metadata";
-    import ManagedObject, { IManagedObjectSettings } from 'sap/ui/base/ManagedObject';
-
-    export interface IFragmentSettings extends IManagedObjectSettings {
-        type?: string;
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Fragment extends ManagedObject {
+    export class Fragment extends sap.ui.base.ManagedObject {
+
+        /**
+            * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
+        */
+        public constructor();
 
 
         /**
@@ -32,7 +31,7 @@ declare module 'sap/ui/core/Fragment' {
         /**
             * Returns a metadata object for class sap.ui.core.Fragment.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -44,7 +43,7 @@ declare module 'sap/ui/core/Fragment' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Gets current value of property {@link #getType type}.
@@ -61,7 +60,7 @@ declare module 'sap/ui/core/Fragment' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setType(sType: string): this;
+        public setType(sType: string): sap.ui.core.Fragment;
 
     }
 }

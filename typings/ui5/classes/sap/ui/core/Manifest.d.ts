@@ -1,19 +1,14 @@
-declare module 'sap/ui/core/Manifest' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IManifestSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Manifest extends Object {
+    export class Manifest extends sap.ui.base.Object {
 
         /**
             * Creates and initializes a manifest wrapper which provides API access to the content of the manifest.
         */
-        public constructor(oManifest: any, mOptions?: { componentName?: string, baseUrl?: string, process?: boolean, });
+        public constructor(oManifest: any, mOptions: { componentName?: string, baseUrl?: string, process?: boolean, });
 
 
         /**
@@ -47,7 +42,7 @@ declare module 'sap/ui/core/Manifest' {
         /**
             * Returns a metadata object for class sap.ui.core.Manifest.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -64,7 +59,7 @@ declare module 'sap/ui/core/Manifest' {
         /**
             * Function to load the manifest by URL
         */
-        protected static load(mOptions: { manifestUrl: string, componentName?: string, async?: boolean, failOnError?: boolean, }): Manifest | any;
+        protected static load(mOptions: { manifestUrl: string, componentName?: string, async?: boolean, failOnError?: boolean, }): sap.ui.core.Manifest | any;
 
     }
 }

@@ -1,6 +1,6 @@
 import JSONModel from "sap/ui/model/json/JSONModel";
 import * as Device from "sap/ui/Device";
-import { BindingMode } from "sap/ui/model/BindingMode";
+import BindingMode from "sap/ui/model/BindingMode";
 
 export default {
     createDeviceModel(): JSONModel {

@@ -1,12 +1,11 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Configuration options for vertical alignments, for example of a layout cell content within the borders.
     */
-    export type VerticalAlign = "Bottom" | "Inherit" | "Middle" | "Top";
-    export namespace VerticalAlign {
-        const Bottom: VerticalAlign;
-        const Inherit: VerticalAlign;
-        const Middle: VerticalAlign;
-        const Top: VerticalAlign;
+    export enum VerticalAlign {
+        Bottom = "Bottom",
+        Inherit = "Inherit",
+        Middle = "Middle",
+        Top = "Top",
     }
 }

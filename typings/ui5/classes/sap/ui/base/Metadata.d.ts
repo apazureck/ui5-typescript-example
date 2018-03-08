@@ -1,13 +1,9 @@
-declare module 'sap/ui/base/Metadata' {
-
-
-    export interface IMetadataSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class Metadata {
+    export class Metadata {
 
         /**
             * Creates a new metadata object from the given static infos.
@@ -35,7 +31,7 @@ declare module 'sap/ui/base/Metadata' {
         /**
             * Returns the metadata object of the base class of the described class or null if the class has no (documented) base class.
         */
-        public getParent(): this;
+        public getParent(): sap.ui.base.Metadata;
 
         /**
             * Returns an array with the names of the public methods declared by the described class.

@@ -1,14 +1,14 @@
-declare module 'sap/ui/model/MetaModel' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Model, { IModelSettings } from 'sap/ui/model/Model';
-
-    export interface IMetaModelSettings extends IModelSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class MetaModel extends Model {
+    export class MetaModel extends sap.ui.model.Model {
+
+        /**
+            * Constructor for a new MetaModel.
+        */
+        public constructor();
 
 
         /**
@@ -21,7 +21,7 @@ declare module 'sap/ui/model/MetaModel' {
         /**
             * Returns a metadata object for class sap.ui.model.MetaModel.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

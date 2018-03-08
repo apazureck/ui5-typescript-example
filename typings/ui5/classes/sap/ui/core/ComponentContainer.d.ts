@@ -1,35 +1,16 @@
-declare module 'sap/ui/core/ComponentContainer' {
-    import Event from "sap/ui/base/Event";
-    import UIComponent from "sap/ui/core/UIComponent";
-    import { ComponentLifecycle } from "sap/ui/core/library";
-    import Metadata from "sap/ui/base/Metadata";
-    import Control, { IControlSettings } from 'sap/ui/core/Control';
-
-    export interface IComponentContainerSettings extends IControlSettings {
-        name?: string;
-        url?: sap.ui.core.URI;
-        async?: boolean;
-        handleValidation?: boolean;
-        settings?: any;
-        propagateModel?: boolean;
-        width?: sap.ui.core.CSSSize;
-        height?: sap.ui.core.CSSSize;
-        lifecycle?: ComponentLifecycle;
-        autoPrefixId?: boolean;
-        usage?: string;
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class ComponentContainer extends Control {
+    export class ComponentContainer extends sap.ui.core.Control {
 
         /**
             * Constructor for a new ComponentContainer.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: IComponentContainerSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -39,8 +20,8 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Fired when the component instance has been created by the ComponentContainer.
         */
-        attachComponentCreated<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * Reference to the created component instance */
-            component: UIComponent,
+        attachComponentCreated<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * Reference to the created component instance */
+            component: sap.ui.core.UIComponent,
         }>) => void, oListener?: Tcontext): this;
 
         /**
@@ -50,8 +31,8 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Fired when the component instance has been created by the ComponentContainer.
         */
-        attachComponentCreated<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * Reference to the created component instance */
-            component: UIComponent,
+        attachComponentCreated<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * Reference to the created component instance */
+            component: sap.ui.core.UIComponent,
         }>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
@@ -59,7 +40,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachComponentCreated(fnFunction: Function, oListener: any): this;
+        public detachComponentCreated(fnFunction: Function, oListener: any): sap.ui.core.ComponentContainer;
 
         /**
             * Creates a new subclass of class sap.ui.core.ComponentContainer with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -71,7 +52,7 @@ declare module 'sap/ui/core/ComponentContainer' {
         /**
             * Fires event {@link #event:componentCreated componentCreated} to attached listeners.
         */
-        protected fireComponentCreated(mParameters?: { component?: UIComponent, }): this;
+        protected fireComponentCreated(mParameters?: { component?: sap.ui.core.UIComponent, }): sap.ui.core.ComponentContainer;
 
         /**
             * Gets current value of property {@link #getAsync async}.
@@ -119,17 +100,17 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `Legacy`.
         */
-        public getLifecycle(): ComponentLifecycle;
+        public getLifecycle(): sap.ui.core.ComponentLifecycle;
 
         /**
             * Returns a metadata object for class sap.ui.core.ComponentContainer.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -141,7 +122,7 @@ declare module 'sap/ui/core/ComponentContainer' {
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
             * Gets current value of property {@link #getName name}.
@@ -196,7 +177,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `false`.
         */
-        public setAsync(bAsync: boolean): this;
+        public setAsync(bAsync: boolean): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getAutoPrefixId autoPrefixId}.
@@ -207,14 +188,14 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `false`.
         */
-        public setAutoPrefixId(bAutoPrefixId: boolean): this;
+        public setAutoPrefixId(bAutoPrefixId: boolean): sap.ui.core.ComponentContainer;
 
         /**
             * Sets the component of the container. Depending on the ComponentContainer's lifecycle this might destroy the old associated Component.
          * 
          * Once the component is associated with the container the cross connection to the component will be set and the models will be propagated if defined. If the `usage` property is set the ComponentLifecycle is processed like a "Container" lifecycle.
         */
-        public setComponent(vComponent: string | UIComponent): this;
+        public setComponent(vComponent: string | sap.ui.core.UIComponent): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getHandleValidation handleValidation}.
@@ -225,7 +206,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `false`.
         */
-        public setHandleValidation(bHandleValidation: boolean): this;
+        public setHandleValidation(bHandleValidation: boolean): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getHeight height}.
@@ -234,7 +215,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setHeight(sHeight: sap.ui.core.CSSSize): this;
+        public setHeight(sHeight: sap.ui.core.CSSSize): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getLifecycle lifecycle}.
@@ -245,7 +226,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `Legacy`.
         */
-        public setLifecycle(sLifecycle: ComponentLifecycle): this;
+        public setLifecycle(sLifecycle: sap.ui.core.ComponentLifecycle): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getName name}.
@@ -254,7 +235,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setName(sName: string): this;
+        public setName(sName: string): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getPropagateModel propagateModel}.
@@ -265,7 +246,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * Default value is `false`.
         */
-        public setPropagateModel(bPropagateModel: boolean): this;
+        public setPropagateModel(bPropagateModel: boolean): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getSettings settings}.
@@ -274,7 +255,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setSettings(oSettings: any): this;
+        public setSettings(oSettings: any): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getUrl url}.
@@ -283,7 +264,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setUrl(sUrl: sap.ui.core.URI): this;
+        public setUrl(sUrl: sap.ui.core.URI): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getUsage usage}.
@@ -292,7 +273,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setUsage(sUsage: string): this;
+        public setUsage(sUsage: string): sap.ui.core.ComponentContainer;
 
         /**
             * Sets a new value for property {@link #getWidth width}.
@@ -301,7 +282,7 @@ declare module 'sap/ui/core/ComponentContainer' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setWidth(sWidth: sap.ui.core.CSSSize): this;
+        public setWidth(sWidth: sap.ui.core.CSSSize): sap.ui.core.ComponentContainer;
 
     }
 }

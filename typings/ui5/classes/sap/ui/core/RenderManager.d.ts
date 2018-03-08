@@ -1,27 +1,27 @@
-declare module 'sap/ui/core/RenderManager' {
-    import Control from "sap/ui/core/Control";
-    import Element from "sap/ui/core/Element";
-    import Configuration from "sap/ui/core/Configuration";
-
-
-    export interface IRenderManagerSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class RenderManager {
+    export class RenderManager {
+
+        /**
+            * Creates an instance of the RenderManager.
+         * 
+         * Applications or controls must not call the `RenderManager` constructor on their own but should use the {@link sap.ui.core.Core#createRenderManager sap.ui.getCore().createRenderManager()} method to create an instance for their exclusive use.
+        */
+        public constructor();
 
 
         /**
             * Adds a class to the class collection if the name is not empty or null. The class collection is flushed if it is written to the buffer using {@link #writeClasses}
         */
-        public addClass(sName: string): this;
+        public addClass(sName: string): sap.ui.core.RenderManager;
 
         /**
             * Adds a style property to the style collection if the value is not empty or null The style collection is flushed if it is written to the buffer using {@link #writeStyle}
         */
-        public addStyle(sName: string, value: string | number | number): this;
+        public addStyle(sName: string, value: string | number | number): sap.ui.core.RenderManager;
 
         /**
             * Cleans up the rendering state of the given control without rendering it.
@@ -52,12 +52,12 @@ declare module 'sap/ui/core/RenderManager' {
          * 
          * ** Note: **: the functionality of this method is different from the default handling for invisible controls (controls with `visible == false`). The standard rendering for invisible controls still renders a placeholder DOM. This allows re-rendering of the invisible control once it becomes visible again without a need to render its parent, too. Children that are cleaned up with this method here, are supposed to have no more DOM at all. Rendering them later on therefore requires an involvement (typically: a rendering) of their parent.
         */
-        public cleanupControlWithoutRendering(oControl: Control): any;
+        public cleanupControlWithoutRendering(oControl: sap.ui.core.Control): any;
 
         /**
             * Creates the ID to be used for the invisible Placeholder DOM element. This method can be used to get direct access to the placeholder DOM element. Also statically available as RenderManager.createInvisiblePlaceholderId()
         */
-        protected static createInvisiblePlaceholderId(oElement: Element): string;
+        protected static createInvisiblePlaceholderId(oElement: sap.ui.core.Element): string;
 
         /**
             * Cleans up the resources associated with this instance.
@@ -96,12 +96,12 @@ declare module 'sap/ui/core/RenderManager' {
         /**
             * Returns the configuration object Shortcut for `sap.ui.getCore().getConfiguration()`
         */
-        public getConfiguration(): Configuration;
+        public getConfiguration(): sap.ui.core.Configuration;
 
         /**
             * Renders the given {@link sap.ui.core.Control} and finally returns the content of the rendering buffer. Ensures the buffer is restored to the state before calling this method.
         */
-        public getHTML(oControl: Control): string;
+        public getHTML(oControl: sap.ui.core.Control): string;
 
         /**
             * Returns the hidden area reference belonging to this window instance.
@@ -111,12 +111,12 @@ declare module 'sap/ui/core/RenderManager' {
         /**
             * Returns the renderer class for a given control instance
         */
-        public getRenderer(oControl: Control): any;
+        public getRenderer(oControl: sap.ui.core.Control): any;
 
         /**
             * Returns the renderer class for a given control instance
         */
-        public static getRenderer(oControl: Control): Function;
+        public static getRenderer(oControl: sap.ui.core.Control): Function;
 
         /**
             * Collects descendants of the given root node that need to be preserved before the root node is wiped out. The "to-be-preserved" nodes are moved to a special, hidden 'preserve' area.
@@ -134,14 +134,14 @@ declare module 'sap/ui/core/RenderManager' {
          * 
          * This function must not be called within control renderers.
         */
-        public render(oControl: Control, oTargetDomNode: any): any;
+        public render(oControl: sap.ui.core.Control, oTargetDomNode: any): any;
 
         /**
             * Turns the given control into its HTML representation and appends it to the rendering buffer.
          * 
          * If the given control is undefined or null, then nothing is rendered.
         */
-        public renderControl(oControl: Control): this;
+        public renderControl(oControl: sap.ui.core.Control): sap.ui.core.RenderManager;
 
         /**
             
@@ -151,12 +151,12 @@ declare module 'sap/ui/core/RenderManager' {
         /**
             * Write the given texts to the buffer
         */
-        public write(sText: string | number): this;
+        public write(sText: string | number): sap.ui.core.RenderManager;
 
         /**
             
         */
-        public writeAcceleratorKey(): this;
+        public writeAcceleratorKey(): sap.ui.core.RenderManager;
 
         /**
             * Writes the accessibility state (see WAI-ARIA specification) of the provided element into the HTML based on the element's properties and associations.
@@ -177,43 +177,43 @@ declare module 'sap/ui/core/RenderManager' {
          * 
          * Examples: `{hidden : true}` results in `aria-hidden="true"` independent of the presence or absence of the visibility property. `{hidden : null}` ensures that no `aria-hidden` attribute is written independent of the presence or absence of the visibility property. The function behaves in the same way for the associations `ariaDescribedBy` and `ariaLabelledBy`. To append additional values to the auto-generated `aria-describedby` and `aria-labelledby` attributes the following format can be used: `{describedby : {value: "id1 id2", append: true}}` => `aria-describedby="ida idb id1 id2"` (assuming that "ida idb" is the auto-generated part based on the association `ariaDescribedBy`).
         */
-        public writeAccessibilityState(oElement?: Element, mProps?: any): this;
+        public writeAccessibilityState(oElement?: sap.ui.core.Element, mProps?: any): sap.ui.core.RenderManager;
 
         /**
             * Writes the attribute and its value into the HTML.
          * 
          * For details about the escaping refer to {@link jQuery.sap.encodeHTML}
         */
-        public writeAttribute(sName: string, vValue: string | number | boolean): this;
+        public writeAttribute(sName: string, vValue: string | number | boolean): sap.ui.core.RenderManager;
 
         /**
             * Writes the attribute and a value into the HTML, the value will be encoded.
          * 
          * The value is properly encoded to avoid XSS attacks.
         */
-        public writeAttributeEscaped(sName: string, vValue: any): this;
+        public writeAttributeEscaped(sName: string, vValue: any): sap.ui.core.RenderManager;
 
         /**
             * Writes and flushes the class collection (all CSS classes added by "addClass()" since the last flush). Also writes the custom style classes added by the application with "addStyleClass(...)". Custom classes are added by default from the currently rendered control. If an oElement is given, this Element's custom style classes are added instead. If oElement === false, no custom style classes are added.
         */
-        public writeClasses(oElement?: Element | boolean): this;
+        public writeClasses(oElement?: sap.ui.core.Element | boolean): sap.ui.core.RenderManager;
 
         /**
             * Writes the controls data into the HTML. Control Data consists at least of the id of a control
         */
-        public writeControlData(oControl: Control): this;
+        public writeControlData(oControl: sap.ui.core.Control): sap.ui.core.RenderManager;
 
         /**
             * Writes the elements data into the HTML. Element Data consists at least of the id of an element
         */
-        public writeElementData(oElement: Element): this;
+        public writeElementData(oElement: sap.ui.core.Element): sap.ui.core.RenderManager;
 
         /**
             * Escape text for HTML and write it to the buffer.
          * 
          * For details about the escaping refer to {@link jQuery.sap.encodeHTML}
         */
-        public writeEscaped(sText: any, bLineBreaks: boolean): this;
+        public writeEscaped(sText: any, bLineBreaks: boolean): sap.ui.core.RenderManager;
 
         /**
             * Writes either an &lt;img&gt; tag for normal URI or a &lt;span&gt; tag with needed properties for an icon URI.
@@ -222,7 +222,7 @@ declare module 'sap/ui/core/RenderManager' {
          * 
          * When an &lt;img&gt; tag is rendered, the following two attributes are added by default and can be overwritten with corresponding values in the `mAttributes` parameter:  * `role: "presentation"` * `alt: ""` 
         */
-        public writeIcon(sURI: sap.ui.core.URI, aClasses?: any[] | string, mAttributes?: any): this;
+        public writeIcon(sURI: sap.ui.core.URI, aClasses?: any[] | string, mAttributes?: any): sap.ui.core.RenderManager;
 
         /**
             * Writes necessary invisible control/element placeholder data into the HTML.
@@ -235,12 +235,12 @@ declare module 'sap/ui/core/RenderManager' {
          *   oRenderManager.writeInvisiblePlaceholderData(oControl);
          *   oRenderManager.write("&gt;&lt;/tr");`
         */
-        protected writeInvisiblePlaceholderData(oElement: Element): this;
+        protected writeInvisiblePlaceholderData(oElement: sap.ui.core.Element): sap.ui.core.RenderManager;
 
         /**
             * Writes and flushes the style collection
         */
-        public writeStyles(): this;
+        public writeStyles(): sap.ui.core.RenderManager;
 
     }
 }

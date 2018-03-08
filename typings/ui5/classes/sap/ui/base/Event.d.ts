@@ -1,20 +1,14 @@
-declare module 'sap/ui/base/Event' {
-    import Metadata from "sap/ui/base/Metadata";
-    import EventProvider from "sap/ui/base/EventProvider";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IEventSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class Event<Tsource = any, Tparameters = any> extends Object {
+    class Event<Tsource = any, Tparameters = any> extends sap.ui.base.Object {
 
         /**
             * Creates an event with the given `sId`, linked to the provided `oSource` and enriched with the `mParameters`.
         */
-        public constructor(sId: string, oSource: EventProvider, mParameters: any);
+        public constructor(sId: string, oSource: sap.ui.base.EventProvider, mParameters: any);
 
 
         /**
@@ -25,7 +19,7 @@ declare module 'sap/ui/base/Event' {
         public cancelBubble(): any;
 
         /**
-            * Creates a new subclass of class sap.ui.base.Event<Tsource, Tparameters> with name `sClassName` and enriches it with the information contained in `oClassInfo`.
+            * Creates a new subclass of class sap.ui.base.Event with name `sClassName` and enriches it with the information contained in `oClassInfo`.
          * 
          * `oClassInfo` might contain the same kind of information as described in {@link sap.ui.base.Object.extend}.
         */
@@ -39,7 +33,7 @@ declare module 'sap/ui/base/Event' {
         /**
             * Returns a metadata object for class sap.ui.base.Event.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -61,7 +55,7 @@ declare module 'sap/ui/base/Event' {
         /**
             * Returns the event provider on which the event was fired.
         */
-        public getSource(): Tsource;
+        public getSource(): sap.ui.base.EventProvider;
 
         /**
             * Prevent the default action of this event.

@@ -1,20 +1,14 @@
-declare module 'sap/ui/model/Sorter' {
-    import Context from "sap/ui/model/Context";
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface ISorterSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class Sorter extends Object {
+    export class Sorter extends sap.ui.base.Object {
 
         /**
             * Constructor for Sorter
         */
-        public constructor(sPath: string, bDescending?: boolean, vGroup?: boolean | Function, fnComparator?: Function);
+        public constructor(sPath: string, bDescending: boolean, vGroup?: boolean | Function, fnComparator?: Function);
 
 
         /**
@@ -36,7 +30,7 @@ declare module 'sap/ui/model/Sorter' {
         /**
             * Returns a group object, at least containing a key property for group detection. May contain additional properties as provided by a custom group function.
         */
-        public getGroup(oContext: Context): any;
+        public getGroup(oContext: sap.ui.model.Context): any;
 
         /**
             * Returns the group function of this Sorter. If grouping is not enabled on this Sorter, it will return undefined, if no explicit group function has been defined the default group function is returned. The returned function is bound to its Sorter, so it will group according to its own property path, even if it is used in the context of another Sorter.
@@ -46,7 +40,7 @@ declare module 'sap/ui/model/Sorter' {
         /**
             * Returns a metadata object for class sap.ui.model.Sorter.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

@@ -1,12 +1,11 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Configuration options for the colors of a progress bar
     */
-    export type BarColor = "CRITICAL" | "NEGATIVE" | "NEUTRAL" | "POSITIVE";
-    export namespace BarColor {
-        const CRITICAL: BarColor;
-        const NEGATIVE: BarColor;
-        const NEUTRAL: BarColor;
-        const POSITIVE: BarColor;
+    export enum BarColor {
+        CRITICAL = "CRITICAL",
+        NEGATIVE = "NEGATIVE",
+        NEUTRAL = "NEUTRAL",
+        POSITIVE = "POSITIVE",
     }
 }

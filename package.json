@@ -1,22 +1,36 @@
 {
-    "name": "ui-typescript-example",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
-        "serve": "lite-server -c=bs-config.json",
-        "build": "tsc -p tsconfig.json",
-        "build:watch": "tsc -p tsconfig.json -w",
-        "lint": "tslint ./src/**/*.ts -t verbose"
-    },
-    "dependencies": {
-        "ui5ts": "^0.3.0"
-    },
-    "devDependencies": {
-        "@types/es6-shim": "^0.31.35",
-        "@types/jquery": "^2.0.47",
-        "concurrently": "^3.2.0",
-        "lite-server": "^2.3.0",
-        "tslint": "^3.15.1",
-        "typescript": "^2.5.2"
-    }
+  "name": "ui-typescript-example",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
+    "serve": "lite-server -c=bs-config.json",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json -w",
+    "lint": "tslint ./src/**/*.ts -t verbose"
+  },
+  "dependencies": {
+    "ui5ts": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/es6-shim": "^0.31.35",
+    "@types/jquery": "^2.0.47",
+    "browser-sync": "^2.23.6",
+    "compression": "^1.7.2",
+    "concurrently": "^3.2.0",
+    "del": "^3.0.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-typescript": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "lite-server": "^2.3.0",
+    "open": "0.0.5",
+    "path": "^0.12.7",
+    "run-sequence": "^2.2.1",
+    "serve-index": "^1.9.1",
+    "tslint": "^3.15.1",
+    "typescript": "^2.5.2"
+  }
 }

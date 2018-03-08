@@ -1,33 +1,22 @@
-declare module 'sap/ui/core/mvc/View' {
-    import Event from "sap/ui/base/Event";
-    import Element from "sap/ui/core/Element";
-    import Metadata from "sap/ui/base/Metadata";
-    import Control, { IControlSettings } from 'sap/ui/core/Control';
-
-    export interface IViewSettings extends IControlSettings {
-        width?: sap.ui.core.CSSSize;
-        height?: sap.ui.core.CSSSize;
-        viewName?: string;
-        displayBlock?: boolean;
-    }
+declare namespace sap.ui.core.mvc {
 
     /**
     
     */
-    export default class View extends Control {
+    export class View extends sap.ui.core.Control {
 
         /**
             * Constructor for a new View.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: IViewSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
             * Adds some content to the aggregation {@link #getContent content}.
         */
-        public addContent(oContent: Control): this;
+        public addContent(oContent: sap.ui.core.Control): sap.ui.core.mvc.View;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:afterInit afterInit} event of this `sap.ui.core.mvc.View`.
@@ -36,7 +25,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the View has parsed the UI description and instantiated the contained controls (/control tree).
         */
-        attachAfterInit<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachAfterInit<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:afterInit afterInit} event of this `sap.ui.core.mvc.View`.
@@ -45,7 +34,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the View has parsed the UI description and instantiated the contained controls (/control tree).
         */
-        attachAfterInit<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachAfterInit<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:afterRendering afterRendering} event of this `sap.ui.core.mvc.View`.
@@ -54,7 +43,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the View has been (re-)rendered and its HTML is present in the DOM.
         */
-        attachAfterRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachAfterRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:afterRendering afterRendering} event of this `sap.ui.core.mvc.View`.
@@ -63,7 +52,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the View has been (re-)rendered and its HTML is present in the DOM.
         */
-        attachAfterRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachAfterRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeExit beforeExit} event of this `sap.ui.core.mvc.View`.
@@ -72,7 +61,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the view has received the request to destroy itself, but before it has destroyed anything.
         */
-        attachBeforeExit<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachBeforeExit<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeExit beforeExit} event of this `sap.ui.core.mvc.View`.
@@ -81,7 +70,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired when the view has received the request to destroy itself, but before it has destroyed anything.
         */
-        attachBeforeExit<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachBeforeExit<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.mvc.View`.
@@ -90,7 +79,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired before this View is re-rendered. Use to unbind event handlers from HTML elements etc.
         */
-        attachBeforeRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachBeforeRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.mvc.View`.
@@ -99,19 +88,36 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Fired before this View is re-rendered. Use to unbind event handlers from HTML elements etc.
         */
-        attachBeforeRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachBeforeRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Returns an element by its ID in the context of the view.
         */
-        public byId(sId: string): Element;
+        public byId(sId: string): sap.ui.core.Element;
+
+        /**
+            * Clones a tree of objects starting with the object on which clone is called first (root object).
+         * 
+         * The IDs within the newly created clone tree are derived from the original IDs by appending the given `sIdSuffix` (if no suffix is given, one will be created; it will be unique across multiple clone calls).
+         * 
+         * The `oOptions` configuration object can have the following properties:  * The boolean value `cloneChildren` specifies whether associations/aggregations will be cloned * The boolean value `cloneBindings` specifies if bindings will be cloned 
+         * 
+         * For each cloned object the following settings are cloned based on the metadata of the object and the defined options:  * all properties that are not bound. If `cloneBinding` is `false`, even these properties will be cloned; the values are used by reference, they are not cloned * all aggregated objects that are not bound. If `cloneBinding` is `false`, even the ones that are bound will be cloned; they are all cloned recursively using the same `sIdSuffix` * all associated controls; when an association points to an object inside the cloned object tree, then the cloned association will be modified to that it points to the clone of the target object. When the association points to a managed object outside of the cloned object tree, then its target won't be changed. * all models set via `setModel()`; used by reference * all property and aggregation bindings (if `cloneBindings` is `true`); the pure binding information (path, model name) is cloned, but all other information like template control or factory function, data type or formatter function are copied by reference. The bindings themselves are created anew as they are specific for the combination (object, property, model). As a result, any later changes to a binding of the original object are not reflected in the clone, but changes to e.g the type or template etc. are. 
+         * 
+         * Each clone is created by first collecting the above mentioned settings and then creating a new instance with the normal constructor function. As a result, any side effects of mutator methods (`setProperty` etc.) or init hooks are repeated during clone creation. There is no need to override `clone()` just to reproduce these internal settings!
+         * 
+         * Custom controls however can override `clone()` to implement additional clone steps. They usually will first call `clone()` on the super class and then modify the returned clone accordingly.
+         * 
+         * Applications ** must never provide ** the second parameter `aLocaleIds`. It is determined automatically for the root object (and its non-existence also serves as an indicator for the root object). Specifying it will break the implementation of `clone()`.
+        */
+        protected clone(sIdSuffix?: string, aLocalIds?: any[], oOptions?: any, cloneChildren?: boolean, cloneBindings?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Override clone method to avoid conflict between generic cloning of content and content creation as defined by the UI5 Model View Controller lifecycle.
          * 
          * For more details see the development guide section about Model View Controller in UI5.
         */
-        protected clone(sIdSuffix?: string, aLocalIds?: any[]): this;
+        protected clone(sIdSuffix?: string, aLocalIds?: any[]): sap.ui.core.Element | sap.ui.base.ManagedObject;
 
         /**
             * Convert the given view local element ID to a globally unique ID by prefixing it with the view ID.
@@ -121,35 +127,35 @@ declare module 'sap/ui/core/mvc/View' {
         /**
             * Destroys all the content in the aggregation {@link #getContent content}.
         */
-        public destroyContent(): this;
+        public destroyContent(): sap.ui.core.mvc.View;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:afterInit afterInit} event of this `sap.ui.core.mvc.View`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachAfterInit(fnFunction: Function, oListener: any): this;
+        public detachAfterInit(fnFunction: Function, oListener: any): sap.ui.core.mvc.View;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:afterRendering afterRendering} event of this `sap.ui.core.mvc.View`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachAfterRendering(fnFunction: Function, oListener: any): this;
+        public detachAfterRendering(fnFunction: Function, oListener: any): sap.ui.core.mvc.View;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:beforeExit beforeExit} event of this `sap.ui.core.mvc.View`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachBeforeExit(fnFunction: Function, oListener: any): this;
+        public detachBeforeExit(fnFunction: Function, oListener: any): sap.ui.core.mvc.View;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.mvc.View`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachBeforeRendering(fnFunction: Function, oListener: any): this;
+        public detachBeforeRendering(fnFunction: Function, oListener: any): sap.ui.core.mvc.View;
 
         /**
             * Creates a new subclass of class sap.ui.core.mvc.View with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -161,22 +167,22 @@ declare module 'sap/ui/core/mvc/View' {
         /**
             * Fires event {@link #event:afterInit afterInit} to attached listeners.
         */
-        protected fireAfterInit(mParameters?: any): this;
+        protected fireAfterInit(mParameters?: any): sap.ui.core.mvc.View;
 
         /**
             * Fires event {@link #event:afterRendering afterRendering} to attached listeners.
         */
-        protected fireAfterRendering(mParameters?: any): this;
+        protected fireAfterRendering(mParameters?: any): sap.ui.core.mvc.View;
 
         /**
             * Fires event {@link #event:beforeExit beforeExit} to attached listeners.
         */
-        protected fireBeforeExit(mParameters?: any): this;
+        protected fireBeforeExit(mParameters?: any): sap.ui.core.mvc.View;
 
         /**
             * Fires event {@link #event:beforeRendering beforeRendering} to attached listeners.
         */
-        protected fireBeforeRendering(mParameters?: any): this;
+        protected fireBeforeRendering(mParameters?: any): sap.ui.core.mvc.View;
 
         /**
             * Gets content of aggregation {@link #getContent content}.
@@ -217,14 +223,14 @@ declare module 'sap/ui/core/mvc/View' {
         public getLocalId(sId: string): string;
 
         /**
-            * Returns a metadata object for class sap.ui.core.mvc.View.
-        */
-        public static getMetadata(): Metadata | any;
-
-        /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
+
+        /**
+            * Returns a metadata object for class sap.ui.core.Element.
+        */
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -234,9 +240,9 @@ declare module 'sap/ui/core/mvc/View' {
         public getMetadata(): any;
 
         /**
-            * Returns a metadata object for class sap.ui.core.Element.
+            * Returns a metadata object for class sap.ui.core.mvc.View.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the info object which is also passed to the preprocessors
@@ -272,12 +278,12 @@ declare module 'sap/ui/core/mvc/View' {
         /**
             * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getContent content}. and returns its index if found or -1 otherwise.
         */
-        public indexOfContent(oContent: Control): number;
+        public indexOfContent(oContent: sap.ui.core.Control): number;
 
         /**
             * Inserts a content into the aggregation {@link #getContent content}.
         */
-        public insertContent(oContent: Control, iIndex: number): this;
+        public insertContent(oContent: sap.ui.core.Control, iIndex: number): sap.ui.core.mvc.View;
 
         /**
             * Creates a Promise representing the state of the view initialization.
@@ -307,7 +313,7 @@ declare module 'sap/ui/core/mvc/View' {
         /**
             * Removes a content from the aggregation {@link #getContent content}.
         */
-        public removeContent(vContent: number | string | Control): Control;
+        public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
         /**
             * Executes preprocessors for a type of source
@@ -323,7 +329,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Default value is `false`.
         */
-        public setDisplayBlock(bDisplayBlock: boolean): this;
+        public setDisplayBlock(bDisplayBlock: boolean): sap.ui.core.mvc.View;
 
         /**
             * Sets a new value for property {@link #getHeight height}.
@@ -332,7 +338,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setHeight(sHeight: sap.ui.core.CSSSize): this;
+        public setHeight(sHeight: sap.ui.core.CSSSize): sap.ui.core.mvc.View;
 
         /**
             * Sets a new value for property {@link #getViewName viewName}.
@@ -341,7 +347,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setViewName(sViewName: string): this;
+        public setViewName(sViewName: string): sap.ui.core.mvc.View;
 
         /**
             * Sets a new value for property {@link #getWidth width}.
@@ -352,7 +358,7 @@ declare module 'sap/ui/core/mvc/View' {
          * 
          * Default value is `100%`.
         */
-        public setWidth(sWidth: sap.ui.core.CSSSize): this;
+        public setWidth(sWidth: sap.ui.core.CSSSize): sap.ui.core.mvc.View;
 
     }
 }

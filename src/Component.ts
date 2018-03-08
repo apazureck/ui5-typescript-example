@@ -1,20 +1,18 @@
-import UIComponent  from "sap/ui/core/UIComponent";
-import * as Device  from "sap/ui/Device";
-import models       from "typescript/example/ui5app/model/models";
+import Device from "sap/ui/Device";
+import models from "typescript/example/ui5app/model/models";
 import ListSelector from "typescript/example/ui5app/controller/ListSelector";
 import ErrorHandler from "typescript/example/ui5app/controller/ErrorHandler";
 import Model from "sap/ui/model/Model";
 
 @UI5("typescript.example.ui5app.Component")
-export default class Component extends UIComponent
-{
+export default class Component extends sap.ui.core.UIComponent {
     public static metadata: any = {
-        manifest : "json"
+        manifest: "json"
     };
 
-    public oListSelector: ListSelector;
-    private _oErrorHandler: ErrorHandler;
-    private _sContentDensityClass: string;
+    private oListSelector: ListSelector = new ListSelector();
+    private _oErrorHandler: ErrorHandler = new ErrorHandler(this);
+    private _sContentDensityClass: string | undefined = undefined;
 
     /**
      * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
@@ -23,9 +21,6 @@ export default class Component extends UIComponent
      * @override
      */
     public init(): void {
-        this.oListSelector = new ListSelector();
-        this._oErrorHandler = new ErrorHandler(this);
-
         // set the device model
         this.setModel(models.createDeviceModel(), "device");
 

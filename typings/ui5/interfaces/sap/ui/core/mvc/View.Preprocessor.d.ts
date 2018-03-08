@@ -1,4 +1,4 @@
-declare module 'sap/ui/core/mvc/View' {
+declare namespace sap.ui.core.mvc.View {
 
     /**
     

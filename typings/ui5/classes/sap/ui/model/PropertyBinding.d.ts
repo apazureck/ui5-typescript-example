@@ -1,23 +1,14 @@
-declare module 'sap/ui/model/PropertyBinding' {
-    import { BindingMode } from "sap/ui/model/BindingMode";
-    import Metadata from "sap/ui/base/Metadata";
-    import Type from "sap/ui/model/Type";
-    import Model from "sap/ui/model/Model";
-    import Context from "sap/ui/model/Context";
-    import Binding, { IBindingSettings } from 'sap/ui/model/Binding';
-
-    export interface IPropertyBindingSettings extends IBindingSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class PropertyBinding extends Binding {
+    export class PropertyBinding extends sap.ui.model.Binding {
 
         /**
             * Constructor for PropertyBinding
         */
-        public constructor(oModel: Model, sPath: string, oContext: Context, mParameters?: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters: any);
 
 
         /**
@@ -30,7 +21,7 @@ declare module 'sap/ui/model/PropertyBinding' {
         /**
             * Returns the binding mode
         */
-        public getBindingMode(): BindingMode;
+        public getBindingMode(): sap.ui.model.BindingMode;
 
         /**
             * Returns the current external value of the bound target which is formatted via a type or formatter function.
@@ -52,7 +43,7 @@ declare module 'sap/ui/model/PropertyBinding' {
         /**
             * Returns a metadata object for class sap.ui.model.PropertyBinding.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -64,7 +55,7 @@ declare module 'sap/ui/model/PropertyBinding' {
         /**
             * Returns the type if any for the binding.
         */
-        public getType(): Type;
+        public getType(): sap.ui.model.Type;
 
         /**
             * Returns the current value of the bound target
@@ -81,7 +72,7 @@ declare module 'sap/ui/model/PropertyBinding' {
         /**
             * Sets the binding mode
         */
-        protected setBindingMode(sBindingMode: BindingMode): any;
+        protected setBindingMode(sBindingMode: sap.ui.model.BindingMode): any;
 
         /**
             * Sets the value for this binding. The value is parsed and validated against its type and then set to the binding. A model implementation should check if the current default binding mode permits setting the binding value and if so set the new value also in the model.
@@ -101,7 +92,7 @@ declare module 'sap/ui/model/PropertyBinding' {
         /**
             * Sets the optional type and internal type for the binding. The type and internal type are used to do the parsing/formatting correctly. The internal type is the property type of the element which the value is formatted to.
         */
-        public setType(oType: Type, sInternalType: string): any;
+        public setType(oType: sap.ui.model.Type, sInternalType: string): any;
 
         /**
             * Sets the value for this binding. A model implementation should check if the current default binding mode permits setting the binding value and if so set the new value also in the model.

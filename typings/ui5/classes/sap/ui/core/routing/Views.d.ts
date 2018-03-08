@@ -1,21 +1,19 @@
-declare module 'sap/ui/core/routing/Views' {
-    import Event from "sap/ui/base/Event";
-    import View from "sap/ui/core/mvc/View";
-    import Metadata from "sap/ui/base/Metadata";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
+declare namespace sap.ui.core.routing {
 
-    export interface IViewsSettings extends IEventProviderSettings {
-    }
+    export class Views extends sap.ui.base.EventProvider {
 
-    export default class Views extends EventProvider {
+        /**
+            * Instantiates a view repository that creates and caches views. If it is destroyed, all the Views it created are destroyed. Usually you do not have to create instances of this class, it is used by the {@link sap.ui.core.routing.Router}. If you are using {@link sap.ui.core.routing.Targets} without using a {@link sap.ui.core.UIComponent} you have to create an instance of this class. They will create an instance on their own, or if they are used with a {@link sap.ui.core.UIComponent} they will share the same instance of Views.
+        */
+        public constructor(oOptions: { component?: sap.ui.core.UIComponent, async?: boolean, });
 
 
         /**
             * Attach event-handler `fnFunction` to the 'created' event of this `sap.ui.core.routing.Views`.
          * 
         */
-        attachCreated<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * the instance of the created view. */
-            view: View, /* * The view options passed to {@link sap.ui.view} */
+        attachCreated<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * the instance of the created view. */
+            view: sap.ui.core.mvc.View, /* * The view options passed to {@link sap.ui.view} */
             viewOptions: any,
         }>) => void, oListener?: Tcontext): this;
 
@@ -23,8 +21,8 @@ declare module 'sap/ui/core/routing/Views' {
             * Attach event-handler `fnFunction` to the 'created' event of this `sap.ui.core.routing.Views`.
          * 
         */
-        attachCreated<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * the instance of the created view. */
-            view: View, /* * The view options passed to {@link sap.ui.view} */
+        attachCreated<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * the instance of the created view. */
+            view: sap.ui.core.mvc.View, /* * The view options passed to {@link sap.ui.view} */
             viewOptions: any,
         }>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
@@ -34,7 +32,7 @@ declare module 'sap/ui/core/routing/Views' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachCreated(fnFunction: Function, oListener: any): this;
+        public detachCreated(fnFunction: Function, oListener: any): sap.ui.core.routing.Views;
 
         /**
             * Creates a new subclass of class sap.ui.core.routing.Views with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -46,12 +44,12 @@ declare module 'sap/ui/core/routing/Views' {
         /**
             * Fire event created to attached listeners.
         */
-        protected fireCreated(mArguments?: any): this;
+        protected fireCreated(mArguments?: any): sap.ui.core.routing.Views;
 
         /**
             * Returns a metadata object for class sap.ui.core.routing.Views.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -70,7 +68,7 @@ declare module 'sap/ui/core/routing/Views' {
          * 
          * If the second parameter is set to null or undefined, the previous cache view under the same name isn't managed by the Views instance. The lifecycle (for example the destroy of the view) of the view instance should be maintained by additional code.
         */
-        public setView(sViewName: string, oView: View | any | any): this;
+        public setView(sViewName: string, oView: sap.ui.core.mvc.View | any | any): sap.ui.core.routing.Views;
 
     }
 }

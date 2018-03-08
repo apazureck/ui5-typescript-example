@@ -1,3 +1,3 @@
-declare namespace sap.ui.core.any {
+declare namespace sap.ui.core.Dock {
 
 }

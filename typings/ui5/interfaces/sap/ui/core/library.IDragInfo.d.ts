@@ -1,4 +1,4 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core.dnd {
 
     /**
     

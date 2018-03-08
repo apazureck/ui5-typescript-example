@@ -1,11 +1,6 @@
-declare module 'sap/ui/core/ComponentMetadata' {
-    import Manifest from "sap/ui/core/Manifest";
+declare namespace sap.ui.core {
 
-
-    export interface IComponentMetadataSettings {
-    }
-
-    export default class ComponentMetadata {
+    export class ComponentMetadata {
 
         /**
             * Creates a new metadata object for a Component subclass.
@@ -75,7 +70,7 @@ declare module 'sap/ui/core/ComponentMetadata' {
         /**
             * Returns the manifest object.
         */
-        public getManifestObject(): Manifest;
+        public getManifestObject(): sap.ui.core.Manifest;
 
         /**
             * Returns the version of the metadata which could be 1 or 2. 1 is for legacy metadata whereas 2 is for the manifest.

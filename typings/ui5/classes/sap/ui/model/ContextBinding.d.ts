@@ -1,21 +1,14 @@
-declare module 'sap/ui/model/ContextBinding' {
-    import Context from "sap/ui/model/Context";
-    import Metadata from "sap/ui/base/Metadata";
-    import Model from "sap/ui/model/Model";
-    import Binding, { IBindingSettings } from 'sap/ui/model/Binding';
-
-    export interface IContextBindingSettings extends IBindingSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class ContextBinding extends Binding {
+    export class ContextBinding extends sap.ui.model.Binding {
 
         /**
             * Constructor for ContextBinding
         */
-        public constructor(oModel: Model, sPath: string, oContext: any, mParameters?: any, oEvents?: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: any, mParameters: any, oEvents: any);
 
 
         /**
@@ -28,12 +21,12 @@ declare module 'sap/ui/model/ContextBinding' {
         /**
             * Return the bound context.
         */
-        public getBoundContext(): Context;
+        public getBoundContext(): sap.ui.model.Context;
 
         /**
             * Returns a metadata object for class sap.ui.model.ContextBinding.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

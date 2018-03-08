@@ -1,14 +1,9 @@
-declare module 'sap/ui/core/LayoutData' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Element, { IElementSettings } from 'sap/ui/core/Element';
-
-    export interface ILayoutDataSettings extends IElementSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class LayoutData extends Element {
+    export class LayoutData extends sap.ui.core.Element {
 
         /**
             * Constructor for a new LayoutData.
@@ -17,7 +12,7 @@ declare module 'sap/ui/core/LayoutData' {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.core.Element#constructor sap.ui.core.Element} can be used.
         */
-        public constructor(sId?: string, mSettings?: ILayoutDataSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -30,7 +25,7 @@ declare module 'sap/ui/core/LayoutData' {
         /**
             * Returns a metadata object for class sap.ui.core.LayoutData.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -42,12 +37,12 @@ declare module 'sap/ui/core/LayoutData' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
     }
 }

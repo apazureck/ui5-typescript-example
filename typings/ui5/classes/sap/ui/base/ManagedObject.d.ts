@@ -1,22 +1,9 @@
-declare module 'sap/ui/base/ManagedObject' {
-    import Event from "sap/ui/base/Event";
-    import Type from "sap/ui/model/Type";
-    import Sorter from "sap/ui/model/Sorter";
-    import { BindingMode } from "sap/ui/model/BindingMode";
-    import Binding from "sap/ui/model/Binding";
-    import Context from "sap/ui/model/Context";
-    import Model from "sap/ui/model/Model";
-    import ContextBinding from "sap/ui/model/ContextBinding";
-    import Metadata from "sap/ui/base/Metadata";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
-
-    export interface IManagedObjectSettings extends IEventProviderSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class ManagedObject extends EventProvider {
+    export class ManagedObject extends sap.ui.base.EventProvider {
 
         /**
             * Constructs and initializes a managed object with the given `sId` and settings.
@@ -63,7 +50,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Examples for such metadataContexts are:  * `{/Customers/Name}` a single part with an absolute path to the property * Name * of the * Customers * entity set in the default model * `{path: 'Customers/Name', model:'json'}` a single part with an absolute path to the property * Name * of the * Customers * entity set in a named model * `{parts: [{path: 'Customers/Name'},{path: 'editable', model: 'viewModel'}]}` a combination of to single binding contexts, one context from the default model and one from the viewModel </li> </ul>
         */
-        public constructor(sId?: string, mSettings?: IManagedObjectSettings, oScope?: any);
+        public constructor(sId: string, mSettings: any, oScope: any);
 
 
         /**
@@ -80,7 +67,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically add an object to an aggregation. Use the concrete method add* XYZ * for aggregation 'XYZ' or the generic {@link #applySettings} instead.
         */
-        protected addAggregation(sAggregationName: string, oObject: this, bSuppressInvalidate?: boolean): this;
+        protected addAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Adds some object with the ID `sId` to the association identified by `sAssociationName` and marks this ManagedObject as changed.
@@ -89,12 +76,12 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically add an object to an association. Use the concrete method add* XYZ * for association 'XYZ' or the generic {@link #applySettings} instead.
         */
-        protected addAssociation(sAssociationName: string, sId: string | this, bSuppressInvalidate?: boolean): this;
+        protected addAssociation(sAssociationName: string, sId: string | sap.ui.base.ManagedObject, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Adds a listener function that will be called during each propagation step on every control
         */
-        private addPropagationListener(listener: Function): this;
+        private addPropagationListener(listener: Function): sap.ui.base.ManagedObject;
 
         /**
             * Sets all the properties, aggregations, associations and event handlers as given in the object literal `mSettings`. If a property, aggregation, etc. is not listed in `mSettings`, then its value is not changed by this method.
@@ -103,7 +90,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * For the possible keys and values in `mSettings` see the general documentation in {@link sap.ui.base.ManagedObject} or the specific documentation of the constructor of the concrete managed object class.
         */
-        public applySettings(mSettings: any, oScope?: any): this;
+        public applySettings(mSettings: any, oScope?: any): sap.ui.base.ManagedObject;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:formatError formatError} event of this `sap.ui.base.ManagedObject`.
@@ -112,10 +99,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated from the model, but formatting the value failed with an exception.
         */
-        attachFormatError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property should have received the model update. */
-            element: ManagedObject, /* * Name of the property for which the binding should have been updated. */
+        attachFormatError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property should have received the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the binding should have been updated. */
             property: string, /* * Data type used in the binding (if any). */
-            type: Type, /* * New value (model representation) as propagated from the model. */
+            type: sap.ui.model.Type, /* * New value (model representation) as propagated from the model. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any,
         }>) => void, oListener?: Tcontext): this;
@@ -127,10 +114,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated from the model, but formatting the value failed with an exception.
         */
-        attachFormatError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property should have received the model update. */
-            element: ManagedObject, /* * Name of the property for which the binding should have been updated. */
+        attachFormatError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property should have received the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the binding should have been updated. */
             property: string, /* * Data type used in the binding (if any). */
-            type: Type, /* * New value (model representation) as propagated from the model. */
+            type: sap.ui.model.Type, /* * New value (model representation) as propagated from the model. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any,
         }>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
@@ -142,7 +129,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when models or contexts are changed on this object (either by calling setModel/setBindingContext or due to propagation)
         */
-        attachModelContextChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachModelContextChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:modelContextChange modelContextChange} event of this `sap.ui.base.ManagedObject`.
@@ -151,7 +138,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when models or contexts are changed on this object (either by calling setModel/setBindingContext or due to propagation)
         */
-        attachModelContextChange<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachModelContextChange<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:parseError parseError} event of this `sap.ui.base.ManagedObject`.
@@ -160,10 +147,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated to the model, but parsing the value failed with an exception.
         */
-        attachParseError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
+        attachParseError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as parsed by the binding. */
+            type: sap.ui.model.Type, /* * New value (external representation) as parsed by the binding. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any, /* * Localized message describing the parse error */
             message: string,
@@ -176,10 +163,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated to the model, but parsing the value failed with an exception.
         */
-        attachParseError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
+        attachParseError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as parsed by the binding. */
+            type: sap.ui.model.Type, /* * New value (external representation) as parsed by the binding. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any, /* * Localized message describing the parse error */
             message: string,
@@ -192,10 +179,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated to the model, but validating the value failed with an exception.
         */
-        attachValidationError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
+        attachValidationError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as parsed and validated by the binding. */
+            type: sap.ui.model.Type, /* * New value (external representation) as parsed and validated by the binding. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any, /* * Localized message describing the validation issues */
             message: string,
@@ -208,10 +195,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired when a new value for a bound property should have been propagated to the model, but validating the value failed with an exception.
         */
-        attachValidationError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
+        attachValidationError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property should have been been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as parsed and validated by the binding. */
+            type: sap.ui.model.Type, /* * New value (external representation) as parsed and validated by the binding. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
             oldValue: any, /* * Localized message describing the validation issues */
             message: string,
@@ -224,10 +211,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired after a new value for a bound property has been propagated to the model. Only fired, when the binding uses a data type.
         */
-        attachValidationSuccess<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property has been updated. */
+        attachValidationSuccess<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property has been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as propagated to the model.
+            type: sap.ui.model.Type, /* * New value (external representation) as propagated to the model.
  * 
  * <b>Note: </b>the model might modify (normalize) the value again and this modification will be stored in the ManagedObject. The 'newValue' parameter of this event contains the value <b>before</b> such a normalization. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
@@ -241,10 +228,10 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Fired after a new value for a bound property has been propagated to the model. Only fired, when the binding uses a data type.
         */
-        attachValidationSuccess<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * ManagedObject instance whose property initiated the model update. */
-            element: ManagedObject, /* * Name of the property for which the bound model property has been updated. */
+        attachValidationSuccess<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * ManagedObject instance whose property initiated the model update. */
+            element: sap.ui.base.ManagedObject, /* * Name of the property for which the bound model property has been updated. */
             property: string, /* * Data type used in the binding. */
-            type: Type, /* * New value (external representation) as propagated to the model.
+            type: sap.ui.model.Type, /* * New value (external representation) as propagated to the model.
  * 
  * <b>Note: </b>the model might modify (normalize) the value again and this modification will be stored in the ManagedObject. The 'newValue' parameter of this event contains the value <b>before</b> such a normalization. */
             newValue: any, /* * Old value (external representation) as previously stored in the ManagedObject. */
@@ -256,17 +243,17 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * The bound aggregation will use the given template, clone it for each item which exists in the bound list and set the appropriate binding context. This is a generic method which can be used to bind any aggregation to the model. A managed object may flag aggregations in the metamodel with bindable="bindable" to get typed bind* Something * methods for those aggregations.
         */
-        public bindAggregation(sName: string, oBindingInfo: { path: string, template: ManagedObject, templateShareable?: boolean, factory: Function, startIndex: number, length: number, sorter?: Sorter | any[], filters?: any[], key: string | Function, parameters?: any, groupHeaderFactory?: Function, }): this;
+        public bindAggregation(sName: string, oBindingInfo: { path: string, template: sap.ui.base.ManagedObject, templateShareable?: boolean, factory: Function, startIndex: number, length: number, sorter?: sap.ui.model.Sorter | any[], filters?: any[], key: string | Function, parameters?: any, groupHeaderFactory?: Function, }): sap.ui.base.ManagedObject;
 
         /**
             * Bind the object to the referenced entity in the model, which is used as the binding context to resolve bound properties or aggregations of the object itself and all of its children relatively to the given path.
         */
-        public bindContext(sPath: string): this;
+        public bindContext(sPath: string): sap.ui.base.ManagedObject;
 
         /**
             * Bind the object to the referenced entity in the model, which is used as the binding context to resolve bound properties or aggregations of the object itself and all of its children relatively to the given path. If a relative binding path is used, this will be applied whenever the parent context changes. There is no difference between {@link sap.ui.core.Element#bindElement} and {@link sap.ui.base.ManagedObject#bindObject}.
         */
-        public bindObject(vPath: { path: string, parameters?: any, model?: string, events?: any, }, mParameters?: any): this;
+        public bindObject(vPath: { path: string, parameters?: any, model?: string, events?: any, }, mParameters?: any): sap.ui.base.ManagedObject;
 
         /**
             * Binds a property to the model.
@@ -290,7 +277,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * When the formatter for a property binding (simple or composite) is called, the managed object will be given as `this` context. For formatters of binding parts in a composite binding, this is not the case.
         */
-        public bindProperty(sName: string, oBindingInfo: { path: string, model?: string, formatter?: Function, useRawValues?: boolean, useInternalValues?: boolean, type?: Type | string, targetType?: string, formatOptions?: any, constraints?: any, mode?: BindingMode, parameters?: any, parts?: any[], }): this;
+        public bindProperty(sName: string, oBindingInfo: { path: string, model?: string, formatter?: Function, useRawValues?: boolean, useInternalValues?: boolean, type?: sap.ui.model.Type | string, targetType?: string, formatOptions?: any, constraints?: any, mode?: sap.ui.model.BindingMode, parameters?: any, parts?: any[], }): sap.ui.base.ManagedObject;
 
         /**
             * Clones a tree of objects starting with the object on which clone is called first (root object).
@@ -307,14 +294,14 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * Applications ** must never provide ** the second parameter `aLocaleIds`. It is determined automatically for the root object (and its non-existence also serves as an indicator for the root object). Specifying it will break the implementation of `clone()`.
         */
-        protected clone(sIdSuffix?: string, aLocalIds?: any[], oOptions?: any, cloneChildren?: boolean, cloneBindings?: boolean): this;
+        protected clone(sIdSuffix?: string, aLocalIds?: any[], oOptions?: any, cloneChildren?: boolean, cloneBindings?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Creates a new ManagedObject from the given data.
          * 
          * If `vData` is a managed object already, that object is returned. If `vData` is an object (literal), then a new object is created with `vData` as settings. The type of the object is either determined by a property of name `Type` (capital 'T') in the `vData` or by a property `type` (lower case 't') in the `oKeyInfo` object. In both cases, the type can be specified by name (dot separated name of the class) or by the constructor function of the class.
         */
-        public static create(vData: ManagedObject | any, oKeyInfo?: any, oScope?: any): any;
+        public static create(vData: sap.ui.base.ManagedObject | any, oKeyInfo?: any, oScope?: any): any;
 
         /**
             * Cleans up the resources associated with this object and all its aggregated children.
@@ -330,42 +317,42 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically destroy all objects in an aggregation. Use the concrete method destroy* XYZ * for aggregation 'XYZ' instead.
         */
-        protected destroyAggregation(sAggregationName: string, bSuppressInvalidate?: boolean): this;
+        protected destroyAggregation(sAggregationName: string, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:formatError formatError} event of this `sap.ui.base.ManagedObject`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachFormatError(fnFunction: Function, oListener: any): this;
+        public detachFormatError(fnFunction: Function, oListener: any): sap.ui.base.ManagedObject;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:modelContextChange modelContextChange} event of this `sap.ui.base.ManagedObject`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachModelContextChange(fnFunction: Function, oListener: any): this;
+        public detachModelContextChange(fnFunction: Function, oListener: any): sap.ui.base.ManagedObject;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:parseError parseError} event of this `sap.ui.base.ManagedObject`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachParseError(fnFunction: Function, oListener: any): this;
+        public detachParseError(fnFunction: Function, oListener: any): sap.ui.base.ManagedObject;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:validationError validationError} event of this `sap.ui.base.ManagedObject`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachValidationError(fnFunction: Function, oListener: any): this;
+        public detachValidationError(fnFunction: Function, oListener: any): sap.ui.base.ManagedObject;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:validationSuccess validationSuccess} event of this `sap.ui.base.ManagedObject`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachValidationSuccess(fnFunction: Function, oListener: any): this;
+        public detachValidationSuccess(fnFunction: Function, oListener: any): sap.ui.base.ManagedObject;
 
         /**
             * Escapes the given value so it can be used in the constructor's settings object. Should be used when property values are initialized with static string values which could contain binding characters (curly braces).
@@ -458,27 +445,27 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Fires event {@link #event:formatError formatError} to attached listeners.
         */
-        protected fireFormatError(mParameters?: { element?: ManagedObject, property?: string, type?: Type, newValue?: any, oldValue?: any, }): this;
+        protected fireFormatError(mParameters?: { element?: sap.ui.base.ManagedObject, property?: string, type?: sap.ui.model.Type, newValue?: any, oldValue?: any, }): sap.ui.base.ManagedObject;
 
         /**
             * Fires event {@link #event:modelContextChange modelContextChange} to attached listeners.
         */
-        protected fireModelContextChange(mParameters?: any): this;
+        protected fireModelContextChange(mParameters?: any): sap.ui.base.ManagedObject;
 
         /**
             * Fires event {@link #event:parseError parseError} to attached listeners.
         */
-        protected fireParseError(mParameters?: { element?: ManagedObject, property?: string, type?: Type, newValue?: any, oldValue?: any, message?: string, }): this;
+        protected fireParseError(mParameters?: { element?: sap.ui.base.ManagedObject, property?: string, type?: sap.ui.model.Type, newValue?: any, oldValue?: any, message?: string, }): sap.ui.base.ManagedObject;
 
         /**
             * Fires event {@link #event:validationError validationError} to attached listeners.
         */
-        protected fireValidationError(mParameters?: { element?: ManagedObject, property?: string, type?: Type, newValue?: any, oldValue?: any, message?: string, }): this;
+        protected fireValidationError(mParameters?: { element?: sap.ui.base.ManagedObject, property?: string, type?: sap.ui.model.Type, newValue?: any, oldValue?: any, message?: string, }): sap.ui.base.ManagedObject;
 
         /**
             * Fires event {@link #event:validationSuccess validationSuccess} to attached listeners.
         */
-        protected fireValidationSuccess(mParameters?: { element?: ManagedObject, property?: string, type?: Type, newValue?: any, oldValue?: any, }): this;
+        protected fireValidationSuccess(mParameters?: { element?: sap.ui.base.ManagedObject, property?: string, type?: sap.ui.model.Type, newValue?: any, oldValue?: any, }): sap.ui.base.ManagedObject;
 
         /**
             * Returns the aggregated object(s) for the named aggregation of this ManagedObject.
@@ -489,7 +476,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically read the content of an aggregation. Use the concrete method get* XYZ * for aggregation 'XYZ' instead.
         */
-        protected getAggregation(sAggregationName: string, oDefaultForCreation: this | any[]): this | any[];
+        protected getAggregation(sAggregationName: string, oDefaultForCreation: sap.ui.base.ManagedObject | any[]): sap.ui.base.ManagedObject | any[];
 
         /**
             * Returns the content of the association with the given name.
@@ -507,7 +494,7 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Get the binding object for a specific aggregation/property
         */
-        public getBinding(sName: string): Binding;
+        public getBinding(sName: string): sap.ui.model.Binding;
 
         /**
             * Get the binding context of this object for the given model name.
@@ -518,7 +505,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** A ManagedObject inherits binding contexts from the Core only when it is a descendant of a UIArea.
         */
-        public getBindingContext(sModelName?: string): Context;
+        public getBindingContext(sModelName?: string): sap.ui.model.Context;
 
         /**
             * Returns the binding infos for the given property or aggregation. The binding info contains information about path, binding object, format options, sorter, filter etc. for the property or aggregation. As the binding object is only created when the model becomes available, the binding property may be undefined.
@@ -533,7 +520,7 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Returns the parent managed object as new eventing parent to enable control event bubbling or `null` if this object hasn't been added to a parent yet.
         */
-        protected getEventingParent(): this;
+        protected getEventingParent(): sap.ui.base.EventProvider;
 
         /**
             * Returns the object's Id.
@@ -543,7 +530,7 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the ManagedObject class.
@@ -553,7 +540,7 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Returns a metadata object for class sap.ui.base.EventProvider.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Get the model to be used for data bindings with the given model name. If the object does not have a model set on itself, it will use the first model defined in its parent hierarchy.
@@ -562,14 +549,14 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** to be compatible with future versions of this API, you must not use the following model names:  * `null` * empty string `""` * string literals `"null"` or `"undefined"`  Omitting the model name (or using the value `undefined`) is explicitly allowed and refers to the default model.
         */
-        public getModel<TModel extends Model>(sName?: string): TModel;
+        public getModel(sName?: string | any): sap.ui.model.Model;
 
         /**
             * Get the object binding object for a specific model.
          * 
          * ** Note: ** to be compatible with future versions of this API, you must not use the following model names:  * `null` * empty string `""` * string literals `"null"` or `"undefined"`  Omitting the model name (or using the value `undefined`) is explicitly allowed and refers to the default model.
         */
-        public getObjectBinding(sModelName?: string): ContextBinding;
+        public getObjectBinding(sModelName?: string): sap.ui.model.ContextBinding;
 
         /**
             * Returns the origin info for the value of the given property.
@@ -604,7 +591,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** There is no API to determine the original API parent.
         */
-        public getParent(): this;
+        public getParent(): sap.ui.base.ManagedObject;
 
         /**
             * get propagation listeners
@@ -630,7 +617,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically determine the position of an object in an aggregation. Use the concrete method indexOf* XYZ * for aggregation 'XYZ' instead.
         */
-        protected indexOfAggregation(sAggregationName: string, oObject: this): number;
+        protected indexOfAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject): number;
 
         /**
             * Inserts managed object `oObject` to the aggregation named `sAggregationName` at position `iIndex`.
@@ -643,7 +630,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically insert an object into an aggregation. Use the concrete method insert* XYZ * for aggregation 'XYZ' instead.
         */
-        protected insertAggregation(sAggregationName: string, oObject: this, iIndex: number, bSuppressInvalidate?: boolean): this;
+        protected insertAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject, iIndex: number, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * This triggers rerendering of itself and its children.
@@ -694,7 +681,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically remove an object from an aggregation. Use the concrete method remove* XYZ * for aggregation 'XYZ' instead.
         */
-        protected removeAggregation(sAggregationName: string, vObject: number | string | this, bSuppressInvalidate?: boolean): this;
+        protected removeAggregation(sAggregationName: string, vObject: number | string | sap.ui.base.ManagedObject, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Removes all objects from the 0..n-aggregation named `sAggregationName`.
@@ -725,17 +712,17 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically remove an object from an association. Use the concrete method remove* XYZ * for association 'XYZ' instead.
         */
-        protected removeAssociation(sAssociationName: string, vObject: number | string | this, bSuppressInvalidate?: boolean): string | any;
+        protected removeAssociation(sAssociationName: string, vObject: number | string | sap.ui.base.ManagedObject, bSuppressInvalidate?: boolean): string | any;
 
         /**
             * remove a propagation listener
         */
-        private removePropagationListener(listener: Function): this;
+        private removePropagationListener(listener: Function): sap.ui.base.ManagedObject;
 
         /**
             * Resets the given property to the default value and also restores the "initial" state (like it has never been set).
         */
-        protected resetProperty(sPropertyName: string): this;
+        protected resetProperty(sPropertyName: string): sap.ui.base.ManagedObject;
 
         /**
             * Activates the given ID and settings preprocessors, executes the given function and restores the previously active preprocessors.
@@ -763,7 +750,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically set an object in an aggregation. Use the concrete method set* XYZ * for aggregation 'XYZ' or the generic {@link #applySettings} instead.
         */
-        protected setAggregation(sAggregationName: string, oObject: any, bSuppressInvalidate?: boolean): this;
+        protected setAggregation(sAggregationName: string, oObject: any, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Sets the associated object for the given managed association of cardinality '0..1' and marks this ManagedObject as changed.
@@ -772,7 +759,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low-level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically set an object in an association. Use the concrete method set* XYZ * for association 'XYZ' or the generic {@link #applySettings} instead.
         */
-        protected setAssociation(sAssociationName: string, sId: string | this, bSuppressInvalidate?: boolean): this;
+        protected setAssociation(sAssociationName: string, sId: string | sap.ui.base.ManagedObject, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Set the binding context for this ManagedObject for the model with the given name.
@@ -781,7 +768,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** A ManagedObject inherits binding contexts from the Core only when it is a descendant of a UIArea.
         */
-        public setBindingContext(oContext: Context, sModelName?: string): this;
+        public setBindingContext(oContext: sap.ui.model.Context, sModelName?: string): sap.ui.base.ManagedObject;
 
         /**
             * Sets or unsets a model for the given model name for this ManagedObject.
@@ -798,7 +785,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** A ManagedObject inherits models from the Core only when it is a descendant of a UIArea.
         */
-        public setModel(oModel: Model, sName?: string): this;
+        public setModel(oModel: sap.ui.model.Model, sName?: string): sap.ui.base.ManagedObject;
 
         /**
             * Sets the given value for the given property after validating and normalizing it, marks this object as changed.
@@ -809,7 +796,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * ** Note: ** This method is a low level API as described in <a href="#lowlevelapi">the class documentation</a>. Applications or frameworks must not use this method to generically set a property. Use the concrete method set* XYZ * for property 'XYZ' or the generic {@link #applySettings} instead.
         */
-        protected setProperty(sPropertyName: string, oValue: any, bSuppressInvalidate?: boolean): this;
+        protected setProperty(sPropertyName: string, oValue: any, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Returns a simple string representation of this managed object.
@@ -821,22 +808,22 @@ declare module 'sap/ui/base/ManagedObject' {
         /**
             * Unbind the aggregation from the model
         */
-        public unbindAggregation(sName: string, bSuppressReset: boolean): this;
+        public unbindAggregation(sName: string, bSuppressReset: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Removes the defined binding context of this object, all bindings will now resolve relative to the parent context again.
         */
-        public unbindContext(sModelName?: string): this;
+        public unbindContext(sModelName?: string): sap.ui.base.ManagedObject;
 
         /**
             * Removes the defined binding context of this object, all bindings will now resolve relative to the parent context again.
         */
-        public unbindObject(sModelName?: string): this;
+        public unbindObject(sModelName?: string): sap.ui.base.ManagedObject;
 
         /**
             * Unbind the property from the model
         */
-        public unbindProperty(sName: string, bSuppressReset: boolean): this;
+        public unbindProperty(sName: string, bSuppressReset: boolean): sap.ui.base.ManagedObject;
 
         /**
             * Generic method which is called whenever an aggregation binding has changed.
@@ -854,7 +841,7 @@ declare module 'sap/ui/base/ManagedObject' {
          * 
          * This method is already called by {@link #setAggregation}, {@link #addAggregation} and {@link #insertAggregation}. In many cases, subclasses of ManagedObject don't need to call it again in their mutator methods.
         */
-        protected validateAggregation(sAggregationName: string, oObject: this | any, bMultiple: boolean): this | any;
+        protected validateAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject | any, bMultiple: boolean): sap.ui.base.ManagedObject | any;
 
         /**
             * Checks whether the given value is of the proper type for the given property name.

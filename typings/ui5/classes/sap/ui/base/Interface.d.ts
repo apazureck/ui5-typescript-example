@@ -1,19 +1,14 @@
-declare module 'sap/ui/base/Interface' {
-    import Object from "sap/ui/base/Object";
-
-
-    export interface IInterfaceSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class Interface {
+    export class Interface {
 
         /**
             * Constructs an instance of sap.ui.base.Interface which restricts access to methods marked as public.
         */
-        public constructor(oObject: Object, aMethods: any[]);
+        public constructor(oObject: sap.ui.base.Object, aMethods: any[]);
 
 
     }

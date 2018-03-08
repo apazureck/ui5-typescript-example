@@ -59,7 +59,7 @@ declare namespace jQuery.sap {
  * 
  * Use this method instead of jQuery(...) if you know the argument is exactly one id and the id is not known in advance because it is in a variable (as opposed to a string constant with known content).
     */
-    export function byId(sId: string, oany: any): any;/**
+    export function byId(sId: string, oContext: any): any;/**
     * Transforms a hyphen separated string to a camel case string.
     */
     export function camelCase(sString: string): string;/**
@@ -220,11 +220,11 @@ declare namespace jQuery.sap {
  *   getObject("a.b.C", 0)  -- will create a, b, and C in that order if they don't exists
  *   getObject("a.b.c", 1)  -- will create a and b, but not C.`
  * 
- * When a `oany` is given, the search starts in that object. Otherwise it starts in the `window` object that this plugin has been created in.
+ * When a `oContext` is given, the search starts in that object. Otherwise it starts in the `window` object that this plugin has been created in.
  * 
  * Note: Although this method internally uses `object["key"]` to address object properties, it does not support all possible characters in a name. Especially the dot ('.') is not supported in the individual name segments, as it is always interpreted as a name separator.
     */
-    export function getObject(sName: string, iNoCreates?: number, oany?: any): Function;/**
+    export function getObject(sName: string, iNoCreates?: number, oContext?: any): Function;/**
     * Determines the URL for a resource given its unified resource name.
  * 
  * Searches the longest prefix of the given resource name for which a registration exists (see {@link jQuery.sap.registerResourcePath}) and replaces that prefix by the registered URL prefix.
@@ -233,7 +233,7 @@ declare namespace jQuery.sap {
  * 
  * ** Unified Resource Names **<br> Several UI5 APIs use * Unified Resource Names (URNs) * as naming scheme for resources that they deal with (e.h. Javascript, CSS, JSON, XML, ...). URNs are similar to the path component of a URL:  * they consist of a non-empty sequence of name segments * segments are separated by a forward slash '/' * name segments consist of URL path segment characters only. It is recommended to use only ASCII letters (upper or lower case), digits and the special characters ' * the empty name segment is not supported * names consisting of dots only, are reserved and must not be used for resources * names are case sensitive although the underlying server might be case-insensitive * the behavior with regard to URL encoded characters is not specified, %ddd notation should be avoided * the meaning of a leading slash is undefined, but might be defined in future. It therefore should be avoided , '_', '-', '.') <li>the empty name segment is not supported</li> <li>names consisting of dots only, are reserved and must not be used for resources</li> <li>names are case sensitive although the underlying server might be case-insensitive</li> <li>the behavior with regard to URL encoded characters is not specified, %ddd notation should be avoided</li> <li>the meaning of a leading slash is undefined, but might be defined in future. It therefore should be avoided</li> 
  * 
- * UI5 APIs that only deal with Javascript resources, use a slight variation of this scheme, where the extension '.js' is always omitted (see {@link sap.ui.define}, {@link sap.ui.require}).
+ * UI5 APIs that only deal with Javascript resources, use a slight variation of this scheme, where the extension '.js' is always omitted (see {@link sapui._.define}, {@link sapui._.require}).
  * 
  * ** Relationship to old Module Name Syntax **<br>
  * 
@@ -278,13 +278,13 @@ declare namespace jQuery.sap {
     * Includes the specified stylesheet via a &lt;link&gt;-tag in the head of the current document. If there is call to `includeStylesheet` providing the sId of an already included stylesheet, the existing element will be replaced.
     */
     export function includeStyleSheet(vUrl: { url: string, id?: string, attributes?: any, }, vId?: string | any, fnLoadCallback?: Function, fnErrorCallback?: Function): void | any;/**
-    * Does some basic modifications to the HTML page that make it more suitable for mobile apps. Only the first call to this method is executed, subsequent calls are ignored. Note that this method is also called by the constructor of toplevel controls like sap.m.App, sap.m.SplitApp and sap.m.Shell. Exception: if no homeany was set, subsequent calls have the chance to set it.
+    * Does some basic modifications to the HTML page that make it more suitable for mobile apps. Only the first call to this method is executed, subsequent calls are ignored. Note that this method is also called by the constructor of toplevel controls like sap.m.App, sap.m.SplitApp and sap.m.Shell. Exception: if no homeIcon was set, subsequent calls have the chance to set it.
  * 
  * The "options" parameter configures what exactly should be done.
  * 
- * It can have the following properties:  * viewport: whether to set the viewport in a way that disables zooming (default: true) * statusBar: the iOS status bar color, "default", "black" or "black-translucent" (default: "default") * hideBrowser: whether the browser UI should be hidden as far as possible to make the app feel more native (default: true) * preventScroll: whether native scrolling should be disabled in order to prevent the "rubber-band" effect where the whole window is moved (default: true) * preventPhoneNumberDetection: whether Safari Mobile should be prevented from transforming any numbers that look like phone numbers into clickable links; this should be left as "true", otherwise it might break controls because Safari actually changes the DOM. This only affects all page content which is created after initMobile is called. * rootId: the ID of the root element that should be made fullscreen; only used when hideBrowser is set (default: the document.body) * useFullScreenHeight: a boolean that defines whether the height of the html root element should be set to 100%, which is required for other elements to cover the full height (default: true) <li>homeany: deprecated since 1.12, use jQuery.sap.setanys instead. 
+ * It can have the following properties:  * viewport: whether to set the viewport in a way that disables zooming (default: true) * statusBar: the iOS status bar color, "default", "black" or "black-translucent" (default: "default") * hideBrowser: whether the browser UI should be hidden as far as possible to make the app feel more native (default: true) * preventScroll: whether native scrolling should be disabled in order to prevent the "rubber-band" effect where the whole window is moved (default: true) * preventPhoneNumberDetection: whether Safari Mobile should be prevented from transforming any numbers that look like phone numbers into clickable links; this should be left as "true", otherwise it might break controls because Safari actually changes the DOM. This only affects all page content which is created after initMobile is called. * rootId: the ID of the root element that should be made fullscreen; only used when hideBrowser is set (default: the document.body) * useFullScreenHeight: a boolean that defines whether the height of the html root element should be set to 100%, which is required for other elements to cover the full height (default: true) <li>homeIcon: deprecated since 1.12, use jQuery.sap.setIcons instead. 
     */
-    export function initMobile(options?: { viewport?: boolean, statusBar?: string, hideBrowser?: boolean, preventScroll?: boolean, preventPhoneNumberDetection?: boolean, rootId?: string, useFullScreenHeight?: boolean, homeany?: string, homeanyPrecomposed?: boolean, mobileWebAppCapable?: boolean, }): any;/**
+    export function initMobile(options?: { viewport?: boolean, statusBar?: string, hideBrowser?: boolean, preventScroll?: boolean, preventPhoneNumberDetection?: boolean, rootId?: string, useFullScreenHeight?: boolean, homeIcon?: string, homeIconPrecomposed?: boolean, mobileWebAppCapable?: boolean, }): any;/**
     * Calls a method after a given interval and returns an id for this interval.
     */
     export function intervalCall(iInterval: number, oObject: any, method: string | any, aParameters?: any[]): string;/**
@@ -412,7 +412,7 @@ declare namespace jQuery.sap {
  *    'favicon':'desktop.ico'
  * }` If one of the sizes is not given, the largest available alternative image will be used instead for this size. On Android these icons may or may not be used by the device. Apparently chances can be improved by using icons with glare effect, so the "precomposed" property can be set to "true". Some Android devices may also use the favicon for bookmarks instead of the home icons.</li>
     */
-    export function setanys(oanys: any): any;/**
+    export function setIcons(oIcons: any): any;/**
     * Sets the "apple-mobile-web-app-capable" and "mobile-web-app-capable" meta information which defines whether the application is loaded in full screen mode (browser address bar and toolbar are hidden) after the user does "add to home screen" on mobile devices. Currently this meta tag is only supported by iOS Safari and mobile Chrome from version 31.
  * 
  * If the application opens new tabs because of attachments, url and so on, setting this to false will let the user be able to go from the new tab back to the application tab after the application is added to home screen.
@@ -422,11 +422,11 @@ declare namespace jQuery.sap {
     export function setMobileWebAppCapable(bValue: boolean): any;/**
     * Sets an object property to a given value, where the property is identified by a sequence of names (path).
  * 
- * When a `oany` is given, the path starts in that object. Otherwise it starts in the `window` object that this plugin has been created for.
+ * When a `oContext` is given, the path starts in that object. Otherwise it starts in the `window` object that this plugin has been created for.
  * 
  * Note: Although this method internally uses `object["key"]` to address object properties, it does not support all possible characters in a name. Especially the dot ('.') is not supported in the individual name segments, as it is always interpreted as a name separator.
     */
-    export function setObject(sName: string, vValue: any, oany?: any): any;/**
+    export function setObject(sName: string, vValue: any, oContext?: any): any;/**
     * Convenience wrapper around `jQuery.ajax()` that avoids the need for callback functions when synchronous calls are made. If the setting `complexResult` is true (default), then the return value is an object with the following properties  <li>`success` boolean whether the call succeeded or not <li>`data` any the data returned by the call. For dataType 'text' this is a string, for JSON it is an object, for XML it is a document. When the call failed, then data is not defined <li>`status` string a textual status ('success,', 'error', 'timeout',...) <li>`statusCode` string the HTTP status code of the request <li>`error` Error an error object (exception) in case an error occurred <li>`errorText` string an error message in case an error occurred 
  * 
  * When `complexResult` is false, then in the case of success, only 'data' is returned, in case of an error the 'fallback' setting is returned (defaults to undefined).
@@ -460,7 +460,7 @@ declare namespace jQuery.sap {
     export function syncPost(sUrl: string, data: string | any, sDataType?: string): any;/**
     * Search ancestors of the given source DOM element for the specified CSS class name. If the class name is found, set it to the root DOM element of the target control. If the class name is not found, it is also removed from the target DOM element.
     */
-    export function syncStyleClass(sStyleClass: string, vSource: any | any | string, vDestination: any | any): any | any;/**
+    export function syncStyleClass(sStyleClass: string, vSource: any | sapui._.core.Control | string, vDestination: any | sapui._.core.Control): any | any;/**
     * Creates and returns a pseudo-unique id.
  * 
  * No means for detection of overlap with already present or future UIDs.
@@ -581,7 +581,7 @@ declare namespace jQuery.sap {
  * 
  * The mouse events and touch events are supported simultaneously on both desktop and mobile browsers. Do NOT create both onmouse* and ontouch* functions to avoid one event being handled twice on the same control.
     */
-    export const anyEvents: any;
+    export const ControlEvents: any;
     // Fields
     /**
     * Returns a high resolution timestamp for measurements. The timestamp is based on 01/01/1970 00:00:00 as float with microsecond precision or with millisecond precision, if high resolution timestamps are not available. The fractional part of the timestamp represents fractions of a millisecond. Converting to a `Date` is possible using `new Date(jQuery.sap.now())`

@@ -1,4 +1,4 @@
-declare module 'sap/m/NavContainer' {
+declare namespace sap.m {
 
     /**
     

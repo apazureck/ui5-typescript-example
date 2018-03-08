@@ -1,9 +1,14 @@
-declare namespace jquery.sap.global {
+declare namespace jQuery.sap.log {
 
     /**
     
     */
     export class Logger {
+
+        /**
+            * Creates a new Logger instance which will use the given component string for all logged messages without a specific component.
+        */
+        public constructor(sDefaultComponent: string);
 
 
         /**

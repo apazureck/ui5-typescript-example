@@ -1,18 +1,9 @@
-declare module 'sap/ui/core/Component' {
-    import EventBus from "sap/ui/core/EventBus";
-    import Manifest from "sap/ui/core/Manifest";
-    import ComponentMetadata from "sap/ui/core/ComponentMetadata";
-    import Interface from "sap/ui/base/Interface";
-    import Metadata from "sap/ui/base/Metadata";
-    import ManagedObject, { IManagedObjectSettings } from 'sap/ui/base/ManagedObject';
-
-    export interface IComponentSettings extends IManagedObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Component extends ManagedObject {
+    export class Component extends sap.ui.base.ManagedObject {
 
         /**
             * Creates and initializes a new Component with the given `sId` and settings.
@@ -23,7 +14,7 @@ declare module 'sap/ui/core/Component' {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.base.ManagedObject#constructor sap.ui.base.ManagedObject} can be used.
         */
-        public constructor(sId?: string, mSettings?: IComponentSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -54,7 +45,7 @@ declare module 'sap/ui/core/Component' {
          * 
          * The properties can also be defined in the descriptor. These properties can be overwritten by the local properties of that function.
         */
-        public createComponent(vUsage: { usage: string, id?: string, async?: boolean, settings?: any, componentData?: any, }): this | any;
+        public createComponent(vUsage: { usage: string, id?: string, async?: boolean, settings?: any, componentData?: any, }): sap.ui.core.Component | any;
 
         /**
             * Cleans up the Component instance before destruction.
@@ -80,17 +71,17 @@ declare module 'sap/ui/core/Component' {
         /**
             * Returns the event bus of this component.
         */
-        public getEventBus(): EventBus;
+        public getEventBus(): sap.ui.core.EventBus;
 
         /**
             
         */
-        public getInterface(): any | Interface;
+        public getInterface(): any | sap.ui.base.Interface;
 
         /**
             * Returns the public interface of the object.
         */
-        public getInterface(): Interface;
+        public getInterface(): sap.ui.base.Interface;
 
         /**
             * Returns the manifest defined in the metadata of the component. If not specified, the return value is null.
@@ -111,22 +102,22 @@ declare module 'sap/ui/core/Component' {
         /**
             * Returns the manifest object.
         */
-        public getManifestObject(): Manifest;
+        public getManifestObject(): sap.ui.core.Manifest;
 
         /**
             * Returns the metadata for the Component class.
         */
-        public static getMetadata(): ComponentMetadata;
+        public static getMetadata(): sap.ui.core.ComponentMetadata;
 
         /**
             * Returns a metadata object for class sap.ui.base.EventProvider.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -138,14 +129,14 @@ declare module 'sap/ui/core/Component' {
         /**
             * Returns the metadata for the specific class of the current instance.
         */
-        public getMetadata(): ComponentMetadata | any | Metadata;
+        public getMetadata(): sap.ui.core.ComponentMetadata | any | sap.ui.base.Metadata;
 
         /**
             * Returns the Component instance in whose "context" the given ManagedObject has been created or `undefined`.
          * 
          * This is a convenience wrapper around {@link sap.ui.core.Component.getOwnerIdFor Component.getOwnerIdFor}. If the owner ID cannot be determined for reasons documented on `getOwnerForId` or when the Component for the determined ID no longer exists, `undefined` will be returned.
         */
-        public static getOwnerComponentFor(oObject: ManagedObject): Component;
+        public static getOwnerComponentFor(oObject: sap.ui.base.ManagedObject): sap.ui.core.Component;
 
         /**
             * Returns the ID of the object in whose "context" the given ManagedObject has been created.
@@ -158,7 +149,7 @@ declare module 'sap/ui/core/Component' {
          * 
          * ** Further note ** that only the ID of the owner is recorded. In rare cases, when the lifecycle of a ManagedObject is not bound to the lifecycle of its owner, (e.g. by the means of aggregations), then the owner might have been destroyed already whereas the ManagedObject is still alive. So even the existence of an owner ID is not a guarantee for the existence of the corresponding owner.
         */
-        public static getOwnerIdFor(oObject: ManagedObject): string;
+        public static getOwnerIdFor(oObject: sap.ui.base.ManagedObject): string;
 
         /**
             * Returns a service interface for the {@link sap.ui.core.service.Service Service} declared in the descriptor for components (manifest.json). The declaration needs to be done in the `sap.ui5/services` section as follows: `{

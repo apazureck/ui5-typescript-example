@@ -1,18 +1,14 @@
-declare module 'sap/ui/core/Configuration' {
-
-
-    import Locale from "sap/ui/core/Locale";
-    import Metadata from "sap/ui/base/Metadata";
-    import { CalendarType } from "sap/ui/core/library";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IConfigurationSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Configuration extends Object {
+    export class Configuration extends sap.ui.base.Object {
+
+        /**
+            * Creates a new Configuration object.
+        */
+        public constructor();
 
 
         /**
@@ -22,7 +18,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * The `mSettings` can contain any property `* xyz *` for which a setter method `set* XYZ *` exists in the API of this class. Similarly, values for the {@link sap.ui.core.Configuration.FormatSettings format settings} API can be provided in a nested object with name `formatSettings`.
         */
-        public applySettings(mSettings: any): this;
+        public applySettings(mSettings: any): sap.ui.core.Configuration;
 
         /**
             * Creates a new subclass of class sap.ui.core.Configuration with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -44,7 +40,7 @@ declare module 'sap/ui/core/Configuration' {
         /**
             * Returns the current animation mode.
         */
-        public getAnimationMode(): AnimationMode;
+        public getAnimationMode(): sap.ui.core.Configuration.AnimationMode;
 
         /**
             * Base URLs to AppCacheBuster ETag-Index files.
@@ -109,7 +105,7 @@ declare module 'sap/ui/core/Configuration' {
         /**
             * Returns a configuration object that bundles the format settings of UI5.
         */
-        public getFormatSettings(): FormatSettings;
+        public getFormatSettings(): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * frameOptions mode (allow/deny/trusted).
@@ -149,7 +145,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * The Locale is derived from the {@link #getLanguage language} property.
         */
-        public getLocale(): Locale;
+        public getLocale(): sap.ui.core.Locale;
 
         /**
             * Flag whether a Component should load the manifest first.
@@ -159,7 +155,7 @@ declare module 'sap/ui/core/Configuration' {
         /**
             * Returns a metadata object for class sap.ui.core.Configuration.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -232,12 +228,12 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * Expects an animation mode as string and validates it. If a wrong animation mode was set, an error is thrown. If the mode is valid it is set, then the attributes `data-sap-ui-animation` and `data-sap-ui-animation-mode` of the HTML document root element are also updated. If the `animationMode` is `Configuration.AnimationMode.none` the old `animation` property is set to `false`, otherwise it is set to `true`.
         */
-        public setAnimationMode(sAnimationMode: AnimationMode): any;
+        public setAnimationMode(sAnimationMode: sap.ui.core.Configuration.AnimationMode): any;
 
         /**
             * Sets the new calendar type to be used from now on in locale dependent functionalities (for example, formatting, translation texts, etc.).
         */
-        public setCalendarType(sCalendarType: CalendarType | any): this;
+        public setCalendarType(sCalendarType: sap.ui.core.CalendarType | any): sap.ui.core.Configuration;
 
         /**
             * Sets a new format locale to be used from now on for retrieving locale specific formatters. Modifying this setting does not have an impact on the retrieval of translated texts!
@@ -250,7 +246,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * ** Note **: See documentation of {@link #setLanguage} for restrictions.
         */
-        public setFormatLocale(sFormatLocale: string | any): this;
+        public setFormatLocale(sFormatLocale: string | any): sap.ui.core.Configuration;
 
         /**
             * Sets a new language to be used from now on for language/region dependent functionality (e.g. formatting, data types, translated texts, ...).
@@ -275,7 +271,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * ** Note **: When using this method please take note of and respect the above mentioned restrictions.
         */
-        public setLanguage(sLanguage: string, sSAPLogonLanguage?: string): this;
+        public setLanguage(sLanguage: string, sSAPLogonLanguage?: string): sap.ui.core.Configuration;
 
         /**
             * Sets the character orientation mode to be used from now on.
@@ -286,7 +282,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * ** Note **: See documentation of {@link #setLanguage} for restrictions.
         */
-        public setRTL(bRTL: boolean | any): this;
+        public setRTL(bRTL: boolean | any): sap.ui.core.Configuration;
 
     }
 }

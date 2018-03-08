@@ -1,13 +1,12 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Semantic Colors of an icon.
     */
-    export type IconColor = "Critical" | "Default" | "Negative" | "Neutral" | "Positive";
-    export namespace IconColor {
-        const Critical: IconColor;
-        const Default: IconColor;
-        const Negative: IconColor;
-        const Neutral: IconColor;
-        const Positive: IconColor;
+    export enum IconColor {
+        Critical = "Critical",
+        Default = "Default",
+        Negative = "Negative",
+        Neutral = "Neutral",
+        Positive = "Positive",
     }
 }

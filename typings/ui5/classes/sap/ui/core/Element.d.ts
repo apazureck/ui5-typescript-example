@@ -1,19 +1,9 @@
-declare module 'sap/ui/core/Element' {
-    import CustomData from "sap/ui/core/CustomData";
-    import ContextBinding from "sap/ui/model/ContextBinding";
-    import LayoutData from "sap/ui/core/LayoutData";
-    import Metadata from "sap/ui/base/Metadata";
-    import TooltipBase from "sap/ui/core/TooltipBase";
-    import Interface from "sap/ui/base/Interface";
-    import ManagedObject, { IManagedObjectSettings } from 'sap/ui/base/ManagedObject';
-
-    export interface IElementSettings extends IManagedObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Element extends ManagedObject {
+    export class Element extends sap.ui.base.ManagedObject {
 
         /**
             * Constructs and initializes a UI Element with the given `sId` and settings.
@@ -36,7 +26,7 @@ declare module 'sap/ui/core/Element' {
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: IElementSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -69,12 +59,12 @@ declare module 'sap/ui/core/Element' {
         /**
             * Adds some customData to the aggregation {@link #getCustomData customData}.
         */
-        public addCustomData(oCustomData: CustomData): this;
+        public addCustomData(oCustomData: sap.ui.core.CustomData): sap.ui.core.Element;
 
         /**
             * Adds some dependent to the aggregation {@link #getDependents dependents}.
         */
-        public addDependent(oDependent: this): this;
+        public addDependent(oDependent: sap.ui.core.Element): sap.ui.core.Element;
 
         /**
             * Adds a delegate that listens to the events that are fired on this element (as opposed to events which are fired BY this element).
@@ -85,7 +75,7 @@ declare module 'sap/ui/core/Element' {
          * 
          * ** Important: ** If event delegates were added the delegate will still be called even if the event was processed and/or cancelled via `preventDefault` by the Element or another event delegate. `preventDefault` only prevents the event from bubbling. It should be checked e.g. in the event delegate's listener whether an Element is still enabled via `getEnabled`. Additionally there might be other things that delegates need to check depending on the event (e.g. not adding a key twice to an output string etc.).
         */
-        public addEventDelegate(oDelegate: any, oThis?: any): this;
+        public addEventDelegate(oDelegate: any, oThis?: any): sap.ui.core.Element;
 
         /**
             * Applies the focus info.
@@ -97,21 +87,21 @@ declare module 'sap/ui/core/Element' {
         /**
             * Bind the object to the referenced entity in the model, which is used as the binding context to resolve bound properties or aggregations of the object itself and all of its children relatively to the given path. If a relative binding path is used, this will be applied whenever the parent context changes. There is no difference between {@link sap.ui.core.Element#bindElement} and {@link sap.ui.base.ManagedObject#bindObject}.
         */
-        public bindElement(vPath: { path: string, parameters?: any, model?: string, events?: any, }, mParameters?: any): this;
+        public bindElement(vPath: { path: string, parameters?: any, model?: string, events?: any, }, mParameters?: any): sap.ui.core.Element;
 
         /**
             * Create a clone of this Element.
          * 
          * Calls `ManagedObject#clone` and additionally clones event delegates.
         */
-        protected clone(sIdSuffix?: string, aLocalIds?: any[]): this;
+        protected clone(sIdSuffix?: string, aLocalIds?: any[]): sap.ui.base.ManagedObject;
 
         /**
             * Creates a new Element from the given data.
          * 
          * If `vData` is an Element already, that element is returned. If `vData` is an object (literal), then a new element is created with `vData` as settings. The type of the element is either determined by a property named `Type` in the `vData` or by a type information in the `oKeyInfo` object
         */
-        public static create(vData: Element | any, oKeyInfo?: { type?: string, }): any;
+        public static create(vData: sap.ui.core.Element | any, oKeyInfo?: { type?: string, }): any;
 
         /**
             * Attaches custom data to an `Element` or retrieves attached data.
@@ -137,12 +127,12 @@ declare module 'sap/ui/core/Element' {
          * 
          * The static info can at least contain the following entries:  <li>baseType: {string} fully qualified name of a base class or empty <li>publicMethods: {string} an array of method names that will be visible in the interface proxy returned by {@link #getInterface} 
         */
-        public static defineClass(sClassName: string, oStaticInfo: { baseType: string, publicMethods: any[], }, FNMetaImpl?: Function): Metadata;
+        public static defineClass(sClassName: string, oStaticInfo: { baseType: string, publicMethods: any[], }, FNMetaImpl?: Function): sap.ui.base.Metadata;
 
         /**
             * Creates metadata for a UI Element by extending the Object Metadata.
         */
-        public static defineClass(sClassName: string, oStaticInfo: any, fnMetaImpl?: Function): any | Metadata;
+        public static defineClass(sClassName: string, oStaticInfo: any, fnMetaImpl?: Function): any | sap.ui.base.Metadata;
 
         /**
             * Cleans up the resources associated with this element and all its children.
@@ -156,29 +146,29 @@ declare module 'sap/ui/core/Element' {
         /**
             * Destroys all the customData in the aggregation {@link #getCustomData customData}.
         */
-        public destroyCustomData(): this;
+        public destroyCustomData(): sap.ui.core.Element;
 
         /**
             * Destroys all the dependents in the aggregation {@link #getDependents dependents}.
         */
-        public destroyDependents(): this;
+        public destroyDependents(): sap.ui.core.Element;
 
         /**
             * Destroys the layoutData in the aggregation {@link #getLayoutData layoutData}.
         */
-        public destroyLayoutData(): this;
+        public destroyLayoutData(): sap.ui.core.Element;
 
         /**
             * Destroys the tooltip in the aggregation named `tooltip`.
         */
-        public destroyTooltip(): this;
+        public destroyTooltip(): sap.ui.core.Element;
 
         /**
             * Allows the parent of a control to enhance the aria information during rendering.
          * 
          * This function is called by the RenderManager's writeAccessibilityState method for the parent of the currently rendered control - if the parent implements it.
         */
-        protected enhanceAccessibilityState(oElement: this, mAriaProps: any): any;
+        protected enhanceAccessibilityState(oElement: sap.ui.core.Element, mAriaProps: any): any;
 
         /**
             * Cleans up the element instance before destruction.
@@ -206,7 +196,12 @@ declare module 'sap/ui/core/Element' {
         /**
             * Fires the given event and notifies all listeners. Listeners must not change the content of the event.
         */
-        protected fireEvent(sEventId: string, mParameters: any): this;
+        protected fireEvent(sEventId: string, mParameters: any): sap.ui.core.Element | sap.ui.base.EventProvider | boolean;
+
+        /**
+            * Fires an {@link sap.ui.base.Event event} with the given settings and notifies all attached event handlers.
+        */
+        protected fireEvent(sEventId: string, mParameters?: any, bAllowPreventDefault?: boolean, bEnableEventBubbling?: boolean): sap.ui.base.EventProvider | boolean;
 
         /**
             * Sets the focus to the stored focus DOM reference
@@ -241,7 +236,7 @@ declare module 'sap/ui/core/Element' {
          * 
          * ** Note: ** to be compatible with future versions of this API, you must not use the following model names:  * `null` * empty string `""` * string literals `"null"` or `"undefined"`  Omitting the model name (or using the value `undefined`) is explicitly allowed and refers to the default model.
         */
-        public getElementBinding(sModelName?: string): ContextBinding;
+        public getElementBinding(sModelName?: string): sap.ui.model.ContextBinding;
 
         /**
             * Returns the DOM Element that should get the focus.
@@ -256,26 +251,21 @@ declare module 'sap/ui/core/Element' {
         protected getFocusInfo(): any;
 
         /**
-            
-        */
-        public getInterface(): any | Interface;
-
-        /**
             * Returns the public interface of the object.
         */
-        public getInterface(): Interface;
+        public getInterface(): sap.ui.base.Interface;
+
+        /**
+            
+        */
+        public getInterface(): any | sap.ui.base.Interface;
 
         /**
             * Gets content of aggregation {@link #getLayoutData layoutData}.
          * 
          * Defines the layout constraints for this control when it is used inside a Layout. LayoutData classes are typed classes and must match the embedding Layout. See VariantLayoutData for aggregating multiple alternative LayoutData instances to a single Element.
         */
-        public getLayoutData(): LayoutData;
-
-        /**
-            * Returns a metadata object for class sap.ui.base.EventProvider.
-        */
-        public static getMetadata(): Metadata | any;
+        public getLayoutData(): sap.ui.core.LayoutData;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -285,23 +275,28 @@ declare module 'sap/ui/core/Element' {
         public getMetadata(): any;
 
         /**
+            * Returns a metadata object for class sap.ui.core.Element.
+        */
+        public static getMetadata(): sap.ui.base.Metadata;
+
+        /**
+            * Returns a metadata object for class sap.ui.base.EventProvider.
+        */
+        public static getMetadata(): sap.ui.base.Metadata | any;
+
+        /**
             * Returns the runtime metadata for this UI element.
          * 
          * When using the defineClass method, this function is automatically created and returns a runtime representation of the design time metadata.
         */
-        public getMetadata(): any | Metadata;
-
-        /**
-            * Returns a metadata object for class sap.ui.core.Element.
-        */
-        public static getMetadata(): Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the tooltip for this element if any or an undefined value. The tooltip can either be a simple string or a subclass of {@link sap.ui.core.TooltipBase}.
          * 
          * Callers that are only interested in tooltips of type string (e.g. to render them as a `title` attribute), should call the convenience method {@link #getTooltip_AsString} instead. If they want to get a tooltip text no matter where it comes from (be it a string tooltip or the text from a TooltipBase instance) then they could call {@link #getTooltip_Text} instead.
         */
-        public getTooltip(): string | TooltipBase;
+        public getTooltip(): string | sap.ui.core.TooltipBase;
 
         /**
             * Returns the tooltip for this element but only if it is a simple string. Otherwise an undefined value is returned.
@@ -316,12 +311,12 @@ declare module 'sap/ui/core/Element' {
         /**
             * Checks for the provided `sap.ui.core.CustomData` in the aggregation {@link #getCustomData customData}. and returns its index if found or -1 otherwise.
         */
-        public indexOfCustomData(oCustomData: CustomData): number;
+        public indexOfCustomData(oCustomData: sap.ui.core.CustomData): number;
 
         /**
             * Checks for the provided `sap.ui.core.Element` in the aggregation {@link #getDependents dependents}. and returns its index if found or -1 otherwise.
         */
-        public indexOfDependent(oDependent: this): number;
+        public indexOfDependent(oDependent: sap.ui.core.Element): number;
 
         /**
             * Initializes the element instance after creation.
@@ -335,17 +330,17 @@ declare module 'sap/ui/core/Element' {
         /**
             * Inserts a customData into the aggregation {@link #getCustomData customData}.
         */
-        public insertCustomData(oCustomData: CustomData, iIndex: number): this;
+        public insertCustomData(oCustomData: sap.ui.core.CustomData, iIndex: number): sap.ui.core.Element;
 
         /**
             * Inserts a dependent into the aggregation {@link #getDependents dependents}.
         */
-        public insertDependent(oDependent: this, iIndex: number): this;
+        public insertDependent(oDependent: sap.ui.core.Element, iIndex: number): sap.ui.core.Element;
 
         /**
             * This function either calls set[sPropertyName] or get[sPropertyName] with the specified property name depending if an `oValue` is provided or not.
         */
-        public prop(sPropertyName: string, oValue?: any): any | this;
+        public prop(sPropertyName: string, oValue?: any): any | sap.ui.core.Element;
 
         /**
             * Removes all the controls from the aggregation {@link #getCustomData customData}.
@@ -364,19 +359,19 @@ declare module 'sap/ui/core/Element' {
         /**
             * Removes a customData from the aggregation {@link #getCustomData customData}.
         */
-        public removeCustomData(vCustomData: number | string | CustomData): CustomData;
+        public removeCustomData(vCustomData: number | string | sap.ui.core.CustomData): sap.ui.core.CustomData;
 
         /**
             * Removes a dependent from the aggregation {@link #getDependents dependents}.
         */
-        public removeDependent(vDependent: number | string | this): this;
+        public removeDependent(vDependent: number | string | sap.ui.core.Element): sap.ui.core.Element;
 
         /**
             * Removes the given delegate from this element.
          * 
          * This method will remove all registrations of the given delegate, not only one.
         */
-        public removeEventDelegate(oDelegate: any): this;
+        public removeEventDelegate(oDelegate: any): sap.ui.core.Element;
 
         /**
             * This triggers immediate rerendering of its parent and thus of itself and its children.
@@ -387,14 +382,14 @@ declare module 'sap/ui/core/Element' {
         /**
             * Sets the {@link sap.ui.core.LayoutData} defining the layout constraints for this control when it is used inside a layout.
         */
-        public setLayoutData(oLayoutData: LayoutData): any;
+        public setLayoutData(oLayoutData: sap.ui.core.LayoutData): any;
 
         /**
             * Sets a new tooltip for this object. The tooltip can either be a simple string (which in most cases will be rendered as the `title` attribute of this Element) or an instance of {@link sap.ui.core.TooltipBase}.
          * 
          * If a new tooltip is set, any previously set tooltip is deactivated.
         */
-        public setTooltip(vTooltip: string | TooltipBase): any;
+        public setTooltip(vTooltip: string | sap.ui.core.TooltipBase): any;
 
         /**
             * Returns a simple string representation of this element.
@@ -406,7 +401,7 @@ declare module 'sap/ui/core/Element' {
         /**
             * Removes the defined binding context of this object, all bindings will now resolve relative to the parent context again.
         */
-        public unbindElement(sModelName: string): ManagedObject;
+        public unbindElement(sModelName: string): sap.ui.base.ManagedObject;
 
     }
 }

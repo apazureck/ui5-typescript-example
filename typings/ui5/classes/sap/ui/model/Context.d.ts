@@ -1,20 +1,14 @@
-declare module 'sap/ui/model/Context' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Model from "sap/ui/model/Model";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IContextSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class Context extends Object {
+    export class Context extends sap.ui.base.Object {
 
         /**
             * Constructor for Context class.
         */
-        public constructor(oModel: Model, sPath: string);
+        public constructor(oModel: sap.ui.model.Model, sPath: string);
 
 
         /**
@@ -27,7 +21,7 @@ declare module 'sap/ui/model/Context' {
         /**
             * Returns a metadata object for class sap.ui.model.Context.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -39,7 +33,7 @@ declare module 'sap/ui/model/Context' {
         /**
             * Getter for model
         */
-        public getModel(): Model;
+        public getModel(): sap.ui.model.Model;
 
         /**
             * Gets the (model dependent) object the context points to or the object with the given relative binding path

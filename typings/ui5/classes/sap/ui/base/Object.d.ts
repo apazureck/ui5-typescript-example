@@ -1,15 +1,14 @@
-declare module 'sap/ui/base/Object' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Interface from "sap/ui/base/Interface";
-
-
-    export interface IObjectSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class Object {
+    export class Object {
+
+        /**
+            * Constructor for an sap.ui.base.Object.
+        */
+        public constructor();
 
 
         /**
@@ -19,7 +18,7 @@ declare module 'sap/ui/base/Object' {
          * 
          * The static info can at least contain the following entries:  <li>baseType: {string} fully qualified name of a base class or empty <li>publicMethods: {string} an array of method names that will be visible in the interface proxy returned by {@link #getInterface} 
         */
-        public static defineClass(sClassName: string, oStaticInfo: { baseType: string, publicMethods: any[], }, FNMetaImpl?: Function): Metadata;
+        public static defineClass(sClassName: string, oStaticInfo: { baseType: string, publicMethods: any[], }, FNMetaImpl?: Function): sap.ui.base.Metadata;
 
         /**
             * Destructor method for objects
@@ -48,7 +47,7 @@ declare module 'sap/ui/base/Object' {
         /**
             * Returns the public interface of the object.
         */
-        public getInterface(): Interface | void | {};
+        public getInterface(): sap.ui.base.Interface;
 
         /**
             * Returns the metadata for the class that this object belongs to.

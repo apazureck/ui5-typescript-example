@@ -5,6 +5,12 @@ declare namespace jQuery {
     */
     export class Event {
 
+        /**
+            * Constructor for a jQuery.Event object.
+         *  See "http://www.jquery.com" and "http://api.jquery.com/category/events/event-object/".
+        */
+        public constructor();
+
 
         /**
             * Returns OffsetX of Event. In jQuery there is a bug. In IE the value is in offsetX, in FF in layerX

@@ -1,11 +1,10 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Configuration options for the direction of texts.
     */
-    export type TextDirection = "Inherit" | "LTR" | "RTL";
-    export namespace TextDirection {
-        const Inherit: TextDirection;
-        const LTR: TextDirection;
-        const RTL: TextDirection;
+    export enum TextDirection {
+        Inherit = "Inherit",
+        LTR = "LTR",
+        RTL = "RTL",
     }
 }

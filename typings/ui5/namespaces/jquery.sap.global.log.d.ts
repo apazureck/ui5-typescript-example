@@ -9,16 +9,16 @@ declare namespace jQuery.sap.log {
     export function addLogListener(oListener: any): jQuery.sap.log.Logger;/**
     * Creates a new debug-level entry in the log with the given message, details and calling component.
     */
-    export function debug(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
+    export function debug(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
     * Creates a new error-level entry in the log with the given message, details and calling component.
     */
-    export function error(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
+    export function error(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
     * Creates a new fatal-level entry in the log with the given message, details and calling component.
     */
-    export function fatal(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
+    export function fatal(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
     * Returns the log level currently effective for the given component. If no component is given or when no level has been configured for a given component, the log level for the default component of this logger is returned.
     */
-    export function getLevel(sany?: string): number;/**
+    export function getLevel(sComponent?: string): number;/**
     * Retrieves the currently recorded log entries.
     */
     export function getLog(): any;/**
@@ -33,15 +33,15 @@ declare namespace jQuery.sap.log {
  * 
  * The optional second parameter `iDefaultLogLevel` allows to specify a default log level for the component. It is only applied when no log level has been defined so far for that component (ignoring inherited log levels). If this method is called multiple times for the same component but with different log levels, only the first call one might be taken into account.
     */
-    export function getLogger(sany: string, iDefaultLogLevel?: number): jQuery.sap.log.Logger;/**
+    export function getLogger(sComponent: string, iDefaultLogLevel?: number): jQuery.sap.log.Logger;/**
     * Creates a new info-level entry in the log with the given message, details and calling component.
     */
-    export function info(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
+    export function info(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
     * Checks whether logging is enabled for the given log level, depending on the currently effective log level for the given component.
  * 
  * If no component is given, the default component of this logger will be taken into account.
     */
-    export function isLoggable(iLevel?: number, sany?: string): boolean;/**
+    export function isLoggable(iLevel?: number, sComponent?: string): boolean;/**
     * Allows to remove a registered LogListener.
     */
     export function removeLogListener(oListener: any): jQuery.sap.log.Logger;/**
@@ -49,11 +49,11 @@ declare namespace jQuery.sap.log {
  * 
  * ** Note **: Setting a global default log level has no impact on already defined component log levels. They always override the global default log level.
     */
-    export function setLevel(iLogLevel: jQuery.sap.log.Level, sany?: string): jQuery.sap.log.Logger;/**
+    export function setLevel(iLogLevel: jQuery.sap.log.Level, sComponent?: string): jQuery.sap.log.Logger;/**
     * Creates a new trace-level entry in the log with the given message, details and calling component.
     */
-    export function trace(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
+    export function trace(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;/**
     * Creates a new warning-level entry in the log with the given message, details and calling component.
     */
-    export function warning(sMessage: string, sDetails?: string, sany?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;
+    export function warning(sMessage: string, sDetails?: string, sComponent?: string, fnSupportInfo?: Function): jQuery.sap.log.Logger;
 }

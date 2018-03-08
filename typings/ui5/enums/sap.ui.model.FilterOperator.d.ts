@@ -1,20 +1,19 @@
-declare module 'sap/ui/model/FilterOperator' {
+declare namespace sap.ui.model {
     /**
     * Operators for the Filter.
     */
-    export type FilterOperator = "All" | "Any" | "BT" | "Contains" | "EndsWith" | "EQ" | "GE" | "GT" | "LE" | "LT" | "NE" | "StartsWith";
-    export namespace FilterOperator {
-        const All: FilterOperator;
-        const Any: FilterOperator;
-        const BT: FilterOperator;
-        const Contains: FilterOperator;
-        const EndsWith: FilterOperator;
-        const EQ: FilterOperator;
-        const GE: FilterOperator;
-        const GT: FilterOperator;
-        const LE: FilterOperator;
-        const LT: FilterOperator;
-        const NE: FilterOperator;
-        const StartsWith: FilterOperator;
+    export enum FilterOperator {
+        All = "All",
+        Any = "Any",
+        BT = "BT",
+        Contains = "Contains",
+        EndsWith = "EndsWith",
+        EQ = "EQ",
+        GE = "GE",
+        GT = "GT",
+        LE = "LE",
+        LT = "LT",
+        NE = "NE",
+        StartsWith = "StartsWith",
     }
 }

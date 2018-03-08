@@ -1,14 +1,13 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Configuration options for text alignments.
     */
-    export type TextAlign = "Begin" | "Center" | "End" | "Initial" | "Left" | "Right";
-    export namespace TextAlign {
-        const Begin: TextAlign;
-        const Center: TextAlign;
-        const End: TextAlign;
-        const Initial: TextAlign;
-        const Left: TextAlign;
-        const Right: TextAlign;
+    export enum TextAlign {
+        Begin = "Begin",
+        Center = "Center",
+        End = "End",
+        Initial = "Initial",
+        Left = "Left",
+        Right = "Right",
     }
 }

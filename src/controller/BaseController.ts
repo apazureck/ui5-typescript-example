@@ -17,7 +17,7 @@ export default class BaseController extends Controller
      * @returns {sap.ui.core.routing.Router} the router for this component
      */
     public getRouter(): Router {
-        return (<UIComponent>this.getOwnerComponent()).getRouter();
+        return (<sap.ui.core.UIComponent>this.getOwnerComponent()).getRouter();
     }
 
     /**

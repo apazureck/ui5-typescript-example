@@ -1,14 +1,11 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core.routing {
     /**
     * Enumaration for different HistoryDirections
     */
-    export namespace routing {
-        export type HistoryDirection = "Backwards" | "Forwards" | "NewEntry" | "Unknown";
-        export namespace HistoryDirection {
-            const Backwards: routing.HistoryDirection;
-            const Forwards: routing.HistoryDirection;
-            const NewEntry: routing.HistoryDirection;
-            const Unknown: routing.HistoryDirection;
-        }
+    export enum HistoryDirection {
+        Backwards = "Backwards",
+        Forwards = "Forwards",
+        NewEntry = "NewEntry",
+        Unknown = "Unknown",
     }
 }

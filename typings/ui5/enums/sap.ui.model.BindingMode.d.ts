@@ -1,12 +1,11 @@
-declare module 'sap/ui/model/BindingMode' {
+declare namespace sap.ui.model {
     /**
     * Binding type definitions.
     */
-    export type BindingMode = "Default" | "OneTime" | "OneWay" | "TwoWay";
-    export namespace BindingMode {
-        const Default: BindingMode;
-        const OneTime: BindingMode;
-        const OneWay: BindingMode;
-        const TwoWay: BindingMode;
+    export enum BindingMode {
+        Default = "Default",
+        OneTime = "OneTime",
+        OneWay = "OneWay",
+        TwoWay = "TwoWay",
     }
 }

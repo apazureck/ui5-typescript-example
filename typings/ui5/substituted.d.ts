@@ -13,9 +13,6 @@ declare namespace sap.ui.model {
 declare namespace sap.m {
     export type IconTabBarSelectList = any;
 }
-declare namespace jQuery.sap.log {
-    export type Logger = {};
-}
 declare namespace sap.ui.core {
     export type CSSColor = string;
 }

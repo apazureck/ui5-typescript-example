@@ -1,12 +1,11 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Priorities for general use.
     */
-    export type Priority = "High" | "Low" | "Medium" | "None";
-    export namespace Priority {
-        const High: Priority;
-        const Low: Priority;
-        const Medium: Priority;
-        const None: Priority;
+    export enum Priority {
+        High = "High",
+        Low = "Low",
+        Medium = "Medium",
+        None = "None",
     }
 }

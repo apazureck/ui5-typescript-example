@@ -1,24 +1,9 @@
-declare module 'sap/ui/core/UIComponent' {
-    import Element from "sap/ui/core/Element";
-    import View from "sap/ui/core/mvc/View";
-    import Control from "sap/ui/core/Control";
-    import Metadata from "sap/ui/base/Metadata";
-    import Router from "sap/ui/core/routing/Router";
-    import Controller from "sap/ui/core/mvc/Controller";
-    import Targets from "sap/ui/core/routing/Targets";
-    import UIArea from "sap/ui/core/UIArea";
-    import RenderManager from "sap/ui/core/RenderManager";
-    import ComponentContainer from "sap/ui/core/ComponentContainer";
-    import ComponentMetadata from "sap/ui/core/ComponentMetadata";
-    import Component, { IComponentSettings } from 'sap/ui/core/Component';
-
-    export interface IUIComponentSettings extends IComponentSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class UIComponent extends Component {
+    export class UIComponent extends sap.ui.core.Component {
 
         /**
             * Base Class for UIComponent.
@@ -27,13 +12,13 @@ declare module 'sap/ui/core/UIComponent' {
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: IUIComponentSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
             * Returns an element by its ID in the context of the component.
         */
-        public byId(sId: string): Element;
+        public byId(sId: string): sap.ui.core.Element;
 
         /**
             * Hook method to create the content (UI Control Tree) of this component.
@@ -44,7 +29,7 @@ declare module 'sap/ui/core/UIComponent' {
          * 
          * This method can be overwritten by subclasses if the default implementation doesn't fit their needs. Subclasses are not limited to views as return type but may return any control, but only a single control (can be the root of a larger control tree, however).
         */
-        public createContent(): View | Control;
+        public createContent(): sap.ui.core.mvc.View | sap.ui.core.Control;
 
         /**
             * Convert the given component local element ID to a globally unique ID by prefixing it with the component ID.
@@ -68,7 +53,14 @@ declare module 'sap/ui/core/UIComponent' {
         /**
             
         */
-        protected getEventingParent(): this;
+        protected getEventingParent(): any | sap.ui.base.EventProvider;
+
+        /**
+            * Returns the parent in the eventing hierarchy of this object.
+         * 
+         * Per default this returns null, but if eventing is used in objects, which are hierarchically structured, this can be overwritten to make the object hierarchy visible to the eventing and enables the use of event bubbling within this object hierarchy.
+        */
+        protected getEventingParent(): sap.ui.base.EventProvider;
 
         /**
             * Returns the local ID of an element by removing the component ID prefix or `null` if the ID does not contain a prefix.
@@ -76,29 +68,29 @@ declare module 'sap/ui/core/UIComponent' {
         public getLocalId(sId: string): string;
 
         /**
-            * Returns a metadata object for class sap.ui.core.UIComponent.
-        */
-        public static getMetadata(): Metadata | any | ComponentMetadata;
-
-        /**
             * Returns a metadata object for class sap.ui.base.EventProvider.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the Component class.
         */
-        public static getMetadata(): ComponentMetadata;
+        public static getMetadata(): sap.ui.core.ComponentMetadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the specific class of the current instance.
         */
-        public getMetadata(): ComponentMetadata | any | Metadata;
+        public getMetadata(): sap.ui.core.ComponentMetadata | any | sap.ui.base.Metadata;
+
+        /**
+            * Returns a metadata object for class sap.ui.core.UIComponent.
+        */
+        public static getMetadata(): sap.ui.base.Metadata | any | sap.ui.core.ComponentMetadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -119,27 +111,27 @@ declare module 'sap/ui/core/UIComponent' {
          *               }
          *          });` `
         */
-        protected getRootControl(): Control;
+        protected getRootControl(): sap.ui.core.Control;
 
         /**
             * Returns the reference to the router instance which has been created by the UIComponent once the routes in the routing metadata has been defined.
         */
-        public getRouter(): Router;
+        public getRouter(): sap.ui.core.routing.Router;
 
         /**
             * Returns the reference to the router instance. The passed controller or view has to be created in the context of a UIComponent to return the router instance. Otherwise this function will return undefined. You may define the routerClass property in the config section of the routing to make the Component create your router extension. Example: routing: { config: { routerClass : myAppNamespace.MyRouterClass ... } ...
         */
-        public static getRouterFor(oControllerOrView: View | Controller): Router;
+        public static getRouterFor(oControllerOrView: sap.ui.core.mvc.View | sap.ui.core.mvc.Controller): sap.ui.core.routing.Router;
 
         /**
             * Returns the reference to the Targets instance which has been created by the UIComponent once the targets in the routing metadata has been defined. If routes have been defined, it will be the Targets instance created and used by the router.
         */
-        public getTargets(): Targets;
+        public getTargets(): sap.ui.core.routing.Targets;
 
         /**
             * Returns the reference to the UIArea of the container.
         */
-        public getUIArea(): UIArea;
+        public getUIArea(): sap.ui.core.UIArea;
 
         /**
             * Initializes the Component instance after creation.
@@ -171,12 +163,12 @@ declare module 'sap/ui/core/UIComponent' {
         /**
             * Renders the root control of the UIComponent.
         */
-        public render(oRenderManager: RenderManager): any;
+        public render(oRenderManager: sap.ui.core.RenderManager): any;
 
         /**
             * Sets the reference to the ComponentContainer - later required for the determination of the UIArea for the UIComponent.
         */
-        public setContainer(oContainer: ComponentContainer): this;
+        public setContainer(oContainer: sap.ui.core.ComponentContainer): sap.ui.core.UIComponent;
 
     }
 }

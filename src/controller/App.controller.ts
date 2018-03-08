@@ -3,15 +3,17 @@ import JSONModel        from "sap/ui/model/json/JSONModel";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 import SplitApp from "sap/m/SplitApp";
 
+
 @UI5("typescript.example.ui5app.controller.App")
 export default class App extends BaseController {
 
     public onInit(): void {
-        var oViewModel: JSONModel,
+        let oViewModel: JSONModel,
             oComponent = this.getOwnerComponent(),
             oModel = oComponent.getModel<ODataModel>(),
             fnSetAppNotBusy: () => void,
-            oListSelector = oComponent.oListSelector,
+            // Hack!
+            oListSelector = (oComponent as any).oListSelector,
             iOriginalBusyDelay = this.getView().getBusyIndicatorDelay();
 
         oViewModel = new JSONModel({

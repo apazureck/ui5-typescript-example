@@ -1,23 +1,14 @@
-declare module 'sap/ui/model/ListBinding' {
-    import { FilterType } from "sap/ui/model/FilterType";
-    import Context from "sap/ui/model/Context";
-    import Metadata from "sap/ui/base/Metadata";
-    import Sorter from "sap/ui/model/Sorter";
-    import Model from "sap/ui/model/Model";
-    import Binding, { IBindingSettings } from 'sap/ui/model/Binding';
-
-    export interface IListBindingSettings extends IBindingSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class ListBinding extends Binding {
+    export class ListBinding extends sap.ui.model.Binding {
 
         /**
             * Constructor for ListBinding.
         */
-        public constructor(oModel: Model, sPath: string, oContext: Context, aSorters?: any[], aFilters?: any[], mParameters?: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters: any[], aFilters: any[], mParameters: any);
 
 
         /**
@@ -62,7 +53,7 @@ declare module 'sap/ui/model/ListBinding' {
          * 
          * <h3>Auto-Grouping of Filters<h3> Filters are first grouped according to their binding path. All filters belonging to the same group are ORed and after that the results of all groups are ANDed. Usually this means, all filters applied to a single table column are ORed, while filters on different table columns are ANDed.
         */
-        public filter(aFilters: any[], sFilterType?: FilterType): this;
+        public filter(aFilters: any[], sFilterType?: sap.ui.model.FilterType): sap.ui.model.ListBinding;
 
         /**
             * Returns an array of binding contexts for the bound target list.
@@ -86,7 +77,7 @@ declare module 'sap/ui/model/ListBinding' {
         /**
             * Gets the group for the given context. Must only be called if isGrouped() returns that grouping is enabled for this binding. The grouping will be performed using the first sorter (in case multiple sorters are defined).
         */
-        public getGroup(oContext: Context): any;
+        public getGroup(oContext: sap.ui.model.Context): any;
 
         /**
             * Returns the number of entries in the list. This might be an estimated or preliminary length, in case the full length is not known yet, see method isLengthFinal().
@@ -96,7 +87,7 @@ declare module 'sap/ui/model/ListBinding' {
         /**
             * Returns a metadata object for class sap.ui.model.ListBinding.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -118,7 +109,7 @@ declare module 'sap/ui/model/ListBinding' {
         /**
             * Sorts the list according to the sorter object
         */
-        public sort(aSorters: Sorter | any[]): this;
+        public sort(aSorters: sap.ui.model.Sorter | any[]): sap.ui.model.ListBinding;
 
     }
 }

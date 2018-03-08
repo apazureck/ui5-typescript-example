@@ -1,14 +1,14 @@
-declare module 'sap/ui/model/DataState' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IDataStateSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class DataState extends Object {
+    export class DataState extends sap.ui.base.Object {
+
+        /**
+            
+        */
+        public constructor();
 
 
         /**
@@ -49,7 +49,7 @@ declare module 'sap/ui/model/DataState' {
         /**
             * Returns a metadata object for class sap.ui.model.DataState.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -91,32 +91,32 @@ declare module 'sap/ui/model/DataState' {
         /**
             * Sets an array of control state messages.
         */
-        protected setControlMessages(the: any[]): this;
+        protected setControlMessages(the: any[]): sap.ui.model.DataState;
 
         /**
             * Sets the dirty value that was rejected by the type validation.
         */
-        protected setInvalidValue(vInvalidValue: any): this;
+        protected setInvalidValue(vInvalidValue: any): sap.ui.model.DataState;
 
         /**
             * Sets the laundering state of the data state.
         */
-        protected setLaundering(bLaundering: boolean): this;
+        protected setLaundering(bLaundering: boolean): sap.ui.model.DataState;
 
         /**
             * Sets an array of model state messages.
         */
-        public setModelMessages(the: any[]): this;
+        public setModelMessages(the: any[]): sap.ui.model.DataState;
 
         /**
             * Sets the formatted original value of the data.
         */
-        protected setOriginalValue(vOriginalValue: boolean): this;
+        protected setOriginalValue(vOriginalValue: boolean): sap.ui.model.DataState;
 
         /**
             * Sets the formatted value of the data state,
         */
-        protected setValue(vValue: any): this;
+        protected setValue(vValue: any): sap.ui.model.DataState;
 
     }
 }

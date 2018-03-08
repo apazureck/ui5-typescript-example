@@ -1,10 +1,9 @@
-declare module 'sap/ui/model/FilterType' {
+declare namespace sap.ui.model {
     /**
     * Types of Filters.
     */
-    export type FilterType = "Application" | "Control";
-    export namespace FilterType {
-        const Application: FilterType;
-        const Control: FilterType;
+    export enum FilterType {
+        Application = "Application",
+        Control = "Control",
     }
 }

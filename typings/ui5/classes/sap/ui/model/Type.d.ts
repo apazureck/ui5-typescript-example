@@ -1,14 +1,14 @@
-declare module 'sap/ui/model/Type' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface ITypeSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class Type extends Object {
+    export class Type extends sap.ui.base.Object {
+
+        /**
+            * Constructor for a new Type.
+        */
+        public constructor();
 
 
         /**
@@ -21,7 +21,7 @@ declare module 'sap/ui/model/Type' {
         /**
             * Returns a metadata object for class sap.ui.model.Type.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

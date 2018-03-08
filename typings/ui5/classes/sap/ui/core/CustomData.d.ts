@@ -1,24 +1,16 @@
-declare module 'sap/ui/core/CustomData' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Element, { IElementSettings } from 'sap/ui/core/Element';
-
-    export interface ICustomDataSettings extends IElementSettings {
-        key?: string;
-        value?: any;
-        writeToDom?: boolean;
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class CustomData extends Element {
+    export class CustomData extends sap.ui.core.Element {
 
         /**
             * Constructor for a new CustomData.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: ICustomDataSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -38,12 +30,12 @@ declare module 'sap/ui/core/CustomData' {
         /**
             * Returns a metadata object for class sap.ui.core.CustomData.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -55,7 +47,7 @@ declare module 'sap/ui/core/CustomData' {
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
             * Gets current value of property {@link #getValue value}.
@@ -80,7 +72,7 @@ declare module 'sap/ui/core/CustomData' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setKey(sKey: string): this;
+        public setKey(sKey: string): sap.ui.core.CustomData;
 
         /**
             * Sets a new value for property {@link #getValue value}.
@@ -89,7 +81,7 @@ declare module 'sap/ui/core/CustomData' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setValue(oValue: any): this;
+        public setValue(oValue: any): sap.ui.core.CustomData;
 
         /**
             * Sets a new value for property {@link #getWriteToDom writeToDom}.
@@ -100,7 +92,7 @@ declare module 'sap/ui/core/CustomData' {
          * 
          * Default value is `false`.
         */
-        public setWriteToDom(bWriteToDom: boolean): this;
+        public setWriteToDom(bWriteToDom: boolean): sap.ui.core.CustomData;
 
     }
 }

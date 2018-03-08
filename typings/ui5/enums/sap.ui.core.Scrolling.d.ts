@@ -1,12 +1,11 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Defines the possible values for horizontal and vertical scrolling behavior.
     */
-    export type Scrolling = "Auto" | "Hidden" | "None" | "Scroll";
-    export namespace Scrolling {
-        const Auto: Scrolling;
-        const Hidden: Scrolling;
-        const None: Scrolling;
-        const Scroll: Scrolling;
+    export enum Scrolling {
+        Auto = "Auto",
+        Hidden = "Hidden",
+        None = "None",
+        Scroll = "Scroll",
     }
 }

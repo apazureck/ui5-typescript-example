@@ -1,13 +1,10 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core.dnd {
     /**
     * Configuration options for drop positions.
     */
-    export namespace dnd {
-        export type DropPosition = "Between" | "On" | "OnOrBetween";
-        export namespace DropPosition {
-            const Between: dnd.DropPosition;
-            const On: dnd.DropPosition;
-            const OnOrBetween: dnd.DropPosition;
-        }
+    export enum DropPosition {
+        Between = "Between",
+        On = "On",
+        OnOrBetween = "OnOrBetween",
     }
 }

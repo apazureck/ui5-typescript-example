@@ -1,21 +1,17 @@
-declare module 'sap/ui/core/message/MessageManager' {
-    import Message from "sap/ui/core/message/Message";
-    import MessageModel from "sap/ui/model/message/MessageModel";
-    import Metadata from "sap/ui/base/Metadata";
-    import MessageProcessor from "sap/ui/core/message/MessageProcessor";
-    import ManagedObject from "sap/ui/base/ManagedObject";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
+declare namespace sap.ui.core.message {
 
-    export interface IMessageManagerSettings extends IEventProviderSettings {
-    }
+    export class MessageManager extends sap.ui.base.EventProvider {
 
-    export default class MessageManager extends EventProvider {
+        /**
+            * Constructor for a new MessageManager.
+        */
+        public constructor();
 
 
         /**
             * Add messages to MessageManager
         */
-        public addMessages(vMessages: Message | any[]): any;
+        public addMessages(vMessages: sap.ui.core.message.Message | any[]): any;
 
         /**
             * destroy MessageManager
@@ -32,12 +28,12 @@ declare module 'sap/ui/core/message/MessageManager' {
         /**
             * Get the MessageModel
         */
-        public getMessageModel(): MessageModel;
+        public getMessageModel(): sap.ui.model.message.MessageModel;
 
         /**
             * Returns a metadata object for class sap.ui.core.message.MessageManager.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -49,12 +45,12 @@ declare module 'sap/ui/core/message/MessageManager' {
         /**
             * Register MessageProcessor
         */
-        public registerMessageProcessor(oProcessor: MessageProcessor): any;
+        public registerMessageProcessor(oProcessor: sap.ui.core.message.MessageProcessor): any;
 
         /**
             * Register ManagedObject: Validation and Parse errors are handled by the MessageManager for this object
         */
-        public registerObject(oObject: ManagedObject, bHandleValidation: boolean): any;
+        public registerObject(oObject: sap.ui.base.ManagedObject, bHandleValidation: boolean): any;
 
         /**
             * Remove all messages
@@ -64,17 +60,17 @@ declare module 'sap/ui/core/message/MessageManager' {
         /**
             * Remove given Messages
         */
-        public removeMessages(vMessages: Message | any[]): any;
+        public removeMessages(vMessages: sap.ui.core.message.Message | any[]): any;
 
         /**
             * Deregister MessageProcessor
         */
-        public unregisterMessageProcessor(oProcessor: MessageProcessor): any;
+        public unregisterMessageProcessor(oProcessor: sap.ui.core.message.MessageProcessor): any;
 
         /**
             * Unregister ManagedObject
         */
-        public unregisterObject(oObject: ManagedObject): any;
+        public unregisterObject(oObject: sap.ui.base.ManagedObject): any;
 
     }
 }

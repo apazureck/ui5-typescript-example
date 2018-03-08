@@ -1,25 +1,16 @@
-declare module 'sap/ui/core/tmpl/TemplateControl' {
-    import Event from "sap/ui/base/Event";
-    import View from "sap/ui/core/mvc/View";
-    import Metadata from "sap/ui/base/Metadata";
-    import Template from "sap/ui/core/tmpl/Template";
-    import Control, { IControlSettings } from 'sap/ui/core/Control';
-
-    export interface ITemplateControlSettings extends IControlSettings {
-        context?: any;
-    }
+declare namespace sap.ui.core.tmpl {
 
     /**
     
     */
-    export default class TemplateControl extends Control {
+    export class TemplateControl extends sap.ui.core.Control {
 
         /**
             * Constructor for a new tmpl/TemplateControl.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: ITemplateControlSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -29,7 +20,7 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
          * 
          * Fired when the Template Control has been (re-)rendered and its HTML is present in the DOM.
         */
-        attachAfterRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachAfterRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:afterRendering afterRendering} event of this `sap.ui.core.tmpl.TemplateControl`.
@@ -38,7 +29,7 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
          * 
          * Fired when the Template Control has been (re-)rendered and its HTML is present in the DOM.
         */
-        attachAfterRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachAfterRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.tmpl.TemplateControl`.
@@ -47,7 +38,7 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
          * 
          * Fired before this Template Control is re-rendered. Use to unbind event handlers from HTML elements etc.
         */
-        attachBeforeRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
+        attachBeforeRendering<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.tmpl.TemplateControl`.
@@ -56,7 +47,7 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
          * 
          * Fired before this Template Control is re-rendered. Use to unbind event handlers from HTML elements etc.
         */
-        attachBeforeRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachBeforeRendering<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Creates a pseudo binding for an aggregation to get notified once the property changes to invalidate the control and trigger a re-rendering.
@@ -71,36 +62,36 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
         /**
             * compiles (creates and registers) a new control
         */
-        protected createControl(mSettings: any, sParentPath: string, oView: View): Control;
+        protected createControl(mSettings: any, sParentPath: string, oView: sap.ui.core.mvc.View): sap.ui.core.Control;
 
         /**
             * compiles (creates and registers) a new control
         */
-        protected createControl(mSettings: any, bDoNotAdd: boolean, oView: View): Control;
+        protected createControl(mSettings: any, bDoNotAdd: boolean, oView: sap.ui.core.mvc.View): sap.ui.core.Control;
 
         /**
             * compiles (creates and registers) a new control
         */
-        protected createControl(mSettings: any, sParentPath: string, bDoNotAdd: boolean, oView: View): Control;
+        protected createControl(mSettings: any, sParentPath: string, bDoNotAdd: boolean, oView: sap.ui.core.mvc.View): sap.ui.core.Control;
 
         /**
             * compiles (creates and registers) a new DOM element
         */
-        protected createDOMElement(mSettings: any, sParentPath?: string, bDoNotAdd?: boolean): Control;
+        protected createDOMElement(mSettings: any, sParentPath?: string, bDoNotAdd?: boolean): sap.ui.core.Control;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:afterRendering afterRendering} event of this `sap.ui.core.tmpl.TemplateControl`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachAfterRendering(fnFunction: Function, oListener: any): this;
+        public detachAfterRendering(fnFunction: Function, oListener: any): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Detaches event handler `fnFunction` from the {@link #event:beforeRendering beforeRendering} event of this `sap.ui.core.tmpl.TemplateControl`.
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachBeforeRendering(fnFunction: Function, oListener: any): this;
+        public detachBeforeRendering(fnFunction: Function, oListener: any): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Creates a new subclass of class sap.ui.core.tmpl.TemplateControl with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -112,12 +103,12 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
         /**
             * Fires event {@link #event:afterRendering afterRendering} to attached listeners.
         */
-        protected fireAfterRendering(mParameters?: any): this;
+        protected fireAfterRendering(mParameters?: any): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Fires event {@link #event:beforeRendering beforeRendering} to attached listeners.
         */
-        protected fireBeforeRendering(mParameters?: any): this;
+        protected fireBeforeRendering(mParameters?: any): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Gets current value of property {@link #getContext context}.
@@ -129,12 +120,12 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
         /**
             * Returns a metadata object for class sap.ui.core.tmpl.TemplateControl.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -146,7 +137,7 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
             * ID of the element which is the current target of the association {@link #getTemplate template}, or `null`.
@@ -170,17 +161,17 @@ declare module 'sap/ui/core/tmpl/TemplateControl' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setContext(oContext: any): this;
+        public setContext(oContext: any): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Sets the associated {@link #getTemplate template}.
         */
-        public setTemplate(oTemplate: sap.ui.core.ID | Template): this;
+        public setTemplate(oTemplate: sap.ui.core.ID | sap.ui.core.tmpl.Template): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Sets the instance specific renderer for an anonymous template control.
         */
-        protected setTemplateRenderer(fnRenderer: Function): Template;
+        protected setTemplateRenderer(fnRenderer: Function): sap.ui.core.tmpl.Template;
 
     }
 }

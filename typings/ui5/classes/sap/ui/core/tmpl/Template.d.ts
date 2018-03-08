@@ -1,18 +1,9 @@
-declare module 'sap/ui/core/tmpl/Template' {
-    import View from "sap/ui/core/mvc/View";
-    import TemplateControl from "sap/ui/core/tmpl/TemplateControl";
-    import Metadata from "sap/ui/base/Metadata";
-    import Interface from "sap/ui/base/Interface";
-    import ManagedObject, { IManagedObjectSettings } from 'sap/ui/base/ManagedObject';
-
-    export interface ITemplateSettings extends IManagedObjectSettings {
-        content?: string;
-    }
+declare namespace sap.ui.core.tmpl {
 
     /**
     
     */
-    export default class Template extends ManagedObject {
+    export class Template extends sap.ui.base.ManagedObject {
 
         /**
             * Creates and initializes a new template with the given `sId` and settings.
@@ -21,23 +12,23 @@ declare module 'sap/ui/core/tmpl/Template' {
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: ITemplateSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
             * Returns the registered template for the given ID, if any.
         */
-        public static byId(sId: string): Template;
+        public static byId(sId: string): sap.ui.core.tmpl.Template;
 
         /**
             * Creates an anonymous TemplateControl for the Template.
         */
-        public createControl(sId: string, oContext: any, oView: View): TemplateControl;
+        public createControl(sId: string, oContext: any, oView: sap.ui.core.mvc.View): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Creates an anonymous TemplateControl for the Template.
         */
-        public createControl(sId: string, oView: View): TemplateControl;
+        public createControl(sId: string, oView: sap.ui.core.mvc.View): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Declares a new control based on this template and returns the created class / constructor function. The class is based on the information coming from the abstract functions `createMetadata` and `createRenderer`.
@@ -61,17 +52,17 @@ declare module 'sap/ui/core/tmpl/Template' {
         /**
             
         */
-        public getInterface(): any | Interface;
+        public getInterface(): any | sap.ui.base.Interface;
 
         /**
             * Returns the public interface of the object.
         */
-        public getInterface(): Interface;
+        public getInterface(): sap.ui.base.Interface;
 
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -83,7 +74,7 @@ declare module 'sap/ui/core/tmpl/Template' {
         /**
             * Returns a metadata object for class sap.ui.core.tmpl.Template.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * parses the given path and extracts the model and path
@@ -93,17 +84,17 @@ declare module 'sap/ui/core/tmpl/Template' {
         /**
             * Creates an anonymous TemplateControl for the Template and places the control into the specified DOM element.
         */
-        public placeAt(oRef: string | any, oContext: any, vPosition: string | number, bInline: boolean): TemplateControl;
+        public placeAt(oRef: string | any, oContext: any, vPosition: string | number, bInline: boolean): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Creates an anonymous TemplateControl for the Template and places the control into the specified DOM element.
         */
-        public placeAt(oRef: string | any, oContext: any, bInline: boolean): TemplateControl;
+        public placeAt(oRef: string | any, oContext: any, bInline: boolean): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Creates an anonymous TemplateControl for the Template and places the control into the specified DOM element.
         */
-        public placeAt(oRef: string | any, vPosition: string | number, bInline: boolean): TemplateControl;
+        public placeAt(oRef: string | any, vPosition: string | number, bInline: boolean): sap.ui.core.tmpl.TemplateControl;
 
         /**
             * Sets a new value for property {@link #getContent content}.
@@ -112,7 +103,7 @@ declare module 'sap/ui/core/tmpl/Template' {
          * 
          * When called with a value of `null` or `undefined`, the default value of the property will be restored.
         */
-        public setContent(sContent: string): this;
+        public setContent(sContent: string): sap.ui.core.tmpl.Template;
 
     }
 }

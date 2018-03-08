@@ -1,19 +1,14 @@
-declare module 'sap/ui/core/mvc/JSONView' {
-    import Metadata from "sap/ui/base/Metadata";
-    import View, { IViewSettings } from 'sap/ui/core/mvc/View';
-
-    export interface IJSONViewSettings extends IViewSettings {
-    }
+declare namespace sap.ui.core.mvc {
 
     /**
     
     */
-    export default class JSONView extends View {
+    export class JSONView extends sap.ui.core.mvc.View {
 
         /**
             * Constructor for a new mvc/JSONView.
         */
-        public constructor(sId?: string, mSettings?: IJSONViewSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -26,7 +21,7 @@ declare module 'sap/ui/core/mvc/JSONView' {
         /**
             * Returns a metadata object for class sap.ui.core.mvc.JSONView.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -38,12 +33,12 @@ declare module 'sap/ui/core/mvc/JSONView' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
     }
 }

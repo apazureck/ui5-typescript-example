@@ -1,15 +1,12 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core.mvc {
     /**
     * Specifies possible view types
     */
-    export namespace mvc {
-        export type ViewType = "HTML" | "JS" | "JSON" | "Template" | "XML";
-        export namespace ViewType {
-            const HTML: mvc.ViewType;
-            const JS: mvc.ViewType;
-            const JSON: mvc.ViewType;
-            const Template: mvc.ViewType;
-            const XML: mvc.ViewType;
-        }
+    export enum ViewType {
+        HTML = "HTML",
+        JS = "JS",
+        JSON = "JSON",
+        Template = "Template",
+        XML = "XML",
     }
 }

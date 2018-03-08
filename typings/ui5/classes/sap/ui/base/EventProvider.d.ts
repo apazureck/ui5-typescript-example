@@ -1,39 +1,39 @@
-declare module 'sap/ui/base/EventProvider' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IEventProviderSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.base {
 
     /**
     
     */
-    export default class EventProvider extends Object {
+    export class EventProvider extends sap.ui.base.Object {
+
+        /**
+            * Creates an instance of EventProvider.
+        */
+        public constructor();
 
 
         /**
             * Attaches an event handler to the event with the given identifier.
         */
-        public attachEvent(sEventId: string, fnFunction: Function, oListener?: any): this;
+        public attachEvent(sEventId: string, fnFunction: Function, oListener?: any): sap.ui.base.EventProvider;
 
         /**
             * Attaches an event handler to the event with the given identifier.
         */
-        public attachEvent(sEventId: string, oData: any, fnFunction: Function, oListener?: any): this;
+        public attachEvent(sEventId: string, oData: any, fnFunction: Function, oListener?: any): sap.ui.base.EventProvider;
 
         /**
             * Attaches an event handler, called one time only, to the event with the given identifier.
          * 
          * When the event occurs, the handler function is called and the handler registration is automatically removed afterwards.
         */
-        public attachEventOnce(sEventId: string, fnFunction: Function, oListener?: any): this;
+        public attachEventOnce(sEventId: string, fnFunction: Function, oListener?: any): sap.ui.base.EventProvider;
 
         /**
             * Attaches an event handler, called one time only, to the event with the given identifier.
          * 
          * When the event occurs, the handler function is called and the handler registration is automatically removed afterwards.
         */
-        public attachEventOnce(sEventId: string, oData: any, fnFunction: Function, oListener?: any): this;
+        public attachEventOnce(sEventId: string, oData: any, fnFunction: Function, oListener?: any): sap.ui.base.EventProvider;
 
         /**
             * Cleans up the internal structures and removes all event handlers.
@@ -47,7 +47,7 @@ declare module 'sap/ui/base/EventProvider' {
          * 
          * The passed parameters must match those used for registration with {@link #attachEvent} beforehand.
         */
-        public detachEvent(sEventId: string, fnFunction: Function, oListener?: any): this;
+        public detachEvent(sEventId: string, fnFunction: Function, oListener?: any): sap.ui.base.EventProvider;
 
         /**
             * Creates a new subclass of class sap.ui.base.EventProvider with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -59,19 +59,19 @@ declare module 'sap/ui/base/EventProvider' {
         /**
             * Fires an {@link sap.ui.base.Event event} with the given settings and notifies all attached event handlers.
         */
-        protected fireEvent(sEventId: string, mParameters?: any, bAllowPreventDefault?: boolean, bEnableEventBubbling?: boolean): this | boolean;
+        protected fireEvent(sEventId: string, mParameters?: any, bAllowPreventDefault?: boolean, bEnableEventBubbling?: boolean): sap.ui.base.EventProvider | boolean;
 
         /**
             * Returns the parent in the eventing hierarchy of this object.
          * 
          * Per default this returns null, but if eventing is used in objects, which are hierarchically structured, this can be overwritten to make the object hierarchy visible to the eventing and enables the use of event bubbling within this object hierarchy.
         */
-        protected getEventingParent(): this;
+        protected getEventingParent(): sap.ui.base.EventProvider;
 
         /**
             * Returns a metadata object for class sap.ui.base.EventProvider.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

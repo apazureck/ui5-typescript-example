@@ -1,21 +1,14 @@
-declare module 'sap/ui/model/TreeBinding' {
-    import { FilterType } from "sap/ui/model/FilterType";
-    import Metadata from "sap/ui/base/Metadata";
-    import Model from "sap/ui/model/Model";
-    import Binding, { IBindingSettings } from 'sap/ui/model/Binding';
-
-    export interface ITreeBindingSettings extends IBindingSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class TreeBinding extends Binding {
+    export class TreeBinding extends sap.ui.model.Binding {
 
         /**
             * Constructor for TreeBinding
         */
-        public constructor(oModel: Model, sPath: string, oContext?: any, aFilters?: any[], mParameters?: any, aSorters?: any[]);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: any, aFilters: any[], mParameters: any, aSorters: any[]);
 
 
         /**
@@ -40,7 +33,7 @@ declare module 'sap/ui/model/TreeBinding' {
         /**
             * Filters the tree according to the filter definitions.
         */
-        public filter(aFilters: any[], sFilterType: FilterType): any;
+        public filter(aFilters: any[], sFilterType: sap.ui.model.FilterType): any;
 
         /**
             * Returns the number of child nodes of a specific context
@@ -57,7 +50,7 @@ declare module 'sap/ui/model/TreeBinding' {
         /**
             * Returns a metadata object for class sap.ui.model.TreeBinding.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the current value of the bound target

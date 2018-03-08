@@ -1,15 +1,15 @@
 import BaseController from "typescript/example/ui5app/controller/BaseController";
-import JSONModel      from "sap/ui/model/json/JSONModel";
-import formatter      from "typescript/example/ui5app/model/formatter";
+import JSONModel from "sap/ui/model/json/JSONModel";
+import formatter from "typescript/example/ui5app/model/formatter";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";
 import Event from "sap/ui/base/Event";
 import ODataListBinding from "sap/ui/model/odata/v2/ODataListBinding";
 import Table from "sap/m/Table";
 import ODataContextBinding from "sap/ui/model/odata/v2/ODataContextBinding";
+import { URLHelper } from "sap/m/library";
 
 @UI5("typescript.example.ui5app.controller.Detail")
-export default class Detail extends BaseController
-{
+export default class Detail extends BaseController {
     public formatter = formatter;
 
     /* =========================================================== */
@@ -21,9 +21,9 @@ export default class Detail extends BaseController
         // detail page is busy indication immediately so there is no break in
         // between the busy indication for loading the view's meta data
         var oViewModel = new JSONModel({
-            busy : false,
-            delay : 0,
-            lineItemListTitle : this.getResourceBundle().getText("detailLineItemTableHeading")
+            busy: false,
+            delay: 0,
+            lineItemListTitle: this.getResourceBundle().getText("detailLineItemTableHeading")
         }, false);
 
         this.getRouter().getRoute("object").attachPatternMatched(this._onObjectMatched, this);
@@ -44,7 +44,7 @@ export default class Detail extends BaseController
     onShareEmailPress() {
         var oViewModel = this.getModel<JSONModel>("detailView");
 
-        sap.m.URLHelper.triggerEmail(
+        URLHelper.triggerEmail(
             <string><any>null,
             oViewModel.getProperty("/shareSendEmailSubject"),
             oViewModel.getProperty("/shareSendEmailMessage")
@@ -85,10 +85,10 @@ export default class Detail extends BaseController
      * @private
      */
     private _onObjectMatched(oEvent: Event): void {
-        var sObjectId =  oEvent.getParameter("arguments").objectId;
+        var sObjectId = oEvent.getParameter("arguments").objectId;
         this.getModel<ODataModel>().metadataLoaded().then(() => {
             var sObjectPath = this.getModel<ODataModel>().createKey("Objects", {
-                ObjectID :  sObjectId
+                ObjectID: sObjectId
             });
             this._bindView("/" + sObjectPath);
         });
@@ -109,10 +109,10 @@ export default class Detail extends BaseController
         oViewModel.setProperty("/busy", false);
 
         this.getView().bindElement({
-            path : sObjectPath,
+            path: sObjectPath,
             events: {
-                change : this._onBindingChange.bind(this),
-                dataRequested : function () {
+                change: this._onBindingChange.bind(this),
+                dataRequested: function () {
                     oViewModel.setProperty("/busy", true);
                 },
                 dataReceived: function () {
@@ -132,7 +132,8 @@ export default class Detail extends BaseController
             this.getRouter().getTargets().display("detailObjectNotFound");
             // if object could not be found, the selection in the master list
             // does not make sense anymore.
-            this.getOwnerComponent().oListSelector.clearMasterListSelection();
+            // Hack!
+            (this.getOwnerComponent() as any).oListSelector.clearMasterListSelection();
             return;
         }
 
@@ -144,7 +145,8 @@ export default class Detail extends BaseController
             sObjectName = oObject.Name,
             oViewModel = this.getModel<JSONModel>("detailView");
 
-        this.getOwnerComponent().oListSelector.selectAListItem(sPath);
+        // Hack!
+        (this.getOwnerComponent() as any).oListSelector.selectAListItem(sPath);
 
         oViewModel.setProperty("/shareSendEmailSubject",
             oResourceBundle.getText("shareSendEmailObjectSubject", [sObjectId]));

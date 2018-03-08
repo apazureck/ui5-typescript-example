@@ -1,14 +1,14 @@
-declare module 'sap/ui/model/message/MessageModel' {
-    import Metadata from "sap/ui/base/Metadata";
-    import ClientModel, { IClientModelSettings } from 'sap/ui/model/ClientModel';
-
-    export interface IMessageModelSettings extends IClientModelSettings {
-    }
+declare namespace sap.ui.model.message {
 
     /**
     
     */
-    export default class MessageModel extends ClientModel {
+    export class MessageModel extends sap.ui.model.ClientModel {
+
+        /**
+            * Constructor for a new JSONModel.
+        */
+        public constructor(oMessageManager: sap.ui.core.message.MessageManager);
 
 
         /**
@@ -21,7 +21,7 @@ declare module 'sap/ui/model/message/MessageModel' {
         /**
             * Returns a metadata object for class sap.ui.model.message.MessageModel.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

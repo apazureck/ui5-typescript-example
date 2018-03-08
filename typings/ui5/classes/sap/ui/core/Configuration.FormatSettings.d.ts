@@ -1,15 +1,14 @@
-declare module 'sap/ui/core/Configuration' {
-    import Locale from "sap/ui/core/Locale";
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IFormatSettingsSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.core.Configuration {
 
     /**
     
     */
-    export class FormatSettings extends Object {
+    export class FormatSettings extends sap.ui.base.Object {
+
+        /**
+            
+        */
+        public constructor();
 
 
         /**
@@ -31,7 +30,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * If any user preferences for date, time or number formatting have been set, and if no format locale has been specified, then a special private use subtag is added to the locale, indicating to the framework that these user preferences should be applied.
         */
-        public getFormatLocale(): Locale;
+        public getFormatLocale(): sap.ui.core.Locale;
 
         /**
             * Returns the currently set customizing data for Islamic calendar support
@@ -56,7 +55,7 @@ declare module 'sap/ui/core/Configuration' {
         /**
             * Returns a metadata object for class sap.ui.core.Configuration.FormatSettings.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -86,7 +85,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the date pattern, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setDatePattern(sStyle: string, sPattern: string): this;
+        public setDatePattern(sStyle: string, sPattern: string): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Defines the day used as the first day of the week.
@@ -99,12 +98,12 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the first day of week, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setFirstDayOfWeek(iValue: number): this;
+        public setFirstDayOfWeek(iValue: number): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Allows to specify the customizing data for Islamic calendar support
         */
-        public setLegacyDateCalendarCustomizing(aMappings: any[]): this;
+        public setLegacyDateCalendarCustomizing(aMappings: any[]): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Allows to specify one of the legacy ABAP date formats.
@@ -115,7 +114,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * Note: Iranian date format 'C' is NOT yet supported by UI5. It's accepted by this method for convenience (user settings from ABAP system can be used without filtering), but it's ignored. Instead, the formats from the current format locale will be used and a warning will be logged.
         */
-        public setLegacyDateFormat(sFormatId: string): this;
+        public setLegacyDateFormat(sFormatId: string): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Allows to specify one of the legacy ABAP number format.
@@ -124,7 +123,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the legacy number format, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setLegacyNumberFormat(sFormatId: string): this;
+        public setLegacyNumberFormat(sFormatId: string): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Allows to specify one of the legacy ABAP time formats.
@@ -133,7 +132,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the legacy time format, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setLegacyTimeFormat(sFormatId: string): this;
+        public setLegacyTimeFormat(sFormatId: string): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Defines the string to be used for the given number symbol.
@@ -146,7 +145,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the number symbol, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setNumberSymbol(sStyle: string, sSymbol: string): this;
+        public setNumberSymbol(sStyle: string, sSymbol: string): sap.ui.core.Configuration.FormatSettings;
 
         /**
             * Defines the preferred format pattern for the given time format style.
@@ -159,7 +158,7 @@ declare module 'sap/ui/core/Configuration' {
          * 
          * After changing the time pattern, the framework tries to update localization specific parts of the UI. See the documentation of {@link sap.ui.core.Configuration#setLanguage} for details and restrictions.
         */
-        public setTimePattern(sStyle: string, sPattern: string): this;
+        public setTimePattern(sStyle: string, sPattern: string): sap.ui.core.Configuration.FormatSettings;
 
     }
 }

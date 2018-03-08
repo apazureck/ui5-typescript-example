@@ -2,13 +2,12 @@ import BaseObject from "sap/ui/base/Object";
 import List from "sap/m/List";
 import ListItemBase from "sap/m/ListItemBase";
 import Event from "sap/ui/base/Event";
-import { ListMode } from "sap/m/library";
+import ListMode from "sap/m/library";
 
 @UI5("typescript.example.ui5app.model.ListSelector")
-export default class ListSelector extends BaseObject
-{
-    private _oList: List
-    private _fnResolveListHasBeenSet: (oList: List) => void;
+export default class ListSelector extends BaseObject {
+    private _oList: List | undefined = undefined;
+    private _fnResolveListHasBeenSet: ((oList: List) => void) | undefined = undefined;
     private _oWhenListHasBeenSet: Promise<List>;
     private oWhenListLoadingIsDone: Promise<{ list: List, firstListitem: ListItemBase }>;
 
@@ -34,8 +33,8 @@ export default class ListSelector extends BaseObject
                         (oEvent: Event) => {
                             if (!oEvent.getParameter("data")) {
                                 fnReject({
-                                    list : oList,
-                                    error : true
+                                    list: oList,
+                                    error: true
                                 });
                             }
                             var oFirstListItem = oList.getItems()[0];
@@ -44,14 +43,14 @@ export default class ListSelector extends BaseObject
                                 // and a select event is triggered. Like that, the corresponding
                                 // detail page is loaded automatically
                                 fnResolve({
-                                    list : oList,
-                                    firstListitem : oFirstListItem
+                                    list: oList,
+                                    firstListitem: oFirstListItem
                                 });
                             } else {
                                 // No items in the list
                                 fnReject({
-                                    list : oList,
-                                    error : false
+                                    list: oList,
+                                    error: false
                                 });
                             }
                         }
@@ -68,7 +67,7 @@ export default class ListSelector extends BaseObject
      */
     public setBoundMasterList(oList: List): void {
         this._oList = oList;
-        this._fnResolveListHasBeenSet(oList);
+        if (this._fnResolveListHasBeenSet) { this._fnResolveListHasBeenSet(oList); }
     }
 
 
@@ -83,13 +82,9 @@ export default class ListSelector extends BaseObject
         this.oWhenListLoadingIsDone.then(
             () => {
                 var oList = this._oList,
-                    oSelectedItem: ListItemBase;
+                    oSelectedItem: ListItemBase | undefined;
 
-                if (oList.getMode() === ListMode.None) {
-                    return;
-                }
-
-                oSelectedItem = oList.getSelectedItem();
+                oSelectedItem = oList ? oList.getSelectedItem() : undefined;
 
                 //TODO|openui5: getPath's argument must be optional
                 // skip update if the current selection is already matching the object path
@@ -97,19 +92,20 @@ export default class ListSelector extends BaseObject
                     return;
                 }
 
-                oList.getItems().some((oItem: ListItemBase) => {
-                    //TODO|openui5: getPath's argument must be optional
-                    if (oItem.getBindingContext() && oItem.getBindingContext().getPath("") === sBindingPath) {
-                        oList.setSelectedItem(oItem, true);
-                        return true;
-                    }
-                    return false;
-                });
+                if (oList) {
+                    oList.getItems().some((oItem: ListItemBase) => {
+                        //TODO|openui5: getPath's argument must be optional
+                        if (oItem.getBindingContext() && oItem.getBindingContext().getPath("") === sBindingPath) {
+                            if (oList) { oList.setSelectedItem(oItem, true); }
+                            return true;
+                        }
+                        return false;
+                    });
+                }
             },
             () => jQuery.sap.log.warning("Could not select the list item with the path" + sBindingPath + " because the list encountered an error or had no items")
         );
     }
-
 
     /* =========================================================== */
     /* Convenience Functions for List Selection Change Event       */
@@ -126,7 +122,7 @@ export default class ListSelector extends BaseObject
      */
     public attachListSelectionChange(fnFunction: Function, oListener: any): ListSelector {
         this._oWhenListHasBeenSet.then(() => {
-            this._oList.attachSelectionChange(fnFunction, oListener);
+            if (this._oList) { this._oList.attachSelectionChange(fnFunction, oListener); }
         });
         return this;
     }
@@ -142,7 +138,7 @@ export default class ListSelector extends BaseObject
      */
     public detachListSelectionChange(fnFunction: Function, oListener: any): ListSelector {
         this._oWhenListHasBeenSet.then(() => {
-            this._oList.detachSelectionChange(fnFunction as any, oListener);
+            if (this._oList) { this._oList.detachSelectionChange(fnFunction as any, oListener); }
         });
         return this;
     }
@@ -155,7 +151,7 @@ export default class ListSelector extends BaseObject
     public clearMasterListSelection(): void {
         //use promise to make sure that 'this._oList' is available
         this._oWhenListHasBeenSet.then(() => {
-            this._oList.removeSelections(true);
+            if (this._oList) { this._oList.removeSelections(true); }
         });
     }
 }

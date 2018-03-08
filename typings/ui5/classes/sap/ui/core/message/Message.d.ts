@@ -1,13 +1,11 @@
-declare module 'sap/ui/core/message/Message' {
-    import MessageProcessor from "sap/ui/core/message/MessageProcessor";
-    import Metadata from "sap/ui/base/Metadata";
-    import { MessageType } from "sap/ui/core/library";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
+declare namespace sap.ui.core.message {
 
-    export interface IMessageSettings extends IObjectSettings {
-    }
+    export class Message extends sap.ui.base.Object {
 
-    export default class Message extends Object {
+        /**
+            * Constructor for a new Message.
+        */
+        public constructor(mParameters: { id?: string, message?: string, description?: string, descriptionUrl?: string, additionalText?: string, type?: sap.ui.core.MessageType, code?: string, technical?: boolean, processor?: sap.ui.core.message.MessageProcessor, target?: string, persistent?: boolean, date?: number, });
 
 
         /**
@@ -55,12 +53,12 @@ declare module 'sap/ui/core/message/Message' {
         /**
             * Returns the message processor
         */
-        public getMessageProcessor(): MessageProcessor;
+        public getMessageProcessor(): sap.ui.core.message.MessageProcessor;
 
         /**
             * Returns a metadata object for class sap.ui.core.message.Message.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -87,7 +85,7 @@ declare module 'sap/ui/core/message/Message' {
         /**
             * Returns the message type
         */
-        public getType(): MessageType;
+        public getType(): sap.ui.core.MessageType;
 
         /**
             * Sets the additionaltext for the message or merge different additionaltext strings
@@ -122,7 +120,7 @@ declare module 'sap/ui/core/message/Message' {
         /**
             * Set message processor
         */
-        public setMessageProcessor(oMessageProcessor: MessageProcessor): any;
+        public setMessageProcessor(oMessageProcessor: sap.ui.core.message.MessageProcessor): any;
 
         /**
             * Set message persistent
@@ -142,7 +140,7 @@ declare module 'sap/ui/core/message/Message' {
         /**
             * Set message type
         */
-        public setType(sType: MessageType): any;
+        public setType(sType: sap.ui.core.MessageType): any;
 
     }
 }

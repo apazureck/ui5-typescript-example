@@ -1,14 +1,14 @@
-declare module 'sap/ui/core/Locale' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface ILocaleSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Locale extends Object {
+    export class Locale extends sap.ui.base.Object {
+
+        /**
+            * Creates an instance of the Locale.
+        */
+        public constructor(sLocaleId: string);
 
 
         /**
@@ -44,7 +44,7 @@ declare module 'sap/ui/core/Locale' {
         /**
             * Returns a metadata object for class sap.ui.core.Locale.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

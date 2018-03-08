@@ -1,38 +1,29 @@
-declare module 'sap/ui/model/Binding' {
-    import Event from "sap/ui/base/Event";
-    import DataState from "sap/ui/model/DataState";
-    import Metadata from "sap/ui/base/Metadata";
-    import Model from "sap/ui/model/Model";
-    import Context from "sap/ui/model/Context";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
-
-    export interface IBindingSettings extends IEventProviderSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class Binding extends EventProvider {
+    export class Binding extends sap.ui.base.EventProvider {
 
         /**
             * Constructor for Binding class.
         */
-        public constructor(oModel: Model, sPath: string, oContext: Context, mParameters?: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters: any);
 
 
         /**
             * Attach event-handler `fnFunction` to the 'AggregatedDataStateChange' event of this `sap.ui.model.Binding`.
          * 
         */
-        attachAggregatedDataStateChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The DataState object of the binding. */
-            dataState?: DataState,
+        attachAggregatedDataStateChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The DataState object of the binding. */
+            dataState?: sap.ui.model.DataState,
         }>) => void, oListener?: Tcontext): this;
 
         /**
             * Attach event-handler `fnFunction` to the 'change' event of this `sap.ui.model.Model`.
          * 
         */
-        attachChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * A string stating the reason for the data change. Can be any string and new values can be added in the future. */
+        attachChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * A string stating the reason for the data change. Can be any string and new values can be added in the future. */
             reason?: string,
         }>) => void, oListener?: Tcontext): this;
 
@@ -40,7 +31,7 @@ declare module 'sap/ui/model/Binding' {
             * Attach event-handler `fnFunction` to the 'dataReceived' event of this `sap.ui.model.Binding`.
          * 
         */
-        attachDataReceived<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The data received. In error cases it will be undefined. */
+        attachDataReceived<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The data received. In error cases it will be undefined. */
             data?: string,
         }>) => void, oListener?: Tcontext): this;
 
@@ -48,14 +39,14 @@ declare module 'sap/ui/model/Binding' {
             * Attach event-handler `fnFunction` to the 'dataRequested' event of this `sap.ui.model.Binding`.
          * 
         */
-        attachDataRequested<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, void>) => void, oListener?: Tcontext): this;
+        attachDataRequested<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, void>) => void, oListener?: Tcontext): this;
 
         /**
             * Attach event-handler `fnFunction` to the 'DataStateChange' event of this `sap.ui.model.Binding`.
          * 
         */
-        attachDataStateChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The DataState object of the binding. */
-            dataState?: DataState,
+        attachDataStateChange<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The DataState object of the binding. */
+            dataState?: sap.ui.model.DataState,
         }>) => void, oListener?: Tcontext): this;
 
         /**
@@ -135,7 +126,7 @@ declare module 'sap/ui/model/Binding' {
         /**
             * Returns a metadata object for class sap.ui.model.Binding.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

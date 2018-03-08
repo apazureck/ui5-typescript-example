@@ -1,10 +1,9 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Font design for texts
     */
-    export type Design = "Monospace" | "Standard";
-    export namespace Design {
-        const Monospace: Design;
-        const Standard: Design;
+    export enum Design {
+        Monospace = "Monospace",
+        Standard = "Standard",
     }
 }

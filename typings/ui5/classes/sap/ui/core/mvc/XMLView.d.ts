@@ -1,15 +1,9 @@
-declare module 'sap/ui/core/mvc/XMLView' {
-    import Metadata from "sap/ui/base/Metadata";
-
-    import View, { IViewSettings } from 'sap/ui/core/mvc/View';
-
-    export interface IXMLViewSettings extends IViewSettings {
-    }
+declare namespace sap.ui.core.mvc {
 
     /**
     
     */
-    export default class XMLView extends View {
+    export class XMLView extends sap.ui.core.mvc.View {
 
         /**
             * Constructor for a new mvc/XMLView.
@@ -18,7 +12,7 @@ declare module 'sap/ui/core/mvc/XMLView' {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.core.mvc.View#constructor sap.ui.core.mvc.View} can be used.
         */
-        public constructor(sId?: string, mSettings?: IXMLViewSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -31,7 +25,7 @@ declare module 'sap/ui/core/mvc/XMLView' {
         /**
             * Returns a metadata object for class sap.ui.core.mvc.XMLView.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -43,12 +37,12 @@ declare module 'sap/ui/core/mvc/XMLView' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
             * Register a preprocessor for all views of a specific type.
@@ -59,7 +53,7 @@ declare module 'sap/ui/core/mvc/XMLView' {
          * 
          * ** Note **: Preprocessors work only in async views and will be ignored when the view is instantiated in sync mode by default, as this could have unexpected side effects. You may override this behaviour by setting the bSyncSupport flag to true.
         */
-        protected static registerPreprocessor(sType: string | PreprocessorType, vPreprocessor: string | Function, bSyncSupport: boolean, bOnDemand?: boolean, mSettings?: any): any;
+        protected static registerPreprocessor(sType: string | sap.ui.core.mvc.XMLView.PreprocessorType, vPreprocessor: string | Function, bSyncSupport: boolean, bOnDemand?: boolean, mSettings?: any): any;
 
         /**
             * Register a preprocessor for all views of a specific type.

@@ -1,17 +1,14 @@
-declare module 'sap/ui/core/mvc/Controller' {
-    import Element from "sap/ui/core/Element";
-    import Metadata from "sap/ui/base/Metadata";
-    import Component from "sap/ui/core/Component";
-    import View from "sap/ui/core/mvc/View";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
-
-    export interface IControllerSettings extends IEventProviderSettings {
-    }
+declare namespace sap.ui.core.mvc {
 
     /**
     
     */
-    export default class Controller extends EventProvider {
+    export class Controller extends sap.ui.base.EventProvider {
+
+        /**
+            * Instantiates a (MVC-style) controller. Consumers should call the constructor only in the typed controller scenario. In the generic controller use case, they should use {@link sap.ui.controller} instead.
+        */
+        public constructor(sName: string | any[]);
 
 
         /**
@@ -21,7 +18,7 @@ declare module 'sap/ui/core/mvc/Controller' {
          * 
          * If no view is connected or if the view doesn't contain an element with the given local ID, undefined is returned.
         */
-        public byId<T extends Element = Element>(sId: string): T;
+        public byId<T extends sap.ui.core.Element>(sId: string): T;
 
         /**
             * Converts a view local ID to a globally unique one by prepending the view ID.
@@ -40,7 +37,7 @@ declare module 'sap/ui/core/mvc/Controller' {
         /**
             * Returns a metadata object for class sap.ui.core.mvc.Controller.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -54,12 +51,12 @@ declare module 'sap/ui/core/mvc/Controller' {
          * 
          * If there is no Component connected to the view or the view is not connected to the controller, undefined is returned.
         */
-        public getOwnerComponent(): Component;
+        public getOwnerComponent(): sap.ui.core.Component;
 
         /**
             * Returns the view associated with this controller or undefined.
         */
-        public getView(): View;
+        public getView(): sap.ui.core.mvc.View;
 
         /**
             * This method is called every time the View is rendered, after the HTML is placed in the DOM-Tree. It can be used to apply additional changes to the DOM after the Renderer has finished. (Even though this method is declared as "abstract", it does not need to be defined in controllers, if the method does not exist, it will simply not be called.)

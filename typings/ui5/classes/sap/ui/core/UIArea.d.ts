@@ -1,45 +1,35 @@
-declare module 'sap/ui/core/UIArea' {
-    import Control from "sap/ui/core/Control";
-    import EventProvider from "sap/ui/base/EventProvider";
-    import Metadata from "sap/ui/base/Metadata";
-    import Interface from "sap/ui/base/Interface";
-    import Core from "sap/ui/core/Core";
-    import Context from "sap/ui/model/Context";
-    import ManagedObject, { IManagedObjectSettings } from 'sap/ui/base/ManagedObject';
-
-    export interface IUIAreaSettings extends IManagedObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class UIArea extends ManagedObject {
+    export class UIArea extends sap.ui.base.ManagedObject {
 
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(oCore: Core, oRootNode?: any);
+        public constructor(oCore: sap.ui.core.Core, oRootNode: any);
 
 
         /**
             * Adds some content to the aggregation {@link #getContent content}.
         */
-        public addContent(oContent: Control): this;
+        public addContent(oContent: sap.ui.core.Control): sap.ui.core.UIArea;
 
         /**
             * Adds some dependent to the aggregation {@link #getDependents dependents}.
         */
-        public addDependent(oDependent: Control): this;
+        public addDependent(oDependent: sap.ui.core.Control): sap.ui.core.UIArea;
 
         /**
             * Destroys all the content in the aggregation {@link #getContent content}.
         */
-        public destroyContent(): this;
+        public destroyContent(): sap.ui.core.UIArea;
 
         /**
             * Destroys all the dependents in the aggregation {@link #getDependents dependents}.
         */
-        public destroyDependents(): this;
+        public destroyDependents(): sap.ui.core.UIArea;
 
         /**
             * Creates a new subclass of class sap.ui.core.UIArea with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -51,7 +41,7 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Provide getBindingContext, as UIArea can be parent of an element.
         */
-        public getBindingContext(): any | Context;
+        public getBindingContext(): any | sap.ui.model.Context;
 
         /**
             * Get the binding context of this object for the given model name.
@@ -62,7 +52,7 @@ declare module 'sap/ui/core/UIArea' {
          * 
          * ** Note: ** A ManagedObject inherits binding contexts from the Core only when it is a descendant of a UIArea.
         */
-        public getBindingContext(sModelName?: string): Context;
+        public getBindingContext(sModelName?: string): sap.ui.model.Context;
 
         /**
             * Gets content of aggregation {@link #getContent content}.
@@ -81,7 +71,7 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Returns the Core's event provider as new eventing parent to enable control event bubbling to the core to ensure compatibility with the core validation events.
         */
-        protected getEventingParent(): this;
+        protected getEventingParent(): sap.ui.base.EventProvider;
 
         /**
             * Returns this `UIArea`'s id (as determined from provided RootNode).
@@ -96,7 +86,7 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Returns a metadata object for class sap.ui.core.UIArea.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -108,12 +98,12 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns the content control of this `UIArea` at the specified index. If no index is given the first content control is returned.
         */
-        public getRootControl(idx: number): Control;
+        public getRootControl(idx: number): sap.ui.core.Control;
 
         /**
             * Returns the Root Node hosting this instance of `UIArea`.
@@ -123,27 +113,27 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Returns this UI area. Needed to stop recursive calls from an element to its parent.
         */
-        protected getUIArea(): this;
+        protected getUIArea(): sap.ui.core.UIArea;
 
         /**
             * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getContent content}. and returns its index if found or -1 otherwise.
         */
-        public indexOfContent(oContent: Control): number;
+        public indexOfContent(oContent: sap.ui.core.Control): number;
 
         /**
             * Checks for the provided `sap.ui.core.Control` in the aggregation {@link #getDependents dependents}. and returns its index if found or -1 otherwise.
         */
-        public indexOfDependent(oDependent: Control): number;
+        public indexOfDependent(oDependent: sap.ui.core.Control): number;
 
         /**
             * Inserts a content into the aggregation {@link #getContent content}.
         */
-        public insertContent(oContent: Control, iIndex: number): this;
+        public insertContent(oContent: sap.ui.core.Control, iIndex: number): sap.ui.core.UIArea;
 
         /**
             * Inserts a dependent into the aggregation {@link #getDependents dependents}.
         */
-        public insertDependent(oDependent: Control, iIndex: number): this;
+        public insertDependent(oDependent: sap.ui.core.Control, iIndex: number): sap.ui.core.UIArea;
 
         /**
             * Will be used as end-point for invalidate-bubbling from controls up their hierarchy.
@@ -190,12 +180,12 @@ declare module 'sap/ui/core/UIArea' {
         /**
             * Removes a content from the aggregation {@link #getContent content}.
         */
-        public removeContent(vContent: number | string | Control): Control;
+        public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
         /**
             * Removes a dependent from the aggregation {@link #getDependents dependents}.
         */
-        public removeDependent(vDependent: number | string | Control): Control;
+        public removeDependent(vDependent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
         /**
             * Sets the root control to be displayed in this UIArea.
@@ -204,7 +194,7 @@ declare module 'sap/ui/core/UIArea' {
          * 
          * The real re-rendering happens whenever the re-rendering is called. Either implicitly at the end of any control event or by calling sap.ui.getCore().applyChanges().
         */
-        public setRootControl(oRootControl: Interface | Control): any;
+        public setRootControl(oRootControl: sap.ui.base.Interface | sap.ui.core.Control): any;
 
         /**
             * Allows setting the Root Node hosting this instance of `UIArea`.

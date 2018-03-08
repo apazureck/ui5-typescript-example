@@ -1,15 +1,9 @@
-declare module 'sap/ui/model/Filter' {
-    import Metadata from "sap/ui/base/Metadata";
-    import { FilterOperator } from "sap/ui/model/FilterOperator";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface IFilterSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class Filter extends Object {
+    export class Filter extends sap.ui.base.Object {
 
         /**
             * Constructor for Filter.
@@ -18,7 +12,7 @@ declare module 'sap/ui/model/Filter' {
          * 
          * The filter operators `Any` and `All` are only supported in V4 OData models. When creating a filter instance with these filter operators, the argument `variable` only accepts a string identifier and `condition` needs to be another filter instance.
         */
-        public constructor(vFilterInfo: { path: string, test: Function, comparator: Function, operator: FilterOperator, value1: any, value2?: any, variable?: string, condition?: Filter, filters: any[], and: boolean, }, vOperator?: FilterOperator | Function | boolean, vValue1?: any, vValue2?: any);
+        public constructor(vFilterInfo: { path: string, test: Function, comparator: Function, operator: sap.ui.model.FilterOperator, value1: any, value2?: any, variable?: string, condition?: sap.ui.model.Filter, filters: any[], and: boolean, }, vOperator: sap.ui.model.FilterOperator | Function | boolean, vValue1: any, vValue2: any);
 
 
         /**
@@ -40,7 +34,7 @@ declare module 'sap/ui/model/Filter' {
         /**
             * Returns a metadata object for class sap.ui.model.Filter.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

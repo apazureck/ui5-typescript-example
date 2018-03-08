@@ -1,14 +1,14 @@
-declare module 'sap/ui/model/ClientModel' {
-    import Metadata from "sap/ui/base/Metadata";
-    import Model, { IModelSettings } from 'sap/ui/model/Model';
-
-    export interface IClientModelSettings extends IModelSettings {
-    }
+declare namespace sap.ui.model {
 
     /**
     
     */
-    export default class ClientModel extends Model {
+    export class ClientModel extends sap.ui.model.Model {
+
+        /**
+            * Constructor for a new ClientModel.
+        */
+        public constructor(oData: any);
 
 
         /**
@@ -36,7 +36,7 @@ declare module 'sap/ui/model/ClientModel' {
         /**
             * Returns a metadata object for class sap.ui.model.ClientModel.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

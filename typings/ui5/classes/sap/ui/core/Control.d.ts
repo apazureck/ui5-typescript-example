@@ -1,27 +1,16 @@
-declare module 'sap/ui/core/Control' {
-    import Event from "sap/ui/base/Event";
-    import Metadata from "sap/ui/base/Metadata";
-    import ManagedObject from "sap/ui/base/ManagedObject";
-    import Element, { IElementSettings } from 'sap/ui/core/Element';
-
-    export interface IControlSettings extends IElementSettings {
-        busy?: boolean;
-        busyIndicatorDelay?: number;
-        visible?: boolean;
-        fieldGroupIds?: string[];
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Control extends Element {
+    export class Control extends sap.ui.core.Element {
 
         /**
             * Creates and initializes a new control with the given `sId` and settings.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId?: string, mSettings?: IControlSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
@@ -41,14 +30,14 @@ declare module 'sap/ui/core/Control' {
          * 
          * Only characters allowed inside HTML attributes are allowed. Quotes are not allowed and this method will ignore any strings containing quotes. Strings containing spaces are interpreted as multiple custom style classes which are split by space and can be removed individually later by calling removeStyleClass. Multiple calls with the same sStyleClass will have no different effect than calling once. If sStyleClass is null, empty string or it contains quotes, the call is ignored.
         */
-        public addStyleClass(sStyleClass: string): this;
+        public addStyleClass(sStyleClass: string): sap.ui.core.Control;
 
         /**
             * Defines whether the user can select text inside this control. Defaults to `true` as long as this method has not been called.
          * 
          * ** Note: **This only works in IE and Safari; for Firefox the element's style must be set to: `-moz-user-select: none;` in order to prevent text selection.
         */
-        public allowTextSelection(bAllow: boolean): this;
+        public allowTextSelection(bAllow: boolean): sap.ui.core.Control;
 
         /**
             * Allows binding handlers for any native browser event to the root HTML element of this Control. This internally handles DOM element replacements caused by re-rendering.
@@ -60,7 +49,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * Use {@link #detachBrowserEvent} to remove the event handler(s) again.
         */
-        public attachBrowserEvent(sEventType?: string, fnHandler?: Function, oListener?: any): this;
+        public attachBrowserEvent(sEventType?: string, fnHandler?: Function, oListener?: any): sap.ui.core.Control;
 
         /**
             * Attaches event handler `fnFunction` to the {@link #event:validateFieldGroup validateFieldGroup} event of this `sap.ui.core.Control`.
@@ -71,7 +60,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * Listen to this event to validate data of the controls belonging to a field group. See {@link sap.ui.core.Control#setFieldGroupIds}.
         */
-        attachValidateFieldGroup<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * field group IDs of the logical field groups to validate */
+        attachValidateFieldGroup<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * field group IDs of the logical field groups to validate */
             fieldGroupIds: any[],
         }>) => void, oListener?: Tcontext): this;
 
@@ -84,7 +73,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * Listen to this event to validate data of the controls belonging to a field group. See {@link sap.ui.core.Control#setFieldGroupIds}.
         */
-        attachValidateFieldGroup<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * field group IDs of the logical field groups to validate */
+        attachValidateFieldGroup<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * field group IDs of the logical field groups to validate */
             fieldGroupIds: any[],
         }>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
 
@@ -94,11 +83,28 @@ declare module 'sap/ui/core/Control' {
         public checkFieldGroupIds(vFieldGroupIds?: string | any[]): boolean;
 
         /**
+            * Clones a tree of objects starting with the object on which clone is called first (root object).
+         * 
+         * The IDs within the newly created clone tree are derived from the original IDs by appending the given `sIdSuffix` (if no suffix is given, one will be created; it will be unique across multiple clone calls).
+         * 
+         * The `oOptions` configuration object can have the following properties:  * The boolean value `cloneChildren` specifies whether associations/aggregations will be cloned * The boolean value `cloneBindings` specifies if bindings will be cloned 
+         * 
+         * For each cloned object the following settings are cloned based on the metadata of the object and the defined options:  * all properties that are not bound. If `cloneBinding` is `false`, even these properties will be cloned; the values are used by reference, they are not cloned * all aggregated objects that are not bound. If `cloneBinding` is `false`, even the ones that are bound will be cloned; they are all cloned recursively using the same `sIdSuffix` * all associated controls; when an association points to an object inside the cloned object tree, then the cloned association will be modified to that it points to the clone of the target object. When the association points to a managed object outside of the cloned object tree, then its target won't be changed. * all models set via `setModel()`; used by reference * all property and aggregation bindings (if `cloneBindings` is `true`); the pure binding information (path, model name) is cloned, but all other information like template control or factory function, data type or formatter function are copied by reference. The bindings themselves are created anew as they are specific for the combination (object, property, model). As a result, any later changes to a binding of the original object are not reflected in the clone, but changes to e.g the type or template etc. are. 
+         * 
+         * Each clone is created by first collecting the above mentioned settings and then creating a new instance with the normal constructor function. As a result, any side effects of mutator methods (`setProperty` etc.) or init hooks are repeated during clone creation. There is no need to override `clone()` just to reproduce these internal settings!
+         * 
+         * Custom controls however can override `clone()` to implement additional clone steps. They usually will first call `clone()` on the super class and then modify the returned clone accordingly.
+         * 
+         * Applications ** must never provide ** the second parameter `aLocaleIds`. It is determined automatically for the root object (and its non-existence also serves as an indicator for the root object). Specifying it will break the implementation of `clone()`.
+        */
+        protected clone(sIdSuffix?: string, aLocalIds?: any[], oOptions?: any, cloneChildren?: boolean, cloneBindings?: boolean): sap.ui.base.ManagedObject;
+
+        /**
             * Overrides {@link sap.ui.core.Element#clone Element.clone} to clone additional internal state.
          * 
          * The additionally cloned information contains:  <li>browser event handlers attached with {@link #attachBrowserEvent} <li>text selection behavior <li>style classes added with {@link #addStyleClass} 
         */
-        protected clone(sIdSuffix?: string, aLocalIds?: any[]): this;
+        protected clone(sIdSuffix?: string, aLocalIds?: any[]): sap.ui.core.Element | sap.ui.base.ManagedObject;
 
         /**
             * Removes event handlers which have been previously attached using {@link #attachBrowserEvent}.
@@ -112,7 +118,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * The passed function and listener object must match the ones used for event registration.
         */
-        public detachValidateFieldGroup(fnFunction: Function, oListener: any): this;
+        public detachValidateFieldGroup(fnFunction: Function, oListener: any): sap.ui.core.Control;
 
         /**
             * Creates a new subclass of class sap.ui.core.Control with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -124,7 +130,7 @@ declare module 'sap/ui/core/Control' {
         /**
             * Fires event {@link #event:validateFieldGroup validateFieldGroup} to attached listeners.
         */
-        protected fireValidateFieldGroup(mParameters?: { fieldGroupIds?: any[], }): this;
+        protected fireValidateFieldGroup(mParameters?: { fieldGroupIds?: any[], }): sap.ui.core.Control;
 
         /**
             * This function (if available on the concrete control) provides the current accessibility state of the control.
@@ -193,19 +199,19 @@ declare module 'sap/ui/core/Control' {
         public getIdForLabel(): string;
 
         /**
-            * Returns a metadata object for class sap.ui.core.Control.
+            * Returns the metadata for the class that this object belongs to.
         */
-        public static getMetadata(): Metadata | any;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
         /**
-            * Returns the metadata for the class that this object belongs to.
+            * Returns a metadata object for class sap.ui.core.Control.
         */
-        public getMetadata(): any | Metadata;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -246,7 +252,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * The `oOrigin` parameter was introduced to allow parent controls to limit their rerendering to certain areas that have been invalidated by their children. As there is no strong guideline for control developers to provide the parameter, it is not a reliable source of information. It is therefore not recommended in general to use it, only in scenarios where a control and its descendants know each other very well (e.g. complex controls where parent and children have the same code owner).
         */
-        protected invalidate(oOrigin?: ManagedObject): any;
+        protected invalidate(oOrigin?: sap.ui.base.ManagedObject): any;
 
         /**
             * Check if the control is currently in busy state.
@@ -280,12 +286,12 @@ declare module 'sap/ui/core/Control' {
          * 
          *  * "first": The control is added as the first element to the container. * "last": The control is added as the last element to the container (default). * "only": All existing children of the container are removed (not destroyed!) and the control is added as new child. * * index *: The control is added at the specified * index * to the container. 
         */
-        public placeAt(oRef: string | any | this, vPosition?: string | number): this;
+        public placeAt(oRef: string | any | sap.ui.core.Control, vPosition?: string | number): sap.ui.core.Control;
 
         /**
             * Removes the given string from the list of custom style classes that have been set previously. Regular style classes like "sapUiBtn" cannot be removed.
         */
-        public removeStyleClass(sStyleClass: string): this;
+        public removeStyleClass(sStyleClass: string): sap.ui.core.Control;
 
         /**
             * Tries to replace its DOM reference by re-rendering.
@@ -295,12 +301,12 @@ declare module 'sap/ui/core/Control' {
         /**
             * Set the controls busy state.
         */
-        public setBusy(bBusy: boolean): this;
+        public setBusy(bBusy: boolean): sap.ui.core.Control;
 
         /**
             * Define the delay, after which the busy indicator will show up.
         */
-        public setBusyIndicatorDelay(iDelay: number): this;
+        public setBusyIndicatorDelay(iDelay: number): sap.ui.core.Control;
 
         /**
             * Sets a new value for property {@link #getFieldGroupIds fieldGroupIds}.
@@ -315,7 +321,7 @@ declare module 'sap/ui/core/Control' {
          * 
          * Default value is `[]`.
         */
-        public setFieldGroupIds(sFieldGroupIds: any[]): this;
+        public setFieldGroupIds(sFieldGroupIds: any[]): sap.ui.core.Control;
 
         /**
             * Sets a new value for property {@link #getVisible visible}.
@@ -330,14 +336,14 @@ declare module 'sap/ui/core/Control' {
          * 
          * Default value is `true`.
         */
-        public setVisible(bVisible: boolean): this;
+        public setVisible(bVisible: boolean): sap.ui.core.Control;
 
         /**
             * The string given as "sStyleClass" will be be either added to or removed from the "class" attribute of this control's root HTML element, depending on the value of "bAdd": if bAdd is true, sStyleClass will be added. If bAdd is not given, sStyleClass will be removed if it is currently present and will be added if not present. If sStyleClass is null or empty string, the call is ignored.
          * 
          * See addStyleClass and removeStyleClass for further documentation.
         */
-        public toggleStyleClass(sStyleClass: string, bAdd: boolean): this;
+        public toggleStyleClass(sStyleClass: string, bAdd: boolean): sap.ui.core.Control;
 
         /**
             * Triggers the `validateFieldGroup` event for this control.

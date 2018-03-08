@@ -1,13 +1,12 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Defines the different message types of a message
     */
-    export type MessageType = "Error" | "Information" | "None" | "Success" | "Warning";
-    export namespace MessageType {
-        const Error: MessageType;
-        const Information: MessageType;
-        const None: MessageType;
-        const Success: MessageType;
-        const Warning: MessageType;
+    export enum MessageType {
+        Error = "Error",
+        Information = "Information",
+        None = "None",
+        Success = "Success",
+        Warning = "Warning",
     }
 }

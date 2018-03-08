@@ -1,26 +1,20 @@
-declare module 'sap/ui/core/mvc/JSView' {
-    import Control from "sap/ui/core/Control";
-    import Metadata from "sap/ui/base/Metadata";
-    import View, { IViewSettings } from 'sap/ui/core/mvc/View';
-
-    export interface IJSViewSettings extends IViewSettings {
-    }
+declare namespace sap.ui.core.mvc {
 
     /**
     
     */
-    export default class JSView extends View {
+    export class JSView extends sap.ui.core.mvc.View {
 
         /**
             * Constructor for a new mvc/JSView.
         */
-        public constructor(sId?: string, mSettings?: IJSViewSettings);
+        public constructor(sId: string, mSettings: any);
 
 
         /**
             * A method to be implemented by JSViews, returning the View UI. While for declarative View types like XMLView or JSONView the user interface definition is declared in a separate file, JSViews programmatically construct the UI. This happens in the createContent method which every JSView needs to implement. The View implementation can construct the complete UI in this method - or only return the root control and create the rest of the UI lazily later on.
         */
-        public createContent(): Control;
+        public createContent(): sap.ui.core.Control;
 
         /**
             * Creates a new subclass of class sap.ui.core.mvc.JSView with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -39,7 +33,7 @@ declare module 'sap/ui/core/mvc/JSView' {
         /**
             * Returns a metadata object for class sap.ui.core.mvc.JSView.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -51,12 +45,12 @@ declare module 'sap/ui/core/mvc/JSView' {
         /**
             * Returns the metadata for the class that this object belongs to.
         */
-        public getMetadata(): any | Metadata;
+        public getMetadata(): any | sap.ui.base.Metadata;
 
         /**
             * Returns a metadata object for class sap.ui.core.Element.
         */
-        public static getMetadata(): Metadata;
+        public static getMetadata(): sap.ui.base.Metadata;
 
     }
 }

@@ -1,14 +1,6 @@
-declare module 'sap/ui/core/routing/Target' {
-    import Event from "sap/ui/base/Event";
-    import Control from "sap/ui/core/Control";
-    import Metadata from "sap/ui/base/Metadata";
-    import Views from "sap/ui/core/routing/Views";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
+declare namespace sap.ui.core.routing {
 
-    export interface ITargetSettings extends IEventProviderSettings {
-    }
-
-    export default class Target extends EventProvider {
+    export class Target extends sap.ui.base.EventProvider {
 
         /**
             * Provides a convenient way for placing views into the correct containers of your application.
@@ -17,7 +9,7 @@ declare module 'sap/ui/core/routing/Target' {
          *  If you are using the mobile library, please use the {@link sap.m.routing.Targets} constructor, please read the documentation there.
          * 
         */
-        public constructor(oOptions: any, oViews: Views, oParent?: Target);
+        public constructor(oOptions: any, oViews: sap.ui.core.routing.Views, oParent: sap.ui.core.routing.Target);
 
 
         /**
@@ -25,13 +17,13 @@ declare module 'sap/ui/core/routing/Target' {
          * 
          * This function can be used for applying modification on the view or the container to make the rerendering occur together with the later aggregation change.
         */
-        protected _beforePlacingViewIntoContainer(mArguments: { container: Control, view: Control, data?: any, }): any;
+        protected _beforePlacingViewIntoContainer(mArguments: { container: sap.ui.core.Control, view: sap.ui.core.Control, data?: any, }): any;
 
         /**
             * Attach event-handler `fnFunction` to the 'display' event of this `sap.ui.core.routing.Target`.
          * 
         */
-        attachDisplay<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The view that got displayed. */
+        attachDisplay<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The view that got displayed. */
             view: any, /* * The control that now contains the view in the controlAggregation */
             control: any, /* * The options object passed to the constructor {@link sap.ui.core.routing.Target#constructor} */
             config: any, /* * The data passed into the {@link sap.ui.core.routing.Target#display} function */
@@ -42,7 +34,7 @@ declare module 'sap/ui/core/routing/Target' {
             * Attach event-handler `fnFunction` to the 'display' event of this `sap.ui.core.routing.Target`.
          * 
         */
-        attachDisplay<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The view that got displayed. */
+        attachDisplay<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The view that got displayed. */
             view: any, /* * The control that now contains the view in the controlAggregation */
             control: any, /* * The options object passed to the constructor {@link sap.ui.core.routing.Target#constructor} */
             config: any, /* * The data passed into the {@link sap.ui.core.routing.Target#display} function */
@@ -52,7 +44,7 @@ declare module 'sap/ui/core/routing/Target' {
         /**
             * Destroys the target, will be called by {@link sap.m.routing.Targets} don't call this directly.
         */
-        public destroy(): this;
+        public destroy(): sap.ui.core.routing.Target | any;
 
         /**
             * Destructor method for objects
@@ -65,7 +57,7 @@ declare module 'sap/ui/core/routing/Target' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachDisplay(fnFunction: Function, oListener: any): this;
+        public detachDisplay(fnFunction: Function, oListener: any): sap.ui.core.routing.Target;
 
         /**
             * Creates a view and puts it in an aggregation of a control that has been defined in the {@link sap.ui.core.routing.Target#constructor}.
@@ -82,12 +74,12 @@ declare module 'sap/ui/core/routing/Target' {
         /**
             * Fire event created to attached listeners.
         */
-        protected fireDisplay(mArguments?: any): this;
+        protected fireDisplay(mArguments?: any): sap.ui.core.routing.Target;
 
         /**
             * Returns a metadata object for class sap.ui.core.routing.Target.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

@@ -1,27 +1,14 @@
-declare module 'sap/ui/core/Core' {
-    import Event from "sap/ui/base/Event";
-    import Element from "sap/ui/core/Element";
-    import Type from "sap/ui/model/Type";
-    import RenderManager from "sap/ui/core/RenderManager";
-    import UIArea from "sap/ui/core/UIArea";
-    import Application from "sap/ui/app/Application";
-    import Component from "sap/ui/core/Component";
-    import Configuration from "sap/ui/core/Configuration";
-    import EventBus from "sap/ui/core/EventBus";
-    import MessageManager from "sap/ui/core/message/MessageManager";
-    import Metadata from "sap/ui/base/Metadata";
-    import Model from "sap/ui/model/Model";
-    import Interface from "sap/ui/base/Interface";
-    import Control from "sap/ui/core/Control";
-    import Object, { IObjectSettings } from 'sap/ui/base/Object';
-
-    export interface ICoreSettings extends IObjectSettings {
-    }
+declare namespace sap.ui.core {
 
     /**
     
     */
-    export default class Core extends Object {
+    export class Core extends sap.ui.base.Object {
+
+        /**
+            
+        */
+        public constructor();
 
 
         /**
@@ -52,10 +39,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachFormatError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the format error occurred */
-            element: Element, /* * The property name of the element where the format error occurred */
+        attachFormatError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the format error occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the format error occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the format error occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the format error occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the format error) */
             oldValue: any, /* * The exception object which occurred and has more information about the format error */
             exception: any,
@@ -83,7 +70,7 @@ declare module 'sap/ui/core/Core' {
         /**
             * Register a listener for the `localizationChanged` event.
         */
-        attachLocalizationChanged<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * a map of the changed localization properties */
+        attachLocalizationChanged<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * a map of the changed localization properties */
             changes: any,
         }>) => void, oListener: Tcontext): this;
 
@@ -92,10 +79,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachParseError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the parse error occurred */
-            element: Element, /* * The property name of the element where the parse error occurred */
+        attachParseError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the parse error occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the parse error occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the parse error occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the parse error occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the parse error) */
             oldValue: any, /* * The exception object which occurred and has more information about the parse error */
             exception: any,
@@ -106,10 +93,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachParseError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the parse error occurred */
-            element: Element, /* * The property name of the element where the parse error occurred */
+        attachParseError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the parse error occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the parse error occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the parse error occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the parse error occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the parse error) */
             oldValue: any, /* * The exception object which occurred and has more information about the parse error */
             exception: any,
@@ -118,7 +105,7 @@ declare module 'sap/ui/core/Core' {
         /**
             * Attach event-handler `fnFunction` to the `ThemeChanged` event of this `sap.ui.core.Core`.
         */
-        attachThemeChanged<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * Theme name */
+        attachThemeChanged<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * Theme name */
             theme: string,
         }>) => void, oListener?: Tcontext): this;
 
@@ -127,10 +114,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachValidationError<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the validation error occurred */
-            element: Element, /* * The property name of the element where the validation error occurred */
+        attachValidationError<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the validation error occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the validation error occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the validation error occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the validation error occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the validation error) */
             oldValue: any, /* * The exception object which occurred and has more information about the validation error */
             exception: any,
@@ -141,10 +128,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachValidationError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the validation error occurred */
-            element: Element, /* * The property name of the element where the validation error occurred */
+        attachValidationError<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the validation error occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the validation error occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the validation error occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the validation error occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the validation error) */
             oldValue: any, /* * The exception object which occurred and has more information about the validation error */
             exception: any,
@@ -155,10 +142,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachValidationSuccess<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the successful validation occurred */
-            element: Element, /* * The property name of the element where the successfull validation occurred */
+        attachValidationSuccess<TcustomData, Tcontext>(oData: any, fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the successful validation occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the successfull validation occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the validation occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the validation occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the validation) */
             oldValue: any,
         }>, oCustomData?: TcustomData) => void, oListener?: Tcontext): this;
@@ -168,10 +155,10 @@ declare module 'sap/ui/core/Core' {
          *  Please note that this event is a bubbling event and may already be canceled before reaching the core.
          * 
         */
-        attachValidationSuccess<Tcontext>(fnFunction: (this: Tcontext, oEvent: Event<this, { /* * The Element where the successful validation occurred */
-            element: Element, /* * The property name of the element where the successfull validation occurred */
+        attachValidationSuccess<Tcontext>(fnFunction: (this: Tcontext, oEvent: sap.ui.base.Event<this, { /* * The Element where the successful validation occurred */
+            element: sap.ui.core.Element, /* * The property name of the element where the successfull validation occurred */
             property: string, /* * The type of the property */
-            type: Type, /* * The value of the property which was entered when the validation occurred */
+            type: sap.ui.model.Type, /* * The value of the property which was entered when the validation occurred */
             newValue: any, /* * The value of the property which was present before a new value was entered (before the validation) */
             oldValue: any,
         }>) => void, oListener?: Tcontext): this;
@@ -184,7 +171,7 @@ declare module 'sap/ui/core/Core' {
         /**
             * Returns the registered element for the given id, if any.
         */
-        public byId(sId: string): Element;
+        public byId(sId: string): sap.ui.core.Element;
 
         /**
             * Creates a component with the provided id and settings.
@@ -198,12 +185,12 @@ declare module 'sap/ui/core/Core' {
          * 
          * The caller must take care to destroy the render manager when it is no longer needed. Calling this method before the Core has been {@link #isInitialized initialized}, is not recommended.
         */
-        public createRenderManager(): RenderManager;
+        public createRenderManager(): sap.ui.core.RenderManager;
 
         /**
             * Creates a new sap.ui.core.UIArea.
         */
-        public createUIArea(oDomRef: string | any): UIArea;
+        public createUIArea(oDomRef: string | any): sap.ui.core.UIArea;
 
         /**
             * Unregisters a listener for control events.
@@ -218,7 +205,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachFormatError(fnFunction: Function, oListener: any): this;
+        public detachFormatError(fnFunction: Function, oListener: any): sap.ui.core.Core;
 
         /**
             * Unregisters a listener for the central interval timer.
@@ -240,7 +227,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachParseError(fnFunction: Function, oListener: any): this;
+        public detachParseError(fnFunction: Function, oListener: any): sap.ui.core.Core;
 
         /**
             * Detach event-handler `fnFunction` from the `ThemeChanged` event of this `sap.ui.core.Core`.
@@ -255,7 +242,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachValidationError(fnFunction: Function, oListener: any): this;
+        public detachValidationError(fnFunction: Function, oListener: any): sap.ui.core.Core;
 
         /**
             * Detach event-handler `fnFunction` from the 'validationSuccess' event of `sap.ui.core.Core`.
@@ -263,7 +250,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachValidationSuccess(fnFunction: Function, oListener: any): this;
+        public detachValidationSuccess(fnFunction: Function, oListener: any): sap.ui.core.Core;
 
         /**
             * Creates a new subclass of class sap.ui.core.Core with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -277,48 +264,48 @@ declare module 'sap/ui/core/Core' {
          * 
          * Expects following event parameters:  * 'element' of type `sap.ui.core.Element` * 'property' of type `string` * 'type' of type `string` * 'newValue' of type `object` * 'oldValue' of type `object` * 'exception' of type `object` 
         */
-        protected fireFormatError(mArguments?: any): this;
+        protected fireFormatError(mArguments?: any): sap.ui.core.Core;
 
         /**
             * Fire event parseError to attached listeners.
          * 
          * Expects following event parameters:  * 'element' of type `sap.ui.core.Element` * 'property' of type `string` * 'type' of type `string` * 'newValue' of type `object` * 'oldValue' of type `object` * 'exception' of type `object` 
         */
-        protected fireParseError(mArguments?: any): this;
+        protected fireParseError(mArguments?: any): sap.ui.core.Core;
 
         /**
             * Fire event validationError to attached listeners.
          * 
          * Expects following event parameters:  * 'element' of type `sap.ui.core.Element` * 'property' of type `string` * 'type' of type `string` * 'newValue' of type `object` * 'oldValue' of type `object` * 'exception' of type `object` 
         */
-        protected fireValidationError(mArguments?: any): this;
+        protected fireValidationError(mArguments?: any): sap.ui.core.Core;
 
         /**
             * Fire event validationSuccess to attached listeners.
          * 
          * Expects following event parameters:  * 'element' of type `sap.ui.core.Element` * 'property' of type `string` * 'type' of type `string` * 'newValue' of type `object` * 'oldValue' of type `object` 
         */
-        protected fireValidationSuccess(mArguments?: any): this;
+        protected fireValidationSuccess(mArguments?: any): sap.ui.core.Core;
 
         /**
             * Returns the instance of the application (if exists).
         */
-        public getApplication(): Application;
+        public getApplication(): sap.ui.app.Application;
 
         /**
             * Returns the registered component for the given id, if any.
         */
-        public getComponent(sId: string): Component;
+        public getComponent(sId: string): sap.ui.core.Component;
 
         /**
             * Returns the Configuration of the Core.
         */
-        public getConfiguration(): Configuration;
+        public getConfiguration(): sap.ui.core.Configuration;
 
         /**
             * Returns the registered element for the given ID, if any.
         */
-        public getControl(sId: string): Element;
+        public getControl(sId: string): sap.ui.core.Element;
 
         /**
             * Returns the Id of the control/element currently in focus.
@@ -328,12 +315,12 @@ declare module 'sap/ui/core/Core' {
         /**
             * Returns the registered element for the given ID, if any.
         */
-        public getElementById(sId: string): Element;
+        public getElementById(sId: string): sap.ui.core.Element;
 
         /**
             * Returns the event bus.
         */
-        public getEventBus(): EventBus;
+        public getEventBus(): sap.ui.core.EventBus;
 
         /**
             * Retrieves a resource bundle for the given library and locale.
@@ -362,12 +349,12 @@ declare module 'sap/ui/core/Core' {
         /**
             * Returns the active `MessageManager` instance.
         */
-        public getMessageManager(): MessageManager;
+        public getMessageManager(): sap.ui.core.message.MessageManager;
 
         /**
             * Returns a metadata object for class sap.ui.core.Core.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.
@@ -383,7 +370,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * Note: to be compatible with future versions of this API, applications must not use the value `null`, the empty string `""` or the string literals `"null"` or `"undefined"` as model name.
         */
-        public getModel(sName?: string | any): Model;
+        public getModel(sName?: string | any): sap.ui.model.Model;
 
         /**
             
@@ -393,7 +380,7 @@ declare module 'sap/ui/core/Core' {
         /**
             * Returns the instance of the root component (if exists).
         */
-        public getRootComponent(): Component;
+        public getRootComponent(): sap.ui.core.Component;
 
         /**
             * Returns the static, hidden area DOM element belonging to this core instance.
@@ -407,12 +394,12 @@ declare module 'sap/ui/core/Core' {
         /**
             * Returns the registered template for the given id, if any.
         */
-        public getTemplate(sId: string): Component;
+        public getTemplate(sId: string): sap.ui.core.Component;
 
         /**
             * Returns a UIArea if the given ID/Element belongs to one.
         */
-        public getUIArea(o: string | any): UIArea;
+        public getUIArea(o: string | any): sap.ui.core.UIArea;
 
         /**
             * Returns `true` if there are any pending rendering tasks or when such rendering tasks are currently being executed.
@@ -536,12 +523,12 @@ declare module 'sap/ui/core/Core' {
          * 
          * Note: to be compatible with future versions of this API, applications must not use the value `null`, the empty string `""` or the string literals `"null"` or `"undefined"` as model name.
         */
-        public setModel(oModel: Model, sName?: string): this;
+        public setModel(oModel: sap.ui.model.Model, sName?: string): sap.ui.core.Core;
 
         /**
             * Implicitly creates a new `UIArea` (or reuses an exiting one) for the given DOM reference and adds the given control reference to the UIAreas content (existing content will be removed).
         */
-        public setRoot(oDomRef: string | any, oControl: Interface | Control): any;
+        public setRoot(oDomRef: string | any, oControl: sap.ui.base.Interface | sap.ui.core.Control): any;
 
         /**
             * Defines the root directory from below which UI5 should load the theme with the given name. Optionally allows restricting the setting to parts of a theme covering specific control libraries.
@@ -562,7 +549,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * If the custom theme should be loaded initially (via bootstrap attribute), the `themeRoots` property of the `window["sap-ui-config"]` object must be used instead of calling `sap.ui.getCore().setThemeRoot(...)` in order to configure the theme location early enough.
         */
-        public setThemeRoot(sThemeName: string, sThemeBaseUrl: string): this;
+        public setThemeRoot(sThemeName: string, sThemeBaseUrl: string): sap.ui.core.Core;
 
         /**
             * Defines the root directory from below which UI5 should load the theme with the given name. Optionally allows restricting the setting to parts of a theme covering specific control libraries.
@@ -583,7 +570,7 @@ declare module 'sap/ui/core/Core' {
          * 
          * If the custom theme should be loaded initially (via bootstrap attribute), the `themeRoots` property of the `window["sap-ui-config"]` object must be used instead of calling `sap.ui.getCore().setThemeRoot(...)` in order to configure the theme location early enough.
         */
-        public setThemeRoot(sThemeName: string, aLibraryNames: any[], sThemeBaseUrl: string): this;
+        public setThemeRoot(sThemeName: string, aLibraryNames: any[], sThemeBaseUrl: string): sap.ui.core.Core;
 
         /**
             * Unlocks the Core.

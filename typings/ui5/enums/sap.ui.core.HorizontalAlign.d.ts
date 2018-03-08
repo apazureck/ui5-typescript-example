@@ -1,13 +1,12 @@
-declare module 'sap/ui/core/library' {
+declare namespace sap.ui.core {
     /**
     * Configuration options for horizontal alignments of controls
     */
-    export type HorizontalAlign = "Begin" | "Center" | "End" | "Left" | "Right";
-    export namespace HorizontalAlign {
-        const Begin: HorizontalAlign;
-        const Center: HorizontalAlign;
-        const End: HorizontalAlign;
-        const Left: HorizontalAlign;
-        const Right: HorizontalAlign;
+    export enum HorizontalAlign {
+        Begin = "Begin",
+        Center = "Center",
+        End = "End",
+        Left = "Left",
+        Right = "Right",
     }
 }

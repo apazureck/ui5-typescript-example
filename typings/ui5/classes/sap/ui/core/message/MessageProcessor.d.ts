@@ -1,33 +1,32 @@
-declare module 'sap/ui/core/message/MessageProcessor' {
-    import ListBinding from "sap/ui/model/ListBinding";
-    import Metadata from "sap/ui/base/Metadata";
-    import EventProvider, { IEventProviderSettings } from 'sap/ui/base/EventProvider';
-
-    export interface IMessageProcessorSettings extends IEventProviderSettings {
-    }
+declare namespace sap.ui.core.message {
 
     /**
     
     */
-    export default class MessageProcessor extends EventProvider {
+    export class MessageProcessor extends sap.ui.base.EventProvider {
+
+        /**
+            * Constructor for a new MessageProcessor
+        */
+        public constructor();
 
 
         /**
             * Attach event-handler `fnFunction` to the 'messageChange' event of this `sap.ui.core.message.MessageProcessor`.
          * 
         */
-        public attachMessageChange(fnFunction: Function, oListener?: any): this;
+        public attachMessageChange(fnFunction: Function, oListener?: any): sap.ui.core.message.MessageProcessor;
 
         /**
             * Attach event-handler `fnFunction` to the 'messageChange' event of this `sap.ui.core.message.MessageProcessor`.
          * 
         */
-        public attachMessageChange(oData: any, fnFunction: Function, oListener?: any): this;
+        public attachMessageChange(oData: any, fnFunction: Function, oListener?: any): sap.ui.core.message.MessageProcessor;
 
         /**
             * Implement in inheriting classes
         */
-        public checkMessage(): ListBinding;
+        public checkMessage(): sap.ui.model.ListBinding;
 
         /**
             * Destroys the MessageProcessor Instance
@@ -40,7 +39,7 @@ declare module 'sap/ui/core/message/MessageProcessor' {
          * 
          * The passed function and listener object must match the ones previously used for event registration.
         */
-        public detachMessageChange(fnFunction: Function, oListener: any): this;
+        public detachMessageChange(fnFunction: Function, oListener: any): sap.ui.core.message.MessageProcessor;
 
         /**
             * Creates a new subclass of class sap.ui.core.message.MessageProcessor with name `sClassName` and enriches it with the information contained in `oClassInfo`.
@@ -52,7 +51,7 @@ declare module 'sap/ui/core/message/MessageProcessor' {
         /**
             * Fire event messageChange to attached listeners.
         */
-        protected fireMessageChange(mArguments?: any): this;
+        protected fireMessageChange(mArguments?: any): sap.ui.core.message.MessageProcessor;
 
         /**
             * Returns the ID of the MessageProcessor instance
@@ -62,7 +61,7 @@ declare module 'sap/ui/core/message/MessageProcessor' {
         /**
             * Returns a metadata object for class sap.ui.core.message.MessageProcessor.
         */
-        public static getMetadata(): Metadata | any;
+        public static getMetadata(): sap.ui.base.Metadata | any;
 
         /**
             * Returns the metadata for the class that this object belongs to.

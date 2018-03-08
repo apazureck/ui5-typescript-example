@@ -1,3 +1,7 @@
+declare namespace sapui {
+    export import _ = sap.ui;
+}
+
 declare namespace jQuery {
 
     // Methods
@@ -10,7 +14,7 @@ declare namespace jQuery {
     export function addAriaLabelledBy(sId: string, bPrepend?: boolean): any;/**
     * Extension function to the jQuery.fn which identifies SAPUI5 controls in the given jQuery context.
     */
-    export function control(iIndex?: number): any[] | any;/**
+    export function control(iIndex?: number): any[] | sapui._.core.Control | any;/**
     * Sets or gets the position of the cursor in an element that supports cursor positioning
     */
     export function cursorPos(iPos: number): number | any;/**
@@ -48,7 +52,7 @@ declare namespace jQuery {
     export function removeAriaLabelledBy(sId: string): any;/**
     
     */
-    export function root(oRootany: any): any;/**
+    export function root(oRootControl: any): any;/**
     * Sets or returns the scrollLeft value of the first element in the given jQuery collection in right-to-left mode. Precondition: The element is rendered in RTL mode.
  * 
  * Reason for this method is that the major browsers use three different values for the same scroll position when in RTL mode. This method hides those differences and returns/applies the same value that would be returned in LTR mode: The distance in px how far the given container is scrolled away from the leftmost scroll position.
