@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Time" {
     import Date from "sap/ui/model/type/Date";
 
-    export = Time;
-
-
-
-
     /**
     
     */
-    class Time extends Date {
+    export default class Time extends Date {
+
 
         /**
             * Constructor for a Time type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/Time" {
         public getMetadata(): any;
 
     }
-
 
 }

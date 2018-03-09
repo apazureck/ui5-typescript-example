@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/Dialog" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type BorderDesign = sapuicommonslibrary.enums.BorderDesign;
+    import { enums } from "sap/ui/commons/library";
+    type BorderDesign = enums.BorderDesign;
     import Button from "sap/ui/commons/Button";
-
-    export = Dialog;
-
-
-
 
     /**
     
     */
-    class Dialog extends sap.ui.core.Control {
+    export default class Dialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Dialog.
@@ -534,6 +530,5 @@ declare module "sap/ui/commons/Dialog" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

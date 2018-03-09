@@ -1,14 +1,10 @@
 declare module "sap/ui/test/matchers/Ancestor" {
 
-    export = Ancestor;
-
-
-
-
     /**
     
     */
-    class Ancestor {
+    export default class Ancestor {
+
 
         /**
             
@@ -17,6 +13,5 @@ declare module "sap/ui/test/matchers/Ancestor" {
 
 
     }
-
 
 }

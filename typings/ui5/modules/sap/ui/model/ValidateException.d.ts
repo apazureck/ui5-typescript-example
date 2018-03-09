@@ -1,14 +1,10 @@
 declare module "sap/ui/model/ValidateException" {
 
-    export = ValidateException;
-
-
-
-
     /**
     
     */
-    class ValidateException {
+    export default class ValidateException {
+
 
         /**
             * Creates a new ValidateException.
@@ -17,6 +13,5 @@ declare module "sap/ui/model/ValidateException" {
 
 
     }
-
 
 }

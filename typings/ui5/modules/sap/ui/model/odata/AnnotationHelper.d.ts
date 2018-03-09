@@ -1,11 +1,9 @@
 declare module "sap/ui/model/odata/AnnotationHelper" {
-    import sapuicoreutilXMLPreprocessor from "sap/ui/core/util/XMLPreprocessor";
-    type IContext = sapuicoreutilXMLPreprocessor.IContext;
+    import { IContext } from "sap/ui/core/util/XMLPreprocessor";
+    /**
 
-    export = AnnotationHelper;
-
-
-
+*/
+    export default AnnotationHelper;
     namespace AnnotationHelper {
 
         // Methods
@@ -87,5 +85,4 @@ declare module "sap/ui/model/odata/AnnotationHelper" {
     */
         export function simplePath(oInterface: IContext | sap.ui.model.Context, vRawValue?: any): string;
     }
-
 }

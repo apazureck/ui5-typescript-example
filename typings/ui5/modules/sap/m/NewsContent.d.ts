@@ -1,16 +1,11 @@
 declare module "sap/m/NewsContent" {
-    import sapmlibrary from "sap/m/library";
-    type Size = sapmlibrary.Size;
-
-    export = NewsContent;
-
-
-
+    import { Size } from "sap/m/library";
 
     /**
     
     */
-    class NewsContent extends sap.ui.core.Control {
+    export default class NewsContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.NewsContent control.
@@ -132,6 +127,5 @@ declare module "sap/m/NewsContent" {
         public setSubheader(sSubheader: string): this;
 
     }
-
 
 }

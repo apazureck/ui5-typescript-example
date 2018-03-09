@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/SortAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = SortAction;
-
-
-
-
     /**
     
     */
-    class SortAction extends SemanticButton {
+    export default class SortAction extends SemanticButton {
+
 
         /**
             * Constructor for a new SortAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/SortAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

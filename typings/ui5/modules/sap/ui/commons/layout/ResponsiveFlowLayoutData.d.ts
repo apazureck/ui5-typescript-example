@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/layout/ResponsiveFlowLayoutData" {
     import sap_ui_layout_ResponsiveFlowLayoutData from "sap/ui/layout/ResponsiveFlowLayoutData";
 
-    export = ResponsiveFlowLayoutData;
-
-
-
-
     import ResponsiveFlowLayoutDataBase from 'sap/ui/layout/ResponsiveFlowLayoutData'
 
     /**
     
     */
-    class ResponsiveFlowLayoutData extends ResponsiveFlowLayoutDataBase {
+    export default class ResponsiveFlowLayoutData extends ResponsiveFlowLayoutDataBase {
+
 
         /**
             * Constructor for a new layout/ResponsiveFlowLayoutData.
@@ -63,6 +59,5 @@ declare module "sap/ui/commons/layout/ResponsiveFlowLayoutData" {
         public setMargin(bMargin: boolean): this;
 
     }
-
 
 }

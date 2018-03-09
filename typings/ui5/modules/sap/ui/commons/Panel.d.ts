@@ -1,19 +1,15 @@
 declare module "sap/ui/commons/Panel" {
     import Button from "sap/ui/commons/Button";
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type AreaDesign = sapuicommonslibrary.enums.AreaDesign;
-    type BorderDesign = sapuicommonslibrary.enums.BorderDesign;
+    import { enums } from "sap/ui/commons/library";
+    type AreaDesign = enums.AreaDesign;
+    type BorderDesign = enums.BorderDesign;
     import Title from "sap/ui/core/Title";
-
-    export = Panel;
-
-
-
 
     /**
     
     */
-    class Panel extends sap.ui.core.Control {
+    export default class Panel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Panel.
@@ -316,6 +312,5 @@ declare module "sap/ui/commons/Panel" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

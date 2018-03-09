@@ -1,22 +1,17 @@
 declare module "sap/m/FlexBox" {
-    import sapmlibrary from "sap/m/library";
-    type FlexAlignContent = sapmlibrary.FlexAlignContent;
-    type FlexAlignItems = sapmlibrary.FlexAlignItems;
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-    type FlexDirection = sapmlibrary.FlexDirection;
-    type FlexJustifyContent = sapmlibrary.FlexJustifyContent;
-    type FlexRendertype = sapmlibrary.FlexRendertype;
-    type FlexWrap = sapmlibrary.FlexWrap;
-
-    export = FlexBox;
-
-
-
+    import { FlexAlignContent } from "sap/m/library";
+    import { FlexAlignItems } from "sap/m/library";
+    import { BackgroundDesign } from "sap/m/library";
+    import { FlexDirection } from "sap/m/library";
+    import { FlexJustifyContent } from "sap/m/library";
+    import { FlexRendertype } from "sap/m/library";
+    import { FlexWrap } from "sap/m/library";
 
     /**
     
     */
-    class FlexBox extends sap.ui.core.Control {
+    export default class FlexBox extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `sap.m.FlexBox`.
@@ -409,6 +404,5 @@ declare module "sap/m/FlexBox" {
         public setWrap(sValue: string): this;
 
     }
-
 
 }

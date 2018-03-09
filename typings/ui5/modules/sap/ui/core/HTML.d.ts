@@ -1,14 +1,10 @@
 declare module "sap/ui/core/HTML" {
 
-    export = HTML;
-
-
-
-
     /**
     
     */
-    class HTML extends sap.ui.core.Control {
+    export default class HTML extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new HTML.
@@ -228,6 +224,5 @@ declare module "sap/ui/core/HTML" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

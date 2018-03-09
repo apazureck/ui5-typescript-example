@@ -1,14 +1,10 @@
 declare module "sap/ui/table/RowSettings" {
 
-    export = RowSettings;
-
-
-
-
     /**
     
     */
-    class RowSettings extends sap.ui.core.Element {
+    export default class RowSettings extends sap.ui.core.Element {
+
 
         /**
             * Constructor for new RowSettings.
@@ -68,6 +64,5 @@ declare module "sap/ui/table/RowSettings" {
         public setHighlight(sHighlight: sap.ui.core.MessageType): this;
 
     }
-
 
 }

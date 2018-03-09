@@ -1,14 +1,10 @@
 declare module "sap/ui/core/Message" {
 
-    export = Message;
-
-
-
-
     /**
     
     */
-    class Message extends sap.ui.core.Element {
+    export default class Message extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Message.
@@ -157,6 +153,5 @@ declare module "sap/ui/core/Message" {
         public setTimestamp(sTimestamp: string): this;
 
     }
-
 
 }

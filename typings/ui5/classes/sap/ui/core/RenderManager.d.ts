@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class RenderManager {
 
+
         /**
             * Creates an instance of the RenderManager.
          * 

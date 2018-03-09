@@ -1,19 +1,14 @@
 declare module "sap/m/FeedListItem" {
     import ListItemBase from "sap/m/ListItemBase";
     import FeedListItemAction from "sap/m/FeedListItemAction";
-    import sapmlibrary from "sap/m/library";
-    type LinkConversion = sapmlibrary.LinkConversion;
-    type ListType = sapmlibrary.ListType;
-
-    export = FeedListItem;
-
-
-
+    import { LinkConversion } from "sap/m/library";
+    import { ListType } from "sap/m/library";
 
     /**
     
     */
-    class FeedListItem extends ListItemBase {
+    export default class FeedListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new FeedListItem.
@@ -410,6 +405,5 @@ declare module "sap/m/FeedListItem" {
         public setUnread(value: boolean): this;
 
     }
-
 
 }

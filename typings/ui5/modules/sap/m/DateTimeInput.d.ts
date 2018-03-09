@@ -1,16 +1,11 @@
 declare module "sap/m/DateTimeInput" {
-    import sapmlibrary from "sap/m/library";
-    type DateTimeInputType = sapmlibrary.DateTimeInputType;
-
-    export = DateTimeInput;
-
-
-
+    import { DateTimeInputType } from "sap/m/library";
 
     /**
     
     */
-    class DateTimeInput extends sap.ui.core.Control {
+    export default class DateTimeInput extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new DateTimeInput.
@@ -405,6 +400,5 @@ declare module "sap/m/DateTimeInput" {
         public unbindValue(): this;
 
     }
-
 
 }

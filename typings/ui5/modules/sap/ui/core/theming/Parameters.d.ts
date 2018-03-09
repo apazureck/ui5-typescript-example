@@ -1,9 +1,14 @@
 declare module "sap/ui/core/theming/Parameters" {
+    /**
 
-    export = Parameters;
+*/
+    namespace theming {
 
+    }
+    /**
 
-
+*/
+    export default Parameters;
     namespace Parameters {
 
         // Methods
@@ -15,5 +20,4 @@ declare module "sap/ui/core/theming/Parameters" {
     */
         export function reset(): any;
     }
-
 }

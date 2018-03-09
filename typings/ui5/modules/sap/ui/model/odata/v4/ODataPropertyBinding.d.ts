@@ -2,15 +2,11 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
     import ValueListType from "sap/ui/model/odata/v4/ValueListType";
     import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 
-    export = ODataPropertyBinding;
-
-
-
-
     /**
     
     */
-    class ODataPropertyBinding extends sap.ui.model.PropertyBinding {
+    export default class ODataPropertyBinding extends sap.ui.model.PropertyBinding {
+
 
         /**
             * Do ** NOT ** call this private constructor, but rather use {@link sap.ui.model.odata.v4.ODataModel#bindProperty} instead!
@@ -124,6 +120,5 @@ declare module "sap/ui/model/odata/v4/ODataPropertyBinding" {
         public toString(): string;
 
     }
-
 
 }

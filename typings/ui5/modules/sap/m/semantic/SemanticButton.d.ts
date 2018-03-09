@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/SemanticButton" {
     import SemanticControl from "sap/m/semantic/SemanticControl";
 
-    export = SemanticButton;
-
-
-
-
     /**
     
     */
-    class SemanticButton extends SemanticControl {
+    export default abstract class SemanticButton extends SemanticControl {
+
 
         /**
             * Constructor for a new SemanticButton.
@@ -99,6 +95,5 @@ declare module "sap/m/semantic/SemanticButton" {
         public setEnabled(bEnabled: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/CalendarLegend" {
     import CalendarLegendItem from "sap/ui/unified/CalendarLegendItem";
 
-    export = CalendarLegend;
-
-
-
-
     /**
     
     */
-    class CalendarLegend extends sap.ui.core.Control {
+    export default class CalendarLegend extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new CalendarLegend.
@@ -108,6 +104,5 @@ declare module "sap/ui/unified/CalendarLegend" {
         public setColumnWidth(sColumnWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

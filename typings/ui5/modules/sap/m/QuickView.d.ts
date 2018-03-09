@@ -1,18 +1,13 @@
 declare module "sap/m/QuickView" {
     import QuickViewBase from "sap/m/QuickViewBase";
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type PlacementType = sapmlibrary.PlacementType;
-
-    export = QuickView;
-
-
-
+    import { PlacementType } from "sap/m/library";
 
     /**
     
     */
-    class QuickView extends QuickViewBase {
+    export default class QuickView extends QuickViewBase {
+
 
         /**
             * Constructor for a new QuickView.
@@ -225,6 +220,5 @@ declare module "sap/m/QuickView" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

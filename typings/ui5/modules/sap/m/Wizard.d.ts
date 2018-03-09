@@ -1,15 +1,11 @@
 declare module "sap/m/Wizard" {
     import WizardStep from "sap/m/WizardStep";
 
-    export = Wizard;
-
-
-
-
     /**
     
     */
-    class Wizard extends sap.ui.core.Control {
+    export default class Wizard extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Wizard.
@@ -274,6 +270,5 @@ declare module "sap/m/Wizard" {
         public validateStep(step: WizardStep): this;
 
     }
-
 
 }

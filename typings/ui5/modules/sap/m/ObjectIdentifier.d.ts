@@ -1,14 +1,10 @@
 declare module "sap/m/ObjectIdentifier" {
 
-    export = ObjectIdentifier;
-
-
-
-
     /**
     
     */
-    class ObjectIdentifier extends sap.ui.core.Control {
+    export default class ObjectIdentifier extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectIdentifier.
@@ -243,6 +239,5 @@ declare module "sap/m/ObjectIdentifier" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

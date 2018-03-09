@@ -1,14 +1,10 @@
 declare module "sap/m/WizardStep" {
 
-    export = WizardStep;
-
-
-
-
     /**
     
     */
-    class WizardStep extends sap.ui.core.Control {
+    export default class WizardStep extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new WizardStep.
@@ -237,6 +233,5 @@ declare module "sap/m/WizardStep" {
         public setValidated(bValidated: boolean): this;
 
     }
-
 
 }

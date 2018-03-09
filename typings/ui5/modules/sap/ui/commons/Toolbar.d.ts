@@ -1,17 +1,12 @@
 declare module "sap/ui/commons/Toolbar" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type ToolbarItem = sapuicommonslibrary.ToolbarItem;
-    type ToolbarDesign = sapuicommonslibrary.ToolbarDesign;
-
-    export = Toolbar;
-
-
-
+    import { ToolbarItem } from "sap/ui/commons/library";
+    import { ToolbarDesign } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Toolbar extends sap.ui.core.Control {
+    export default class Toolbar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Toolbar.
@@ -189,6 +184,5 @@ declare module "sap/ui/commons/Toolbar" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

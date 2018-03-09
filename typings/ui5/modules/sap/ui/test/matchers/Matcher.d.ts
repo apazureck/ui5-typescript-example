@@ -1,14 +1,10 @@
 declare module "sap/ui/test/matchers/Matcher" {
 
-    export = Matcher;
-
-
-
-
     /**
     
     */
-    class Matcher extends sap.ui.base.ManagedObject {
+    export default abstract class Matcher extends sap.ui.base.ManagedObject {
+
 
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
@@ -50,6 +46,5 @@ declare module "sap/ui/test/matchers/Matcher" {
         protected isMatching(oControl: sap.ui.core.Control): boolean;
 
     }
-
 
 }

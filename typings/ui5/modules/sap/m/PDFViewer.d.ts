@@ -1,15 +1,11 @@
 declare module "sap/m/PDFViewer" {
     import Button from "sap/m/Button";
 
-    export = PDFViewer;
-
-
-
-
     /**
     
     */
-    class PDFViewer extends sap.ui.core.Control {
+    export default class PDFViewer extends sap.ui.core.Control {
+
 
         /**
             * Definition of PDFViewer control
@@ -356,6 +352,5 @@ declare module "sap/m/PDFViewer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

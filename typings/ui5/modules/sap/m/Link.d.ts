@@ -1,14 +1,10 @@
 declare module "sap/m/Link" {
 
-    export = Link;
-
-
-
-
     /**
     
     */
-    class Link extends sap.ui.core.Control {
+    export default class Link extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Link`.
@@ -317,6 +313,5 @@ declare module "sap/m/Link" {
         public setWrapping(bWrapping: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Currency" {
     import CompositeType from "sap/ui/model/CompositeType";
 
-    export = Currency;
-
-
-
-
     /**
     
     */
-    class Currency extends CompositeType {
+    export default class Currency extends CompositeType {
+
 
         /**
             * Constructor for a Currency type.
@@ -67,6 +63,5 @@ declare module "sap/ui/model/type/Currency" {
         public parseValue(oValue: any, sInternalType: string, aCurrentValues: any[]): any[] | any;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
-declare module "sap/m/BarInPageEnabler/IBarInPageEnabler" {
-
-    export = IBarInPageEnabler;
-
-
-
+declare module "sap/m/BarInPageEnabler" {
 
     /**
     
     */
-    class IBarInPageEnabler {
+    export class IBarInPageEnabler {
+
 
         /**
             
@@ -27,6 +23,5 @@ declare module "sap/m/BarInPageEnabler/IBarInPageEnabler" {
         protected renderTooltip(oRM: sap.ui.core.RenderManager, oControl: sap.ui.core.Control): any;
 
     }
-
 
 }

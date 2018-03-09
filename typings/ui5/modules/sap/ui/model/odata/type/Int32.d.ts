@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Int32" {
     import Int from "sap/ui/model/odata/type/Int";
 
-    export = Int32;
-
-
-
-
     /**
     
     */
-    class Int32 extends Int {
+    export default class Int32 extends Int {
+
 
         /**
             * Constructor for a primitive type `Edm.Int32`.
@@ -47,6 +43,5 @@ declare module "sap/ui/model/odata/type/Int32" {
         protected getRange(): any;
 
     }
-
 
 }

@@ -6,15 +6,11 @@ declare module "sap/m/MultiComboBox" {
     import Dialog from "sap/m/Dialog";
     import ComboBox from "sap/m/ComboBox";
 
-    export = MultiComboBox;
-
-
-
-
     /**
     
     */
-    class MultiComboBox extends ComboBoxBase {
+    export default class MultiComboBox extends ComboBoxBase {
+
 
         /**
             * Constructor for a new MultiComboBox.
@@ -244,6 +240,5 @@ declare module "sap/m/MultiComboBox" {
         public setSelectedKeys(sSelectedKeys: any[]): this;
 
     }
-
 
 }

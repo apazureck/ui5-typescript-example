@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/FileUploaderXHRSettings" {
 
-    export = FileUploaderXHRSettings;
-
-
-
-
     /**
     
     */
-    class FileUploaderXHRSettings extends sap.ui.core.Element {
+    export default class FileUploaderXHRSettings extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new FileUploaderXHRSettings.
@@ -68,6 +64,5 @@ declare module "sap/ui/unified/FileUploaderXHRSettings" {
         public setWithCredentials(bWithCredentials: boolean): this;
 
     }
-
 
 }

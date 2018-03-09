@@ -1,14 +1,10 @@
 declare module "sap/m/Token" {
 
-    export = Token;
-
-
-
-
     /**
     
     */
-    class Token {
+    export default class Token {
+
 
         /**
             * Constructor for a new Token.
@@ -279,6 +275,5 @@ declare module "sap/m/Token" {
         public setTextDirection(sTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/Image" {
 
-    export = Image;
-
-
-
-
     /**
     
     */
-    class Image extends sap.ui.core.Control {
+    export default class Image extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Image.
@@ -178,6 +174,5 @@ declare module "sap/ui/commons/Image" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

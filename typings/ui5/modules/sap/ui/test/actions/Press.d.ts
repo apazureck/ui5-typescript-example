@@ -1,12 +1,8 @@
 declare module "sap/ui/test/actions/Press" {
     import Action from "sap/ui/test/actions/Action";
 
-    export = Press;
+    export default class Press extends Action {
 
-
-
-
-    class Press extends Action {
 
         /**
             * The Press action is used to simulate a press interaction on a Control's dom ref. This will work out of the box for most of the controls (even custom controls).
@@ -53,6 +49,5 @@ declare module "sap/ui/test/actions/Press" {
         public getMetadata(): any | sap.ui.base.Metadata;
 
     }
-
 
 }

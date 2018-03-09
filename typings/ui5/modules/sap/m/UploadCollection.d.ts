@@ -2,20 +2,15 @@ declare module "sap/m/UploadCollection" {
     import UploadCollectionItem from "sap/m/UploadCollectionItem";
     import UploadCollectionParameter from "sap/m/UploadCollectionParameter";
     import Toolbar from "sap/m/Toolbar";
-    import sapmlibrary from "sap/m/library";
-    type ListMode = sapmlibrary.ListMode;
-    type ListSeparators = sapmlibrary.ListSeparators;
+    import { ListMode } from "sap/m/library";
+    import { ListSeparators } from "sap/m/library";
     import OverflowToolbar from "sap/m/OverflowToolbar";
-
-    export = UploadCollection;
-
-
-
 
     /**
     
     */
-    class UploadCollection extends sap.ui.core.Control {
+    export default class UploadCollection extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new UploadCollection.
@@ -935,6 +930,5 @@ declare module "sap/m/UploadCollection" {
         public upload(): any;
 
     }
-
 
 }

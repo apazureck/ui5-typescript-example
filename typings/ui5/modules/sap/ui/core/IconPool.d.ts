@@ -1,9 +1,8 @@
 declare module "sap/ui/core/IconPool" {
+    /**
 
-    export = IconPool;
-
-
-
+*/
+    export default IconPool;
     namespace IconPool {
 
         // Methods
@@ -39,5 +38,4 @@ declare module "sap/ui/core/IconPool" {
     */
         export function isIconURI(uri: string): boolean;
     }
-
 }

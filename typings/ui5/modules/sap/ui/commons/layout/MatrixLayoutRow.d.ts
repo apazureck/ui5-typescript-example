@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/layout/MatrixLayoutRow" {
     import MatrixLayoutCell from "sap/ui/commons/layout/MatrixLayoutCell";
 
-    export = MatrixLayoutRow;
-
-
-
-
     /**
     
     */
-    class MatrixLayoutRow extends sap.ui.core.Element {
+    export default class MatrixLayoutRow extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new layout/MatrixLayoutRow.
@@ -137,6 +133,5 @@ declare module "sap/ui/commons/layout/MatrixLayoutRow" {
         public setHeight(sHeight: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

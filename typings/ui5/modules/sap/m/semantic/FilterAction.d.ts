@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/FilterAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = FilterAction;
-
-
-
-
     /**
     
     */
-    class FilterAction extends SemanticButton {
+    export default class FilterAction extends SemanticButton {
+
 
         /**
             * Constructor for a new FilterAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/FilterAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

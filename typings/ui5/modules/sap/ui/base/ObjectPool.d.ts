@@ -1,14 +1,10 @@
 declare module "sap/ui/base/ObjectPool" {
 
-    export = ObjectPool;
-
-
-
-
     /**
     
     */
-    class ObjectPool extends sap.ui.base.Object {
+    export default class ObjectPool extends sap.ui.base.Object {
+
 
         /**
             * Creates an ObjectPool instance based on the given oObjectClass.&lt;br/&gt; If there is a free pooled instance, returns that one, otherwise creates a new one.&lt;br/&gt; In order to be maintained by the ObjectPool, oObjectClass must implement methods described in the class description.
@@ -44,6 +40,26 @@ declare module "sap/ui/base/ObjectPool" {
             * Returns an object to the pool. The object must have been borrowed from this pool beforehand. The reset method is called on the object before it is added to the set of free objects.
         */
         public returnObject(oObject: any): any;
+
+    }
+
+    /**
+
+*/
+    export interface Poolable {
+
+
+        /**
+            * Called by the object pool when this instance will be actived for a caller. The same method will be called after a new instance has been created by an otherwise exhausted pool.
+         * 
+         * If the caller provided any arguments to {@link sap.ui.base.ObjectPool#borrowObject} all arguments will be propagated to this method.
+        */
+        init(): any;
+
+        /**
+            * Called by the object pool when an instance is returned to the pool. While no specific implementation is required, poolable objects in general should clean all caller specific state (set to null) in this method to avoid memory leaks and to enforce garbage collection of the caller state.
+        */
+        reset(): any;
 
     }
 

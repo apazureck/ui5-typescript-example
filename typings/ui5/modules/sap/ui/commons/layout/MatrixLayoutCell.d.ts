@@ -1,20 +1,16 @@
 declare module "sap/ui/commons/layout/MatrixLayoutCell" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type BackgroundDesign = sapuicommonslibrary.layout.BackgroundDesign;
-    type HAlign = sapuicommonslibrary.layout.HAlign;
-    type Padding = sapuicommonslibrary.layout.Padding;
-    type Separation = sapuicommonslibrary.layout.Separation;
-    type VAlign = sapuicommonslibrary.layout.VAlign;
-
-    export = MatrixLayoutCell;
-
-
-
+    import { layout } from "sap/ui/commons/library";
+    type BackgroundDesign = layout.BackgroundDesign;
+    type HAlign = layout.HAlign;
+    type Padding = layout.Padding;
+    type Separation = layout.Separation;
+    type VAlign = layout.VAlign;
 
     /**
     
     */
-    class MatrixLayoutCell extends sap.ui.core.Element {
+    export default class MatrixLayoutCell extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new layout/MatrixLayoutCell.
@@ -268,6 +264,5 @@ declare module "sap/ui/commons/layout/MatrixLayoutCell" {
         public setVAlign(sVAlign: VAlign): this;
 
     }
-
 
 }

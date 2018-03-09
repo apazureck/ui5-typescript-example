@@ -1,14 +1,10 @@
 declare module "sap/ui/suite/TaskCircle" {
 
-    export = TaskCircle;
-
-
-
-
     /**
     
     */
-    class TaskCircle extends sap.ui.core.Control {
+    export default class TaskCircle extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TaskCircle.
@@ -203,6 +199,5 @@ declare module "sap/ui/suite/TaskCircle" {
         public setValue(iValue: number): this;
 
     }
-
 
 }

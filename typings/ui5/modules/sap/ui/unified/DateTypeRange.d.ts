@@ -1,17 +1,12 @@
 declare module "sap/ui/unified/DateTypeRange" {
     import DateRange from "sap/ui/unified/DateRange";
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type CalendarDayType = sapuiunifiedlibrary.CalendarDayType;
-
-    export = DateTypeRange;
-
-
-
+    import { CalendarDayType } from "sap/ui/unified/library";
 
     /**
     
     */
-    class DateTypeRange extends DateRange {
+    export default class DateTypeRange extends DateRange {
+
 
         /**
             * Constructor for a new DateTypeRange.
@@ -71,6 +66,5 @@ declare module "sap/ui/unified/DateTypeRange" {
         public setType(sType: CalendarDayType): this;
 
     }
-
 
 }

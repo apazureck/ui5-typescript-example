@@ -1,14 +1,10 @@
 declare module "sap/tnt/ToolHeaderUtilitySeparator" {
 
-    export = ToolHeaderUtilitySeparator;
-
-
-
-
     /**
     
     */
-    class ToolHeaderUtilitySeparator extends sap.ui.core.Control {
+    export default class ToolHeaderUtilitySeparator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ToolHeaderUtilitySeparator.
@@ -50,6 +46,5 @@ declare module "sap/tnt/ToolHeaderUtilitySeparator" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

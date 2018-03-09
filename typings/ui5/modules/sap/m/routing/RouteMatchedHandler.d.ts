@@ -1,14 +1,10 @@
 declare module "sap/m/routing/RouteMatchedHandler" {
 
-    export = RouteMatchedHandler;
-
-
-
-
     /**
     
     */
-    class RouteMatchedHandler {
+    export default class RouteMatchedHandler {
+
 
         /**
             * Instantiates a RouteMatchedHandler.
@@ -44,6 +40,5 @@ declare module "sap/m/routing/RouteMatchedHandler" {
         public setCloseDialogs(bCloseDialogs: boolean): this;
 
     }
-
 
 }

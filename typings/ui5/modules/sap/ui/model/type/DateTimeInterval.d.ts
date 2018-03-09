@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/DateTimeInterval" {
     import DateInterval from "sap/ui/model/type/DateInterval";
 
-    export = DateTimeInterval;
-
-
-
-
     /**
     
     */
-    class DateTimeInterval extends DateInterval {
+    export default class DateTimeInterval extends DateInterval {
+
 
         /**
             * Constructor for a DateTime interval type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/DateTimeInterval" {
         public getMetadata(): any;
 
     }
-
 
 }

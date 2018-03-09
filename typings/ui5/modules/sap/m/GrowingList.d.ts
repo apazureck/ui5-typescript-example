@@ -1,15 +1,11 @@
 declare module "sap/m/GrowingList" {
     import List from "sap/m/List";
 
-    export = GrowingList;
-
-
-
-
     /**
     
     */
-    class GrowingList extends List {
+    export default class GrowingList extends List {
+
 
         /**
             * Constructor for a new GrowingList.
@@ -105,6 +101,5 @@ declare module "sap/m/GrowingList" {
         public setTriggerText(sTriggerText: string): this;
 
     }
-
 
 }

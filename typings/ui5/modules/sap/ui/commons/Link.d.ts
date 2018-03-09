@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/Link" {
 
-    export = Link;
-
-
-
-
     /**
     
     */
-    class Link extends sap.ui.core.Control {
+    export default class Link extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Link.
@@ -238,6 +234,5 @@ declare module "sap/ui/commons/Link" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

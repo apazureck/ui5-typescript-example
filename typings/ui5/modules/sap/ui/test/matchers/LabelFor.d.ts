@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/LabelFor" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = LabelFor;
-
-
-
-
     /**
     
     */
-    class LabelFor extends Matcher {
+    export default class LabelFor extends Matcher {
+
 
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
@@ -142,6 +138,5 @@ declare module "sap/ui/test/matchers/LabelFor" {
         public setText(sText: string): this;
 
     }
-
 
 }

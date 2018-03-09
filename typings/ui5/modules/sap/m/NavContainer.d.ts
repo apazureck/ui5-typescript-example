@@ -1,14 +1,10 @@
 declare module "sap/m/NavContainer" {
 
-    export = NavContainer;
-
-
-
-
     /**
     
     */
-    class NavContainer extends sap.ui.core.Control {
+    export default class NavContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new NavContainer.
@@ -402,6 +398,5 @@ declare module "sap/m/NavContainer" {
         public to(sPageId: string, sTransitionName?: string, oData?: any, oTransitionParameters?: any): this;
 
     }
-
 
 }

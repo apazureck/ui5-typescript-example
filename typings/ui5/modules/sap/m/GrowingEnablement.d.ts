@@ -1,12 +1,8 @@
 declare module "sap/m/GrowingEnablement" {
     import ListBase from "sap/m/ListBase";
 
-    export = GrowingEnablement;
+    export default class GrowingEnablement extends sap.ui.base.Object {
 
-
-
-
-    class GrowingEnablement extends sap.ui.base.Object {
 
         /**
             * Creates a GrowingEnablement delegate that can be attached to ListBase Controls requiring capabilities for growing
@@ -34,6 +30,5 @@ declare module "sap/m/GrowingEnablement" {
         public getMetadata(): any;
 
     }
-
 
 }

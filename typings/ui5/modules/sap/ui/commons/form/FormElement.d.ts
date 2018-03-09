@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/FormElement" {
     import sap_ui_layout_form_FormElement from "sap/ui/layout/form/FormElement";
 
-    export = FormElement;
-
-
-
-
     import FormElementBase from 'sap/ui/layout/form/FormElement'
 
     /**
     
     */
-    class FormElement extends FormElementBase {
+    export default class FormElement extends FormElementBase {
+
 
         /**
             * Constructor for a new form/FormElement.
@@ -63,6 +59,5 @@ declare module "sap/ui/commons/form/FormElement" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

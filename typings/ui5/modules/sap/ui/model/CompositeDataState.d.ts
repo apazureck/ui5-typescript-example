@@ -1,14 +1,10 @@
 declare module "sap/ui/model/CompositeDataState" {
 
-    export = CompositeDataState;
-
-
-
-
     /**
     
     */
-    class CompositeDataState extends sap.ui.model.DataState {
+    export default class CompositeDataState extends sap.ui.model.DataState {
+
 
         /**
             
@@ -94,6 +90,5 @@ declare module "sap/ui/model/CompositeDataState" {
         public isLaundering(): boolean;
 
     }
-
 
 }

@@ -1,19 +1,15 @@
 declare module "sap/ui/commons/form/SimpleForm" {
     import sap_ui_layout_form_SimpleForm from "sap/ui/layout/form/SimpleForm";
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type SimpleFormLayout = sapuilayoutlibrary.form.SimpleFormLayout;
-
-    export = SimpleForm;
-
-
-
+    import { form } from "sap/ui/layout/library";
+    type SimpleFormLayout = form.SimpleFormLayout;
 
     import SimpleFormBase from 'sap/ui/layout/form/SimpleForm'
 
     /**
     
     */
-    class SimpleForm extends SimpleFormBase {
+    export default class SimpleForm extends SimpleFormBase {
+
 
         /**
             * Constructor for a new form/SimpleForm.
@@ -65,6 +61,5 @@ declare module "sap/ui/commons/form/SimpleForm" {
         public setLayout(oLayout: SimpleFormLayout): this;
 
     }
-
 
 }

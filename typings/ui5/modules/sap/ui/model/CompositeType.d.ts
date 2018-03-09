@@ -1,15 +1,11 @@
 declare module "sap/ui/model/CompositeType" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = CompositeType;
-
-
-
-
     /**
     
     */
-    class CompositeType extends SimpleType {
+    export default abstract class CompositeType extends SimpleType {
+
 
         /**
             * Constructor for a new CompositeType.
@@ -67,6 +63,5 @@ declare module "sap/ui/model/CompositeType" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

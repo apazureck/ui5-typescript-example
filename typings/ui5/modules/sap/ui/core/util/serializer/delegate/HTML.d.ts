@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/serializer/delegate/HTML" {
     import Delegate from "sap/ui/core/util/serializer/delegate/Delegate";
 
-    export = HTML;
-
-
-
-
     /**
     
     */
-    class HTML extends Delegate {
+    export default class HTML extends Delegate {
+
 
         /**
             * HTML serializer delegate class. Called by the serializer instance.
@@ -37,6 +33,5 @@ declare module "sap/ui/core/util/serializer/delegate/HTML" {
         public getMetadata(): any;
 
     }
-
 
 }

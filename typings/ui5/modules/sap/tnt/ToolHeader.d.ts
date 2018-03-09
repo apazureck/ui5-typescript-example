@@ -1,15 +1,11 @@
 declare module "sap/tnt/ToolHeader" {
     import OverflowToolbar from "sap/m/OverflowToolbar";
 
-    export = ToolHeader;
-
-
-
-
     /**
     
     */
-    class ToolHeader extends OverflowToolbar {
+    export default class ToolHeader extends OverflowToolbar {
+
 
         /**
             * Constructor for a new ToolHeader.
@@ -47,6 +43,5 @@ declare module "sap/tnt/ToolHeader" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

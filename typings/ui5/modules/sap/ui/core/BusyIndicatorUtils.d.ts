@@ -1,11 +1,9 @@
 declare module "sap/ui/core/BusyIndicatorUtils" {
+    /**
 
-    export = BusyIndicatorUtils;
-
-
-
+*/
+    export default BusyIndicatorUtils;
     namespace BusyIndicatorUtils {
 
     }
-
 }

@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/GridElementData" {
     import sap_ui_layout_form_GridElementData from "sap/ui/layout/form/GridElementData";
 
-    export = GridElementData;
-
-
-
-
     import GridElementDataBase from 'sap/ui/layout/form/GridElementData'
 
     /**
     
     */
-    class GridElementData extends GridElementDataBase {
+    export default class GridElementData extends GridElementDataBase {
+
 
         /**
             * Constructor for a new form/GridElementData.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/form/GridElementData" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

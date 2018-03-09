@@ -1,14 +1,10 @@
 declare module "sap/m/BusyDialog" {
 
-    export = BusyDialog;
-
-
-
-
     /**
     
     */
-    class BusyDialog extends sap.ui.core.Control {
+    export default class BusyDialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BusyDialog.
@@ -379,6 +375,5 @@ declare module "sap/m/BusyDialog" {
         public setTooltip(vTooltip: string | sap.ui.core.TooltipBase): any;
 
     }
-
 
 }

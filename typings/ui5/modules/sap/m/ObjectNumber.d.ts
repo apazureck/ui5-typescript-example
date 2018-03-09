@@ -1,14 +1,10 @@
 declare module "sap/m/ObjectNumber" {
 
-    export = ObjectNumber;
-
-
-
-
     /**
     
     */
-    class ObjectNumber extends sap.ui.core.Control {
+    export default class ObjectNumber extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectNumber.
@@ -184,6 +180,5 @@ declare module "sap/m/ObjectNumber" {
         public setUnit(sUnit: string): this;
 
     }
-
 
 }

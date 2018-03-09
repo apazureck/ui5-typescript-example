@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/MessageBar" {
 
-    export = MessageBar;
-
-
-
-
     /**
     
     */
-    class MessageBar extends sap.ui.core.Control {
+    export default class MessageBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessageBar.
@@ -176,6 +172,5 @@ declare module "sap/ui/commons/MessageBar" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

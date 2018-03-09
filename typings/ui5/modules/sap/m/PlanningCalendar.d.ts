@@ -3,20 +3,15 @@ declare module "sap/m/PlanningCalendar" {
     import PlanningCalendarRow from "sap/m/PlanningCalendarRow";
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
     import PlanningCalendarView from "sap/m/PlanningCalendarView";
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type CalendarAppointmentVisualization = sapuiunifiedlibrary.CalendarAppointmentVisualization;
-    type GroupAppointmentsMode = sapuiunifiedlibrary.GroupAppointmentsMode;
+    import { CalendarAppointmentVisualization } from "sap/ui/unified/library";
+    import { GroupAppointmentsMode } from "sap/ui/unified/library";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
-
-    export = PlanningCalendar;
-
-
-
 
     /**
     
     */
-    class PlanningCalendar extends sap.ui.core.Control {
+    export default class PlanningCalendar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `PlanningCalendar`.
@@ -810,6 +805,5 @@ declare module "sap/m/PlanningCalendar" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

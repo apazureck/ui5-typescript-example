@@ -1,14 +1,10 @@
 declare module "sap/m/ObjectStatus" {
 
-    export = ObjectStatus;
-
-
-
-
     /**
     
     */
-    class ObjectStatus extends sap.ui.core.Control {
+    export default class ObjectStatus extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectStatus.
@@ -177,6 +173,5 @@ declare module "sap/m/ObjectStatus" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

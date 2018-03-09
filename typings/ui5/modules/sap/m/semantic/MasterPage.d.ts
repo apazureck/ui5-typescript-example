@@ -4,27 +4,23 @@ declare module "sap/m/semantic/MasterPage" {
     import CancelAction from "sap/m/semantic/CancelAction";
     import DeleteAction from "sap/m/semantic/DeleteAction";
     import EditAction from "sap/m/semantic/EditAction";
-    import sapmlibrary from "sap/m/library";
-    type IFilter = sapmlibrary.semantic.IFilter;
+    import { semantic } from "sap/m/library";
+    type IFilter = semantic.IFilter;
     import ForwardAction from "sap/m/semantic/ForwardAction";
-    type IGroup = sapmlibrary.semantic.IGroup;
+    type IGroup = semantic.IGroup;
     import MainAction from "sap/m/semantic/MainAction";
     import MessagesIndicator from "sap/m/semantic/MessagesIndicator";
     import MultiSelectAction from "sap/m/semantic/MultiSelectAction";
     import NegativeAction from "sap/m/semantic/NegativeAction";
     import PositiveAction from "sap/m/semantic/PositiveAction";
     import SaveAction from "sap/m/semantic/SaveAction";
-    type ISort = sapmlibrary.semantic.ISort;
-
-    export = MasterPage;
-
-
-
+    type ISort = semantic.ISort;
 
     /**
     
     */
-    class MasterPage extends SemanticPage {
+    export default class MasterPage extends SemanticPage {
+
 
         /**
             * Constructor for a new MasterPage
@@ -302,6 +298,5 @@ declare module "sap/m/semantic/MasterPage" {
         public setSort(oSort: ISort): this;
 
     }
-
 
 }

@@ -1,9 +1,8 @@
 declare module "sap/ui/core/AppCacheBuster" {
+    /**
 
-    export = AppCacheBuster;
-
-
-
+*/
+    export default AppCacheBuster;
     namespace AppCacheBuster {
 
         // Methods
@@ -21,5 +20,4 @@ declare module "sap/ui/core/AppCacheBuster" {
     */
         export function register(base: string): any;
     }
-
 }

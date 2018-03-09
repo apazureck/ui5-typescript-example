@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/ShareInJamAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = ShareInJamAction;
-
-
-
-
     /**
     
     */
-    class ShareInJamAction extends SemanticButton {
+    export default class ShareInJamAction extends SemanticButton {
+
 
         /**
             * Constructor for a new ShareInJamAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/ShareInJamAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

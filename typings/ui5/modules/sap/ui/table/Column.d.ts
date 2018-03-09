@@ -1,17 +1,12 @@
 declare module "sap/ui/table/Column" {
     import Menu from "sap/ui/unified/Menu";
-    import sapuitablelibrary from "sap/ui/table/library";
-    type SortOrder = sapuitablelibrary.SortOrder;
-
-    export = Column;
-
-
-
+    import { SortOrder } from "sap/ui/table/library";
 
     /**
     
     */
-    class Column extends sap.ui.core.Element {
+    export default class Column extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Column.
@@ -615,6 +610,5 @@ declare module "sap/ui/table/Column" {
         public toggleSort(): this;
 
     }
-
 
 }

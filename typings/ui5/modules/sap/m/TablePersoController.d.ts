@@ -2,15 +2,11 @@ declare module "sap/m/TablePersoController" {
     import Table from "sap/m/Table";
     import TablePersoDialog from "sap/m/TablePersoDialog";
 
-    export = TablePersoController;
-
-
-
-
     /**
     
     */
-    class TablePersoController extends sap.ui.base.ManagedObject {
+    export default class TablePersoController extends sap.ui.base.ManagedObject {
+
 
         /**
             * The TablePersoController can be used to connect a table that you want to provide a personalization dialog for, with a persistence service such as one provided by the unified shell.
@@ -251,6 +247,5 @@ declare module "sap/m/TablePersoController" {
         public setTable(oTable: sap.ui.core.ID | Table): this;
 
     }
-
 
 }

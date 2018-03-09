@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/Accordion" {
     import AccordionSection from "sap/ui/commons/AccordionSection";
 
-    export = Accordion;
-
-
-
-
     /**
     
     */
-    class Accordion extends sap.ui.core.Control {
+    export default class Accordion extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Accordion.
@@ -236,6 +232,5 @@ declare module "sap/ui/commons/Accordion" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

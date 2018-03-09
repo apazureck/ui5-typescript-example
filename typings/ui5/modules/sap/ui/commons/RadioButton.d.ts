@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/RadioButton" {
 
-    export = RadioButton;
-
-
-
-
     /**
     
     */
-    class RadioButton extends sap.ui.core.Control {
+    export default class RadioButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RadioButton.
@@ -286,6 +282,5 @@ declare module "sap/ui/commons/RadioButton" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -2,10 +2,11 @@ declare namespace sap.ui.core.routing {
 
     export class Router extends sap.ui.base.EventProvider {
 
+
         /**
             * Instantiates a SAPUI5 Router
         */
-        public constructor(oRoutes: any | any[], oConfig: { async?: boolean, }, oOwner: sap.ui.core.UIComponent, oTargetsConfig: any);
+        public constructor(oRoutes?: any | any[], oConfig?: { async?: boolean, }, oOwner?: sap.ui.core.UIComponent, oTargetsConfig?: any);
 
 
         /**

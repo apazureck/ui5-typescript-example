@@ -2,15 +2,11 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
     import Context from "sap/ui/model/odata/v4/Context";
     import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 
-    export = ODataListBinding;
-
-
-
-
     /**
     
     */
-    class ODataListBinding extends sap.ui.model.ListBinding {
+    export default class ODataListBinding extends sap.ui.model.ListBinding {
+
 
         /**
             * Do ** NOT ** call this private constructor, but rather use {@link sap.ui.model.odata.v4.ODataModel#bindList} instead!
@@ -190,6 +186,5 @@ declare module "sap/ui/model/odata/v4/ODataListBinding" {
         public toString(): string;
 
     }
-
 
 }

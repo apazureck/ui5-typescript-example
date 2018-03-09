@@ -1,20 +1,15 @@
 declare module "sap/ui/unified/CalendarRow" {
     import CalendarAppointment from "sap/ui/unified/CalendarAppointment";
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type CalendarAppointmentVisualization = sapuiunifiedlibrary.CalendarAppointmentVisualization;
-    type GroupAppointmentsMode = sapuiunifiedlibrary.GroupAppointmentsMode;
-    type CalendarIntervalType = sapuiunifiedlibrary.CalendarIntervalType;
+    import { CalendarAppointmentVisualization } from "sap/ui/unified/library";
+    import { GroupAppointmentsMode } from "sap/ui/unified/library";
+    import { CalendarIntervalType } from "sap/ui/unified/library";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
-
-    export = CalendarRow;
-
-
-
 
     /**
     
     */
-    class CalendarRow extends sap.ui.core.Control {
+    export default class CalendarRow extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `CalendarRow`.
@@ -679,6 +674,5 @@ declare module "sap/ui/unified/CalendarRow" {
         public updateCurrentTimeVisualization(): this;
 
     }
-
 
 }

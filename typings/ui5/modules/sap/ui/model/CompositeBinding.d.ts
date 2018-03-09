@@ -1,15 +1,11 @@
 declare module "sap/ui/model/CompositeBinding" {
     import CompositeType from "sap/ui/model/CompositeType";
 
-    export = CompositeBinding;
-
-
-
-
     /**
     
     */
-    class CompositeBinding extends sap.ui.model.PropertyBinding {
+    export default class CompositeBinding extends sap.ui.model.PropertyBinding {
+
 
         /**
             * Constructor for CompositeBinding
@@ -166,6 +162,5 @@ declare module "sap/ui/model/CompositeBinding" {
         protected updateRequired(oModel: any): boolean;
 
     }
-
 
 }

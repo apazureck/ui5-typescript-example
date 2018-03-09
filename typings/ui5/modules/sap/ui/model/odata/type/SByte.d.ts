@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/SByte" {
     import Int from "sap/ui/model/odata/type/Int";
 
-    export = SByte;
-
-
-
-
     /**
     
     */
-    class SByte extends Int {
+    export default class SByte extends Int {
+
 
         /**
             * Constructor for a primitive type `Edm.SByte`.
@@ -47,6 +43,5 @@ declare module "sap/ui/model/odata/type/SByte" {
         protected getRange(): any;
 
     }
-
 
 }

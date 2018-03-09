@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/Paginator" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type PaginatorEvent = sapuicommonslibrary.PaginatorEvent;
-
-    export = Paginator;
-
-
-
+    import { PaginatorEvent } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Paginator extends sap.ui.core.Control {
+    export default class Paginator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Paginator.
@@ -128,6 +123,5 @@ declare module "sap/ui/commons/Paginator" {
         public setNumberOfPages(iNumberOfPages: number): this;
 
     }
-
 
 }

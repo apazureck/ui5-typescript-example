@@ -1,14 +1,10 @@
 declare module "sap/m/InputBase" {
 
-    export = InputBase;
-
-
-
-
     /**
     
     */
-    class InputBase extends sap.ui.core.Control {
+    export default class InputBase extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `sap.m.InputBase`.
@@ -406,6 +402,5 @@ declare module "sap/m/InputBase" {
         protected updateDomValue(sValue: string): this;
 
     }
-
 
 }

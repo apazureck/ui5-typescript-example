@@ -1,16 +1,11 @@
 declare module "sap/ui/ux3/ExactArea" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type ToolbarItem = sapuicommonslibrary.ToolbarItem;
-
-    export = ExactArea;
-
-
-
+    import { ToolbarItem } from "sap/ui/commons/library";
 
     /**
     
     */
-    class ExactArea extends sap.ui.core.Control {
+    export default class ExactArea extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ExactArea.
@@ -148,6 +143,5 @@ declare module "sap/ui/ux3/ExactArea" {
         public setToolbarVisible(bToolbarVisible: boolean): this;
 
     }
-
 
 }

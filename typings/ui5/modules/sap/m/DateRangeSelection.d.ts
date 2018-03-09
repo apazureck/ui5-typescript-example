@@ -1,15 +1,11 @@
 declare module "sap/m/DateRangeSelection" {
     import DatePicker from "sap/m/DatePicker";
 
-    export = DateRangeSelection;
-
-
-
-
     /**
     
     */
-    class DateRangeSelection extends DatePicker {
+    export default class DateRangeSelection extends DatePicker {
+
 
         /**
             * Constructor for a new `DateRangeSelection`.
@@ -206,6 +202,5 @@ declare module "sap/m/DateRangeSelection" {
         public setValueFormat(sValueFormat: string): this;
 
     }
-
 
 }

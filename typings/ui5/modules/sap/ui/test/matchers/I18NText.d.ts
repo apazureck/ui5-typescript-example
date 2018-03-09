@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/I18NText" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = I18NText;
-
-
-
-
     /**
     
     */
-    class I18NText extends Matcher {
+    export default class I18NText extends Matcher {
+
 
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
@@ -122,6 +118,5 @@ declare module "sap/ui/test/matchers/I18NText" {
         public setPropertyName(sPropertyName: string): this;
 
     }
-
 
 }

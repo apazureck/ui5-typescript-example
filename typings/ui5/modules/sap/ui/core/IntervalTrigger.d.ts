@@ -1,14 +1,10 @@
 declare module "sap/ui/core/IntervalTrigger" {
 
-    export = IntervalTrigger;
-
-
-
-
     /**
     
     */
-    class IntervalTrigger extends sap.ui.base.Object {
+    export default class IntervalTrigger extends sap.ui.base.Object {
+
 
         /**
             * Creates an instance of EventBus.
@@ -66,6 +62,5 @@ declare module "sap/ui/core/IntervalTrigger" {
         public setInterval(iInterval: number): any;
 
     }
-
 
 }

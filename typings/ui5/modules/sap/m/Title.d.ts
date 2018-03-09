@@ -1,15 +1,11 @@
 declare module "sap/m/Title" {
     import sap_ui_core_Title from "sap/ui/core/Title";
 
-    export = Title;
-
-
-
-
     /**
     
     */
-    class Title extends sap.ui.core.Control {
+    export default class Title extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Title control.
@@ -186,6 +182,5 @@ declare module "sap/m/Title" {
         public setWrapping(bWrapping: boolean): this;
 
     }
-
 
 }

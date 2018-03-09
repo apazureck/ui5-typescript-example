@@ -1,14 +1,10 @@
 declare module "sap/m/CheckBox" {
 
-    export = CheckBox;
-
-
-
-
     /**
     
     */
-    class CheckBox extends sap.ui.core.Control {
+    export default class CheckBox extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `CheckBox`.
@@ -357,6 +353,5 @@ declare module "sap/m/CheckBox" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

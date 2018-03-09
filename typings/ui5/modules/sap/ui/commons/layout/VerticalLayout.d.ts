@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/layout/VerticalLayout" {
     import sap_ui_layout_VerticalLayout from "sap/ui/layout/VerticalLayout";
 
-    export = VerticalLayout;
-
-
-
-
     import VerticalLayoutBase from 'sap/ui/layout/VerticalLayout'
 
     /**
     
     */
-    class VerticalLayout extends VerticalLayoutBase {
+    export default class VerticalLayout extends VerticalLayoutBase {
+
 
         /**
             * Constructor for a new layout/VerticalLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/layout/VerticalLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

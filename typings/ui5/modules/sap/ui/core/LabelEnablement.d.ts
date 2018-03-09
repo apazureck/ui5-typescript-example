@@ -1,9 +1,8 @@
 declare module "sap/ui/core/LabelEnablement" {
+    /**
 
-    export = LabelEnablement;
-
-
-
+*/
+    export default LabelEnablement;
     namespace LabelEnablement {
 
         // Methods
@@ -15,5 +14,4 @@ declare module "sap/ui/core/LabelEnablement" {
     */
         export function isRequired(oElement: sap.ui.core.Element): boolean;
     }
-
 }

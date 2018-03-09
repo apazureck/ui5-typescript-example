@@ -1,17 +1,18 @@
 declare module "sap/ui/core/delegate/ScrollEnablement" {
-    import sapmlibrary from "sap/m/library";
-    type ListGrowingDirection = sapmlibrary.ListGrowingDirection;
+    import { ListGrowingDirection } from "sap/m/library";
     import IconTabBar from "sap/m/IconTabBar";
+    /**
 
-    export = ScrollEnablement;
+*/
+    namespace delegate {
 
-
-
+    }
 
     /**
     
     */
-    class ScrollEnablement extends sap.ui.base.Object {
+    export default class ScrollEnablement extends sap.ui.base.Object {
+
 
         /**
             * Creates a ScrollEnablement delegate that can be attached to Controls requiring capabilities for scrolling of a certain part of their DOM.
@@ -106,6 +107,5 @@ declare module "sap/ui/core/delegate/ScrollEnablement" {
         protected setVertical(bVertical: boolean): any;
 
     }
-
 
 }

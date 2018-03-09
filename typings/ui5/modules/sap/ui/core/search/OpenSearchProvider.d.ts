@@ -1,15 +1,11 @@
 declare module "sap/ui/core/search/OpenSearchProvider" {
     import SearchProvider from "sap/ui/core/search/SearchProvider";
 
-    export = OpenSearchProvider;
-
-
-
-
     /**
     
     */
-    class OpenSearchProvider extends SearchProvider {
+    export default class OpenSearchProvider extends SearchProvider {
+
 
         /**
             * Constructor for a new search/OpenSearchProvider.
@@ -90,6 +86,5 @@ declare module "sap/ui/core/search/OpenSearchProvider" {
         public suggest(sValue: string, fCallback: Function): any;
 
     }
-
 
 }

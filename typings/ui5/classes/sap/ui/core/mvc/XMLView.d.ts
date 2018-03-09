@@ -5,6 +5,7 @@ declare namespace sap.ui.core.mvc {
     */
     export class XMLView extends sap.ui.core.mvc.View {
 
+
         /**
             * Constructor for a new mvc/XMLView.
          * 
@@ -12,7 +13,7 @@ declare namespace sap.ui.core.mvc {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.core.mvc.View#constructor sap.ui.core.mvc.View} can be used.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

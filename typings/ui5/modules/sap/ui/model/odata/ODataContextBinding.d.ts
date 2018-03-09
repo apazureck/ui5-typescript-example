@@ -1,14 +1,10 @@
 declare module "sap/ui/model/odata/ODataContextBinding" {
 
-    export = ODataContextBinding;
-
-
-
-
     /**
     
     */
-    class ODataContextBinding extends sap.ui.model.ContextBinding {
+    export default abstract class ODataContextBinding extends sap.ui.model.ContextBinding {
+
 
         /**
             * Constructor for odata.ODataContextBinding
@@ -36,6 +32,5 @@ declare module "sap/ui/model/odata/ODataContextBinding" {
         public getMetadata(): any;
 
     }
-
 
 }

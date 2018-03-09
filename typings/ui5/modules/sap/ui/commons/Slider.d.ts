@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/Slider" {
 
-    export = Slider;
-
-
-
-
     /**
     
     */
-    class Slider extends sap.ui.core.Control {
+    export default class Slider extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Slider`.
@@ -400,6 +396,5 @@ declare module "sap/ui/commons/Slider" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

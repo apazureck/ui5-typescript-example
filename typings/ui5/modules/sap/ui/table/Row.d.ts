@@ -1,14 +1,10 @@
 declare module "sap/ui/table/Row" {
 
-    export = Row;
-
-
-
-
     /**
     
     */
-    class Row extends sap.ui.core.Element {
+    export default class Row extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Row.
@@ -92,6 +88,5 @@ declare module "sap/ui/table/Row" {
         public removeCell(vCell: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
     }
-
 
 }

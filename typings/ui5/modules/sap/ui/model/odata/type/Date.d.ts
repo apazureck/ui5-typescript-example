@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Date" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Date;
-
-
-
-
     /**
     
     */
-    class Date extends ODataType {
+    export default class Date extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.Date`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Date" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

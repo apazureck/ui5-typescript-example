@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/Button" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type ButtonStyle = sapuicommonslibrary.ButtonStyle;
-
-    export = Button;
-
-
-
+    import { ButtonStyle } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Button extends sap.ui.core.Control {
+    export default class Button extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Button.
@@ -362,6 +357,5 @@ declare module "sap/ui/commons/Button" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

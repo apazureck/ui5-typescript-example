@@ -1,15 +1,11 @@
 declare module "sap/ui/table/AnalyticalColumnMenu" {
     import ColumnMenu from "sap/ui/table/ColumnMenu";
 
-    export = AnalyticalColumnMenu;
-
-
-
-
     /**
     
     */
-    class AnalyticalColumnMenu extends ColumnMenu {
+    export default class AnalyticalColumnMenu extends ColumnMenu {
+
 
         /**
             * Constructor for a new AnalyticalColumnMenu.
@@ -47,6 +43,5 @@ declare module "sap/ui/table/AnalyticalColumnMenu" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

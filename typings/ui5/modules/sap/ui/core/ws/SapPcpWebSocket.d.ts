@@ -1,13 +1,11 @@
 declare module "sap/ui/core/ws/SapPcpWebSocket" {
     import WebSocket from "sap/ui/core/ws/WebSocket";
 
-    export = SapPcpWebSocket;
-
-
     /**
     
     */
-    class SapPcpWebSocket extends WebSocket {
+    export default class SapPcpWebSocket extends WebSocket {
+
 
         /**
             * Creates a new WebSocket connection and uses the pcp-protocol for communication.
@@ -51,18 +49,15 @@ declare module "sap/ui/core/ws/SapPcpWebSocket" {
 
     }
 
-
-    namespace SapPcpWebSocket {
-
-        /** 
-    * Protocol versions.
-     * 
-     * One (or more) of these have to be selected to create an SapPcpWebSocket connection (or no protocol at all). 
-    */
-        enum SUPPORTED_PROTOCOLS {
-            v10 = "v10",
-        }
+    /** 
+* Protocol versions.
+ * 
+ * One (or more) of these have to be selected to create an SapPcpWebSocket connection (or no protocol at all). 
+*/
 
 
+    export enum SUPPORTED_PROTOCOLS {
+        v10 = "v10",
     }
+
 }

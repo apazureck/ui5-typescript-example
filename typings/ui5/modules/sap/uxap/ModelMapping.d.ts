@@ -1,14 +1,10 @@
 declare module "sap/uxap/ModelMapping" {
 
-    export = ModelMapping;
-
-
-
-
     /**
     
     */
-    class ModelMapping extends sap.ui.core.Element {
+    export default class ModelMapping extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ModelMapping.
@@ -100,6 +96,5 @@ declare module "sap/uxap/ModelMapping" {
         public setInternalModelName(sInternalModelName: string): this;
 
     }
-
 
 }

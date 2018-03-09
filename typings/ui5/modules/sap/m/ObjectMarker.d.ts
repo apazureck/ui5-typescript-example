@@ -1,17 +1,12 @@
 declare module "sap/m/ObjectMarker" {
-    import sapmlibrary from "sap/m/library";
-    type ObjectMarkerType = sapmlibrary.ObjectMarkerType;
-    type ObjectMarkerVisibility = sapmlibrary.ObjectMarkerVisibility;
-
-    export = ObjectMarker;
-
-
-
+    import { ObjectMarkerType } from "sap/m/library";
+    import { ObjectMarkerVisibility } from "sap/m/library";
 
     /**
     
     */
-    class ObjectMarker extends sap.ui.core.Control {
+    export default class ObjectMarker extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectMarker.
@@ -145,6 +140,5 @@ declare module "sap/m/ObjectMarker" {
         public setVisibility(sVisibility: ObjectMarkerVisibility): this;
 
     }
-
 
 }

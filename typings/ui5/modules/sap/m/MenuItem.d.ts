@@ -1,15 +1,11 @@
 declare module "sap/m/MenuItem" {
     import Item from "sap/ui/core/Item";
 
-    export = MenuItem;
-
-
-
-
     /**
     
     */
-    class MenuItem extends Item {
+    export default class MenuItem extends Item {
+
 
         /**
             * Constructor for a new `MenuItem`.
@@ -260,6 +256,5 @@ declare module "sap/m/MenuItem" {
         public unbindItems(): this;
 
     }
-
 
 }

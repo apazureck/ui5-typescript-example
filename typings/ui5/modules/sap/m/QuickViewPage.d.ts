@@ -1,15 +1,11 @@
 declare module "sap/m/QuickViewPage" {
     import QuickViewGroup from "sap/m/QuickViewGroup";
 
-    export = QuickViewPage;
-
-
-
-
     /**
     
     */
-    class QuickViewPage extends sap.ui.core.Control {
+    export default class QuickViewPage extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new QuickViewPage.
@@ -236,6 +232,5 @@ declare module "sap/m/QuickViewPage" {
         public unbindGroups(): this;
 
     }
-
 
 }

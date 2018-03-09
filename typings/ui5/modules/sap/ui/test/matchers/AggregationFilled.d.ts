@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/AggregationFilled" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = AggregationFilled;
-
-
-
-
     /**
     
     */
-    class AggregationFilled extends Matcher {
+    export default class AggregationFilled extends Matcher {
+
 
         /**
             * AggregationFilled - checks if an aggregation contains at least one entry.
@@ -72,6 +68,5 @@ declare module "sap/ui/test/matchers/AggregationFilled" {
         public setName(sName: string): this;
 
     }
-
 
 }

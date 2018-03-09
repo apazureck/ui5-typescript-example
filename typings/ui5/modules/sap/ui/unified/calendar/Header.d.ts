@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/calendar/Header" {
 
-    export = Header;
-
-
-
-
     /**
     
     */
-    class Header extends sap.ui.core.Control {
+    export default class Header extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Header.
@@ -446,6 +442,5 @@ declare module "sap/ui/unified/calendar/Header" {
         public setVisibleButton2(bVisibleButton2: boolean): this;
 
     }
-
 
 }

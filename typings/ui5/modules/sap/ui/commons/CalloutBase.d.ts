@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/CalloutBase" {
 
-    export = CalloutBase;
-
-
-
-
     /**
     
     */
-    class CalloutBase extends sap.ui.core.TooltipBase {
+    export default class CalloutBase extends sap.ui.core.TooltipBase {
+
 
         /**
             * Constructor for a new CalloutBase.
@@ -193,6 +189,5 @@ declare module "sap/ui/commons/CalloutBase" {
         public setPosition(myPosition: sap.ui.core.Dock, atPosition: sap.ui.core.Dock): this;
 
     }
-
 
 }

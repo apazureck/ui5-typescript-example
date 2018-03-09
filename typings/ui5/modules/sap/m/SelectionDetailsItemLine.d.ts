@@ -1,14 +1,10 @@
 declare module "sap/m/SelectionDetailsItemLine" {
 
-    export = SelectionDetailsItemLine;
-
-
-
-
     /**
     
     */
-    class SelectionDetailsItemLine extends sap.ui.core.Element {
+    export default class SelectionDetailsItemLine extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new SelectionDetailsItemLine.
@@ -112,6 +108,5 @@ declare module "sap/m/SelectionDetailsItemLine" {
         public setValue(oValue: any): this;
 
     }
-
 
 }

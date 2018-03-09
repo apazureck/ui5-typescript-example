@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/SplitPane" {
 
-    export = SplitPane;
-
-
-
-
     /**
     
     */
-    class SplitPane extends sap.ui.core.Element {
+    export default class SplitPane extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new SplitPane.
@@ -105,6 +101,5 @@ declare module "sap/ui/layout/SplitPane" {
         public setRequiredParentWidth(iRequiredParentWidth: number): this;
 
     }
-
 
 }

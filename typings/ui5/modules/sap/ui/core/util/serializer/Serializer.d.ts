@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/serializer/Serializer" {
 
-    export = Serializer;
-
-
-
-
     /**
     
     */
-    class Serializer extends sap.ui.base.EventProvider {
+    export default class Serializer extends sap.ui.base.EventProvider {
+
 
         /**
             * Serializer class. Iterates over all controls and call a given serializer delegate.
@@ -36,6 +32,5 @@ declare module "sap/ui/core/util/serializer/Serializer" {
         public getMetadata(): any;
 
     }
-
 
 }

@@ -5,10 +5,11 @@ declare namespace sap.ui.core {
     */
     export class UIArea extends sap.ui.base.ManagedObject {
 
+
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(oCore: sap.ui.core.Core, oRootNode: any);
+        public constructor(oCore: sap.ui.core.Core, oRootNode?: any);
 
 
         /**

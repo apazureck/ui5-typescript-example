@@ -2,15 +2,11 @@ declare module "sap/m/MaskInput" {
     import InputBase from "sap/m/InputBase";
     import MaskInputRule from "sap/m/MaskInputRule";
 
-    export = MaskInput;
-
-
-
-
     /**
     
     */
-    class MaskInput extends InputBase {
+    export default class MaskInput extends InputBase {
+
 
         /**
             * Constructor for a new MaskInput.
@@ -125,6 +121,5 @@ declare module "sap/m/MaskInput" {
         public setPlaceholderSymbol(sPlaceholderSymbol: string): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/P13nPanel" {
     import P13nItem from "sap/m/P13nItem";
 
-    export = P13nPanel;
-
-
-
-
     /**
     
     */
-    class P13nPanel extends sap.ui.core.Control {
+    export default class P13nPanel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new P13nPanel.
@@ -271,6 +267,5 @@ declare module "sap/m/P13nPanel" {
         public unbindItems(): this;
 
     }
-
 
 }

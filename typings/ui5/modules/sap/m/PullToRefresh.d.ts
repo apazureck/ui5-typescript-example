@@ -1,14 +1,10 @@
 declare module "sap/m/PullToRefresh" {
 
-    export = PullToRefresh;
-
-
-
-
     /**
     
     */
-    class PullToRefresh extends sap.ui.core.Control {
+    export default class PullToRefresh extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new PullToRefresh.
@@ -159,6 +155,5 @@ declare module "sap/m/PullToRefresh" {
         public setShowIcon(bShowIcon: boolean): this;
 
     }
-
 
 }

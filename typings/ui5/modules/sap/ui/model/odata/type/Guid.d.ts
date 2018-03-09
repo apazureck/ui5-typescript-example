@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Guid" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Guid;
-
-
-
-
     /**
     
     */
-    class Guid extends ODataType {
+    export default class Guid extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.Guid`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Guid" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

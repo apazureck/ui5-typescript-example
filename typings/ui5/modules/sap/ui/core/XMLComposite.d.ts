@@ -1,14 +1,10 @@
 declare module "sap/ui/core/XMLComposite" {
 
-    export = XMLComposite;
-
-
-
-
     /**
     
     */
-    class XMLComposite extends sap.ui.core.Control {
+    export default abstract class XMLComposite extends sap.ui.core.Control {
+
 
         /**
             * XMLComposite is the base class for composite controls that use a XML fragment representation for their visual parts. From a user perspective such controls appear as any other control, but internally the rendering part is added as a fragment. The fragment that is used should appear in the same folder as the control's JS implementation with the file extension `.control.xml`. The fragment's content can access the interface data from the XMLComposite control via bindings. Currently only aggregations and properties can be used with bindings inside a fragment. The exposed model that is used for internal bindings in the fragment has the default name `$this`. The name will always start with an `$`. The metadata of the derived control can define the alias with its metadata. A code example can be found below.
@@ -183,6 +179,5 @@ declare module "sap/ui/core/XMLComposite" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -1,23 +1,21 @@
 declare module "sap/ui/suite/library" {
+    /**
 
-    export = suite;
-
+*/
+    export default suite;
     namespace suite {
 
     }
-
-    namespace suite {
-
-        /** 
-    * Defined color values for the Task Circle Control 
-    */
-        enum TaskCircleColor {
-            Gray = "Gray",
-            Green = "Green",
-            Red = "Red",
-            Yellow = "Yellow",
-        }
+    /** 
+* Defined color values for the Task Circle Control 
+*/
 
 
+    export enum TaskCircleColor {
+        Gray = "Gray",
+        Green = "Green",
+        Red = "Red",
+        Yellow = "Yellow",
     }
+
 }

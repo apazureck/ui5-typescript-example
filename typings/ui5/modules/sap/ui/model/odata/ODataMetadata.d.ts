@@ -1,14 +1,10 @@
 declare module "sap/ui/model/odata/ODataMetadata" {
 
-    export = ODataMetadata;
-
-
-
-
     /**
     
     */
-    class ODataMetadata extends sap.ui.base.EventProvider {
+    export default class ODataMetadata extends sap.ui.base.EventProvider {
+
 
         /**
             * Constructor for a new ODataMetadata.
@@ -110,6 +106,5 @@ declare module "sap/ui/model/odata/ODataMetadata" {
         public refresh(): any;
 
     }
-
 
 }

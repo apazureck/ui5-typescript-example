@@ -1,14 +1,10 @@
 declare module "sap/ui/core/Icon" {
 
-    export = Icon;
-
-
-
-
     /**
     
     */
-    class Icon extends sap.ui.core.Control {
+    export default class Icon extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Icon.
@@ -339,6 +335,5 @@ declare module "sap/ui/core/Icon" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

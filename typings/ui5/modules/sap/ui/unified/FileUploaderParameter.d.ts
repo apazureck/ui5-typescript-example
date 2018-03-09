@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/FileUploaderParameter" {
 
-    export = FileUploaderParameter;
-
-
-
-
     /**
     
     */
-    class FileUploaderParameter extends sap.ui.core.Element {
+    export default class FileUploaderParameter extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new FileUploaderParameter.
@@ -80,6 +76,5 @@ declare module "sap/ui/unified/FileUploaderParameter" {
         public setValue(sValue: string): this;
 
     }
-
 
 }

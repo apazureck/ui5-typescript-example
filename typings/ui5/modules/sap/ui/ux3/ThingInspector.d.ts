@@ -4,19 +4,14 @@ declare module "sap/ui/ux3/ThingInspector" {
     import NavigationItem from "sap/ui/ux3/NavigationItem";
     import ThingGroup from "sap/ui/ux3/ThingGroup";
     import ActionBar from "sap/ui/ux3/ActionBar";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type FollowActionState = sapuiux3library.FollowActionState;
-    type ThingViewerHeaderType = sapuiux3library.ThingViewerHeaderType;
-
-    export = ThingInspector;
-
-
-
+    import { FollowActionState } from "sap/ui/ux3/library";
+    import { ThingViewerHeaderType } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class ThingInspector extends Overlay {
+    export default class ThingInspector extends Overlay {
+
 
         /**
             * Constructor for a new ThingInspector.
@@ -578,6 +573,5 @@ declare module "sap/ui/ux3/ThingInspector" {
         public setUpdateActionEnabled(bUpdateActionEnabled: boolean): this;
 
     }
-
 
 }

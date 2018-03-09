@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/RoadMapStep" {
 
-    export = RoadMapStep;
-
-
-
-
     /**
     
     */
-    class RoadMapStep extends sap.ui.core.Element {
+    export default class RoadMapStep extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new RoadMapStep.
@@ -163,6 +159,5 @@ declare module "sap/ui/commons/RoadMapStep" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

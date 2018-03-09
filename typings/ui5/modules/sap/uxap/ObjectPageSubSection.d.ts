@@ -1,18 +1,13 @@
 declare module "sap/uxap/ObjectPageSubSection" {
     import ObjectPageSectionBase from "sap/uxap/ObjectPageSectionBase";
-    import sapuxaplibrary from "sap/uxap/library";
-    type ObjectPageSubSectionMode = sapuxaplibrary.ObjectPageSubSectionMode;
+    import { ObjectPageSubSectionMode } from "sap/uxap/library";
     import BlockBase from "sap/uxap/BlockBase";
-
-    export = ObjectPageSubSection;
-
-
-
 
     /**
     
     */
-    class ObjectPageSubSection extends ObjectPageSectionBase {
+    export default class ObjectPageSubSection extends ObjectPageSectionBase {
+
 
         /**
             * Constructor for a new ObjectPageSubSection.
@@ -213,6 +208,5 @@ declare module "sap/uxap/ObjectPageSubSection" {
         public setTitleUppercase(bTitleUppercase: boolean): this;
 
     }
-
 
 }

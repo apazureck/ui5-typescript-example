@@ -1,15 +1,11 @@
 declare module "sap/m/ColumnListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = ColumnListItem;
-
-
-
-
     /**
     
     */
-    class ColumnListItem extends ListItemBase {
+    export default class ColumnListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new ColumnListItem.
@@ -145,6 +141,5 @@ declare module "sap/m/ColumnListItem" {
         public unbindCells(): this;
 
     }
-
 
 }

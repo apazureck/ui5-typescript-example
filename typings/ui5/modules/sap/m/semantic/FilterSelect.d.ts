@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/FilterSelect" {
     import SemanticSelect from "sap/m/semantic/SemanticSelect";
 
-    export = FilterSelect;
-
-
-
-
     /**
     
     */
-    class FilterSelect extends SemanticSelect {
+    export default class FilterSelect extends SemanticSelect {
+
 
         /**
             * Constructor for a new FilterSelect.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/FilterSelect" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

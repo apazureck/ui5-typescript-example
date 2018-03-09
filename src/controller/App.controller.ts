@@ -39,5 +39,4 @@ export default class App extends BaseController {
         // apply content density mode to root view
         this.getView().addStyleClass(oComponent.getContentDensityClass());
     }
-
 }

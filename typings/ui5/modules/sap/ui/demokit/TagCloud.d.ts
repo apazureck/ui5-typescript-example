@@ -1,15 +1,11 @@
 declare module "sap/ui/demokit/TagCloud" {
     import Tag from "sap/ui/demokit/Tag";
 
-    export = TagCloud;
-
-
-
-
     /**
     
     */
-    class TagCloud extends sap.ui.core.Control {
+    export default class TagCloud extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TagCloud.
@@ -162,6 +158,5 @@ declare module "sap/ui/demokit/TagCloud" {
         public setMinFontSize(iMinFontSize: number): this;
 
     }
-
 
 }

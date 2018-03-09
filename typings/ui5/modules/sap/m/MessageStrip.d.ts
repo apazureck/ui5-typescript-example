@@ -1,15 +1,11 @@
 declare module "sap/m/MessageStrip" {
     import Link from "sap/m/Link";
 
-    export = MessageStrip;
-
-
-
-
     /**
     
     */
-    class MessageStrip extends sap.ui.core.Control {
+    export default class MessageStrip extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessageStrip.
@@ -213,6 +209,5 @@ declare module "sap/m/MessageStrip" {
         public setType(sType: sap.ui.core.MessageType): this;
 
     }
-
 
 }

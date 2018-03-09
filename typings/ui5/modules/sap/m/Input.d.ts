@@ -4,19 +4,14 @@ declare module "sap/m/Input" {
     import Item from "sap/ui/core/Item";
     import ColumnListItem from "sap/m/ColumnListItem";
     import Column from "sap/m/Column";
-    import sapmlibrary from "sap/m/library";
-    type InputTextFormatMode = sapmlibrary.InputTextFormatMode;
-    type InputType = sapmlibrary.InputType;
-
-    export = Input;
-
-
-
+    import { InputTextFormatMode } from "sap/m/library";
+    import { InputType } from "sap/m/library";
 
     /**
     
     */
-    class Input extends InputBase {
+    export default class Input extends InputBase {
+
 
         /**
             * Constructor for a new `Input`.
@@ -1203,6 +1198,5 @@ declare module "sap/m/Input" {
         protected validateAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject | any, bMultiple: boolean): sap.ui.base.ManagedObject | any;
 
     }
-
 
 }

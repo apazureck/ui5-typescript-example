@@ -1,15 +1,11 @@
 declare module "sap/m/ActionListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = ActionListItem;
-
-
-
-
     /**
     
     */
-    class ActionListItem extends ListItemBase {
+    export default class ActionListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new ActionListItem.
@@ -77,6 +73,5 @@ declare module "sap/m/ActionListItem" {
         public setText(sText: string): this;
 
     }
-
 
 }

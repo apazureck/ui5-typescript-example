@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/PrintAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = PrintAction;
-
-
-
-
     /**
     
     */
-    class PrintAction extends SemanticButton {
+    export default class PrintAction extends SemanticButton {
+
 
         /**
             * Constructor for a new PrintAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/PrintAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

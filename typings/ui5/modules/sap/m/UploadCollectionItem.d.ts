@@ -4,15 +4,11 @@ declare module "sap/m/UploadCollectionItem" {
     import ObjectStatus from "sap/m/ObjectStatus";
     import FileUploader from "sap/ui/unified/FileUploader";
 
-    export = UploadCollectionItem;
-
-
-
-
     /**
     
     */
-    class UploadCollectionItem extends sap.ui.core.Element {
+    export default class UploadCollectionItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new UploadCollectionItem
@@ -524,6 +520,5 @@ declare module "sap/m/UploadCollectionItem" {
         public unbindStatuses(): this;
 
     }
-
 
 }

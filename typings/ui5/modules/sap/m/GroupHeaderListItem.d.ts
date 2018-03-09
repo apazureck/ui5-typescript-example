@@ -1,15 +1,11 @@
 declare module "sap/m/GroupHeaderListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = GroupHeaderListItem;
-
-
-
-
     /**
     
     */
-    class GroupHeaderListItem extends ListItemBase {
+    export default class GroupHeaderListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new GroupHeaderListItem.
@@ -121,6 +117,5 @@ declare module "sap/m/GroupHeaderListItem" {
         public setUpperCase(bUpperCase: boolean): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/UIAreaSubstitute" {
 
-    export = UIAreaSubstitute;
-
-
-
-
     /**
     
     */
-    class UIAreaSubstitute extends sap.ui.core.Element {
+    export default class UIAreaSubstitute extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new UIAreaSubstitute.
@@ -87,6 +83,5 @@ declare module "sap/ui/demokit/UIAreaSubstitute" {
         public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
     }
-
 
 }

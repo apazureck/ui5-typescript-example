@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/FormLayout" {
     import sap_ui_layout_form_FormLayout from "sap/ui/layout/form/FormLayout";
 
-    export = FormLayout;
-
-
-
-
     import FormLayoutBase from 'sap/ui/layout/form/FormLayout'
 
     /**
     
     */
-    class FormLayout extends FormLayoutBase {
+    export default class FormLayout extends FormLayoutBase {
+
 
         /**
             * Constructor for a new form/FormLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/form/FormLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

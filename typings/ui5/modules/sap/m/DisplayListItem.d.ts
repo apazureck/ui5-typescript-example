@@ -1,15 +1,11 @@
 declare module "sap/m/DisplayListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = DisplayListItem;
-
-
-
-
     /**
     
     */
-    class DisplayListItem extends ListItemBase {
+    export default class DisplayListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new DisplayListItem.
@@ -101,6 +97,5 @@ declare module "sap/m/DisplayListItem" {
         public setValueTextDirection(sValueTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

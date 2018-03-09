@@ -1,15 +1,11 @@
 declare module "sap/ui/table/RowAction" {
     import RowActionItem from "sap/ui/table/RowActionItem";
 
-    export = RowAction;
-
-
-
-
     /**
     
     */
-    class RowAction extends sap.ui.core.Control {
+    export default class RowAction extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RowAction.
@@ -123,6 +119,5 @@ declare module "sap/ui/table/RowAction" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

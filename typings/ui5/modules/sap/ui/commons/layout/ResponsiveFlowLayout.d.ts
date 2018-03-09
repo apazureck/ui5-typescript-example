@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/layout/ResponsiveFlowLayout" {
     import sap_ui_layout_ResponsiveFlowLayout from "sap/ui/layout/ResponsiveFlowLayout";
 
-    export = ResponsiveFlowLayout;
-
-
-
-
     import ResponsiveFlowLayoutBase from 'sap/ui/layout/ResponsiveFlowLayout'
 
     /**
     
     */
-    class ResponsiveFlowLayout extends ResponsiveFlowLayoutBase {
+    export default class ResponsiveFlowLayout extends ResponsiveFlowLayoutBase {
+
 
         /**
             * Constructor for a new layout/ResponsiveFlowLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/layout/ResponsiveFlowLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

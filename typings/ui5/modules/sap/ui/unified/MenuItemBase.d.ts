@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/MenuItemBase" {
     import Menu from "sap/ui/unified/Menu";
 
-    export = MenuItemBase;
-
-
-
-
     /**
     
     */
-    class MenuItemBase extends sap.ui.core.Element {
+    export default abstract class MenuItemBase extends sap.ui.core.Element {
+
 
         /**
             * Abstract base class `MenuItemBase` for menu item elements. Please use concrete subclasses.
@@ -188,6 +184,5 @@ declare module "sap/ui/unified/MenuItemBase" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

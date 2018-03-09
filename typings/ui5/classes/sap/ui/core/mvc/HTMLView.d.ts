@@ -5,10 +5,11 @@ declare namespace sap.ui.core.mvc {
     */
     export class HTMLView extends sap.ui.core.mvc.View {
 
+
         /**
             * Constructor for a new mvc/HTMLView.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

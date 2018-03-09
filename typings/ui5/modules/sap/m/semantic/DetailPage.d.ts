@@ -22,15 +22,11 @@ declare module "sap/m/semantic/DetailPage" {
     import SendMessageAction from "sap/m/semantic/SendMessageAction";
     import ShareInJamAction from "sap/m/semantic/ShareInJamAction";
 
-    export = DetailPage;
-
-
-
-
     /**
     
     */
-    class DetailPage extends ShareMenuPage {
+    export default class DetailPage extends ShareMenuPage {
+
 
         /**
             * Constructor for a new DetailPage
@@ -427,6 +423,5 @@ declare module "sap/m/semantic/DetailPage" {
         public setShareInJamAction(oShareInJamAction: ShareInJamAction): this;
 
     }
-
 
 }

@@ -3,7 +3,8 @@ declare namespace sap.ui.base {
     /**
     
     */
-    export class Object {
+    export abstract class Object {
+
 
         /**
             * Constructor for an sap.ui.base.Object.

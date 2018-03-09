@@ -4,15 +4,11 @@ declare module "sap/ui/ux3/Feed" {
     import ListItem from "sap/ui/core/ListItem";
     import MenuItem from "sap/ui/commons/MenuItem";
 
-    export = Feed;
-
-
-
-
     /**
     
     */
-    class Feed extends sap.ui.core.Control {
+    export default class Feed extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Feed.
@@ -445,6 +441,5 @@ declare module "sap/ui/ux3/Feed" {
         public unbindToolsMenuItems(): this;
 
     }
-
 
 }

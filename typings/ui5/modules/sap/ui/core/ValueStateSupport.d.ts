@@ -1,9 +1,8 @@
 declare module "sap/ui/core/ValueStateSupport" {
+    /**
 
-    export = ValueStateSupport;
-
-
-
+*/
+    export default ValueStateSupport;
     namespace ValueStateSupport {
 
         // Methods
@@ -20,5 +19,4 @@ declare module "sap/ui/core/ValueStateSupport" {
     */
         export function getAdditionalText(vValue: sap.ui.core.Element | sap.ui.core.ValueState): string;
     }
-
 }

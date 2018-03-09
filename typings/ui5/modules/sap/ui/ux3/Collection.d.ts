@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/Collection" {
     import Item from "sap/ui/core/Item";
 
-    export = Collection;
-
-
-
-
     /**
     
     */
-    class Collection extends sap.ui.core.Element {
+    export default class Collection extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Collection.
@@ -224,6 +220,5 @@ declare module "sap/ui/ux3/Collection" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

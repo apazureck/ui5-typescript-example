@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/CancelAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = CancelAction;
-
-
-
-
     /**
     
     */
-    class CancelAction extends SemanticButton {
+    export default class CancelAction extends SemanticButton {
+
 
         /**
             * Constructor for a new CancelAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/CancelAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

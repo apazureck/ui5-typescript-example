@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/OpenInAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = OpenInAction;
-
-
-
-
     /**
     
     */
-    class OpenInAction extends SemanticButton {
+    export default class OpenInAction extends SemanticButton {
+
 
         /**
             * Constructor for a new OpenInAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/OpenInAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

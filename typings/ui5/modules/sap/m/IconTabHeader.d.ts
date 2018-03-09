@@ -1,19 +1,14 @@
 declare module "sap/m/IconTabHeader" {
     import IconTabFilter from "sap/m/IconTabFilter";
-    import sapmlibrary from "sap/m/library";
-    type IconTab = sapmlibrary.IconTab;
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-    type IconTabHeaderMode = sapmlibrary.IconTabHeaderMode;
-
-    export = IconTabHeader;
-
-
-
+    import { IconTab } from "sap/m/library";
+    import { BackgroundDesign } from "sap/m/library";
+    import { IconTabHeaderMode } from "sap/m/library";
 
     /**
     
     */
-    class IconTabHeader extends sap.ui.core.Control {
+    export default class IconTabHeader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new IconTabHeader.
@@ -285,6 +280,5 @@ declare module "sap/m/IconTabHeader" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

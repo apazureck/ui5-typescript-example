@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/Menu" {
     import sap_ui_unified_Menu from "sap/ui/unified/Menu";
 
-    export = Menu;
-
-
-
-
     import MenuBase from 'sap/ui/unified/Menu'
 
     /**
     
     */
-    class Menu extends MenuBase {
+    export default class Menu extends MenuBase {
+
 
         /**
             * Constructor for a new Menu control.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/Menu" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

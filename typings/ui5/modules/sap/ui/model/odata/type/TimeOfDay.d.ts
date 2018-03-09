@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/TimeOfDay" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = TimeOfDay;
-
-
-
-
     /**
     
     */
-    class TimeOfDay extends ODataType {
+    export default class TimeOfDay extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.TimeOfDay`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/TimeOfDay" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

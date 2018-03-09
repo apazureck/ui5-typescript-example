@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/ContentSwitcher" {
 
-    export = ContentSwitcher;
-
-
-
-
     /**
     
     */
-    class ContentSwitcher extends sap.ui.core.Control {
+    export default class ContentSwitcher extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ContentSwitcher.
@@ -171,6 +167,5 @@ declare module "sap/ui/unified/ContentSwitcher" {
         public switchContent(): any;
 
     }
-
 
 }

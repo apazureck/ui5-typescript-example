@@ -1,10 +1,8 @@
 declare module "sap/m/MessageBox" {
-    import sapmMessageBox from "sap/m/MessageBox";
-    type Action = sapmMessageBox.Action;
-    type Icon = sapmMessageBox.Icon;
+    /**
 
-    export = MessageBox;
-
+*/
+    export default MessageBox;
     namespace MessageBox {
 
         // Methods
@@ -137,14 +135,12 @@ declare module "sap/m/MessageBox" {
     */
         export function warning(vMessage: string, mOptions?: { onClose?: Function, title?: string, id?: string, styleClass?: string, initialFocus?: string | Action, textDirection?: sap.ui.core.TextDirection, }): any;
     }
-
+    /** 
+* Enumeration of supported actions in a MessageBox.
+ * 
+ * Each action is represented as a button in the message box. The values of this enumeration are used for both, specifying the set of allowed actions as well as reporting back the user choice. 
+*/
     namespace MessageBox {
-
-        /** 
-    * Enumeration of supported actions in a MessageBox.
-     * 
-     * Each action is represented as a button in the message box. The values of this enumeration are used for both, specifying the set of allowed actions as well as reporting back the user choice. 
-    */
         enum Action {
             ABORT = "ABORT",
             CANCEL = "CANCEL",
@@ -156,10 +152,12 @@ declare module "sap/m/MessageBox" {
             RETRY = "RETRY",
             YES = "YES",
         }
+    }
 
-        /** 
-    * Enumeration of the pre-defined icons that can be used in a MessageBox. 
-    */
+    /** 
+* Enumeration of the pre-defined icons that can be used in a MessageBox. 
+*/
+    namespace MessageBox {
         enum Icon {
             ERROR = "ERROR",
             INFORMATION = "INFORMATION",
@@ -168,7 +166,6 @@ declare module "sap/m/MessageBox" {
             SUCCESS = "SUCCESS",
             WARNING = "WARNING",
         }
-
-
     }
+
 }

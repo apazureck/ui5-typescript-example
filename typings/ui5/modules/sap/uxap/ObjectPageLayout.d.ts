@@ -1,20 +1,14 @@
 declare module "sap/uxap/ObjectPageLayout" {
     import ObjectPageSection from "sap/uxap/ObjectPageSection";
-    import sapmlibrary from "sap/m/library";
-    type IBar = sapmlibrary.IBar;
-    import sapuxaplibrary from "sap/uxap/library";
-    type IHeaderTitle = sapuxaplibrary.IHeaderTitle;
-    type ObjectPageSubSectionLayout = sapuxaplibrary.ObjectPageSubSectionLayout;
-
-    export = ObjectPageLayout;
-
-
-
+    import { IBar } from "sap/m/library";
+    import { IHeaderTitle } from "sap/uxap/library";
+    import { ObjectPageSubSectionLayout } from "sap/uxap/library";
 
     /**
     
     */
-    class ObjectPageLayout extends sap.ui.core.Control {
+    export default class ObjectPageLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectPageLayout.
@@ -757,6 +751,5 @@ declare module "sap/uxap/ObjectPageLayout" {
         public setUseTwoColumnsForLargeScreen(bUseTwoColumnsForLargeScreen: boolean): this;
 
     }
-
 
 }

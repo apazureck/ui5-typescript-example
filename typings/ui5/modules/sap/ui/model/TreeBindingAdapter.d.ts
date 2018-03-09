@@ -1,12 +1,8 @@
 declare module "sap/ui/model/TreeBindingAdapter" {
     import SelectionModel from "sap/ui/model/SelectionModel";
 
-    export = TreeBindingAdapter;
+    export default class TreeBindingAdapter {
 
-
-
-
-    class TreeBindingAdapter {
 
         /**
             * Adapter for TreeBindings to add the ListBinding functionality and use the tree structure in list based controls.
@@ -52,6 +48,5 @@ declare module "sap/ui/model/TreeBindingAdapter" {
         protected getNodes(iStartIndex: number, iLength: number, iThreshold: number): any;
 
     }
-
 
 }

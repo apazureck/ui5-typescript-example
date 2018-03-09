@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/v2/ODataTreeBinding" {
     import OperationMode from "sap/ui/model/odata/OperationMode";
 
-    export = ODataTreeBinding;
-
-
-
-
     /**
     
     */
-    class ODataTreeBinding extends sap.ui.model.TreeBinding {
+    export default class ODataTreeBinding extends sap.ui.model.TreeBinding {
+
 
         /**
             
@@ -118,6 +114,5 @@ declare module "sap/ui/model/odata/v2/ODataTreeBinding" {
         public sort(aSorters: any[]): any;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/DateInterval" {
     import CompositeType from "sap/ui/model/CompositeType";
 
-    export = DateInterval;
-
-
-
-
     /**
     
     */
-    class DateInterval extends CompositeType {
+    export default class DateInterval extends CompositeType {
+
 
         /**
             * Constructor for a Date interval type.
@@ -59,6 +55,5 @@ declare module "sap/ui/model/type/DateInterval" {
         public parseValue(oValue: any, sInternalType: string): any;
 
     }
-
 
 }

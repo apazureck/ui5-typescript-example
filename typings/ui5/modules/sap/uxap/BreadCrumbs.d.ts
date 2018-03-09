@@ -2,15 +2,11 @@ declare module "sap/uxap/BreadCrumbs" {
     import Link from "sap/m/Link";
     import Text from "sap/m/Text";
 
-    export = BreadCrumbs;
-
-
-
-
     /**
     
     */
-    class BreadCrumbs extends sap.ui.core.Control {
+    export default class BreadCrumbs extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BreadCrumbs.
@@ -126,6 +122,5 @@ declare module "sap/uxap/BreadCrumbs" {
         public setShowCurrentLocation(bShowCurrentLocation: boolean): this;
 
     }
-
 
 }

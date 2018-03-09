@@ -1,15 +1,11 @@
 declare module "sap/m/DateTimeField" {
     import InputBase from "sap/m/InputBase";
 
-    export = DateTimeField;
-
-
-
-
     /**
     
     */
-    class DateTimeField extends InputBase {
+    export default abstract class DateTimeField extends InputBase {
+
 
         /**
             * Constructor for a new `sap.m.DateTimeField`.
@@ -97,6 +93,5 @@ declare module "sap/m/DateTimeField" {
         public setValueFormat(sValueFormat: string): this;
 
     }
-
 
 }

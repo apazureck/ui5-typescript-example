@@ -1,14 +1,10 @@
 declare module "sap/ui/core/tmpl/DOMAttribute" {
 
-    export = DOMAttribute;
-
-
-
-
     /**
     
     */
-    class DOMAttribute extends sap.ui.core.Element {
+    export default class DOMAttribute extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new tmpl/DOMAttribute.
@@ -80,6 +76,5 @@ declare module "sap/ui/core/tmpl/DOMAttribute" {
         public setValue(sValue: string): this;
 
     }
-
 
 }

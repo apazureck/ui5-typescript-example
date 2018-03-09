@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/EditAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = EditAction;
-
-
-
-
     /**
     
     */
-    class EditAction extends SemanticButton {
+    export default class EditAction extends SemanticButton {
+
 
         /**
             * Constructor for a new EditAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/EditAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

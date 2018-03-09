@@ -1,14 +1,10 @@
 declare module "sap/ui/core/service/ServiceFactory" {
 
-    export = ServiceFactory;
-
-
-
-
     /**
     
     */
-    class ServiceFactory extends sap.ui.base.Object {
+    export default class ServiceFactory extends sap.ui.base.Object {
+
 
         /**
             * Creates a service factory.
@@ -51,6 +47,5 @@ declare module "sap/ui/core/service/ServiceFactory" {
         public getMetadata(): any;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/TablePersoProvider" {
     import Column from "sap/m/Column";
 
-    export = TablePersoProvider;
-
-
-
-
     /**
     
     */
-    class TablePersoProvider extends sap.ui.base.ManagedObject {
+    export default abstract class TablePersoProvider extends sap.ui.base.ManagedObject {
+
 
         /**
             * This is an abstract TablePersoProvider, describing the interface for a real TablePersoProvider.
@@ -91,6 +87,5 @@ declare module "sap/m/TablePersoProvider" {
         public setPersData(oBundle: any): any;
 
     }
-
 
 }

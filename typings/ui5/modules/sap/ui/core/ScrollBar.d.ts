@@ -1,14 +1,10 @@
 declare module "sap/ui/core/ScrollBar" {
 
-    export = ScrollBar;
-
-
-
-
     /**
     
     */
-    class ScrollBar extends sap.ui.core.Control {
+    export default class ScrollBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ScrollBar.
@@ -192,6 +188,5 @@ declare module "sap/ui/core/ScrollBar" {
         public unbind(oOwnerDomRef: string): any;
 
     }
-
 
 }

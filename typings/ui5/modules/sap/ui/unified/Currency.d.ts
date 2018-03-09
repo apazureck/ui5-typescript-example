@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/Currency" {
 
-    export = Currency;
-
-
-
-
     /**
     
     */
-    class Currency extends sap.ui.core.Control {
+    export default class Currency extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Currency`.
@@ -157,6 +153,5 @@ declare module "sap/ui/unified/Currency" {
         public setValue(fValue: number): this;
 
     }
-
 
 }

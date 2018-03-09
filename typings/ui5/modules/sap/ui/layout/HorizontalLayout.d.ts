@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/HorizontalLayout" {
 
-    export = HorizontalLayout;
-
-
-
-
     /**
     
     */
-    class HorizontalLayout extends sap.ui.core.Control {
+    export default class HorizontalLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new HorizontalLayout.
@@ -112,6 +108,5 @@ declare module "sap/ui/layout/HorizontalLayout" {
         public setAllowWrapping(bAllowWrapping: boolean): this;
 
     }
-
 
 }

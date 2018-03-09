@@ -1,7 +1,8 @@
 declare module "sap/ui/test/gherkin/dataTableUtils" {
+    /**
 
-    export = dataTableUtils;
-
+*/
+    export default dataTableUtils;
     namespace dataTableUtils {
 
         // Methods
@@ -34,29 +35,27 @@ declare module "sap/ui/test/gherkin/dataTableUtils" {
     */
         export function toTable(aData: any[], vNorm?: string | Function): any[];
     }
+    /**
 
-    namespace dataTableUtils {
+*/
+    export namespace normalization {
 
-        namespace normalization {
-
-            // Methods
-            /**
-                * For example: "First Name" -> "firstName"
-                */
-            export function camelCase(sString: string): string;/**
+        // Methods
+        /**
+            * For example: "First Name" -> "firstName"
+            */
+        export function camelCase(sString: string): string;/**
     * For example: "First Name" -> "first-name"
     */
-            export function hyphenated(sString: string): string;/**
+        export function hyphenated(sString: string): string;/**
     * For example: "First Name" -> "First Name"
     */
-            export function none(sString: string): string;/**
+        export function none(sString: string): string;/**
     * For example: "first name" -> "FirstName"
     */
-            export function pascalCase(sString: string): string;/**
+        export function pascalCase(sString: string): string;/**
     * For example: "first name" -> "First Name"
     */
-            export function titleCase(sString: string): string;
-        }
-
+        export function titleCase(sString: string): string;
     }
 }

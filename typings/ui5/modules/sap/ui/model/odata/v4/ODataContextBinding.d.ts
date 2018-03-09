@@ -2,15 +2,11 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
     import Context from "sap/ui/model/odata/v4/Context";
     import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 
-    export = ODataContextBinding;
-
-
-
-
     /**
     
     */
-    class ODataContextBinding extends sap.ui.model.ContextBinding {
+    export default class ODataContextBinding extends sap.ui.model.ContextBinding {
+
 
         /**
             * Do ** NOT ** call this private constructor, but rather use {@link sap.ui.model.odata.v4.ODataModel#bindContext} instead!
@@ -132,6 +128,5 @@ declare module "sap/ui/model/odata/v4/ODataContextBinding" {
         public toString(): string;
 
     }
-
 
 }

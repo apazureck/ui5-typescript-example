@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/AutoComplete" {
     import ComboBox from "sap/ui/commons/ComboBox";
 
-    export = AutoComplete;
-
-
-
-
     /**
     
     */
-    class AutoComplete extends ComboBox {
+    export default class AutoComplete extends ComboBox {
+
 
         /**
             * Constructor for a new AutoComplete.
@@ -167,6 +163,5 @@ declare module "sap/ui/commons/AutoComplete" {
         public setSelectedKey(): this;
 
     }
-
 
 }

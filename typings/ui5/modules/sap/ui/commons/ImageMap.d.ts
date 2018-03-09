@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/ImageMap" {
     import Area from "sap/ui/commons/Area";
 
-    export = ImageMap;
-
-
-
-
     /**
     
     */
-    class ImageMap extends sap.ui.core.Control {
+    export default class ImageMap extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ImageMap.
@@ -145,6 +141,5 @@ declare module "sap/ui/commons/ImageMap" {
         public setName(sName: string): this;
 
     }
-
 
 }

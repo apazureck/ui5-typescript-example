@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/String" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = String;
-
-
-
-
     /**
     
     */
-    class String extends ODataType {
+    export default class String extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.String`.
@@ -74,6 +70,5 @@ declare module "sap/ui/model/odata/type/String" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/SortSelect" {
     import SemanticSelect from "sap/m/semantic/SemanticSelect";
 
-    export = SortSelect;
-
-
-
-
     /**
     
     */
-    class SortSelect extends SemanticSelect {
+    export default class SortSelect extends SemanticSelect {
+
 
         /**
             * Constructor for a new SortSelect.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/SortSelect" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/FavoriteAction" {
     import SemanticToggleButton from "sap/m/semantic/SemanticToggleButton";
 
-    export = FavoriteAction;
-
-
-
-
     /**
     
     */
-    class FavoriteAction extends SemanticToggleButton {
+    export default class FavoriteAction extends SemanticToggleButton {
+
 
         /**
             * Constructor for a new FavoriteAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/FavoriteAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

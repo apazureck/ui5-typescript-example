@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/NavigationBar" {
     import NavigationItem from "sap/ui/ux3/NavigationItem";
 
-    export = NavigationBar;
-
-
-
-
     /**
     
     */
-    class NavigationBar extends sap.ui.core.Control {
+    export default class NavigationBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new NavigationBar.
@@ -206,6 +202,5 @@ declare module "sap/ui/ux3/NavigationBar" {
         public setToplevelVariant(bToplevelVariant: boolean): this;
 
     }
-
 
 }

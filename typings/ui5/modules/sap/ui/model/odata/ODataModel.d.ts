@@ -4,15 +4,11 @@ declare module "sap/ui/model/odata/ODataModel" {
     import ODataMetadata from "sap/ui/model/odata/ODataMetadata";
     import ODataMetaModel from "sap/ui/model/odata/ODataMetaModel";
 
-    export = ODataModel;
-
-
-
-
     /**
     
     */
-    class ODataModel extends sap.ui.model.Model {
+    export default class ODataModel extends sap.ui.model.Model {
+
 
         /**
             * Constructor for a new ODataModel.
@@ -389,6 +385,5 @@ declare module "sap/ui/model/odata/ODataModel" {
         public updateBindings(bForceUpdate?: boolean): any;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/uxap/ObjectPageHeaderContent" {
-    import sapuxaplibrary from "sap/uxap/library";
-    type ObjectPageHeaderDesign = sapuxaplibrary.ObjectPageHeaderDesign;
-
-    export = ObjectPageHeaderContent;
-
-
-
+    import { ObjectPageHeaderDesign } from "sap/uxap/library";
 
     /**
     
     */
-    class ObjectPageHeaderContent extends sap.ui.core.Control {
+    export default class ObjectPageHeaderContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectPageHeaderContent.
@@ -109,6 +104,5 @@ declare module "sap/uxap/ObjectPageHeaderContent" {
         public setContentDesign(sContentDesign: ObjectPageHeaderDesign): this;
 
     }
-
 
 }

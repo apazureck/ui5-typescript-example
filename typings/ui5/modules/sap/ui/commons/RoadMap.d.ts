@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/RoadMap" {
     import RoadMapStep from "sap/ui/commons/RoadMapStep";
 
-    export = RoadMap;
-
-
-
-
     /**
     
     */
-    class RoadMap extends sap.ui.core.Control {
+    export default class RoadMap extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RoadMap.
@@ -224,6 +220,5 @@ declare module "sap/ui/commons/RoadMap" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

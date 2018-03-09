@@ -1,15 +1,11 @@
 declare module "sap/ui/core/ws/WebSocket" {
     import ReadyState from "sap/ui/core/ws/ReadyState";
 
-    export = WebSocket;
-
-
-
-
     /**
     
     */
-    class WebSocket extends sap.ui.base.EventProvider {
+    export default class WebSocket extends sap.ui.base.EventProvider {
+
 
         /**
             * Creates a new WebSocket connection.
@@ -167,6 +163,5 @@ declare module "sap/ui/core/ws/WebSocket" {
         public send(sMessage: string): this;
 
     }
-
 
 }

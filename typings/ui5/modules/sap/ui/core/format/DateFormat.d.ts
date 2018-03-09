@@ -1,14 +1,10 @@
 declare module "sap/ui/core/format/DateFormat" {
 
-    export = DateFormat;
-
-
-
-
     /**
     
     */
-    class DateFormat {
+    export default class DateFormat {
+
 
         /**
             * Constructor for DateFormat - must not be used: To get a DateFormat instance, please use getDateInstance, getDateTimeInstance or getTimeInstance.
@@ -42,6 +38,5 @@ declare module "sap/ui/core/format/DateFormat" {
         public parse(sValue: string, bUTC: boolean, bStrict: boolean): any | any[];
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/table/AnalyticalTable" {
     import Table from "sap/ui/table/Table";
 
-    export = AnalyticalTable;
-
-
-
-
     /**
     
     */
-    class AnalyticalTable extends Table {
+    export default class AnalyticalTable extends Table {
+
 
         /**
             * Constructor for a new AnalyticalTable.
@@ -298,6 +294,5 @@ declare module "sap/ui/table/AnalyticalTable" {
         protected suspendUpdateAnalyticalInfo(): any;
 
     }
-
 
 }

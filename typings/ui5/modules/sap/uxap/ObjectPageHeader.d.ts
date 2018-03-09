@@ -1,21 +1,16 @@
 declare module "sap/uxap/ObjectPageHeader" {
     import Link from "sap/m/Link";
     import Breadcrumbs from "sap/m/Breadcrumbs";
-    import sapuxaplibrary from "sap/uxap/library";
-    type ObjectPageHeaderDesign = sapuxaplibrary.ObjectPageHeaderDesign;
+    import { ObjectPageHeaderDesign } from "sap/uxap/library";
     import Bar from "sap/m/Bar";
-    type ObjectPageHeaderPictureShape = sapuxaplibrary.ObjectPageHeaderPictureShape;
+    import { ObjectPageHeaderPictureShape } from "sap/uxap/library";
     import Button from "sap/m/Button";
-
-    export = ObjectPageHeader;
-
-
-
 
     /**
     
     */
-    class ObjectPageHeader extends sap.ui.core.Control {
+    export default class ObjectPageHeader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectPageHeader.
@@ -634,6 +629,5 @@ declare module "sap/uxap/ObjectPageHeader" {
         public setSideContentButton(oSideContentButton: Button): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/m/StepInput" {
 
-    export = StepInput;
-
-
-
-
     /**
     
     */
-    class StepInput extends sap.ui.core.Control {
+    export default class StepInput extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `StepInput`.
@@ -382,6 +378,5 @@ declare module "sap/m/StepInput" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

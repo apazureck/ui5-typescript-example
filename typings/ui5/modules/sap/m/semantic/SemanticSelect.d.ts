@@ -2,15 +2,11 @@ declare module "sap/m/semantic/SemanticSelect" {
     import SemanticControl from "sap/m/semantic/SemanticControl";
     import Item from "sap/ui/core/Item";
 
-    export = SemanticSelect;
-
-
-
-
     /**
     
     */
-    class SemanticSelect extends SemanticControl {
+    export default abstract class SemanticSelect extends SemanticControl {
+
 
         /**
             * Constructor for a new SemanticSelect.
@@ -185,6 +181,5 @@ declare module "sap/m/semantic/SemanticSelect" {
         public unbindItems(): this;
 
     }
-
 
 }

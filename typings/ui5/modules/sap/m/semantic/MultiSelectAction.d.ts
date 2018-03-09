@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/MultiSelectAction" {
     import SemanticToggleButton from "sap/m/semantic/SemanticToggleButton";
 
-    export = MultiSelectAction;
-
-
-
-
     /**
     
     */
-    class MultiSelectAction extends SemanticToggleButton {
+    export default class MultiSelectAction extends SemanticToggleButton {
+
 
         /**
             * Constructor for a new MultiSelectAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/MultiSelectAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

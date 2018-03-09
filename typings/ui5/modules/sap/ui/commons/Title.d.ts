@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/Title" {
     import sap_ui_core_Title from "sap/ui/core/Title";
 
-    export = Title;
-
-
-
-
     import TitleBase from 'sap/ui/core/Title'
 
     /**
     
     */
-    class Title extends TitleBase {
+    export default class Title extends TitleBase {
+
 
         /**
             * Constructor for a new Title.
@@ -65,6 +61,5 @@ declare module "sap/ui/commons/Title" {
         public setLevel(oLevel: sap.ui.core.TitleLevel): this;
 
     }
-
 
 }

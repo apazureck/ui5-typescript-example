@@ -1,17 +1,12 @@
 declare module "sap/uxap/BlockBase" {
     import ModelMapping from "sap/uxap/ModelMapping";
-    import sapuxaplibrary from "sap/uxap/library";
-    type BlockBaseFormAdjustment = sapuxaplibrary.BlockBaseFormAdjustment;
-
-    export = BlockBase;
-
-
-
+    import { BlockBaseFormAdjustment } from "sap/uxap/library";
 
     /**
     
     */
-    class BlockBase extends sap.ui.core.Control {
+    export default class BlockBase extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BlockBase.
@@ -199,6 +194,5 @@ declare module "sap/uxap/BlockBase" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

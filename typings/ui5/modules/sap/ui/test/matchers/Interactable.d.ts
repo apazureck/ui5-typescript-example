@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/Interactable" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = Interactable;
-
-
-
-
     /**
     
     */
-    class Interactable extends Matcher {
+    export default class Interactable extends Matcher {
+
 
         /**
             
@@ -42,6 +38,5 @@ declare module "sap/ui/test/matchers/Interactable" {
         public getMetadata(): any | sap.ui.base.Metadata;
 
     }
-
 
 }

@@ -2,15 +2,11 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
     import MenuItemBase from "sap/ui/unified/MenuItemBase";
     import Menu from "sap/ui/unified/Menu";
 
-    export = MenuTextFieldItem;
-
-
-
-
     /**
     
     */
-    class MenuTextFieldItem extends MenuItemBase {
+    export default class MenuTextFieldItem extends MenuItemBase {
+
 
         /**
             * Constructor for a new MenuTextFieldItem element.
@@ -133,6 +129,5 @@ declare module "sap/ui/unified/MenuTextFieldItem" {
         public setValueState(sValueState: sap.ui.core.ValueState): this;
 
     }
-
 
 }

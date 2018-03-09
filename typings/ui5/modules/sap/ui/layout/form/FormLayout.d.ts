@@ -1,16 +1,11 @@
 declare module "sap/ui/layout/form/FormLayout" {
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type BackgroundDesign = sapuilayoutlibrary.BackgroundDesign;
-
-    export = FormLayout;
-
-
-
+    import { BackgroundDesign } from "sap/ui/layout/library";
 
     /**
     
     */
-    class FormLayout extends sap.ui.core.Control {
+    export default class FormLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.FormLayout.
@@ -74,6 +69,5 @@ declare module "sap/ui/layout/form/FormLayout" {
         public setBackgroundDesign(sBackgroundDesign: BackgroundDesign): this;
 
     }
-
 
 }

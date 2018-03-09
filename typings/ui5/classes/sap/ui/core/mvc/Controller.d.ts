@@ -5,6 +5,7 @@ declare namespace sap.ui.core.mvc {
     */
     export class Controller extends sap.ui.base.EventProvider {
 
+
         /**
             * Instantiates a (MVC-style) controller. Consumers should call the constructor only in the typed controller scenario. In the generic controller use case, they should use {@link sap.ui.controller} instead.
         */
@@ -18,7 +19,7 @@ declare namespace sap.ui.core.mvc {
          * 
          * If no view is connected or if the view doesn't contain an element with the given local ID, undefined is returned.
         */
-        public byId<T extends sap.ui.core.Element>(sId: string): T;
+        public byId<T extends sap.ui.core.Element = any>(sId: sap.ui.core.ID): T;
 
         /**
             * Converts a view local ID to a globally unique one by prepending the view ID.

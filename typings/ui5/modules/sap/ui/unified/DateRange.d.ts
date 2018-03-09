@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/DateRange" {
 
-    export = DateRange;
-
-
-
-
     /**
     
     */
-    class DateRange extends sap.ui.core.Element {
+    export default class DateRange extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new DateRange.
@@ -80,6 +76,5 @@ declare module "sap/ui/unified/DateRange" {
         public setStartDate(oStartDate: any): this;
 
     }
-
 
 }

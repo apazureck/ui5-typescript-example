@@ -1,14 +1,10 @@
 declare module "sap/ui/core/Title" {
 
-    export = Title;
-
-
-
-
     /**
     
     */
-    class Title extends sap.ui.core.Element {
+    export default class Title extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Title.
@@ -124,6 +120,5 @@ declare module "sap/ui/core/Title" {
         public setText(sText: string): this;
 
     }
-
 
 }

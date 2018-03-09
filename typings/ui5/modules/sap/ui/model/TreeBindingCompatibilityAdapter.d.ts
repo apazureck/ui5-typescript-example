@@ -1,11 +1,7 @@
 declare module "sap/ui/model/TreeBindingCompatibilityAdapter" {
 
-    export = TreeBindingCompatibilityAdapter;
+    export default class TreeBindingCompatibilityAdapter {
 
-
-
-
-    class TreeBindingCompatibilityAdapter {
 
         /**
             * Adapter for TreeBindings to add the ListBinding functionality and use the tree structure in list based controls.
@@ -16,6 +12,5 @@ declare module "sap/ui/model/TreeBindingCompatibilityAdapter" {
 
 
     }
-
 
 }

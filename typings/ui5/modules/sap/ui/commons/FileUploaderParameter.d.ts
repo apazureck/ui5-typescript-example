@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/FileUploaderParameter" {
     import sap_ui_unified_FileUploaderParameter from "sap/ui/unified/FileUploaderParameter";
 
-    export = FileUploaderParameter;
-
-
-
-
     import FileUploaderParameterBase from 'sap/ui/unified/FileUploaderParameter'
 
     /**
     
     */
-    class FileUploaderParameter extends FileUploaderParameterBase {
+    export default class FileUploaderParameter extends FileUploaderParameterBase {
+
 
         /**
             * Constructor for a new FileUploaderParameter.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/FileUploaderParameter" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

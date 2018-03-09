@@ -1,14 +1,10 @@
 declare module "sap/ui/model/odata/ODataPropertyBinding" {
 
-    export = ODataPropertyBinding;
-
-
-
-
     /**
     
     */
-    class ODataPropertyBinding extends sap.ui.model.PropertyBinding {
+    export default class ODataPropertyBinding extends sap.ui.model.PropertyBinding {
+
 
         /**
             
@@ -51,6 +47,5 @@ declare module "sap/ui/model/odata/ODataPropertyBinding" {
         protected initialize(): any;
 
     }
-
 
 }

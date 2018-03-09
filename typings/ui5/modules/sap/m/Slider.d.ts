@@ -1,16 +1,11 @@
 declare module "sap/m/Slider" {
-    import sapmlibrary from "sap/m/library";
-    type IScale = sapmlibrary.IScale;
-
-    export = Slider;
-
-
-
+    import { IScale } from "sap/m/library";
 
     /**
     
     */
-    class Slider extends sap.ui.core.Control {
+    export default class Slider extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Slider`.
@@ -411,6 +406,5 @@ declare module "sap/m/Slider" {
         public stepUp(iStep?: number): this;
 
     }
-
 
 }

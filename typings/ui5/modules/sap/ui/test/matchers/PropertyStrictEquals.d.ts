@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/PropertyStrictEquals" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = PropertyStrictEquals;
-
-
-
-
     /**
     
     */
-    class PropertyStrictEquals extends Matcher {
+    export default class PropertyStrictEquals extends Matcher {
+
 
         /**
             * PropertyStrictEquals - checks if a property has the exact same value.
@@ -88,6 +84,5 @@ declare module "sap/ui/test/matchers/PropertyStrictEquals" {
         public setValue(oValue: any): this;
 
     }
-
 
 }

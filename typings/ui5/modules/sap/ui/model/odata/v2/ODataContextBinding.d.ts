@@ -1,14 +1,10 @@
 declare module "sap/ui/model/odata/v2/ODataContextBinding" {
 
-    export = ODataContextBinding;
-
-
-
-
     /**
     
     */
-    class ODataContextBinding extends sap.ui.model.ContextBinding {
+    export default abstract class ODataContextBinding extends sap.ui.model.ContextBinding {
+
 
         /**
             * Constructor for odata.ODataContextBinding
@@ -41,6 +37,5 @@ declare module "sap/ui/model/odata/v2/ODataContextBinding" {
         public refresh(bForceUpdate?: boolean, sGroupId?: string): any;
 
     }
-
 
 }

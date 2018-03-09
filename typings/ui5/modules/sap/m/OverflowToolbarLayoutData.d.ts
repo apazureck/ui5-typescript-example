@@ -1,17 +1,12 @@
 declare module "sap/m/OverflowToolbarLayoutData" {
     import ToolbarLayoutData from "sap/m/ToolbarLayoutData";
-    import sapmlibrary from "sap/m/library";
-    type OverflowToolbarPriority = sapmlibrary.OverflowToolbarPriority;
-
-    export = OverflowToolbarLayoutData;
-
-
-
+    import { OverflowToolbarPriority } from "sap/m/library";
 
     /**
     
     */
-    class OverflowToolbarLayoutData extends ToolbarLayoutData {
+    export default class OverflowToolbarLayoutData extends ToolbarLayoutData {
+
 
         /**
             * Constructor for a new `OverflowToolbarLayoutData`.
@@ -151,6 +146,5 @@ declare module "sap/m/OverflowToolbarLayoutData" {
         public setStayInOverflow(bStayInOverflow: boolean): this;
 
     }
-
 
 }

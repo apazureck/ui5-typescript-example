@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/PasswordField" {
     import TextField from "sap/ui/commons/TextField";
 
-    export = PasswordField;
-
-
-
-
     /**
     
     */
-    class PasswordField extends TextField {
+    export default class PasswordField extends TextField {
+
 
         /**
             * Constructor for a new PasswordField.
@@ -47,6 +43,5 @@ declare module "sap/ui/commons/PasswordField" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

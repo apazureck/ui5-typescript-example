@@ -1,15 +1,11 @@
 declare module "sap/m/P13nGroupItem" {
     import Item from "sap/ui/core/Item";
 
-    export = P13nGroupItem;
-
-
-
-
     /**
     
     */
-    class P13nGroupItem extends Item {
+    export default class P13nGroupItem extends Item {
+
 
         /**
             * Constructor for a new P13nGroupItem.
@@ -101,6 +97,5 @@ declare module "sap/m/P13nGroupItem" {
         public setShowIfGrouped(bShowIfGrouped: boolean): this;
 
     }
-
 
 }

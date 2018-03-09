@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Double" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Double;
-
-
-
-
     /**
     
     */
-    class Double extends ODataType {
+    export default class Double extends ODataType {
+
 
         /**
             * Constructor for a primitive type `Edm.Double`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Double" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

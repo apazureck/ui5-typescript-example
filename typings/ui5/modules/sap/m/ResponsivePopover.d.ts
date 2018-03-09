@@ -1,18 +1,13 @@
 declare module "sap/m/ResponsivePopover" {
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type IBar = sapmlibrary.IBar;
-    type PlacementType = sapmlibrary.PlacementType;
-
-    export = ResponsivePopover;
-
-
-
+    import { IBar } from "sap/m/library";
+    import { PlacementType } from "sap/m/library";
 
     /**
     
     */
-    class ResponsivePopover extends sap.ui.core.Control {
+    export default class ResponsivePopover extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ResponsivePopover.
@@ -635,6 +630,5 @@ declare module "sap/m/ResponsivePopover" {
         public setVerticalScrolling(bVerticalScrolling: boolean): this;
 
     }
-
 
 }

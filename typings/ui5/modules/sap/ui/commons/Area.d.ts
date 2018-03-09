@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/Area" {
 
-    export = Area;
-
-
-
-
     /**
     
     */
-    class Area extends sap.ui.core.Element {
+    export default class Area extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Area.
@@ -112,6 +108,5 @@ declare module "sap/ui/commons/Area" {
         public setShape(sShape: string): this;
 
     }
-
 
 }

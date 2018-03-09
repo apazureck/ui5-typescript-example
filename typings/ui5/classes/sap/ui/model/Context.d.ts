@@ -3,7 +3,8 @@ declare namespace sap.ui.model {
     /**
     
     */
-    export class Context extends sap.ui.base.Object {
+    export abstract class Context extends sap.ui.base.Object {
+
 
         /**
             * Constructor for Context class.

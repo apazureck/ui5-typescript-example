@@ -2,15 +2,11 @@ declare module "sap/ui/layout/ResponsiveSplitter" {
     import PaneContainer from "sap/ui/layout/PaneContainer";
     import SplitPane from "sap/ui/layout/SplitPane";
 
-    export = ResponsiveSplitter;
-
-
-
-
     /**
     
     */
-    class ResponsiveSplitter extends sap.ui.core.Control {
+    export default class ResponsiveSplitter extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ResponsiveSplitter.
@@ -117,6 +113,5 @@ declare module "sap/ui/layout/ResponsiveSplitter" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -2,15 +2,11 @@ declare module "sap/m/Tokenizer" {
     import Token from "sap/m/Token";
     import ScrollEnablement from "sap/ui/core/delegate/ScrollEnablement";
 
-    export = Tokenizer;
-
-
-
-
     /**
     
     */
-    class Tokenizer {
+    export default class Tokenizer {
+
 
         /**
             * Constructor for a new Tokenizer.
@@ -290,6 +286,5 @@ declare module "sap/m/Tokenizer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

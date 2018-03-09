@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/SearchProvider" {
     import OpenSearchProvider from "sap/ui/core/search/OpenSearchProvider";
 
-    export = SearchProvider;
-
-
-
-
     /**
     
     */
-    class SearchProvider extends OpenSearchProvider {
+    export default class SearchProvider extends OpenSearchProvider {
+
 
         /**
             * Constructor for a new SearchProvider.
@@ -47,6 +43,5 @@ declare module "sap/ui/commons/SearchProvider" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

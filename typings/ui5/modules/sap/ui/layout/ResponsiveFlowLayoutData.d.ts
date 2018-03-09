@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/ResponsiveFlowLayoutData" {
 
-    export = ResponsiveFlowLayoutData;
-
-
-
-
     /**
     
     */
-    class ResponsiveFlowLayoutData extends sap.ui.core.LayoutData {
+    export default class ResponsiveFlowLayoutData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new ResponsiveFlowLayoutData.
@@ -148,6 +144,5 @@ declare module "sap/ui/layout/ResponsiveFlowLayoutData" {
         public setWeight(iWeight: number): this;
 
     }
-
 
 }

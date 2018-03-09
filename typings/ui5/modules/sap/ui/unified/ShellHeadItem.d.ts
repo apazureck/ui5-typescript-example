@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/ShellHeadItem" {
 
-    export = ShellHeadItem;
-
-
-
-
     /**
     
     */
-    class ShellHeadItem extends sap.ui.core.Element {
+    export default class ShellHeadItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ShellHeadItem.
@@ -234,6 +230,5 @@ declare module "sap/ui/unified/ShellHeadItem" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

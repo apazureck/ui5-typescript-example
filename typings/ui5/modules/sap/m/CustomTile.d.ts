@@ -1,15 +1,11 @@
 declare module "sap/m/CustomTile" {
     import Tile from "sap/m/Tile";
 
-    export = CustomTile;
-
-
-
-
     /**
     
     */
-    class CustomTile extends Tile {
+    export default class CustomTile extends Tile {
+
 
         /**
             * Constructor for a new CustomTile.
@@ -66,6 +62,5 @@ declare module "sap/m/CustomTile" {
         public setContent(oContent: sap.ui.core.Control): this;
 
     }
-
 
 }

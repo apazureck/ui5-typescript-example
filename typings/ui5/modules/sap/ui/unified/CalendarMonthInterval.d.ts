@@ -4,15 +4,11 @@ declare module "sap/ui/unified/CalendarMonthInterval" {
     import Calendar from "sap/ui/unified/Calendar";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
 
-    export = CalendarMonthInterval;
-
-
-
-
     /**
     
     */
-    class CalendarMonthInterval extends sap.ui.core.Control {
+    export default class CalendarMonthInterval extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `CalendarMonthInterval`.
@@ -426,6 +422,5 @@ declare module "sap/ui/unified/CalendarMonthInterval" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

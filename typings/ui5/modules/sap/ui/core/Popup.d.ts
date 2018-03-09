@@ -1,12 +1,10 @@
 declare module "sap/ui/core/Popup" {
 
-    export = Popup;
-
-
     /**
     
     */
-    class Popup extends sap.ui.base.ManagedObject {
+    export default class Popup extends sap.ui.base.ManagedObject {
+
 
         /**
             * Creates an instance of `sap.ui.core.Popup` that can be used to open controls as a Popup, visually appearing in front of other controls.
@@ -164,7 +162,7 @@ declare module "sap/ui/core/Popup" {
          * 
          * If the Popup's OpenState is different from "CLOSED" (i.e. if the Popup is already open, opening or closing), the call is ignored.
         */
-        public open(iDuration?: number, my?: Popup.Dock, at?: Popup.Dock, of?: string | sap.ui.core.Element | any | any | jQuery.Event, offset?: string, collision?: string, followOf?: boolean): any;
+        public open(iDuration?: number, my?: Dock, at?: Dock, of?: string | sap.ui.core.Element | any | any | jQuery.Event, offset?: string, collision?: string, followOf?: boolean): any;
 
         /**
             * Sets the animation functions to use for opening and closing the Popup. Any null value will be ignored and not change the respective animation function. When called, the animation functions receive three parameters: - the jQuery object wrapping the DomRef of the popup - the requested animation duration - a function that MUST be called once the animation has completed
@@ -214,7 +212,7 @@ declare module "sap/ui/core/Popup" {
         /**
             * Sets the position of the Popup (if you refer to a Control as anchor then do not use the DOMRef of the control which might change after re-renderings). Optional parameters can only be omitted when all subsequent parameters are omitted as well.
         */
-        public setPosition(my: Popup.Dock, at: Popup.Dock | any, of?: string | sap.ui.core.Element | any | any | jQuery.Event, offset?: string, collision?: string): this;
+        public setPosition(my: Dock, at: Dock | any, of?: string | sap.ui.core.Element | any | any | jQuery.Event, offset?: string, collision?: string): this;
 
         /**
             * Determines whether the Popup should have a shadow (in supporting browsers). This also affects a currently open popup.
@@ -223,30 +221,27 @@ declare module "sap/ui/core/Popup" {
 
     }
 
-
-    namespace Popup {
-
-        /** 
-    * Enumeration providing options for docking of some element to another. "Right" and "Left" will stay the same in RTL mode, but "Begin" and "End" will flip to the other side ("Begin" is "Right" in RTL). 
-    */
-        enum Dock {
-            BeginBottom = "BeginBottom",
-            BeginCenter = "BeginCenter",
-            BeginTop = "BeginTop",
-            CenterBottom = "CenterBottom",
-            CenterCenter = "CenterCenter",
-            CenterTop = "CenterTop",
-            EndBottom = "EndBottom",
-            EndCenter = "EndCenter",
-            EndTop = "EndTop",
-            LeftBottom = "LeftBottom",
-            LeftCenter = "LeftCenter",
-            LeftTop = "LeftTop",
-            RightBottom = "RightBottom",
-            RightCenter = "RightCenter",
-            RightTop = "RightTop",
-        }
+    /** 
+* Enumeration providing options for docking of some element to another. "Right" and "Left" will stay the same in RTL mode, but "Begin" and "End" will flip to the other side ("Begin" is "Right" in RTL). 
+*/
 
 
+    export enum Dock {
+        BeginBottom = "BeginBottom",
+        BeginCenter = "BeginCenter",
+        BeginTop = "BeginTop",
+        CenterBottom = "CenterBottom",
+        CenterCenter = "CenterCenter",
+        CenterTop = "CenterTop",
+        EndBottom = "EndBottom",
+        EndCenter = "EndCenter",
+        EndTop = "EndTop",
+        LeftBottom = "LeftBottom",
+        LeftCenter = "LeftCenter",
+        LeftTop = "LeftTop",
+        RightBottom = "RightBottom",
+        RightCenter = "RightCenter",
+        RightTop = "RightTop",
     }
+
 }

@@ -1,14 +1,10 @@
 declare module "sap/m/Text" {
 
-    export = Text;
-
-
-
-
     /**
     
     */
-    class Text extends sap.ui.core.Control {
+    export default class Text extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Text.
@@ -271,6 +267,5 @@ declare module "sap/m/Text" {
         public unbindText(): this;
 
     }
-
 
 }

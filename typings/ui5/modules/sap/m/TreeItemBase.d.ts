@@ -1,15 +1,11 @@
 declare module "sap/m/TreeItemBase" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = TreeItemBase;
-
-
-
-
     /**
     
     */
-    class TreeItemBase extends ListItemBase {
+    export default class TreeItemBase extends ListItemBase {
+
 
         /**
             * Constructor for a new TreeItemBase.
@@ -82,6 +78,5 @@ declare module "sap/m/TreeItemBase" {
         public isTopLevel(): boolean;
 
     }
-
 
 }

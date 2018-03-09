@@ -1,15 +1,11 @@
 declare module "sap/m/FacetFilterItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = FacetFilterItem;
-
-
-
-
     /**
     
     */
-    class FacetFilterItem extends ListItemBase {
+    export default class FacetFilterItem extends ListItemBase {
+
 
         /**
             * Constructor for a new `FacetFilterItem`.
@@ -97,6 +93,5 @@ declare module "sap/m/FacetFilterItem" {
         public setText(sText: string): this;
 
     }
-
 
 }

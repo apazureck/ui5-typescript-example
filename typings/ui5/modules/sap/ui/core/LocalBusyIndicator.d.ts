@@ -1,14 +1,10 @@
 declare module "sap/ui/core/LocalBusyIndicator" {
 
-    export = LocalBusyIndicator;
-
-
-
-
     /**
     
     */
-    class LocalBusyIndicator extends sap.ui.core.Control {
+    export default class LocalBusyIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new LocalBusyIndicator.
@@ -88,6 +84,5 @@ declare module "sap/ui/core/LocalBusyIndicator" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

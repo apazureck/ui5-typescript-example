@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/ValueHelpField" {
     import TextField from "sap/ui/commons/TextField";
 
-    export = ValueHelpField;
-
-
-
-
     /**
     
     */
-    class ValueHelpField extends TextField {
+    export default class ValueHelpField extends TextField {
+
 
         /**
             * Constructor for a new ValueHelpField.
@@ -132,6 +128,5 @@ declare module "sap/ui/commons/ValueHelpField" {
         public setIconURL(sIconURL: sap.ui.core.URI): this;
 
     }
-
 
 }

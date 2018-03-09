@@ -1,14 +1,10 @@
 declare module "sap/ui/ux3/DataSetItem" {
 
-    export = DataSetItem;
-
-
-
-
     /**
     
     */
-    class DataSetItem extends sap.ui.core.Element {
+    export default class DataSetItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new DataSetItem.
@@ -158,6 +154,5 @@ declare module "sap/ui/ux3/DataSetItem" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

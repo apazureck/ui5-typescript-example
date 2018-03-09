@@ -1,14 +1,10 @@
 declare module "sap/m/FeedInput" {
 
-    export = FeedInput;
-
-
-
-
     /**
     
     */
-    class FeedInput extends sap.ui.core.Control {
+    export default class FeedInput extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FeedInput.
@@ -258,6 +254,5 @@ declare module "sap/m/FeedInput" {
         public setValue(sValue: string): this;
 
     }
-
 
 }

@@ -1,18 +1,14 @@
 declare module "sap/ui/layout/form/SimpleForm" {
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type BackgroundDesign = sapuilayoutlibrary.BackgroundDesign;
-    type SimpleFormLayout = sapuilayoutlibrary.form.SimpleFormLayout;
+    import { BackgroundDesign } from "sap/ui/layout/library";
+    import { form } from "sap/ui/layout/library";
+    type SimpleFormLayout = form.SimpleFormLayout;
     import Title from "sap/ui/core/Title";
-
-    export = SimpleForm;
-
-
-
 
     /**
     
     */
-    class SimpleForm extends sap.ui.core.Control {
+    export default class SimpleForm extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.SimpleForm.
@@ -719,6 +715,5 @@ declare module "sap/ui/layout/form/SimpleForm" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

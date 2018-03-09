@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/ToggleButton" {
     import Button from "sap/ui/commons/Button";
 
-    export = ToggleButton;
-
-
-
-
     /**
     
     */
-    class ToggleButton extends Button {
+    export default class ToggleButton extends Button {
+
 
         /**
             * Constructor for a new ToggleButton.
@@ -74,6 +70,5 @@ declare module "sap/ui/commons/ToggleButton" {
         public setPressed(bPressed: boolean): this;
 
     }
-
 
 }

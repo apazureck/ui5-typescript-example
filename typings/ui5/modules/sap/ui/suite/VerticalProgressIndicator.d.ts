@@ -1,14 +1,10 @@
 declare module "sap/ui/suite/VerticalProgressIndicator" {
 
-    export = VerticalProgressIndicator;
-
-
-
-
     /**
     
     */
-    class VerticalProgressIndicator extends sap.ui.core.Control {
+    export default class VerticalProgressIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new VerticalProgressIndicator.
@@ -135,6 +131,5 @@ declare module "sap/ui/suite/VerticalProgressIndicator" {
         public setPercentage(iPercentage: number): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/model/xml/XMLTreeBinding" {
     import XMLModel from "sap/ui/model/xml/XMLModel";
 
-    export = XMLTreeBinding;
-
-
-
-
     /**
     
     */
-    class XMLTreeBinding {
+    export default class XMLTreeBinding {
+
 
         /**
             
@@ -28,6 +24,5 @@ declare module "sap/ui/model/xml/XMLTreeBinding" {
         protected getNodeContexts(oContext: any, iStartIndex: number, iLength: number): any[];
 
     }
-
 
 }

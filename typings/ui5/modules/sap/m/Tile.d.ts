@@ -1,14 +1,10 @@
 declare module "sap/m/Tile" {
 
-    export = Tile;
-
-
-
-
     /**
     
     */
-    class Tile extends sap.ui.core.Control {
+    export default class Tile extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Tile.
@@ -98,6 +94,5 @@ declare module "sap/m/Tile" {
         public setRemovable(bRemovable: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/BindingPath" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = BindingPath;
-
-
-
-
     /**
     
     */
-    class BindingPath extends Matcher {
+    export default class BindingPath extends Matcher {
+
 
         /**
             * BindingPath - checks if a control has a binding context with the exact same binding path.
@@ -88,6 +84,5 @@ declare module "sap/ui/test/matchers/BindingPath" {
         public setPath(sPath: string): this;
 
     }
-
 
 }

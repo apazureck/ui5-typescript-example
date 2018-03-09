@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/FileSize" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = FileSize;
-
-
-
-
     /**
     
     */
-    class FileSize extends SimpleType {
+    export default class FileSize extends SimpleType {
+
 
         /**
             * Constructor for a FileSize type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/FileSize" {
         public getMetadata(): any;
 
     }
-
 
 }

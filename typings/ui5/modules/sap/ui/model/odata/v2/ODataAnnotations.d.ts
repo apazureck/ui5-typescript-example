@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/v2/ODataAnnotations" {
     import ODataMetadata from "sap/ui/model/odata/ODataMetadata";
 
-    export = ODataAnnotations;
-
-
-
-
     /**
     
     */
-    class ODataAnnotations extends sap.ui.base.EventProvider {
+    export default class ODataAnnotations extends sap.ui.base.EventProvider {
+
 
         /**
             * Creates a new instance of the ODataAnnotations annotation loader.
@@ -154,6 +150,5 @@ declare module "sap/ui/model/odata/v2/ODataAnnotations" {
         public setHeaders(mHeaders: any): any;
 
     }
-
 
 }

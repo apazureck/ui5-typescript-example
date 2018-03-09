@@ -1,14 +1,10 @@
 declare module "sap/ui/core/dnd/DragDropBase" {
 
-    export = DragDropBase;
-
-
-
-
     /**
     
     */
-    class DragDropBase extends sap.ui.core.Element {
+    export default class DragDropBase extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new DragDropBase.
@@ -50,6 +46,5 @@ declare module "sap/ui/core/dnd/DragDropBase" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

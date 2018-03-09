@@ -1,15 +1,11 @@
 declare module "sap/m/TextArea" {
     import InputBase from "sap/m/InputBase";
 
-    export = TextArea;
-
-
-
-
     /**
     
     */
-    class TextArea extends InputBase {
+    export default class TextArea extends InputBase {
+
 
         /**
             * Constructor for a new TextArea.
@@ -263,6 +259,5 @@ declare module "sap/m/TextArea" {
         public setWrapping(sWrapping: sap.ui.core.Wrapping): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/CollectionInspector" {
     import Collection from "sap/ui/ux3/Collection";
 
-    export = CollectionInspector;
-
-
-
-
     /**
     
     */
-    class CollectionInspector extends sap.ui.core.Control {
+    export default class CollectionInspector extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new CollectionInspector.
@@ -280,6 +276,5 @@ declare module "sap/ui/ux3/CollectionInspector" {
         public setSidebarVisible(bSidebarVisible: boolean): this;
 
     }
-
 
 }

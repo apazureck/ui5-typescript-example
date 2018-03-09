@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/Message" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type MessageType = sapuicommonslibrary.MessageType;
-
-    export = Message;
-
-
-
+    import { MessageType } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Message extends sap.ui.core.Control {
+    export default class Message extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Message.
@@ -123,6 +118,5 @@ declare module "sap/ui/commons/Message" {
         public setType(sType: MessageType): this;
 
     }
-
 
 }

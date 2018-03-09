@@ -1,15 +1,11 @@
 declare module "sap/ui/table/AnalyticalColumn" {
     import Column from "sap/ui/table/Column";
 
-    export = AnalyticalColumn;
-
-
-
-
     /**
     
     */
-    class AnalyticalColumn extends Column {
+    export default class AnalyticalColumn extends Column {
+
 
         /**
             * Constructor for a new AnalyticalColumn.
@@ -141,6 +137,5 @@ declare module "sap/ui/table/AnalyticalColumn" {
         public setSummed(bSummed: boolean): this;
 
     }
-
 
 }

@@ -5,10 +5,11 @@ declare namespace sap.ui.model {
     */
     export class ListBinding extends sap.ui.model.Binding {
 
+
         /**
             * Constructor for ListBinding.
         */
-        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters: any[], aFilters: any[], mParameters: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, aSorters?: any[], aFilters?: any[], mParameters?: any);
 
 
         /**

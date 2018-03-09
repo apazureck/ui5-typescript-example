@@ -2,15 +2,11 @@ declare module "sap/tnt/ToolPage" {
     import ToolHeader from "sap/tnt/ToolHeader";
     import SideNavigation from "sap/tnt/SideNavigation";
 
-    export = ToolPage;
-
-
-
-
     /**
     
     */
-    class ToolPage extends sap.ui.core.Control {
+    export default class ToolPage extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ToolPage.
@@ -142,6 +138,5 @@ declare module "sap/tnt/ToolPage" {
         public toggleSideContentMode(): this;
 
     }
-
 
 }

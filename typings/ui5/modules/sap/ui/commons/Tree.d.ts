@@ -1,17 +1,12 @@
 declare module "sap/ui/commons/Tree" {
     import TreeNode from "sap/ui/commons/TreeNode";
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type TreeSelectionMode = sapuicommonslibrary.TreeSelectionMode;
-
-    export = Tree;
-
-
-
+    import { TreeSelectionMode } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Tree extends sap.ui.core.Control {
+    export default class Tree extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Tree.
@@ -343,6 +338,5 @@ declare module "sap/ui/commons/Tree" {
         public unbindNodes(): this;
 
     }
-
 
 }

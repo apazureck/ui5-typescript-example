@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/AccordionSection" {
 
-    export = AccordionSection;
-
-
-
-
     /**
     
     */
-    class AccordionSection extends sap.ui.core.Element {
+    export default class AccordionSection extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new AccordionSection.
@@ -183,6 +179,5 @@ declare module "sap/ui/commons/AccordionSection" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/layout/BorderLayout" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type BorderLayoutAreaTypes = sapuicommonslibrary.layout.BorderLayoutAreaTypes;
+    import { layout } from "sap/ui/commons/library";
+    type BorderLayoutAreaTypes = layout.BorderLayoutAreaTypes;
     import BorderLayoutArea from "sap/ui/commons/layout/BorderLayoutArea";
-
-    export = BorderLayout;
-
-
-
 
     /**
     
     */
-    class BorderLayout extends sap.ui.core.Control {
+    export default class BorderLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new layout/BorderLayout.
@@ -256,6 +252,5 @@ declare module "sap/ui/commons/layout/BorderLayout" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

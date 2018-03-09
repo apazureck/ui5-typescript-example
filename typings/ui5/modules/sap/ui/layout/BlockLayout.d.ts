@@ -1,17 +1,12 @@
 declare module "sap/ui/layout/BlockLayout" {
     import BlockLayoutRow from "sap/ui/layout/BlockLayoutRow";
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type BlockBackgroundType = sapuilayoutlibrary.BlockBackgroundType;
-
-    export = BlockLayout;
-
-
-
+    import { BlockBackgroundType } from "sap/ui/layout/library";
 
     /**
     
     */
-    class BlockLayout extends sap.ui.core.Control {
+    export default class BlockLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BlockLayout.
@@ -104,6 +99,5 @@ declare module "sap/ui/layout/BlockLayout" {
         public setBackground(sNewBackground: string): this;
 
     }
-
 
 }

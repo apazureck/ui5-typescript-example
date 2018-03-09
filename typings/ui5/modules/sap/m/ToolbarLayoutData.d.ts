@@ -1,14 +1,10 @@
 declare module "sap/m/ToolbarLayoutData" {
 
-    export = ToolbarLayoutData;
-
-
-
-
     /**
     
     */
-    class ToolbarLayoutData extends sap.ui.core.LayoutData {
+    export default class ToolbarLayoutData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new `ToolbarLayoutData`.
@@ -104,6 +100,5 @@ declare module "sap/m/ToolbarLayoutData" {
         public setShrinkable(bShrinkable: boolean): this;
 
     }
-
 
 }

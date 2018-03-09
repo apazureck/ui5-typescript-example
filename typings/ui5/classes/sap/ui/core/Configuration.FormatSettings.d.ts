@@ -5,6 +5,7 @@ declare namespace sap.ui.core.Configuration {
     */
     export class FormatSettings extends sap.ui.base.Object {
 
+
         /**
             
         */

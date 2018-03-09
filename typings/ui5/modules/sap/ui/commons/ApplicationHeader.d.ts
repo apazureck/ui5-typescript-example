@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/ApplicationHeader" {
 
-    export = ApplicationHeader;
-
-
-
-
     /**
     
     */
-    class ApplicationHeader extends sap.ui.core.Control {
+    export default class ApplicationHeader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ApplicationHeader.
@@ -166,6 +162,5 @@ declare module "sap/ui/commons/ApplicationHeader" {
         public setUserName(sUserName: string): this;
 
     }
-
 
 }

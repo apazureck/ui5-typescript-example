@@ -2,15 +2,11 @@ declare module "sap/m/ActionSelect" {
     import Select from "sap/m/Select";
     import Button from "sap/m/Button";
 
-    export = ActionSelect;
-
-
-
-
     /**
     
     */
-    class ActionSelect extends Select {
+    export default class ActionSelect extends Select {
+
 
         /**
             * Constructor for a new ActionSelect.
@@ -70,6 +66,5 @@ declare module "sap/m/ActionSelect" {
         public removeButton(vButton: number | string | Button): string;
 
     }
-
 
 }

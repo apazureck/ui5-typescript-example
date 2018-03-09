@@ -1,14 +1,10 @@
 declare module "sap/ui/core/support/Plugin" {
 
-    export = Plugin;
-
-
-
-
     /**
     
     */
-    class Plugin extends sap.ui.base.Object {
+    export default abstract class Plugin extends sap.ui.base.Object {
+
 
         /**
             * Creates an instance of sap.ui.core.support.Plugin.
@@ -98,6 +94,5 @@ declare module "sap/ui/core/support/Plugin" {
         private runsAsToolPlugin(): boolean;
 
     }
-
 
 }

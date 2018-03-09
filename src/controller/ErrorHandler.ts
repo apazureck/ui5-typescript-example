@@ -1,5 +1,5 @@
 import UI5Object        from "sap/ui/base/Object";
-import * as MessageBox       from "sap/m/MessageBox";
+import MessageBox       from "sap/m/MessageBox";
 import MyUIComponent    from "typescript/example/ui5app/Component";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ODataModel from "sap/ui/model/odata/v2/ODataModel";

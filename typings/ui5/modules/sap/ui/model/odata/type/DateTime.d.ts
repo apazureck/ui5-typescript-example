@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/DateTime" {
     import DateTimeBase from "sap/ui/model/odata/type/DateTimeBase";
 
-    export = DateTime;
-
-
-
-
     /**
     
     */
-    class DateTime extends DateTimeBase {
+    export default class DateTime extends DateTimeBase {
+
 
         /**
             * Constructor for a primitive type `Edm.DateTime`.
@@ -42,6 +38,5 @@ declare module "sap/ui/model/odata/type/DateTime" {
         public getName(): string;
 
     }
-
 
 }

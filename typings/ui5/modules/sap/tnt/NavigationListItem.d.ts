@@ -1,15 +1,11 @@
 declare module "sap/tnt/NavigationListItem" {
     import Item from "sap/ui/core/Item";
 
-    export = NavigationListItem;
-
-
-
-
     /**
     
     */
-    class NavigationListItem extends Item {
+    export default class NavigationListItem extends Item {
+
 
         /**
             * Constructor for a new NavigationListItem.
@@ -202,6 +198,5 @@ declare module "sap/tnt/NavigationListItem" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

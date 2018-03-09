@@ -1,15 +1,11 @@
 declare module "sap/ui/core/tmpl/DOMElement" {
     import DOMAttribute from "sap/ui/core/tmpl/DOMAttribute";
 
-    export = DOMElement;
-
-
-
-
     /**
     
     */
-    class DOMElement extends sap.ui.core.Control {
+    export default class DOMElement extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new tmpl/DOMElement.
@@ -173,6 +169,5 @@ declare module "sap/ui/core/tmpl/DOMElement" {
         public setText(sText: string): this;
 
     }
-
 
 }

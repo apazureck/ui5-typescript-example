@@ -1,15 +1,11 @@
 declare module "sap/m/App" {
     import NavContainer from "sap/m/NavContainer";
 
-    export = App;
-
-
-
-
     /**
     
     */
-    class App extends NavContainer {
+    export default class App extends NavContainer {
+
 
         /**
             * Constructor for a new `App`.
@@ -199,6 +195,5 @@ declare module "sap/m/App" {
         public setHomeIcon(oHomeIcon: any): this;
 
     }
-
 
 }

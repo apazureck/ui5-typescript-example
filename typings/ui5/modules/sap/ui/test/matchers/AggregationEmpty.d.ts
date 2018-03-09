@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/AggregationEmpty" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = AggregationEmpty;
-
-
-
-
     /**
     
     */
-    class AggregationEmpty extends Matcher {
+    export default class AggregationEmpty extends Matcher {
+
 
         /**
             * AggregationEmpty - checks if an aggregation is empty.
@@ -72,6 +68,5 @@ declare module "sap/ui/test/matchers/AggregationEmpty" {
         public setName(sName: string): this;
 
     }
-
 
 }

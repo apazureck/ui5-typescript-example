@@ -1,14 +1,10 @@
 declare module "sap/ui/test/PageObjectFactory" {
 
-    export = PageObjectFactory;
-
-
-
-
     /**
     
     */
-    class PageObjectFactory extends sap.ui.base.Object {
+    export default class PageObjectFactory extends sap.ui.base.Object {
+
 
         /**
             
@@ -22,6 +18,5 @@ declare module "sap/ui/test/PageObjectFactory" {
         protected static create(): any;
 
     }
-
 
 }

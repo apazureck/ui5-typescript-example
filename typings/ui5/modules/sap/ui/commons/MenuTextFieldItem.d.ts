@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/MenuTextFieldItem" {
     import sap_ui_unified_MenuTextFieldItem from "sap/ui/unified/MenuTextFieldItem";
 
-    export = MenuTextFieldItem;
-
-
-
-
     import MenuTextFieldItemBase from 'sap/ui/unified/MenuTextFieldItem'
 
     /**
     
     */
-    class MenuTextFieldItem extends MenuTextFieldItemBase {
+    export default class MenuTextFieldItem extends MenuTextFieldItemBase {
+
 
         /**
             * Constructor for a new MenuTextFieldItem element.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/MenuTextFieldItem" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/ui/ux3/Feeder" {
-    import sapuiux3library from "sap/ui/ux3/library";
-    type FeederType = sapuiux3library.FeederType;
-
-    export = Feeder;
-
-
-
+    import { FeederType } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class Feeder extends sap.ui.core.Control {
+    export default class Feeder extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Feeder.
@@ -152,6 +147,5 @@ declare module "sap/ui/ux3/Feeder" {
         public setType(sType: FeederType): this;
 
     }
-
 
 }

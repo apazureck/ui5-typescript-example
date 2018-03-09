@@ -1,15 +1,11 @@
 declare module "sap/m/TileContainer" {
     import Tile from "sap/m/Tile";
 
-    export = TileContainer;
-
-
-
-
     /**
     
     */
-    class TileContainer extends sap.ui.core.Control {
+    export default class TileContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TileContainer.
@@ -286,6 +282,5 @@ declare module "sap/m/TileContainer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -1,17 +1,12 @@
 declare module "sap/ui/ux3/FacetFilter" {
     import FacetFilterList from "sap/ui/ux3/FacetFilterList";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type VisibleItemCountMode = sapuiux3library.VisibleItemCountMode;
-
-    export = FacetFilter;
-
-
-
+    import { VisibleItemCountMode } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class FacetFilter extends sap.ui.core.Control {
+    export default class FacetFilter extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FacetFilter.
@@ -110,6 +105,5 @@ declare module "sap/ui/ux3/FacetFilter" {
         public setVisibleItemCountMode(sVisibleItemCountMode: VisibleItemCountMode): this;
 
     }
-
 
 }

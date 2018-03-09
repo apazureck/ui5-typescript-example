@@ -1,14 +1,10 @@
 declare module "sap/m/ScrollContainer" {
 
-    export = ScrollContainer;
-
-
-
-
     /**
     
     */
-    class ScrollContainer extends sap.ui.core.Control {
+    export default class ScrollContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ScrollContainer.
@@ -209,6 +205,5 @@ declare module "sap/m/ScrollContainer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

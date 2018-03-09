@@ -1,18 +1,13 @@
 declare module "sap/m/SelectionDetails" {
     import Item from "sap/ui/core/Item";
     import SelectionDetailsItem from "sap/m/SelectionDetailsItem";
-    import sapmlibrary from "sap/m/library";
-    type SelectionDetailsActionLevel = sapmlibrary.SelectionDetailsActionLevel;
-
-    export = SelectionDetails;
-
-
-
+    import { SelectionDetailsActionLevel } from "sap/m/library";
 
     /**
     
     */
-    class SelectionDetails extends sap.ui.core.Control {
+    export default class SelectionDetails extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SelectionDetails.
@@ -342,6 +337,5 @@ declare module "sap/m/SelectionDetails" {
         public unbindItems(): this;
 
     }
-
 
 }

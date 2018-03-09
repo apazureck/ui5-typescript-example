@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/Splitter" {
 
-    export = Splitter;
-
-
-
-
     /**
     
     */
-    class Splitter extends sap.ui.core.Control {
+    export default class Splitter extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Splitter.
@@ -286,6 +282,5 @@ declare module "sap/ui/commons/Splitter" {
         public setWidth(sWidth: sap.ui.commons.SplitterSize): this;
 
     }
-
 
 }

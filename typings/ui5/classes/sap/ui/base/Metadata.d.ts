@@ -5,6 +5,7 @@ declare namespace sap.ui.base {
     */
     export class Metadata {
 
+
         /**
             * Creates a new metadata object from the given static infos.
          * 

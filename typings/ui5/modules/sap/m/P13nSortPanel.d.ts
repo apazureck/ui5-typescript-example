@@ -2,15 +2,11 @@ declare module "sap/m/P13nSortPanel" {
     import P13nPanel from "sap/m/P13nPanel";
     import P13nSortItem from "sap/m/P13nSortItem";
 
-    export = P13nSortPanel;
-
-
-
-
     /**
     
     */
-    class P13nSortPanel extends P13nPanel {
+    export default class P13nSortPanel extends P13nPanel {
+
 
         /**
             * Constructor for a new P13nSortPanel.
@@ -247,6 +243,5 @@ declare module "sap/m/P13nSortPanel" {
         public validateConditions(): boolean;
 
     }
-
 
 }

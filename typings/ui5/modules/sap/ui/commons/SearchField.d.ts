@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/SearchField" {
     import SearchProvider from "sap/ui/core/search/SearchProvider";
 
-    export = SearchField;
-
-
-
-
     /**
     
     */
-    class SearchField extends sap.ui.core.Control {
+    export default class SearchField extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SearchField.
@@ -540,6 +536,5 @@ declare module "sap/ui/commons/SearchField" {
         public suggest(sSSuggestValue: string, aASuggestions: any[]): any;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/Menu" {
     import MenuItem from "sap/m/MenuItem";
 
-    export = Menu;
-
-
-
-
     /**
     
     */
-    class Menu extends sap.ui.core.Control {
+    export default class Menu extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Menu.
@@ -200,6 +196,5 @@ declare module "sap/m/Menu" {
         public unbindItems(): this;
 
     }
-
 
 }

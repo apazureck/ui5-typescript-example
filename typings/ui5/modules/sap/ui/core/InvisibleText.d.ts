@@ -1,14 +1,10 @@
 declare module "sap/ui/core/InvisibleText" {
 
-    export = InvisibleText;
-
-
-
-
     /**
     
     */
-    class InvisibleText extends sap.ui.core.Control {
+    export default class InvisibleText extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new InvisibleText.
@@ -125,6 +121,5 @@ declare module "sap/ui/core/InvisibleText" {
         public toStatic(): this;
 
     }
-
 
 }

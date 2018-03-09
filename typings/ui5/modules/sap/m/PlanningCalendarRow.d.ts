@@ -1,15 +1,11 @@
 declare module "sap/m/PlanningCalendarRow" {
     import CalendarAppointment from "sap/ui/unified/CalendarAppointment";
 
-    export = PlanningCalendarRow;
-
-
-
-
     /**
     
     */
-    class PlanningCalendarRow extends sap.ui.core.Element {
+    export default class PlanningCalendarRow extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new `PlanningCalendarRow`.
@@ -261,6 +257,5 @@ declare module "sap/m/PlanningCalendarRow" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

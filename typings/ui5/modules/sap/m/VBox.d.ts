@@ -1,15 +1,11 @@
 declare module "sap/m/VBox" {
     import FlexBox from "sap/m/FlexBox";
 
-    export = VBox;
-
-
-
-
     /**
     
     */
-    class VBox extends FlexBox {
+    export default class VBox extends FlexBox {
+
 
         /**
             * Constructor for a new VBox.
@@ -47,6 +43,5 @@ declare module "sap/m/VBox" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

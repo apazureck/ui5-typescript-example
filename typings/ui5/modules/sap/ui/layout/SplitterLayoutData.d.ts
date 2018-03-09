@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/SplitterLayoutData" {
 
-    export = SplitterLayoutData;
-
-
-
-
     /**
     
     */
-    class SplitterLayoutData extends sap.ui.core.LayoutData {
+    export default class SplitterLayoutData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new SplitterLayoutData.
@@ -108,6 +104,5 @@ declare module "sap/ui/layout/SplitterLayoutData" {
         public setSize(sSize: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

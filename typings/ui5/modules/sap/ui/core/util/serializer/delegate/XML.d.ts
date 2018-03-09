@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/serializer/delegate/XML" {
     import Delegate from "sap/ui/core/util/serializer/delegate/Delegate";
 
-    export = XML;
-
-
-
-
     /**
     
     */
-    class XML extends Delegate {
+    export default class XML extends Delegate {
+
 
         /**
             * XML serializer delegate class. Called by the serializer instance.
@@ -37,6 +33,5 @@ declare module "sap/ui/core/util/serializer/delegate/XML" {
         public getMetadata(): any;
 
     }
-
 
 }

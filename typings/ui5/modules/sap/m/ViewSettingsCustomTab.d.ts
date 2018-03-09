@@ -1,15 +1,11 @@
 declare module "sap/m/ViewSettingsCustomTab" {
     import Item from "sap/ui/core/Item";
 
-    export = ViewSettingsCustomTab;
-
-
-
-
     /**
     
     */
-    class ViewSettingsCustomTab extends Item {
+    export default class ViewSettingsCustomTab extends Item {
+
 
         /**
             * Constructor for a new ViewSettingsCustomTab.
@@ -128,6 +124,5 @@ declare module "sap/m/ViewSettingsCustomTab" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

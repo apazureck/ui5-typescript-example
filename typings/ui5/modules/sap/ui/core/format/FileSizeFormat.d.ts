@@ -1,14 +1,10 @@
 declare module "sap/ui/core/format/FileSizeFormat" {
 
-    export = FileSizeFormat;
-
-
-
-
     /**
     
     */
-    class FileSizeFormat extends sap.ui.base.Object {
+    export default class FileSizeFormat extends sap.ui.base.Object {
+
 
         /**
             * Constructor for FileSizeFormat - must not be used: To get a FileSizeFormat instance, please use getInstance.
@@ -53,6 +49,5 @@ declare module "sap/ui/core/format/FileSizeFormat" {
         public parse(sValue: string): number;
 
     }
-
 
 }

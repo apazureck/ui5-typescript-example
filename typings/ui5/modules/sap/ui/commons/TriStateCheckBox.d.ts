@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/TriStateCheckBox" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type TriStateCheckBoxState = sapuicommonslibrary.TriStateCheckBoxState;
-
-    export = TriStateCheckBox;
-
-
-
+    import { TriStateCheckBoxState } from "sap/ui/commons/library";
 
     /**
     
     */
-    class TriStateCheckBox extends sap.ui.core.Control {
+    export default class TriStateCheckBox extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TriStateCheckBox.
@@ -221,6 +216,5 @@ declare module "sap/ui/commons/TriStateCheckBox" {
         public toggle(destState: TriStateCheckBoxState): any;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Boolean" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Boolean;
-
-
-
-
     /**
     
     */
-    class Boolean extends ODataType {
+    export default class Boolean extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.Boolean`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Boolean" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

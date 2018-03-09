@@ -1,14 +1,10 @@
 declare module "sap/ui/core/message/ControlMessageProcessor" {
 
-    export = ControlMessageProcessor;
-
-
-
-
     /**
     
     */
-    class ControlMessageProcessor extends sap.ui.core.message.MessageProcessor {
+    export default class ControlMessageProcessor extends sap.ui.core.message.MessageProcessor {
+
 
         /**
             * Constructor for a new ControlMessageProcessor
@@ -51,6 +47,5 @@ declare module "sap/ui/core/message/ControlMessageProcessor" {
         public setMessages(vMessages: any): any;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/m/RatingIndicator" {
-    import sapmlibrary from "sap/m/library";
-    type RatingIndicatorVisualMode = sapmlibrary.RatingIndicatorVisualMode;
-
-    export = RatingIndicator;
-
-
-
+    import { RatingIndicatorVisualMode } from "sap/m/library";
 
     /**
     
     */
-    class RatingIndicator extends sap.ui.core.Control {
+    export default class RatingIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RatingIndicator.
@@ -349,6 +344,5 @@ declare module "sap/m/RatingIndicator" {
         public unbindValue(): this;
 
     }
-
 
 }

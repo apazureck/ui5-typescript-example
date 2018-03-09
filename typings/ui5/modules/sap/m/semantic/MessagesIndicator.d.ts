@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/MessagesIndicator" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = MessagesIndicator;
-
-
-
-
     /**
     
     */
-    class MessagesIndicator extends SemanticButton {
+    export default class MessagesIndicator extends SemanticButton {
+
 
         /**
             * Constructor for a new MessagesIndicator.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/MessagesIndicator" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

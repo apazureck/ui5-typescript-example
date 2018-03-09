@@ -1,10 +1,8 @@
 declare module "sap/ui/commons/MessageBox" {
-    import sapuicommonsMessageBox from "sap/ui/commons/MessageBox";
-    type Icon = sapuicommonsMessageBox.Icon;
-    type Action = sapuicommonsMessageBox.Action;
+    /**
 
-    export = MessageBox;
-
+*/
+    export default MessageBox;
     namespace MessageBox {
 
         // Methods
@@ -41,38 +39,37 @@ declare module "sap/ui/commons/MessageBox" {
     */
         export function show(vMessage: string | sap.ui.core.Control, oIcon?: Icon, sTitle?: string, vActions?: Action | any[], fnCallback?: Function, oDefaultAction?: Action, sDialogId?: string): any;
     }
-
-    namespace MessageBox {
-
-        /** 
-    * Enumeration of supported actions in a MessageBox.
-     * 
-     * Each action is represented as a button in the message box. The values of this enumeration are used for both, specifying the set of allowed actions as well as reporting back the user choice. 
-    */
-        enum Action {
-            ABORT = "ABORT",
-            CANCEL = "CANCEL",
-            CLOSE = "CLOSE",
-            IGNORE = "IGNORE",
-            NO = "NO",
-            OK = "OK",
-            RETRY = "RETRY",
-            YES = "YES",
-        }
-
-        /** 
-    * Enumeration of the pre-defined icons that can be used in a MessageBox. 
-    */
-        enum Icon {
-            CRITICAL = "CRITICAL",
-            ERROR = "ERROR",
-            INFORMATION = "INFORMATION",
-            NONE = "NONE",
-            QUESTION = "QUESTION",
-            SUCCESS = "SUCCESS",
-            WARNING = "WARNING",
-        }
+    /** 
+* Enumeration of supported actions in a MessageBox.
+ * 
+ * Each action is represented as a button in the message box. The values of this enumeration are used for both, specifying the set of allowed actions as well as reporting back the user choice. 
+*/
 
 
+    export enum Action {
+        ABORT = "ABORT",
+        CANCEL = "CANCEL",
+        CLOSE = "CLOSE",
+        IGNORE = "IGNORE",
+        NO = "NO",
+        OK = "OK",
+        RETRY = "RETRY",
+        YES = "YES",
     }
+
+    /** 
+* Enumeration of the pre-defined icons that can be used in a MessageBox. 
+*/
+
+
+    export enum Icon {
+        CRITICAL = "CRITICAL",
+        ERROR = "ERROR",
+        INFORMATION = "INFORMATION",
+        NONE = "NONE",
+        QUESTION = "QUESTION",
+        SUCCESS = "SUCCESS",
+        WARNING = "WARNING",
+    }
+
 }

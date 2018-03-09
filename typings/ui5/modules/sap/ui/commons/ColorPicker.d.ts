@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/ColorPicker" {
 
-    export = ColorPicker;
-
-
-
-
     /**
     
     */
-    class ColorPicker extends sap.ui.core.Control {
+    export default class ColorPicker extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ColorPicker.
@@ -50,6 +46,5 @@ declare module "sap/ui/commons/ColorPicker" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

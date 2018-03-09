@@ -3,14 +3,15 @@ declare namespace sap.ui.core {
     /**
     
     */
-    export class Control extends sap.ui.core.Element {
+    export abstract class Control extends sap.ui.core.Element {
+
 
         /**
             * Creates and initializes a new control with the given `sId` and settings.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

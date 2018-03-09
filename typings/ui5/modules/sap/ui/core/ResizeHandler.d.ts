@@ -1,9 +1,8 @@
 declare module "sap/ui/core/ResizeHandler" {
+    /**
 
-    export = ResizeHandler;
-
-
-
+*/
+    export default ResizeHandler;
     namespace ResizeHandler {
 
         // Methods
@@ -29,5 +28,4 @@ declare module "sap/ui/core/ResizeHandler" {
     */
         export function register(oRef: any | sap.ui.core.Control, fHandler: Function): string;
     }
-
 }

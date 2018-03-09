@@ -1,14 +1,10 @@
 declare module "sap/m/ObjectAttribute" {
 
-    export = ObjectAttribute;
-
-
-
-
     /**
     
     */
-    class ObjectAttribute extends sap.ui.core.Control {
+    export default class ObjectAttribute extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ObjectAttribute`.
@@ -176,6 +172,5 @@ declare module "sap/m/ObjectAttribute" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

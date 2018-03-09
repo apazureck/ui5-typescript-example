@@ -22,15 +22,11 @@ declare module "sap/m/semantic/FullscreenPage" {
     import SendMessageAction from "sap/m/semantic/SendMessageAction";
     import ShareInJamAction from "sap/m/semantic/ShareInJamAction";
 
-    export = FullscreenPage;
-
-
-
-
     /**
     
     */
-    class FullscreenPage extends ShareMenuPage {
+    export default class FullscreenPage extends ShareMenuPage {
+
 
         /**
             * Constructor for a new FullscreenPage
@@ -427,6 +423,5 @@ declare module "sap/m/semantic/FullscreenPage" {
         public setShareInJamAction(oShareInJamAction: ShareInJamAction): this;
 
     }
-
 
 }

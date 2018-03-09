@@ -1,14 +1,10 @@
 declare module "sap/m/MaskInputRule" {
 
-    export = MaskInputRule;
-
-
-
-
     /**
     
     */
-    class MaskInputRule extends sap.ui.core.Element {
+    export default class MaskInputRule extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new MaskInputRule.
@@ -88,6 +84,5 @@ declare module "sap/m/MaskInputRule" {
         public setRegex(sRegex: string): this;
 
     }
-
 
 }

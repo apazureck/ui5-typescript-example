@@ -2,15 +2,11 @@ declare module "sap/m/P13nGroupPanel" {
     import P13nPanel from "sap/m/P13nPanel";
     import P13nGroupItem from "sap/m/P13nGroupItem";
 
-    export = P13nGroupPanel;
-
-
-
-
     /**
     
     */
-    class P13nGroupPanel extends P13nPanel {
+    export default class P13nGroupPanel extends P13nPanel {
+
 
         /**
             * Constructor for a new P13nGroupPanel.
@@ -267,6 +263,5 @@ declare module "sap/m/P13nGroupPanel" {
         public validateConditions(): boolean;
 
     }
-
 
 }

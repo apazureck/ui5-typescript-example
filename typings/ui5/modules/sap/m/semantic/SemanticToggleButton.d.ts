@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/SemanticToggleButton" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = SemanticToggleButton;
-
-
-
-
     /**
     
     */
-    class SemanticToggleButton extends SemanticButton {
+    export default abstract class SemanticToggleButton extends SemanticButton {
+
 
         /**
             * Constructor for a new SemanticToggleButton.
@@ -69,6 +65,5 @@ declare module "sap/m/semantic/SemanticToggleButton" {
         public setPressed(bPressed: boolean): this;
 
     }
-
 
 }

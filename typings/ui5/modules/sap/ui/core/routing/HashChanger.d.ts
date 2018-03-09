@@ -1,14 +1,10 @@
 declare module "sap/ui/core/routing/HashChanger" {
 
-    export = HashChanger;
-
-
-
-
     /**
     
     */
-    class HashChanger extends sap.ui.base.EventProvider {
+    export default class HashChanger extends sap.ui.base.EventProvider {
+
 
         /**
             
@@ -81,6 +77,5 @@ declare module "sap/ui/core/routing/HashChanger" {
         public setHash(sHash: string): any;
 
     }
-
 
 }

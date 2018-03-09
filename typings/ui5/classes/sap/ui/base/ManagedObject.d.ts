@@ -5,6 +5,7 @@ declare namespace sap.ui.base {
     */
     export class ManagedObject extends sap.ui.base.EventProvider {
 
+
         /**
             * Constructs and initializes a managed object with the given `sId` and settings.
          * 
@@ -50,7 +51,7 @@ declare namespace sap.ui.base {
          * 
          * Examples for such metadataContexts are:  * `{/Customers/Name}` a single part with an absolute path to the property * Name * of the * Customers * entity set in the default model * `{path: 'Customers/Name', model:'json'}` a single part with an absolute path to the property * Name * of the * Customers * entity set in a named model * `{parts: [{path: 'Customers/Name'},{path: 'editable', model: 'viewModel'}]}` a combination of to single binding contexts, one context from the default model and one from the viewModel </li> </ul>
         */
-        public constructor(sId: string, mSettings: any, oScope: any);
+        public constructor(sId?: string, mSettings?: any, oScope?: any);
 
 
         /**

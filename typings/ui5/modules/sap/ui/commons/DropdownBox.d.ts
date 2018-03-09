@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/DropdownBox" {
     import ComboBox from "sap/ui/commons/ComboBox";
 
-    export = DropdownBox;
-
-
-
-
     /**
     
     */
-    class DropdownBox extends ComboBox {
+    export default class DropdownBox extends ComboBox {
+
 
         /**
             * Constructor for a new DropdownBox.
@@ -240,6 +236,5 @@ declare module "sap/ui/commons/DropdownBox" {
         public setSearchHelpText(sSearchHelpText: string): this;
 
     }
-
 
 }

@@ -3,7 +3,8 @@ declare namespace sap.ui.app {
     /**
     
     */
-    export class Application extends sap.ui.core.Component {
+    export abstract class Application extends sap.ui.core.Component {
+
 
         /**
             * Abstract application class. Extend this class to create a central application class.
@@ -12,7 +13,7 @@ declare namespace sap.ui.app {
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

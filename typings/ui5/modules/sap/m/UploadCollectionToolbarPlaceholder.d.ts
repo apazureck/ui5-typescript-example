@@ -1,14 +1,10 @@
 declare module "sap/m/UploadCollectionToolbarPlaceholder" {
 
-    export = UploadCollectionToolbarPlaceholder;
-
-
-
-
     /**
     
     */
-    class UploadCollectionToolbarPlaceholder extends sap.ui.core.Control {
+    export default class UploadCollectionToolbarPlaceholder extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new UploadCollectionToolbarPlaceholder.
@@ -50,6 +46,5 @@ declare module "sap/m/UploadCollectionToolbarPlaceholder" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

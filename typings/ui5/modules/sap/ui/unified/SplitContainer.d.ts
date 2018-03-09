@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/SplitContainer" {
 
-    export = SplitContainer;
-
-
-
-
     /**
     
     */
-    class SplitContainer extends sap.ui.core.Control {
+    export default class SplitContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SplitContainer.
@@ -202,6 +198,5 @@ declare module "sap/ui/unified/SplitContainer" {
         public setShowSecondaryContent(bShowSecondaryContent: boolean): this;
 
     }
-
 
 }

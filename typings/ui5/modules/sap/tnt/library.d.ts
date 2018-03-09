@@ -1,11 +1,9 @@
 declare module "sap/tnt/library" {
+    /**
 
-    export = tnt;
-
-
-
+*/
+    export default tnt;
     namespace tnt {
 
     }
-
 }

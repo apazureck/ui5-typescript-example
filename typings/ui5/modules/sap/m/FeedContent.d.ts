@@ -1,17 +1,12 @@
 declare module "sap/m/FeedContent" {
-    import sapmlibrary from "sap/m/library";
-    type Size = sapmlibrary.Size;
-    type ValueColor = sapmlibrary.ValueColor;
-
-    export = FeedContent;
-
-
-
+    import { Size } from "sap/m/library";
+    import { ValueColor } from "sap/m/library";
 
     /**
     
     */
-    class FeedContent extends sap.ui.core.Control {
+    export default class FeedContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.FeedContent control.
@@ -185,6 +180,5 @@ declare module "sap/m/FeedContent" {
         public setValueColor(sValueColor: ValueColor): this;
 
     }
-
 
 }

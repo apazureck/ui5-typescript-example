@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/ODataAnnotations" {
     import ODataMetadata from "sap/ui/model/odata/ODataMetadata";
 
-    export = ODataAnnotations;
-
-
-
-
     /**
     
     */
-    class ODataAnnotations extends sap.ui.base.EventProvider {
+    export default class ODataAnnotations extends sap.ui.base.EventProvider {
+
 
         /**
             
@@ -113,6 +109,5 @@ declare module "sap/ui/model/odata/ODataAnnotations" {
         public setXML(oXMLDocument: any, sXMLContent: string, mOptions?: { success?: Function, error?: Function, fireEvents?: boolean, }): boolean;
 
     }
-
 
 }

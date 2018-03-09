@@ -1,14 +1,10 @@
 declare module "sap/m/ImageContent" {
 
-    export = ImageContent;
-
-
-
-
     /**
     
     */
-    class ImageContent extends sap.ui.core.Control {
+    export default class ImageContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.ImageContent control.
@@ -110,6 +106,5 @@ declare module "sap/m/ImageContent" {
         public setSrc(sSrc: sap.ui.core.URI): this;
 
     }
-
 
 }

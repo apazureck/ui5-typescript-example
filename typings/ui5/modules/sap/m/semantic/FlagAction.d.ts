@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/FlagAction" {
     import SemanticToggleButton from "sap/m/semantic/SemanticToggleButton";
 
-    export = FlagAction;
-
-
-
-
     /**
     
     */
-    class FlagAction extends SemanticToggleButton {
+    export default class FlagAction extends SemanticToggleButton {
+
 
         /**
             * Constructor for a new FlagAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/FlagAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

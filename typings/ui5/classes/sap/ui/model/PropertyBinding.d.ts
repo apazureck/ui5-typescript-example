@@ -5,10 +5,11 @@ declare namespace sap.ui.model {
     */
     export class PropertyBinding extends sap.ui.model.Binding {
 
+
         /**
             * Constructor for PropertyBinding
         */
-        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters?: any);
 
 
         /**

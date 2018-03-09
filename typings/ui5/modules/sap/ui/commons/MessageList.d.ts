@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/MessageList" {
 
-    export = MessageList;
-
-
-
-
     /**
     
     */
-    class MessageList extends sap.ui.core.Control {
+    export default class MessageList extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessageList.
@@ -122,6 +118,5 @@ declare module "sap/ui/commons/MessageList" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

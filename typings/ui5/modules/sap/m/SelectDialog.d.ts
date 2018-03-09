@@ -2,15 +2,11 @@ declare module "sap/m/SelectDialog" {
     import StandardListItem from "sap/m/StandardListItem";
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = SelectDialog;
-
-
-
-
     /**
     
     */
-    class SelectDialog extends sap.ui.core.Control {
+    export default class SelectDialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SelectDialog.
@@ -428,6 +424,5 @@ declare module "sap/m/SelectDialog" {
         public toggleStyleClass(): this;
 
     }
-
 
 }

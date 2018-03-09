@@ -1,15 +1,11 @@
 declare module "sap/m/P13nSortItem" {
     import Item from "sap/ui/core/Item";
 
-    export = P13nSortItem;
-
-
-
-
     /**
     
     */
-    class P13nSortItem extends Item {
+    export default class P13nSortItem extends Item {
+
 
         /**
             * Constructor for a new P13nSortItem.
@@ -81,6 +77,5 @@ declare module "sap/m/P13nSortItem" {
         public setOperation(sOperation: string): this;
 
     }
-
 
 }

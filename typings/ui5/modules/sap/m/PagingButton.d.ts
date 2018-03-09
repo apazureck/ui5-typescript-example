@@ -1,14 +1,10 @@
 declare module "sap/m/PagingButton" {
 
-    export = PagingButton;
-
-
-
-
     /**
     
     */
-    class PagingButton extends sap.ui.core.Control {
+    export default class PagingButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new PagingButton.
@@ -164,6 +160,5 @@ declare module "sap/m/PagingButton" {
         public setPreviousButtonTooltip(sPreviousButtonTooltip: string): this;
 
     }
-
 
 }

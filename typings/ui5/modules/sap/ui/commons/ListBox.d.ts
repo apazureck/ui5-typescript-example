@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/ListBox" {
     import Item from "sap/ui/core/Item";
 
-    export = ListBox;
-
-
-
-
     /**
     
     */
-    class ListBox extends sap.ui.core.Control {
+    export default class ListBox extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ListBox.
@@ -459,6 +455,5 @@ declare module "sap/ui/commons/ListBox" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

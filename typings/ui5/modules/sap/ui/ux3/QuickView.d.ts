@@ -2,18 +2,13 @@ declare module "sap/ui/ux3/QuickView" {
     import CalloutBase from "sap/ui/commons/CalloutBase";
     import ThingAction from "sap/ui/ux3/ThingAction";
     import ActionBar from "sap/ui/ux3/ActionBar";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type FollowActionState = sapuiux3library.FollowActionState;
-
-    export = QuickView;
-
-
-
+    import { FollowActionState } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class QuickView extends CalloutBase {
+    export default class QuickView extends CalloutBase {
+
 
         /**
             * Constructor for a new QuickView.
@@ -532,6 +527,5 @@ declare module "sap/ui/ux3/QuickView" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

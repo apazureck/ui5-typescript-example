@@ -1,17 +1,12 @@
 declare module "sap/m/SlideTile" {
-    import sapmlibrary from "sap/m/library";
-    type GenericTileScope = sapmlibrary.GenericTileScope;
+    import { GenericTileScope } from "sap/m/library";
     import GenericTile from "sap/m/GenericTile";
-
-    export = SlideTile;
-
-
-
 
     /**
     
     */
-    class SlideTile extends sap.ui.core.Control {
+    export default class SlideTile extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.SlideTile control.
@@ -200,6 +195,5 @@ declare module "sap/m/SlideTile" {
         public unbindTiles(): this;
 
     }
-
 
 }

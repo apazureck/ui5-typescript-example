@@ -1,15 +1,11 @@
 declare module "sap/ui/core/SeparatorItem" {
     import Item from "sap/ui/core/Item";
 
-    export = SeparatorItem;
-
-
-
-
     /**
     
     */
-    class SeparatorItem extends Item {
+    export default class SeparatorItem extends Item {
+
 
         /**
             * Constructor for a new SeparatorItem.
@@ -47,6 +43,5 @@ declare module "sap/ui/core/SeparatorItem" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

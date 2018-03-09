@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/InPlaceEdit" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type TextViewDesign = sapuicommonslibrary.TextViewDesign;
-
-    export = InPlaceEdit;
-
-
-
+    import { TextViewDesign } from "sap/ui/commons/library";
 
     /**
     
     */
-    class InPlaceEdit extends sap.ui.core.Control {
+    export default class InPlaceEdit extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new InPlaceEdit.
@@ -230,6 +225,5 @@ declare module "sap/ui/commons/InPlaceEdit" {
         public setValueState(sValueState: sap.ui.core.ValueState): this;
 
     }
-
 
 }

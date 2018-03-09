@@ -1,19 +1,14 @@
 declare module "sap/m/NumericContent" {
-    import sapmlibrary from "sap/m/library";
-    type DeviationIndicator = sapmlibrary.DeviationIndicator;
-    type Size = sapmlibrary.Size;
-    type LoadState = sapmlibrary.LoadState;
-    type ValueColor = sapmlibrary.ValueColor;
-
-    export = NumericContent;
-
-
-
+    import { DeviationIndicator } from "sap/m/library";
+    import { Size } from "sap/m/library";
+    import { LoadState } from "sap/m/library";
+    import { ValueColor } from "sap/m/library";
 
     /**
     
     */
-    class NumericContent extends sap.ui.core.Control {
+    export default class NumericContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.GenericTile control.
@@ -343,6 +338,5 @@ declare module "sap/m/NumericContent" {
         public setWithMargin(bWithMargin: boolean): this;
 
     }
-
 
 }

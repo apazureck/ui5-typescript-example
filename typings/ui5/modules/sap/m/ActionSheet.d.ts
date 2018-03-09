@@ -1,17 +1,12 @@
 declare module "sap/m/ActionSheet" {
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type PlacementType = sapmlibrary.PlacementType;
-
-    export = ActionSheet;
-
-
-
+    import { PlacementType } from "sap/m/library";
 
     /**
     
     */
-    class ActionSheet extends sap.ui.core.Control {
+    export default class ActionSheet extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ActionSheet.
@@ -362,6 +357,5 @@ declare module "sap/m/ActionSheet" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

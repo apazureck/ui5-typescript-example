@@ -2,15 +2,11 @@ declare module "sap/ui/model/odata/ODataMetaModel" {
     import ODataMetadata from "sap/ui/model/odata/ODataMetadata";
     import ODataAnnotations from "sap/ui/model/odata/ODataAnnotations";
 
-    export = ODataMetaModel;
-
-
-
-
     /**
     
     */
-    class ODataMetaModel extends sap.ui.model.MetaModel {
+    export default class ODataMetaModel extends sap.ui.model.MetaModel {
+
 
         /**
             * DO NOT CALL this private constructor for a new `ODataMetaModel`, but rather use {@link sap.ui.model.odata.ODataModel#getMetaModel getMetaModel} instead!
@@ -118,6 +114,5 @@ declare module "sap/ui/model/odata/ODataMetaModel" {
         public setLegacySyntax(bLegacySyntax: boolean): any;
 
     }
-
 
 }

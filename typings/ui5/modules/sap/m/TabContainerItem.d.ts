@@ -1,14 +1,10 @@
 declare module "sap/m/TabContainerItem" {
 
-    export = TabContainerItem;
-
-
-
-
     /**
     
     */
-    class TabContainerItem extends sap.ui.core.Element {
+    export default class TabContainerItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new `TabContainerItem`.
@@ -197,6 +193,5 @@ declare module "sap/m/TabContainerItem" {
         protected setProperty(sPropertyName: string, oValue: any, bSuppressInvalidate?: boolean): sap.ui.base.ManagedObject;
 
     }
-
 
 }

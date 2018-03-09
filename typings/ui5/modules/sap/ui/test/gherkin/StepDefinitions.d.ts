@@ -1,11 +1,7 @@
 declare module "sap/ui/test/gherkin/StepDefinitions" {
 
-    export = StepDefinitions;
+    export default abstract class StepDefinitions extends sap.ui.base.Object {
 
-
-
-
-    class StepDefinitions extends sap.ui.base.Object {
 
         /**
             * A Gherkin feature file is human-readable, and the computer does not know how to execute its steps. This StepDefinitions class provides the interface between human and machine. It defines what each step in the Gherkin feature file will actually do when it is executed.
@@ -50,6 +46,5 @@ declare module "sap/ui/test/gherkin/StepDefinitions" {
         public register(rRegex: RegExp, fnFunc: Function): any;
 
     }
-
 
 }

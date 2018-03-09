@@ -4,15 +4,11 @@ declare module "sap/m/ObjectListItem" {
     import ObjectMarker from "sap/m/ObjectMarker";
     import ObjectStatus from "sap/m/ObjectStatus";
 
-    export = ObjectListItem;
-
-
-
-
     /**
     
     */
-    class ObjectListItem extends ListItemBase {
+    export default class ObjectListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new ObjectListItem.
@@ -414,6 +410,5 @@ declare module "sap/m/ObjectListItem" {
         public setTitleTextDirection(sTitleTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

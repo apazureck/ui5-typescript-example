@@ -1,17 +1,12 @@
 declare module "sap/m/FacetFilter" {
     import FacetFilterList from "sap/m/FacetFilterList";
-    import sapmlibrary from "sap/m/library";
-    type FacetFilterType = sapmlibrary.FacetFilterType;
-
-    export = FacetFilter;
-
-
-
+    import { FacetFilterType } from "sap/m/library";
 
     /**
     
     */
-    class FacetFilter extends sap.ui.core.Control {
+    export default class FacetFilter extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `FacetFilter`.
@@ -275,6 +270,5 @@ declare module "sap/m/FacetFilter" {
         public setType(sType: FacetFilterType): this;
 
     }
-
 
 }

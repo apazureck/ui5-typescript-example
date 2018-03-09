@@ -5,16 +5,18 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
     import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
     import ODataPropertyBinding from "sap/ui/model/odata/v4/ODataPropertyBinding";
     import ODataMetaModel from "sap/ui/model/odata/v4/ODataMetaModel";
+    /**
 
-    export = ODataModel;
+*/
+    namespace v4 {
 
-
-
+    }
 
     /**
     
     */
-    class ODataModel extends sap.ui.model.Model {
+    export default class ODataModel extends sap.ui.model.Model {
+
 
         /**
             * Constructor for a new ODataModel.
@@ -187,6 +189,5 @@ declare module "sap/ui/model/odata/v4/ODataModel" {
         public toString(): string;
 
     }
-
 
 }

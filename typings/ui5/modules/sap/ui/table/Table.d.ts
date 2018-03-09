@@ -1,25 +1,20 @@
 declare module "sap/ui/table/Table" {
     import Column from "sap/ui/table/Column";
-    import sapuitablelibrary from "sap/ui/table/library";
-    type SortOrder = sapuitablelibrary.SortOrder;
+    import { SortOrder } from "sap/ui/table/library";
     import DragDropBase from "sap/ui/core/dnd/DragDropBase";
     import Row from "sap/ui/table/Row";
-    type NavigationMode = sapuitablelibrary.NavigationMode;
+    import { NavigationMode } from "sap/ui/table/library";
     import RowAction from "sap/ui/table/RowAction";
     import RowSettings from "sap/ui/table/RowSettings";
-    type SelectionBehavior = sapuitablelibrary.SelectionBehavior;
-    type SelectionMode = sapuitablelibrary.SelectionMode;
-    type VisibleRowCountMode = sapuitablelibrary.VisibleRowCountMode;
-
-    export = Table;
-
-
-
+    import { SelectionBehavior } from "sap/ui/table/library";
+    import { SelectionMode } from "sap/ui/table/library";
+    import { VisibleRowCountMode } from "sap/ui/table/library";
 
     /**
     
     */
-    class Table extends sap.ui.core.Control {
+    export default class Table extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Table.
@@ -1551,6 +1546,5 @@ declare module "sap/ui/table/Table" {
         public unbindRows(): this;
 
     }
-
 
 }

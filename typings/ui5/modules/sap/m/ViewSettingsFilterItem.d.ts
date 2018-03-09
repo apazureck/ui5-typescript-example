@@ -1,15 +1,11 @@
 declare module "sap/m/ViewSettingsFilterItem" {
     import ViewSettingsItem from "sap/m/ViewSettingsItem";
 
-    export = ViewSettingsFilterItem;
-
-
-
-
     /**
     
     */
-    class ViewSettingsFilterItem extends ViewSettingsItem {
+    export default class ViewSettingsFilterItem extends ViewSettingsItem {
+
 
         /**
             * Constructor for a new ViewSettingsFilterItem.
@@ -150,6 +146,5 @@ declare module "sap/m/ViewSettingsFilterItem" {
         public unbindItems(): this;
 
     }
-
 
 }

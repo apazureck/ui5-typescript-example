@@ -5,12 +5,13 @@ declare namespace sap.ui.core {
     */
     export class CustomData extends sap.ui.core.Element {
 
+
         /**
             * Constructor for a new CustomData.
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

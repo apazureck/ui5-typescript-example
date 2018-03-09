@@ -1,19 +1,14 @@
 declare module "sap/ui/commons/RowRepeater" {
     import RowRepeaterFilter from "sap/ui/commons/RowRepeaterFilter";
     import RowRepeaterSorter from "sap/ui/commons/RowRepeaterSorter";
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type RowRepeaterDesign = sapuicommonslibrary.RowRepeaterDesign;
+    import { RowRepeaterDesign } from "sap/ui/commons/library";
     import Title from "sap/ui/core/Title";
-
-    export = RowRepeater;
-
-
-
 
     /**
     
     */
-    class RowRepeater extends sap.ui.core.Control {
+    export default class RowRepeater extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RowRepeater.
@@ -503,6 +498,5 @@ declare module "sap/ui/commons/RowRepeater" {
         public unbindRows(): this;
 
     }
-
 
 }

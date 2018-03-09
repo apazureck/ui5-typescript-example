@@ -1,14 +1,16 @@
 declare module "sap/ui/model/resource/ResourceModel" {
+    /**
 
-    export = ResourceModel;
+*/
+    namespace resource {
 
-
-
+    }
 
     /**
     
     */
-    class ResourceModel extends sap.ui.model.Model {
+    export default class ResourceModel extends sap.ui.model.Model {
+
 
         /**
             * Constructor for a new ResourceModel.
@@ -56,6 +58,5 @@ declare module "sap/ui/model/resource/ResourceModel" {
         public getResourceBundle(): jQuery.sap.util.ResourceBundle | any;
 
     }
-
 
 }

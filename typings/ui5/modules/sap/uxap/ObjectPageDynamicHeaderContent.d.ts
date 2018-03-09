@@ -1,14 +1,10 @@
 declare module "sap/uxap/ObjectPageDynamicHeaderContent" {
 
-    export = ObjectPageDynamicHeaderContent;
-
-
-
-
     /**
     
     */
-    class ObjectPageDynamicHeaderContent {
+    export default class ObjectPageDynamicHeaderContent {
+
 
         /**
             * Constructor for a new `ObjectPageDynamicHeaderContent`.
@@ -29,6 +25,5 @@ declare module "sap/uxap/ObjectPageDynamicHeaderContent" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

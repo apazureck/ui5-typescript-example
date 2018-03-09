@@ -1,16 +1,11 @@
 declare module "sap/m/PlanningCalendarView" {
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type CalendarIntervalType = sapuiunifiedlibrary.CalendarIntervalType;
-
-    export = PlanningCalendarView;
-
-
-
+    import { CalendarIntervalType } from "sap/ui/unified/library";
 
     /**
     
     */
-    class PlanningCalendarView extends sap.ui.core.Element {
+    export default class PlanningCalendarView extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new `PlanningCalendarView`.
@@ -190,6 +185,5 @@ declare module "sap/m/PlanningCalendarView" {
         public setShowSubIntervals(bShowSubIntervals: boolean): this;
 
     }
-
 
 }

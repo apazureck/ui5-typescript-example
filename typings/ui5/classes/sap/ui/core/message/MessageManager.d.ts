@@ -2,6 +2,7 @@ declare namespace sap.ui.core.message {
 
     export class MessageManager extends sap.ui.base.EventProvider {
 
+
         /**
             * Constructor for a new MessageManager.
         */

@@ -1,15 +1,11 @@
 declare module "sap/m/MessagePage" {
     import Link from "sap/m/Link";
 
-    export = MessagePage;
-
-
-
-
     /**
     
     */
-    class MessagePage extends sap.ui.core.Control {
+    export default class MessagePage extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessagePage.
@@ -305,6 +301,5 @@ declare module "sap/m/MessagePage" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

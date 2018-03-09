@@ -1,18 +1,13 @@
 declare module "sap/m/Panel" {
-    import sapmlibrary from "sap/m/library";
-    type PanelAccessibleRole = sapmlibrary.PanelAccessibleRole;
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
+    import { PanelAccessibleRole } from "sap/m/library";
+    import { BackgroundDesign } from "sap/m/library";
     import Toolbar from "sap/m/Toolbar";
-
-    export = Panel;
-
-
-
 
     /**
     
     */
-    class Panel extends sap.ui.core.Control {
+    export default class Panel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Panel.
@@ -291,6 +286,5 @@ declare module "sap/m/Panel" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

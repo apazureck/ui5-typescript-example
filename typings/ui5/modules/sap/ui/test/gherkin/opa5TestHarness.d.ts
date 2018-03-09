@@ -1,9 +1,8 @@
 declare module "sap/ui/test/gherkin/opa5TestHarness" {
+    /**
 
-    export = opa5TestHarness;
-
-
-
+*/
+    export default opa5TestHarness;
     namespace opa5TestHarness {
 
         // Methods
@@ -20,5 +19,4 @@ declare module "sap/ui/test/gherkin/opa5TestHarness" {
             */
         export function test(args: { featurePath: string, steps?: Function, generateMissingSteps?: boolean, }): any;
     }
-
 }

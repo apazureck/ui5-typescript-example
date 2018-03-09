@@ -1,14 +1,10 @@
 declare module "sap/ui/ux3/Overlay" {
 
-    export = Overlay;
-
-
-
-
     /**
     
     */
-    class Overlay extends sap.ui.core.Control {
+    export default class Overlay extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Overlay.
@@ -243,6 +239,5 @@ declare module "sap/ui/ux3/Overlay" {
         public setOpenButtonVisible(bOpenButtonVisible: boolean): this;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/ui/ux3/ExactAttribute" {
-    import sapuiux3library from "sap/ui/ux3/library";
-    type ExactOrder = sapuiux3library.ExactOrder;
-
-    export = ExactAttribute;
-
-
-
+    import { ExactOrder } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class ExactAttribute extends sap.ui.core.Element {
+    export default class ExactAttribute extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ExactAttribute.
@@ -302,6 +297,5 @@ declare module "sap/ui/ux3/ExactAttribute" {
         public setWidth(iWidth: number): this;
 
     }
-
 
 }

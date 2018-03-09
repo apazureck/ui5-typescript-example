@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/Notifier" {
     import Message from "sap/ui/core/Message";
 
-    export = Notifier;
-
-
-
-
     /**
     
     */
-    class Notifier extends sap.ui.core.Element {
+    export default class Notifier extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Notifier.
@@ -161,6 +157,5 @@ declare module "sap/ui/ux3/Notifier" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

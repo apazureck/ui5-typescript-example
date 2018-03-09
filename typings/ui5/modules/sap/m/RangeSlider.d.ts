@@ -1,15 +1,11 @@
 declare module "sap/m/RangeSlider" {
     import Slider from "sap/m/Slider";
 
-    export = RangeSlider;
-
-
-
-
     /**
     
     */
-    class RangeSlider extends Slider {
+    export default class RangeSlider extends Slider {
+
 
         /**
             * Constructor for a new `RangeSlider`.
@@ -97,6 +93,5 @@ declare module "sap/m/RangeSlider" {
         public setValue2(fValue2: number): this;
 
     }
-
 
 }

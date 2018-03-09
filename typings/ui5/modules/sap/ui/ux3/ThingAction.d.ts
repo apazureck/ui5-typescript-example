@@ -1,14 +1,10 @@
 declare module "sap/ui/ux3/ThingAction" {
 
-    export = ThingAction;
-
-
-
-
     /**
     
     */
-    class ThingAction extends sap.ui.core.Element {
+    export default class ThingAction extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ThingAction.
@@ -120,6 +116,5 @@ declare module "sap/ui/ux3/ThingAction" {
         public setText(sText: string): this;
 
     }
-
 
 }

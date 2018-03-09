@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Int64" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Int64;
-
-
-
-
     /**
     
     */
-    class Int64 extends ODataType {
+    export default class Int64 extends ODataType {
+
 
         /**
             * Constructor for a primitive type `Edm.Int64`.
@@ -77,6 +73,5 @@ declare module "sap/ui/model/odata/type/Int64" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

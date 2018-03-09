@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/ExportColumn" {
     import ExportCell from "sap/ui/core/util/ExportCell";
 
-    export = ExportColumn;
-
-
-
-
     /**
     
     */
-    class ExportColumn extends sap.ui.base.ManagedObject {
+    export default class ExportColumn extends sap.ui.base.ManagedObject {
+
 
         /**
             * Constructor for a new ExportCell.
@@ -77,6 +73,5 @@ declare module "sap/ui/core/util/ExportColumn" {
         public setTemplate(oTemplate: ExportCell): this;
 
     }
-
 
 }

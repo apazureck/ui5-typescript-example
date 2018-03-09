@@ -3,7 +3,8 @@ declare namespace sap.ui.model {
     /**
     
     */
-    export class Type extends sap.ui.base.Object {
+    export abstract class Type extends sap.ui.base.Object {
+
 
         /**
             * Constructor for a new Type.

@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/Tag" {
 
-    export = Tag;
-
-
-
-
     /**
     
     */
-    class Tag extends sap.ui.core.Element {
+    export default class Tag extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Tag.
@@ -84,6 +80,5 @@ declare module "sap/ui/demokit/Tag" {
         public setWeight(iWeight: number): this;
 
     }
-
 
 }

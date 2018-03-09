@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/TreeNode" {
 
-    export = TreeNode;
-
-
-
-
     /**
     
     */
-    class TreeNode extends sap.ui.core.Element {
+    export default class TreeNode extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new TreeNode.
@@ -310,6 +306,5 @@ declare module "sap/ui/commons/TreeNode" {
         public setText(sText: string): this;
 
     }
-
 
 }

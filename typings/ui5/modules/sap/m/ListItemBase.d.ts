@@ -1,16 +1,11 @@
 declare module "sap/m/ListItemBase" {
-    import sapmlibrary from "sap/m/library";
-    type ListType = sapmlibrary.ListType;
-
-    export = ListItemBase;
-
-
-
+    import { ListType } from "sap/m/library";
 
     /**
     
     */
-    class ListItemBase extends sap.ui.core.Control {
+    export default class ListItemBase extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ListItemBase.
@@ -331,6 +326,5 @@ declare module "sap/m/ListItemBase" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

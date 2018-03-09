@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/DatePicker" {
     import TextField from "sap/ui/commons/TextField";
 
-    export = DatePicker;
-
-
-
-
     /**
     
     */
-    class DatePicker extends TextField {
+    export default class DatePicker extends TextField {
+
 
         /**
             * Constructor for a new DatePicker.
@@ -98,6 +94,5 @@ declare module "sap/ui/commons/DatePicker" {
         public setYyyymmdd(sYyyymmdd: string): this;
 
     }
-
 
 }

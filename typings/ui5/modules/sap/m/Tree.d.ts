@@ -1,15 +1,11 @@
 declare module "sap/m/Tree" {
     import ListBase from "sap/m/ListBase";
 
-    export = Tree;
-
-
-
-
     /**
     
     */
-    class Tree extends ListBase {
+    export default class Tree extends ListBase {
+
 
         /**
             * Constructor for a new Tree.
@@ -129,6 +125,5 @@ declare module "sap/m/Tree" {
         public setGrowingTriggerText(): this;
 
     }
-
 
 }

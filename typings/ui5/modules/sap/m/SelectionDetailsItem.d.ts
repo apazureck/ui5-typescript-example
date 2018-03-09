@@ -2,15 +2,11 @@ declare module "sap/m/SelectionDetailsItem" {
     import Item from "sap/ui/core/Item";
     import SelectionDetailsItemLine from "sap/m/SelectionDetailsItemLine";
 
-    export = SelectionDetailsItem;
-
-
-
-
     /**
     
     */
-    class SelectionDetailsItem extends sap.ui.core.Element {
+    export default class SelectionDetailsItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new SelectionDetailsItem.
@@ -165,6 +161,5 @@ declare module "sap/m/SelectionDetailsItem" {
         public unbindLines(): this;
 
     }
-
 
 }

@@ -12,6 +12,18 @@
             "webRoot": "${workspaceFolder}/out",
             "sourceMaps": true,
             "disableNetworkCache": true
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Gulp Development",
+            "program": "${workspaceRoot}/node_modules/gulp/bin/gulp.js",
+            "cwd": "${workspaceRoot}",
+            "args": [
+                "compilets"
+            ],
+            "runtimeExecutable": null,
+            "env": {}
         }
     ]
 }

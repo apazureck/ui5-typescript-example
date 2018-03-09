@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/MenuItem" {
     import MenuItemBase from "sap/ui/unified/MenuItemBase";
 
-    export = MenuItem;
-
-
-
-
     /**
     
     */
-    class MenuItem extends MenuItemBase {
+    export default class MenuItem extends MenuItemBase {
+
 
         /**
             * Constructor for a new MenuItem element.
@@ -89,6 +85,5 @@ declare module "sap/ui/unified/MenuItem" {
         public setText(sText: string): this;
 
     }
-
 
 }

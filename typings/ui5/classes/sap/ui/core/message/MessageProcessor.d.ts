@@ -3,7 +3,8 @@ declare namespace sap.ui.core.message {
     /**
     
     */
-    export class MessageProcessor extends sap.ui.base.EventProvider {
+    export abstract class MessageProcessor extends sap.ui.base.EventProvider {
+
 
         /**
             * Constructor for a new MessageProcessor

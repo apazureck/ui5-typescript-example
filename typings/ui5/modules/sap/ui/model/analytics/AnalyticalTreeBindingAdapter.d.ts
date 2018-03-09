@@ -1,11 +1,7 @@
 declare module "sap/ui/model/analytics/AnalyticalTreeBindingAdapter" {
 
-    export = AnalyticalTreeBindingAdapter;
+    export default class AnalyticalTreeBindingAdapter {
 
-
-
-
-    class AnalyticalTreeBindingAdapter {
 
         /**
             * Adapter for TreeBindings to add the ListBinding functionality and use the tree structure in list based controls.
@@ -29,6 +25,5 @@ declare module "sap/ui/model/analytics/AnalyticalTreeBindingAdapter" {
         protected setNumberOfExpandedLevels(iLevels: number): any;
 
     }
-
 
 }

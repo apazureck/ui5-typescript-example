@@ -1,9 +1,8 @@
 declare module "sap/ui/core/Renderer" {
+    /**
 
-    export = Renderer;
-
-
-
+*/
+    export default Renderer;
     namespace Renderer {
 
         // Methods
@@ -74,5 +73,4 @@ declare module "sap/ui/core/Renderer" {
             */
         export function extend(vName: string | any, oRendererInfo?: any): any;
     }
-
 }

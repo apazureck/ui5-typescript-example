@@ -1,15 +1,11 @@
 declare module "sap/m/OverflowToolbarButton" {
     import Button from "sap/m/Button";
 
-    export = OverflowToolbarButton;
-
-
-
-
     /**
     
     */
-    class OverflowToolbarButton extends Button {
+    export default class OverflowToolbarButton extends Button {
+
 
         /**
             * Constructor for a new `OverflowToolbarButton`.
@@ -47,6 +43,5 @@ declare module "sap/m/OverflowToolbarButton" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

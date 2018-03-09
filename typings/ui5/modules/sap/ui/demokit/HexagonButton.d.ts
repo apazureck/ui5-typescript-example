@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/HexagonButton" {
 
-    export = HexagonButton;
-
-
-
-
     /**
     
     */
-    class HexagonButton extends sap.ui.core.Control {
+    export default class HexagonButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new HexagonButton.
@@ -166,6 +162,5 @@ declare module "sap/ui/demokit/HexagonButton" {
         public setPosition(sPosition: string): this;
 
     }
-
 
 }

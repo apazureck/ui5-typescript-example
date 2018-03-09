@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/MainAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = MainAction;
-
-
-
-
     /**
     
     */
-    class MainAction extends SemanticButton {
+    export default class MainAction extends SemanticButton {
+
 
         /**
             * Constructor for a new MainAction.
@@ -65,6 +61,5 @@ declare module "sap/m/semantic/MainAction" {
         public setText(sText: string): this;
 
     }
-
 
 }

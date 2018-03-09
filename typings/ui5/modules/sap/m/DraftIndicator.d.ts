@@ -1,16 +1,11 @@
 declare module "sap/m/DraftIndicator" {
-    import sapmlibrary from "sap/m/library";
-    type DraftIndicatorState = sapmlibrary.DraftIndicatorState;
-
-    export = DraftIndicator;
-
-
-
+    import { DraftIndicatorState } from "sap/m/library";
 
     /**
     
     */
-    class DraftIndicator extends sap.ui.core.Control {
+    export default abstract class DraftIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new DraftIndicator.
@@ -94,6 +89,5 @@ declare module "sap/m/DraftIndicator" {
         public showDraftSaving(): any;
 
     }
-
 
 }

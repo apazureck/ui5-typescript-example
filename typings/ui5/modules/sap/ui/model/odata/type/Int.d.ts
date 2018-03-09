@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Int" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Int;
-
-
-
-
     /**
     
     */
-    class Int extends ODataType {
+    export default abstract class Int extends ODataType {
+
 
         /**
             * Constructor for a new `Int`.
@@ -67,6 +63,5 @@ declare module "sap/ui/model/odata/type/Int" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

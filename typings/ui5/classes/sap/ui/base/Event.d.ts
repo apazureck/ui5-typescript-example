@@ -5,6 +5,7 @@ declare namespace sap.ui.base {
     */
     class Event<Tsource = any, Tparameters = any> extends sap.ui.base.Object {
 
+
         /**
             * Creates an event with the given `sId`, linked to the provided `oSource` and enriched with the `mParameters`.
         */

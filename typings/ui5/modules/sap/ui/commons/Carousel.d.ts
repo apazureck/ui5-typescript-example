@@ -1,16 +1,12 @@
 declare module "sap/ui/commons/Carousel" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type Orientation = sapuicommonslibrary.enums.Orientation;
-
-    export = Carousel;
-
-
-
+    import { enums } from "sap/ui/commons/library";
+    type Orientation = enums.Orientation;
 
     /**
     
     */
-    class Carousel extends sap.ui.core.Control {
+    export default class Carousel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Carousel.
@@ -307,6 +303,5 @@ declare module "sap/ui/commons/Carousel" {
         public unbindContent(): this;
 
     }
-
 
 }

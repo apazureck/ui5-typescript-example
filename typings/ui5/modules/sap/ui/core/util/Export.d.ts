@@ -3,15 +3,11 @@ declare module "sap/ui/core/util/Export" {
     import ExportRow from "sap/ui/core/util/ExportRow";
     import ExportType from "sap/ui/core/util/ExportType";
 
-    export = Export;
-
-
-
-
     /**
     
     */
-    class Export extends sap.ui.core.Control {
+    export default class Export extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Export.
@@ -184,6 +180,5 @@ declare module "sap/ui/core/util/Export" {
         public unbindRows(): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/RadioButtonGroup" {
     import Item from "sap/ui/core/Item";
 
-    export = RadioButtonGroup;
-
-
-
-
     /**
     
     */
-    class RadioButtonGroup extends sap.ui.core.Control {
+    export default class RadioButtonGroup extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RadioButtonGroup.
@@ -329,6 +325,5 @@ declare module "sap/ui/commons/RadioButtonGroup" {
         public unbindItems(): this;
 
     }
-
 
 }

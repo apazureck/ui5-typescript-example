@@ -4,15 +4,11 @@ declare module "sap/ui/ux3/Exact" {
     import SearchField from "sap/ui/commons/SearchField";
     import Menu from "sap/ui/commons/Menu";
 
-    export = Exact;
-
-
-
-
     /**
     
     */
-    class Exact extends sap.ui.core.Control {
+    export default class Exact extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Exact.
@@ -206,6 +202,5 @@ declare module "sap/ui/ux3/Exact" {
         public setSettingsMenu(oSettingsMenu: Menu): this;
 
     }
-
 
 }

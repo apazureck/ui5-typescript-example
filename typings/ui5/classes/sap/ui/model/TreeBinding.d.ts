@@ -5,10 +5,11 @@ declare namespace sap.ui.model {
     */
     export class TreeBinding extends sap.ui.model.Binding {
 
+
         /**
             * Constructor for TreeBinding
         */
-        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: any, aFilters: any[], mParameters: any, aSorters: any[]);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext?: any, aFilters?: any[], mParameters?: any, aSorters?: any[]);
 
 
         /**

@@ -3,12 +3,13 @@ declare namespace sap.ui.model {
     /**
     
     */
-    export class Binding extends sap.ui.base.EventProvider {
+    export abstract class Binding extends sap.ui.base.EventProvider {
+
 
         /**
             * Constructor for Binding class.
         */
-        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters: any);
+        public constructor(oModel: sap.ui.model.Model, sPath: string, oContext: sap.ui.model.Context, mParameters?: any);
 
 
         /**

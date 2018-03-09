@@ -1,15 +1,11 @@
 declare module "sap/m/CustomTreeItem" {
     import TreeItemBase from "sap/m/TreeItemBase";
 
-    export = CustomTreeItem;
-
-
-
-
     /**
     
     */
-    class CustomTreeItem extends TreeItemBase {
+    export default class CustomTreeItem extends TreeItemBase {
+
 
         /**
             * Constructor for a new CustomTreeItem.
@@ -100,6 +96,5 @@ declare module "sap/m/CustomTreeItem" {
         public unbindContent(): this;
 
     }
-
 
 }

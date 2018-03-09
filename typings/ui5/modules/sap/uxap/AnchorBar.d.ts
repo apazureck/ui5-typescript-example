@@ -2,15 +2,11 @@ declare module "sap/uxap/AnchorBar" {
     import Toolbar from "sap/m/Toolbar";
     import Button from "sap/m/Button";
 
-    export = AnchorBar;
-
-
-
-
     /**
     
     */
-    class AnchorBar extends Toolbar {
+    export default class AnchorBar extends Toolbar {
+
 
         /**
             * Constructor for a new AnchorBar.
@@ -110,6 +106,5 @@ declare module "sap/uxap/AnchorBar" {
         public setUpperCase(bUpperCase: boolean): this;
 
     }
-
 
 }

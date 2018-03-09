@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/AggregationContainsPropertyEqual" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = AggregationContainsPropertyEqual;
-
-
-
-
     /**
     
     */
-    class AggregationContainsPropertyEqual extends Matcher {
+    export default class AggregationContainsPropertyEqual extends Matcher {
+
 
         /**
             * AggregationContainsPropertyEqual - checks if an aggregation contains at least one item that has a Property set to a certain value.
@@ -104,6 +100,5 @@ declare module "sap/ui/test/matchers/AggregationContainsPropertyEqual" {
         public setPropertyValue(oPropertyValue: any): this;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/m/Image" {
-    import sapmlibrary from "sap/m/library";
-    type ImageMode = sapmlibrary.ImageMode;
-
-    export = Image;
-
-
-
+    import { ImageMode } from "sap/m/library";
 
     /**
     
     */
-    class Image extends sap.ui.core.Control {
+    export default class Image extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Image.
@@ -428,6 +423,5 @@ declare module "sap/m/Image" {
         public unbindDetailBox(): this;
 
     }
-
 
 }

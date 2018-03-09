@@ -1,15 +1,11 @@
 declare module "sap/m/StandardTreeItem" {
     import TreeItemBase from "sap/m/TreeItemBase";
 
-    export = StandardTreeItem;
-
-
-
-
     /**
     
     */
-    class StandardTreeItem extends TreeItemBase {
+    export default class StandardTreeItem extends TreeItemBase {
+
 
         /**
             * Constructor for a new StandardTreeItem.
@@ -85,6 +81,5 @@ declare module "sap/m/StandardTreeItem" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/ForwardAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = ForwardAction;
-
-
-
-
     /**
     
     */
-    class ForwardAction extends SemanticButton {
+    export default class ForwardAction extends SemanticButton {
+
 
         /**
             * Constructor for a new ForwardAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/ForwardAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

@@ -1,18 +1,13 @@
 declare module "sap/m/Dialog" {
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type IBar = sapmlibrary.IBar;
-    type DialogType = sapmlibrary.DialogType;
-
-    export = Dialog;
-
-
-
+    import { IBar } from "sap/m/library";
+    import { DialogType } from "sap/m/library";
 
     /**
     
     */
-    class Dialog extends sap.ui.core.Control {
+    export default class Dialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Dialog.
@@ -679,6 +674,5 @@ declare module "sap/m/Dialog" {
         public setVerticalScrolling(bVerticalScrolling: boolean): this;
 
     }
-
 
 }

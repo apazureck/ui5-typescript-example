@@ -1,15 +1,11 @@
 declare module "sap/m/ViewSettingsCustomItem" {
     import ViewSettingsItem from "sap/m/ViewSettingsItem";
 
-    export = ViewSettingsCustomItem;
-
-
-
-
     /**
     
     */
-    class ViewSettingsCustomItem extends ViewSettingsItem {
+    export default class ViewSettingsCustomItem extends ViewSettingsItem {
+
 
         /**
             * Constructor for a new ViewSettingsCustomItem.
@@ -83,6 +79,5 @@ declare module "sap/m/ViewSettingsCustomItem" {
         public setFilterCount(iValue: number): ViewSettingsItem;
 
     }
-
 
 }

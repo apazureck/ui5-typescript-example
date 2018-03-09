@@ -1,19 +1,14 @@
 declare module "sap/m/ViewSettingsDialog" {
     import ViewSettingsItem from "sap/m/ViewSettingsItem";
     import ViewSettingsFilterItem from "sap/m/ViewSettingsFilterItem";
-    import sapmlibrary from "sap/m/library";
-    type StringFilterOperator = sapmlibrary.StringFilterOperator;
+    import { StringFilterOperator } from "sap/m/library";
     import ViewSettingsCustomTab from "sap/m/ViewSettingsCustomTab";
-
-    export = ViewSettingsDialog;
-
-
-
 
     /**
     
     */
-    class ViewSettingsDialog extends sap.ui.core.Control {
+    export default class ViewSettingsDialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ViewSettingsDialog`.
@@ -677,6 +672,5 @@ declare module "sap/m/ViewSettingsDialog" {
         public unbindSortItems(): this;
 
     }
-
 
 }

@@ -2,15 +2,11 @@ declare module "sap/ui/layout/form/FormContainer" {
     import FormElement from "sap/ui/layout/form/FormElement";
     import Title from "sap/ui/core/Title";
 
-    export = FormContainer;
-
-
-
-
     /**
     
     */
-    class FormContainer extends sap.ui.core.Element {
+    export default class FormContainer extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.FormContainer.
@@ -222,6 +218,5 @@ declare module "sap/ui/layout/form/FormContainer" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

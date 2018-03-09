@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/GroupSelect" {
     import SemanticSelect from "sap/m/semantic/SemanticSelect";
 
-    export = GroupSelect;
-
-
-
-
     /**
     
     */
-    class GroupSelect extends SemanticSelect {
+    export default class GroupSelect extends SemanticSelect {
+
 
         /**
             * Constructor for a new GroupSelect.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/GroupSelect" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

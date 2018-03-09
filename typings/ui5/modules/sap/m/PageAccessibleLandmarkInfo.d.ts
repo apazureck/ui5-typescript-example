@@ -1,14 +1,10 @@
 declare module "sap/m/PageAccessibleLandmarkInfo" {
 
-    export = PageAccessibleLandmarkInfo;
-
-
-
-
     /**
     
     */
-    class PageAccessibleLandmarkInfo extends sap.ui.core.Element {
+    export default class PageAccessibleLandmarkInfo extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new `sap.m.PageAccessibleLandmarkInfo` element.
@@ -268,6 +264,5 @@ declare module "sap/m/PageAccessibleLandmarkInfo" {
         public setSubHeaderRole(sSubHeaderRole: sap.ui.core.AccessibleLandmarkRole): this;
 
     }
-
 
 }

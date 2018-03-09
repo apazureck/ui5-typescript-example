@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/ShellOverlay" {
     import ShellLayout from "sap/ui/unified/ShellLayout";
 
-    export = ShellOverlay;
-
-
-
-
     /**
     
     */
-    class ShellOverlay extends sap.ui.core.Control {
+    export default class ShellOverlay extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ShellOverlay.
@@ -175,6 +171,5 @@ declare module "sap/ui/unified/ShellOverlay" {
         public setShell(oShell: sap.ui.core.ID | ShellLayout): this;
 
     }
-
 
 }

@@ -1,14 +1,16 @@
 declare module "sap/ui/model/json/JSONModel" {
+    /**
 
-    export = JSONModel;
+*/
+    namespace json {
 
-
-
+    }
 
     /**
     
     */
-    class JSONModel extends sap.ui.model.ClientModel {
+    export default class JSONModel extends sap.ui.model.ClientModel {
+
 
         /**
             * Constructor for a new JSONModel.
@@ -71,6 +73,5 @@ declare module "sap/ui/model/json/JSONModel" {
         public setProperty(sPath: string, oValue: any, oContext?: any, bAsyncUpdate?: boolean): boolean;
 
     }
-
 
 }

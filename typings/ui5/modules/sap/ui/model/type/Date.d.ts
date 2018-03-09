@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Date" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = Date;
-
-
-
-
     /**
     
     */
-    class Date extends SimpleType {
+    export default class Date extends SimpleType {
+
 
         /**
             * Constructor for a Date type.
@@ -42,6 +38,5 @@ declare module "sap/ui/model/type/Date" {
         protected getOutputPattern(): any;
 
     }
-
 
 }

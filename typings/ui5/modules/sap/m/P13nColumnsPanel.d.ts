@@ -2,15 +2,11 @@ declare module "sap/m/P13nColumnsPanel" {
     import P13nPanel from "sap/m/P13nPanel";
     import P13nColumnsItem from "sap/m/P13nColumnsItem";
 
-    export = P13nColumnsPanel;
-
-
-
-
     /**
     
     */
-    class P13nColumnsPanel extends P13nPanel {
+    export default class P13nColumnsPanel extends P13nPanel {
+
 
         /**
             * Constructor for a new P13nColumnsPanel.
@@ -248,6 +244,5 @@ declare module "sap/m/P13nColumnsPanel" {
         public unbindColumnsItems(): this;
 
     }
-
 
 }

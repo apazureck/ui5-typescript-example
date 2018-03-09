@@ -1,16 +1,11 @@
 declare module "sap/m/Column" {
-    import sapmlibrary from "sap/m/library";
-    type PopinDisplay = sapmlibrary.PopinDisplay;
-
-    export = Column;
-
-
-
+    import { PopinDisplay } from "sap/m/library";
 
     /**
     
     */
-    class Column extends sap.ui.core.Element {
+    export default class Column extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Column.
@@ -385,6 +380,5 @@ declare module "sap/m/Column" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

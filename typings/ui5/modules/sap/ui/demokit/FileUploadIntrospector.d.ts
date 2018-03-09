@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/FileUploadIntrospector" {
 
-    export = FileUploadIntrospector;
-
-
-
-
     /**
     
     */
-    class FileUploadIntrospector extends sap.ui.core.Control {
+    export default class FileUploadIntrospector extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FileUploadIntrospector.
@@ -121,6 +117,5 @@ declare module "sap/ui/demokit/FileUploadIntrospector" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

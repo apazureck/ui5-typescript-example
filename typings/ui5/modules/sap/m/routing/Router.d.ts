@@ -1,12 +1,8 @@
 declare module "sap/m/routing/Router" {
     import TargetHandler from "sap/m/routing/TargetHandler";
 
-    export = Router;
+    export default class Router extends sap.ui.core.routing.Router {
 
-
-
-
-    class Router extends sap.ui.core.routing.Router {
 
         /**
             * Instantiates a SAPUI5 mobile Router see {@link sap.ui.core.routing.Router} for the constructor arguments The difference to the {@link sap.ui.core.routing.Router} are the properties viewLevel, transition and transitionParameters you can specify in every Route or Target created by this router.
@@ -39,6 +35,5 @@ declare module "sap/m/routing/Router" {
         public getTargetHandler(): TargetHandler;
 
     }
-
 
 }

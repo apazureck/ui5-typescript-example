@@ -2,15 +2,11 @@ declare module "sap/tnt/NavigationList" {
     import Item from "sap/ui/core/Item";
     import NavigationListItem from "sap/tnt/NavigationListItem";
 
-    export = NavigationList;
-
-
-
-
     /**
     
     */
-    class NavigationList extends sap.ui.core.Control {
+    export default class NavigationList extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new NavigationList.
@@ -209,6 +205,5 @@ declare module "sap/tnt/NavigationList" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

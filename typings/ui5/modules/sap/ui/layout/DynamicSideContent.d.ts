@@ -1,18 +1,13 @@
 declare module "sap/ui/layout/DynamicSideContent" {
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type SideContentFallDown = sapuilayoutlibrary.SideContentFallDown;
-    type SideContentPosition = sapuilayoutlibrary.SideContentPosition;
-    type SideContentVisibility = sapuilayoutlibrary.SideContentVisibility;
-
-    export = DynamicSideContent;
-
-
-
+    import { SideContentFallDown } from "sap/ui/layout/library";
+    import { SideContentPosition } from "sap/ui/layout/library";
+    import { SideContentVisibility } from "sap/ui/layout/library";
 
     /**
     
     */
-    class DynamicSideContent extends sap.ui.core.Control {
+    export default class DynamicSideContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `DynamicSideContent`.
@@ -278,6 +273,5 @@ declare module "sap/ui/layout/DynamicSideContent" {
         public toggle(): this;
 
     }
-
 
 }

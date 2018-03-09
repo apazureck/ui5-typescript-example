@@ -1,17 +1,12 @@
 declare module "sap/m/Carousel" {
-    import sapmlibrary from "sap/m/library";
-    type CarouselArrowsPlacement = sapmlibrary.CarouselArrowsPlacement;
-    type PlacementType = sapmlibrary.PlacementType;
-
-    export = Carousel;
-
-
-
+    import { CarouselArrowsPlacement } from "sap/m/library";
+    import { PlacementType } from "sap/m/library";
 
     /**
     
     */
-    class Carousel extends sap.ui.core.Control {
+    export default class Carousel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Carousel.
@@ -374,6 +369,5 @@ declare module "sap/m/Carousel" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

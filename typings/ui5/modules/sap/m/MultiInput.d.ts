@@ -2,15 +2,11 @@ declare module "sap/m/MultiInput" {
     import Input from "sap/m/Input";
     import Token from "sap/m/Token";
 
-    export = MultiInput;
-
-
-
-
     /**
     
     */
-    class MultiInput extends Input {
+    export default class MultiInput extends Input {
+
 
         /**
             * Constructor for a new MultiInput.
@@ -288,6 +284,5 @@ declare module "sap/m/MultiInput" {
         protected updateInputField(): any;
 
     }
-
 
 }

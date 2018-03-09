@@ -1,14 +1,10 @@
 declare module "sap/ui/model/analytics/BatchResponseCollector" {
 
-    export = BatchResponseCollector;
-
-
-
-
     /**
     
     */
-    class BatchResponseCollector {
+    export default class BatchResponseCollector {
+
 
         /**
             * Constructor for a batch response collecting component.
@@ -43,6 +39,5 @@ declare module "sap/ui/model/analytics/BatchResponseCollector" {
         public success(oResponse: any): any;
 
     }
-
 
 }

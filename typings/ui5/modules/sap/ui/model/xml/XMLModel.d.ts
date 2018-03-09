@@ -1,14 +1,16 @@
 declare module "sap/ui/model/xml/XMLModel" {
+    /**
 
-    export = XMLModel;
+*/
+    namespace xml {
 
-
-
+    }
 
     /**
     
     */
-    class XMLModel extends sap.ui.model.ClientModel {
+    export default class XMLModel extends sap.ui.model.ClientModel {
+
 
         /**
             * Constructor for a new XMLModel.
@@ -96,6 +98,5 @@ declare module "sap/ui/model/xml/XMLModel" {
         public setXML(sXMLText: string): any;
 
     }
-
 
 }

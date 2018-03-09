@@ -1,16 +1,11 @@
 declare module "sap/ui/table/RowActionItem" {
-    import sapuitablelibrary from "sap/ui/table/library";
-    type RowActionType = sapuitablelibrary.RowActionType;
-
-    export = RowActionItem;
-
-
-
+    import { RowActionType } from "sap/ui/table/library";
 
     /**
     
     */
-    class RowActionItem extends sap.ui.core.Element {
+    export default class RowActionItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new RowActionItem.
@@ -156,6 +151,5 @@ declare module "sap/ui/table/RowActionItem" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

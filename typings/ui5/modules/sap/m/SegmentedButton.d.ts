@@ -2,15 +2,11 @@ declare module "sap/m/SegmentedButton" {
     import Button from "sap/m/Button";
     import SegmentedButtonItem from "sap/m/SegmentedButtonItem";
 
-    export = SegmentedButton;
-
-
-
-
     /**
     
     */
-    class SegmentedButton extends sap.ui.core.Control {
+    export default class SegmentedButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `SegmentedButton`.
@@ -333,6 +329,5 @@ declare module "sap/m/SegmentedButton" {
         public unbindSelectedKey(): this;
 
     }
-
 
 }

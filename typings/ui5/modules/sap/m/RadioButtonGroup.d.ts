@@ -1,15 +1,11 @@
 declare module "sap/m/RadioButtonGroup" {
     import RadioButton from "sap/m/RadioButton";
 
-    export = RadioButtonGroup;
-
-
-
-
     /**
     
     */
-    class RadioButtonGroup extends sap.ui.core.Control {
+    export default class RadioButtonGroup extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new RadioButtonGroup.
@@ -419,6 +415,5 @@ declare module "sap/m/RadioButtonGroup" {
         public updateButtons(): any;
 
     }
-
 
 }

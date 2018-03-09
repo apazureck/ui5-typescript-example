@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/serializer/delegate/Delegate" {
 
-    export = Delegate;
-
-
-
-
     /**
     
     */
-    class Delegate extends sap.ui.base.EventProvider {
+    export default abstract class Delegate extends sap.ui.base.EventProvider {
+
 
         /**
             * Abstract serializer delegate class. All delegates must extend from this class and implement the abstract methods.
@@ -36,6 +32,5 @@ declare module "sap/ui/core/util/serializer/delegate/Delegate" {
         public getMetadata(): any;
 
     }
-
 
 }

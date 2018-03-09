@@ -2,15 +2,11 @@ declare module "sap/m/NotificationListItem" {
     import NotificationListBase from "sap/m/NotificationListBase";
     import MessageStrip from "sap/m/MessageStrip";
 
-    export = NotificationListItem;
-
-
-
-
     /**
     
     */
-    class NotificationListItem extends NotificationListBase {
+    export default class NotificationListItem extends NotificationListBase {
+
 
         /**
             * Constructor for a new NotificationListItem.
@@ -244,6 +240,5 @@ declare module "sap/m/NotificationListItem" {
         public setUnread(unread: boolean): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/test/actions/Action" {
 
-    export = Action;
-
-
-
-
     /**
     
     */
-    class Action extends sap.ui.base.ManagedObject {
+    export default abstract class Action extends sap.ui.base.ManagedObject {
+
 
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
@@ -58,6 +54,5 @@ declare module "sap/ui/test/actions/Action" {
         public setIdSuffix(sIdSuffix: string): this;
 
     }
-
 
 }

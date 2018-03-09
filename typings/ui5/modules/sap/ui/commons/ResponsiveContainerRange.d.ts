@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/ResponsiveContainerRange" {
 
-    export = ResponsiveContainerRange;
-
-
-
-
     /**
     
     */
-    class ResponsiveContainerRange extends sap.ui.core.Element {
+    export default class ResponsiveContainerRange extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ResponsiveContainerRange.
@@ -118,6 +114,5 @@ declare module "sap/ui/commons/ResponsiveContainerRange" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -2,15 +2,11 @@ declare module "sap/m/MessageView" {
     import MessageItem from "sap/m/MessageItem";
     import Button from "sap/m/Button";
 
-    export = MessageView;
-
-
-
-
     /**
     
     */
-    class MessageView {
+    export default class MessageView {
+
 
         /**
             * Constructor for a new MessageView
@@ -335,6 +331,5 @@ declare module "sap/m/MessageView" {
         public setShowDetailsPageHeader(bShowDetailsPageHeader: boolean): this;
 
     }
-
 
 }

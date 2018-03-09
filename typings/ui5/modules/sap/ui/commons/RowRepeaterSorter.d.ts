@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/RowRepeaterSorter" {
 
-    export = RowRepeaterSorter;
-
-
-
-
     /**
     
     */
-    class RowRepeaterSorter extends sap.ui.core.Element {
+    export default class RowRepeaterSorter extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new RowRepeaterSorter.
@@ -96,6 +92,5 @@ declare module "sap/ui/commons/RowRepeaterSorter" {
         public setText(sText: string): this;
 
     }
-
 
 }

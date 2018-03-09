@@ -2,15 +2,11 @@ declare module "sap/m/NotificationListGroup" {
     import NotificationListBase from "sap/m/NotificationListBase";
     import NotificationListItem from "sap/m/NotificationListItem";
 
-    export = NotificationListGroup;
-
-
-
-
     /**
     
     */
-    class NotificationListGroup extends NotificationListBase {
+    export default class NotificationListGroup extends NotificationListBase {
+
 
         /**
             * Constructor for a new NotificationListGroup.
@@ -232,6 +228,5 @@ declare module "sap/m/NotificationListGroup" {
         public setShowEmptyGroup(bShowEmptyGroup: boolean): this;
 
     }
-
 
 }

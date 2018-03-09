@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/ExportType" {
     import Export from "sap/ui/core/util/Export";
 
-    export = ExportType;
-
-
-
-
     /**
     
     */
-    class ExportType extends sap.ui.base.ManagedObject {
+    export default class ExportType extends sap.ui.base.ManagedObject {
+
 
         /**
             * Constructor for a new ExportType.
@@ -147,6 +143,5 @@ declare module "sap/ui/core/util/ExportType" {
         public setMimeType(sMimeType: string): this;
 
     }
-
 
 }

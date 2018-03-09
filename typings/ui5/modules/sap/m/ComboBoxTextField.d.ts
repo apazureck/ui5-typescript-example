@@ -1,15 +1,11 @@
 declare module "sap/m/ComboBoxTextField" {
     import InputBase from "sap/m/InputBase";
 
-    export = ComboBoxTextField;
-
-
-
-
     /**
     
     */
-    class ComboBoxTextField extends InputBase {
+    export default class ComboBoxTextField extends InputBase {
+
 
         /**
             * Constructor for a new `sap.m.ComboBoxTextField`.
@@ -96,6 +92,5 @@ declare module "sap/m/ComboBoxTextField" {
         public setShowButton(bShowButton: boolean): this;
 
     }
-
 
 }

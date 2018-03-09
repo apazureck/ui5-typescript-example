@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class EventBus extends sap.ui.base.Object {
 
+
         /**
             * Creates an instance of EventBus.
         */

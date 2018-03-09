@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/serializer/ViewSerializer" {
 
-    export = ViewSerializer;
-
-
-
-
     /**
     
     */
-    class ViewSerializer extends sap.ui.base.EventProvider {
+    export default class ViewSerializer extends sap.ui.base.EventProvider {
+
 
         /**
             * View serializer class. Iterates over all controls and serializes all found views by calling the corresponding view type serializer.
@@ -36,6 +32,5 @@ declare module "sap/ui/core/util/serializer/ViewSerializer" {
         public getMetadata(): any;
 
     }
-
 
 }

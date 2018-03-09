@@ -5,15 +5,11 @@ declare module "sap/m/NotificationListBase" {
     import OverflowToolbar from "sap/m/OverflowToolbar";
     import Button from "sap/m/Button";
 
-    export = NotificationListBase;
-
-
-
-
     /**
     
     */
-    class NotificationListBase extends ListItemBase {
+    export default class NotificationListBase extends ListItemBase {
+
 
         /**
             * Constructor for a new NotificationListBase.
@@ -523,6 +519,5 @@ declare module "sap/m/NotificationListBase" {
         protected validateAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject | any, bMultiple: boolean): sap.ui.base.ManagedObject | any;
 
     }
-
 
 }

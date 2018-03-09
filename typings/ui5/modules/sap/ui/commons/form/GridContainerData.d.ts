@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/GridContainerData" {
     import sap_ui_layout_form_GridContainerData from "sap/ui/layout/form/GridContainerData";
 
-    export = GridContainerData;
-
-
-
-
     import GridContainerDataBase from 'sap/ui/layout/form/GridContainerData'
 
     /**
     
     */
-    class GridContainerData extends GridContainerDataBase {
+    export default class GridContainerData extends GridContainerDataBase {
+
 
         /**
             * Constructor for a new form/GridContainerData.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/form/GridContainerData" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

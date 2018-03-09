@@ -2,15 +2,11 @@ declare module "sap/m/TimePicker" {
     import DateTimeField from "sap/m/DateTimeField";
     import MaskInputRule from "sap/m/MaskInputRule";
 
-    export = TimePicker;
-
-
-
-
     /**
     
     */
-    class TimePicker extends DateTimeField {
+    export default class TimePicker extends DateTimeField {
+
 
         /**
             * Constructor for a new `TimePicker`.
@@ -267,6 +263,5 @@ declare module "sap/m/TimePicker" {
         public setTooltip(vTooltip: string | sap.ui.core.TooltipBase): this;
 
     }
-
 
 }

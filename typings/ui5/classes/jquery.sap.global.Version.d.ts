@@ -5,6 +5,7 @@ declare namespace jQuery.sap {
     */
     export class Version {
 
+
         /**
             * Returns a Version instance created from the given parameters.
          * 

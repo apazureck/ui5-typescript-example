@@ -1,17 +1,12 @@
 declare module "sap/m/Popover" {
-    import sapmlibrary from "sap/m/library";
-    type PlacementType = sapmlibrary.PlacementType;
+    import { PlacementType } from "sap/m/library";
     import Button from "sap/m/Button";
-
-    export = Popover;
-
-
-
 
     /**
     
     */
-    class Popover extends sap.ui.core.Control {
+    export default class Popover extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Popover.
@@ -686,6 +681,5 @@ declare module "sap/m/Popover" {
         public setVerticalScrolling(bVerticalScrolling: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/MessageToast" {
     import Message from "sap/ui/commons/Message";
 
-    export = MessageToast;
-
-
-
-
     /**
     
     */
-    class MessageToast extends sap.ui.core.Control {
+    export default class MessageToast extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessageToast.
@@ -107,6 +103,5 @@ declare module "sap/ui/commons/MessageToast" {
         public toast(oMessage: Message, sAnchorId: string): any;
 
     }
-
 
 }

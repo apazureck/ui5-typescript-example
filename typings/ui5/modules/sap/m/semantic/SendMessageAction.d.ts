@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/SendMessageAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = SendMessageAction;
-
-
-
-
     /**
     
     */
-    class SendMessageAction extends SemanticButton {
+    export default class SendMessageAction extends SemanticButton {
+
 
         /**
             * Constructor for a new SendMessageAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/SendMessageAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

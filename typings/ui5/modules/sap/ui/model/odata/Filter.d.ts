@@ -1,14 +1,10 @@
 declare module "sap/ui/model/odata/Filter" {
 
-    export = Filter;
-
-
-
-
     /**
     
     */
-    class Filter extends sap.ui.base.Object {
+    export default class Filter extends sap.ui.base.Object {
+
 
         /**
             * Constructor for Filter
@@ -41,6 +37,5 @@ declare module "sap/ui/model/odata/Filter" {
         public getMetadata(): any;
 
     }
-
 
 }

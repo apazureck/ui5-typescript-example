@@ -1,14 +1,10 @@
 declare module "sap/ui/core/DeclarativeSupport" {
 
-    export = DeclarativeSupport;
-
-
-
-
     /**
     
     */
-    class DeclarativeSupport {
+    export default class DeclarativeSupport {
+
 
         /**
             
@@ -22,6 +18,5 @@ declare module "sap/ui/core/DeclarativeSupport" {
         public static compile(oElement: any, oView?: sap.ui.core.mvc.HTMLView, isRecursive?: boolean): any;
 
     }
-
 
 }

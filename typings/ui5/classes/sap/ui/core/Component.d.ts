@@ -3,7 +3,8 @@ declare namespace sap.ui.core {
     /**
     
     */
-    export class Component extends sap.ui.base.ManagedObject {
+    export abstract class Component extends sap.ui.base.ManagedObject {
+
 
         /**
             * Creates and initializes a new Component with the given `sId` and settings.
@@ -14,7 +15,7 @@ declare namespace sap.ui.core {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.base.ManagedObject#constructor sap.ui.base.ManagedObject} can be used.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

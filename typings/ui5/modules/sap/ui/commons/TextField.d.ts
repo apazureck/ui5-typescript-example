@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/TextField" {
 
-    export = TextField;
-
-
-
-
     /**
     
     */
-    class TextField extends sap.ui.core.Control {
+    export default class TextField extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TextField.
@@ -506,6 +502,5 @@ declare module "sap/ui/commons/TextField" {
         public unbindValue(): this;
 
     }
-
 
 }

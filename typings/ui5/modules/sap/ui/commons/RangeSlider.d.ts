@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/RangeSlider" {
     import Slider from "sap/ui/commons/Slider";
 
-    export = RangeSlider;
-
-
-
-
     /**
     
     */
-    class RangeSlider extends Slider {
+    export default class RangeSlider extends Slider {
+
 
         /**
             * Constructor for a new `RangeSlider`.
@@ -73,6 +69,5 @@ declare module "sap/ui/commons/RangeSlider" {
         public setValue2(fValue2: number): this;
 
     }
-
 
 }

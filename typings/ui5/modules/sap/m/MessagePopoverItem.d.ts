@@ -1,15 +1,11 @@
 declare module "sap/m/MessagePopoverItem" {
     import Item from "sap/ui/core/Item";
 
-    export = MessagePopoverItem;
-
-
-
-
     /**
     
     */
-    class MessagePopoverItem extends Item {
+    export default class MessagePopoverItem extends Item {
+
 
         /**
             * Constructor for a new MessagePopoverItem.
@@ -47,6 +43,5 @@ declare module "sap/m/MessagePopoverItem" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

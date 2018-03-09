@@ -1,15 +1,11 @@
 declare module "sap/m/SuggestionItem" {
     import Item from "sap/ui/core/Item";
 
-    export = SuggestionItem;
-
-
-
-
     /**
     
     */
-    class SuggestionItem extends Item {
+    export default class SuggestionItem extends Item {
+
 
         /**
             * Constructor for a new SuggestionItem.
@@ -103,6 +99,5 @@ declare module "sap/m/SuggestionItem" {
         public setIcon(sIcon: string): this;
 
     }
-
 
 }

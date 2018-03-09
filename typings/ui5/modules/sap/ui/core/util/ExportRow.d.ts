@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/ExportRow" {
     import ExportCell from "sap/ui/core/util/ExportCell";
 
-    export = ExportRow;
-
-
-
-
     /**
     
     */
-    class ExportRow extends sap.ui.base.ManagedObject {
+    export default class ExportRow extends sap.ui.base.ManagedObject {
+
 
         /**
             * Constructor for a new ExportRow.
@@ -83,6 +79,5 @@ declare module "sap/ui/core/util/ExportRow" {
         public removeCell(vCell: number | string | ExportCell): ExportCell;
 
     }
-
 
 }

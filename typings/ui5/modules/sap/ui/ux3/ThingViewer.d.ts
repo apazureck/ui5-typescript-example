@@ -2,18 +2,13 @@ declare module "sap/ui/ux3/ThingViewer" {
     import NavigationItem from "sap/ui/ux3/NavigationItem";
     import ThingGroup from "sap/ui/ux3/ThingGroup";
     import ActionBar from "sap/ui/ux3/ActionBar";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type ThingViewerHeaderType = sapuiux3library.ThingViewerHeaderType;
-
-    export = ThingViewer;
-
-
-
+    import { ThingViewerHeaderType } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class ThingViewer extends sap.ui.core.Control {
+    export default class ThingViewer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ThingViewer.
@@ -361,6 +356,5 @@ declare module "sap/ui/ux3/ThingViewer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

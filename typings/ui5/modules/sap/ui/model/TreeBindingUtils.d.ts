@@ -1,9 +1,8 @@
 declare module "sap/ui/model/TreeBindingUtils" {
+    /**
 
-    export = TreeBindingUtils;
-
-
-
+*/
+    export default TreeBindingUtils;
     namespace TreeBindingUtils {
 
         // Methods
@@ -12,5 +11,4 @@ declare module "sap/ui/model/TreeBindingUtils" {
             */
         export function mergeSections(aSections: any[], oNewSection: any): any[];
     }
-
 }

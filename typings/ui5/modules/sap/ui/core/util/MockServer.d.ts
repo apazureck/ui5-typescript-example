@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/MockServer" {
 
-    export = MockServer;
-
-
-
-
     /**
     
     */
-    class MockServer extends sap.ui.base.ManagedObject {
+    export default class MockServer extends sap.ui.base.ManagedObject {
+
 
         /**
             * Creates a mocked server. This helps to mock all or some backend calls, e.g. for OData/JSON Models or simple XHR calls, without changing the application code. This class can also be used for qunit tests.
@@ -164,6 +160,5 @@ declare module "sap/ui/core/util/MockServer" {
         public static stopAll(): any;
 
     }
-
 
 }

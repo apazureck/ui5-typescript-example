@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Raw" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Raw;
-
-
-
-
     /**
     
     */
-    class Raw extends ODataType {
+    export default class Raw extends ODataType {
+
 
         /**
             * Constructor for a placeholder for all unsupported OData primitive types.
@@ -57,6 +53,5 @@ declare module "sap/ui/model/odata/type/Raw" {
         public validateValue(): any;
 
     }
-
 
 }

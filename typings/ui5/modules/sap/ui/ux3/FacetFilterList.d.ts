@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/FacetFilterList" {
     import ListItem from "sap/ui/core/ListItem";
 
-    export = FacetFilterList;
-
-
-
-
     /**
     
     */
-    class FacetFilterList extends sap.ui.core.Control {
+    export default class FacetFilterList extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FacetFilterList.
@@ -220,6 +216,5 @@ declare module "sap/ui/ux3/FacetFilterList" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

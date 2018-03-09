@@ -1,17 +1,12 @@
 declare module "sap/ui/commons/HorizontalDivider" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type HorizontalDividerHeight = sapuicommonslibrary.HorizontalDividerHeight;
-    type HorizontalDividerType = sapuicommonslibrary.HorizontalDividerType;
-
-    export = HorizontalDivider;
-
-
-
+    import { HorizontalDividerHeight } from "sap/ui/commons/library";
+    import { HorizontalDividerType } from "sap/ui/commons/library";
 
     /**
     
     */
-    class HorizontalDivider extends sap.ui.core.Control {
+    export default class HorizontalDivider extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new HorizontalDivider.
@@ -111,6 +106,5 @@ declare module "sap/ui/commons/HorizontalDivider" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

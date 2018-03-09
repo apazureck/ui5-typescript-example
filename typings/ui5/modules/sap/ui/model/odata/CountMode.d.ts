@@ -1,12 +1,10 @@
 declare module "sap/ui/model/odata/CountMode" {
-
-    export = CountMode;
-
-
-
     /** 
 * Different modes for retrieving the count of collections. 
 */
+
+
+    export default CountMode;
     enum CountMode {
         Both = "Both",
         Inline = "Inline",
@@ -14,6 +12,5 @@ declare module "sap/ui/model/odata/CountMode" {
         None = "None",
         Request = "Request",
     }
-
 
 }

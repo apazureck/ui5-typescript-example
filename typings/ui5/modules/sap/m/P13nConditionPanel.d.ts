@@ -1,14 +1,38 @@
 declare module "sap/m/P13nConditionPanel" {
+    /** 
+ 
+*/
 
-    export = P13nConditionPanel;
 
-
+    enum P13nConditionOperation {
+        Ascending = "Ascending",
+        Average = "Average",
+        BT = "BT",
+        Contains = "Contains",
+        Descending = "Descending",
+        Empty = "Empty",
+        EndsWith = "EndsWith",
+        EQ = "EQ",
+        GE = "GE",
+        GroupAscending = "GroupAscending",
+        GroupDescending = "GroupDescending",
+        GT = "GT",
+        Initial = "Initial",
+        LE = "LE",
+        LT = "LT",
+        Maximum = "Maximum",
+        Minimum = "Minimum",
+        NotEmpty = "NotEmpty",
+        StartsWith = "StartsWith",
+        Total = "Total",
+    }
 
 
     /**
     
     */
-    class P13nConditionPanel extends sap.ui.core.Control {
+    export default class P13nConditionPanel extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new P13nConditionPanel.
@@ -355,6 +379,5 @@ declare module "sap/m/P13nConditionPanel" {
         public setValidationExecutor(oValidationExecutor: any): this;
 
     }
-
 
 }

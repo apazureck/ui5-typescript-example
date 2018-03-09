@@ -2,15 +2,11 @@ declare module "sap/m/MultiEditField" {
     import XMLComposite from "sap/ui/core/XMLComposite";
     import Item from "sap/ui/core/Item";
 
-    export = MultiEditField;
-
-
-
-
     /**
     
     */
-    class MultiEditField extends XMLComposite {
+    export default class MultiEditField extends XMLComposite {
+
 
         /**
             * Constructor for MultiEditField
@@ -251,6 +247,5 @@ declare module "sap/m/MultiEditField" {
         public unbindItems(): this;
 
     }
-
 
 }

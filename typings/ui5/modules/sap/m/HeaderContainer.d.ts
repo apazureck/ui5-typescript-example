@@ -1,16 +1,11 @@
 declare module "sap/m/HeaderContainer" {
-    import sapmlibrary from "sap/m/library";
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-
-    export = HeaderContainer;
-
-
-
+    import { BackgroundDesign } from "sap/m/library";
 
     /**
     
     */
-    class HeaderContainer extends sap.ui.core.Control {
+    export default class HeaderContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for the new HeaderContainer control.
@@ -221,6 +216,5 @@ declare module "sap/m/HeaderContainer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/QuickViewCard" {
     import QuickViewBase from "sap/m/QuickViewBase";
 
-    export = QuickViewCard;
-
-
-
-
     /**
     
     */
-    class QuickViewCard extends QuickViewBase {
+    export default class QuickViewCard extends QuickViewBase {
+
 
         /**
             * Constructor for a new QuickViewCard.
@@ -69,6 +65,5 @@ declare module "sap/m/QuickViewCard" {
         public setShowVerticalScrollBar(bShowVerticalScrollBar: boolean): this;
 
     }
-
 
 }

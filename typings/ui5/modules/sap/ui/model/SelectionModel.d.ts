@@ -1,11 +1,7 @@
 declare module "sap/ui/model/SelectionModel" {
 
-    export = SelectionModel;
+    export default class SelectionModel extends sap.ui.base.EventProvider {
 
-
-
-
-    class SelectionModel extends sap.ui.base.EventProvider {
 
         /**
             * Constructs an instance of an sap.ui.model.SelectionModel.
@@ -144,6 +140,5 @@ declare module "sap/ui/model/SelectionModel" {
         public sliceSelectionInterval(iFromIndex: number, iToIndex: number): this;
 
     }
-
 
 }

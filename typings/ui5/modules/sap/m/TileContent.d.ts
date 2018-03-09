@@ -1,18 +1,13 @@
 declare module "sap/m/TileContent" {
-    import sapmlibrary from "sap/m/library";
-    type ValueColor = sapmlibrary.ValueColor;
-    type FrameType = sapmlibrary.FrameType;
-    type Size = sapmlibrary.Size;
-
-    export = TileContent;
-
-
-
+    import { ValueColor } from "sap/m/library";
+    import { FrameType } from "sap/m/library";
+    import { Size } from "sap/m/library";
 
     /**
     
     */
-    class TileContent extends sap.ui.core.Control {
+    export default class TileContent extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.TileContent control.
@@ -203,6 +198,5 @@ declare module "sap/m/TileContent" {
         public unbindContent(): this;
 
     }
-
 
 }

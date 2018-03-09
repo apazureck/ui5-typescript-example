@@ -1,14 +1,10 @@
 declare module "sap/ui/model/SimpleType" {
 
-    export = SimpleType;
-
-
-
-
     /**
     
     */
-    class SimpleType extends sap.ui.model.Type {
+    export default abstract class SimpleType extends sap.ui.model.Type {
+
 
         /**
             * Constructor for a new SimpleType.
@@ -62,6 +58,5 @@ declare module "sap/ui/model/SimpleType" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

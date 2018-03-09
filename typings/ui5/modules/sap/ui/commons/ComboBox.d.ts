@@ -3,15 +3,11 @@ declare module "sap/ui/commons/ComboBox" {
     import ListItem from "sap/ui/core/ListItem";
     import ListBox from "sap/ui/commons/ListBox";
 
-    export = ComboBox;
-
-
-
-
     /**
     
     */
-    class ComboBox extends TextField {
+    export default class ComboBox extends TextField {
+
 
         /**
             * Constructor for a new ComboBox.
@@ -252,6 +248,5 @@ declare module "sap/ui/commons/ComboBox" {
         public unbindItems(): this;
 
     }
-
 
 }

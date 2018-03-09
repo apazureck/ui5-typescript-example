@@ -1,15 +1,11 @@
 declare module "sap/ui/table/TablePersoController" {
     import Table from "sap/ui/table/Table";
 
-    export = TablePersoController;
-
-
-
-
     /**
     
     */
-    class TablePersoController extends sap.ui.base.ManagedObject {
+    export default class TablePersoController extends sap.ui.base.ManagedObject {
+
 
         /**
             * Constructor for a new TablePersoController.
@@ -127,6 +123,5 @@ declare module "sap/ui/table/TablePersoController" {
         public setTable(oTable: sap.ui.core.ID | Table): this;
 
     }
-
 
 }

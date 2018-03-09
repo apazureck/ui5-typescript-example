@@ -1,15 +1,11 @@
 declare module "sap/m/InputListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = InputListItem;
-
-
-
-
     /**
     
     */
-    class InputListItem extends ListItemBase {
+    export default class InputListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new InputListItem.
@@ -136,6 +132,5 @@ declare module "sap/m/InputListItem" {
         public unbindContent(): this;
 
     }
-
 
 }

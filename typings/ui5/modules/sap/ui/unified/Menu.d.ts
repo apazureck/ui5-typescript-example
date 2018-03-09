@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/Menu" {
     import MenuItemBase from "sap/ui/unified/MenuItemBase";
 
-    export = Menu;
-
-
-
-
     /**
     
     */
-    class Menu extends sap.ui.core.Control {
+    export default class Menu extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Menu control.
@@ -232,6 +228,5 @@ declare module "sap/ui/unified/Menu" {
         public setPageSize(iPageSize: number): this;
 
     }
-
 
 }

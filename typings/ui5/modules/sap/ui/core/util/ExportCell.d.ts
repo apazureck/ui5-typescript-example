@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/ExportCell" {
 
-    export = ExportCell;
-
-
-
-
     /**
     
     */
-    class ExportCell extends sap.ui.core.Element {
+    export default class ExportCell extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ExportCell.
@@ -64,6 +60,5 @@ declare module "sap/ui/core/util/ExportCell" {
         public setContent(sContent: string): this;
 
     }
-
 
 }

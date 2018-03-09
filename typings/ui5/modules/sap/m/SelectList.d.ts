@@ -1,17 +1,12 @@
 declare module "sap/m/SelectList" {
     import Item from "sap/ui/core/Item";
-    import sapmlibrary from "sap/m/library";
-    type SelectListKeyboardNavigationMode = sapmlibrary.SelectListKeyboardNavigationMode;
-
-    export = SelectList;
-
-
-
+    import { SelectListKeyboardNavigationMode } from "sap/m/library";
 
     /**
     
     */
-    class SelectList extends sap.ui.core.Control {
+    export default class SelectList extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `sap.m.SelectList`.
@@ -382,6 +377,5 @@ declare module "sap/m/SelectList" {
         public unbindItems(): this;
 
     }
-
 
 }

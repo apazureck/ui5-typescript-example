@@ -2,6 +2,7 @@ declare namespace sap.ui.core {
 
     export class ComponentMetadata {
 
+
         /**
             * Creates a new metadata object for a Component subclass.
         */

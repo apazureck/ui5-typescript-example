@@ -2,15 +2,11 @@ declare module "sap/m/semantic/ShareMenuPage" {
     import SemanticPage from "sap/m/semantic/SemanticPage";
     import Button from "sap/m/Button";
 
-    export = ShareMenuPage;
-
-
-
-
     /**
     
     */
-    class ShareMenuPage extends SemanticPage {
+    export default class ShareMenuPage extends SemanticPage {
+
 
         /**
             * Constructor for a new ShareMenuPage
@@ -89,6 +85,5 @@ declare module "sap/m/semantic/ShareMenuPage" {
         public removeCustomShareMenuContent(vCustomShareMenuContent: number | string | Button): Button;
 
     }
-
 
 }

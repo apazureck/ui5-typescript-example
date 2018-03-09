@@ -1,14 +1,10 @@
 declare module "sap/ui/test/matchers/Properties" {
 
-    export = Properties;
-
-
-
-
     /**
     
     */
-    class Properties {
+    export default class Properties {
+
 
         /**
             
@@ -17,6 +13,5 @@ declare module "sap/ui/test/matchers/Properties" {
 
 
     }
-
 
 }

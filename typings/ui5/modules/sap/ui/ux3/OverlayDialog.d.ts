@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/OverlayDialog" {
     import Overlay from "sap/ui/ux3/Overlay";
 
-    export = OverlayDialog;
-
-
-
-
     /**
     
     */
-    class OverlayDialog extends Overlay {
+    export default class OverlayDialog extends Overlay {
+
 
         /**
             * Constructor for a new OverlayDialog.
@@ -121,6 +117,5 @@ declare module "sap/ui/ux3/OverlayDialog" {
         public setWidth(sWidth: sap.ui.core.CSSSize): any;
 
     }
-
 
 }

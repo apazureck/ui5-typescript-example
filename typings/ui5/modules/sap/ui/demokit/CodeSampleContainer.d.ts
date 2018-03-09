@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/CodeSampleContainer" {
 
-    export = CodeSampleContainer;
-
-
-
-
     /**
     
     */
-    class CodeSampleContainer extends sap.ui.core.Control {
+    export default class CodeSampleContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new CodeSampleContainer.
@@ -170,6 +166,5 @@ declare module "sap/ui/demokit/CodeSampleContainer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

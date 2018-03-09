@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/ShellHeadUserItem" {
 
-    export = ShellHeadUserItem;
-
-
-
-
     /**
     
     */
-    class ShellHeadUserItem extends sap.ui.core.Element {
+    export default class ShellHeadUserItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ShellHeadUserItem.
@@ -154,6 +150,5 @@ declare module "sap/ui/unified/ShellHeadUserItem" {
         public setUsername(sUsername: string): this;
 
     }
-
 
 }

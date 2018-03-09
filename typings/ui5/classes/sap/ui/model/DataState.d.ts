@@ -5,6 +5,7 @@ declare namespace sap.ui.model {
     */
     export class DataState extends sap.ui.base.Object {
 
+
         /**
             
         */

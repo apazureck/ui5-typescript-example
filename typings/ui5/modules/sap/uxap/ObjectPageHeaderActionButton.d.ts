@@ -1,17 +1,12 @@
 declare module "sap/uxap/ObjectPageHeaderActionButton" {
     import Button from "sap/m/Button";
-    import sapuxaplibrary from "sap/uxap/library";
-    type Importance = sapuxaplibrary.Importance;
-
-    export = ObjectPageHeaderActionButton;
-
-
-
+    import { Importance } from "sap/uxap/library";
 
     /**
     
     */
-    class ObjectPageHeaderActionButton extends Button {
+    export default class ObjectPageHeaderActionButton extends Button {
+
 
         /**
             * Constructor for a new ObjectPageHeaderActionButton.
@@ -111,6 +106,5 @@ declare module "sap/uxap/ObjectPageHeaderActionButton" {
         public setImportance(sImportance: Importance): this;
 
     }
-
 
 }

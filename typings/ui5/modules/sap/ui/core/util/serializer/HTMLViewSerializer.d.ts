@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/serializer/HTMLViewSerializer" {
 
-    export = HTMLViewSerializer;
-
-
-
-
     /**
     
     */
-    class HTMLViewSerializer extends sap.ui.base.EventProvider {
+    export default class HTMLViewSerializer extends sap.ui.base.EventProvider {
+
 
         /**
             * HTML view serializer class. Serializes a given view.
@@ -41,6 +37,5 @@ declare module "sap/ui/core/util/serializer/HTMLViewSerializer" {
         public getMetadata(): any;
 
     }
-
 
 }

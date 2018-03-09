@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/calendar/DatesRow" {
     import Month from "sap/ui/unified/calendar/Month";
 
-    export = DatesRow;
-
-
-
-
     /**
     
     */
-    class DatesRow extends Month {
+    export default class DatesRow extends Month {
+
 
         /**
             * Constructor for a new calendar/DatesRow.
@@ -137,6 +133,5 @@ declare module "sap/ui/unified/calendar/DatesRow" {
         public setStartDate(oStartDate: any): this;
 
     }
-
 
 }

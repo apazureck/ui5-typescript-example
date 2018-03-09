@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/TextArea" {
     import TextField from "sap/ui/commons/TextField";
 
-    export = TextArea;
-
-
-
-
     /**
     
     */
-    class TextArea extends TextField {
+    export default class TextArea extends TextField {
+
 
         /**
             * Constructor for a new TextArea.
@@ -162,6 +158,5 @@ declare module "sap/ui/commons/TextArea" {
         public setWrapping(sWrapping: sap.ui.core.Wrapping): this;
 
     }
-
 
 }

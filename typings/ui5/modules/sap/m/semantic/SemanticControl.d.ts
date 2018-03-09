@@ -1,14 +1,10 @@
 declare module "sap/m/semantic/SemanticControl" {
 
-    export = SemanticControl;
-
-
-
-
     /**
     
     */
-    class SemanticControl extends sap.ui.core.Element {
+    export default abstract class SemanticControl extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new SemanticControl.
@@ -68,6 +64,5 @@ declare module "sap/m/semantic/SemanticControl" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

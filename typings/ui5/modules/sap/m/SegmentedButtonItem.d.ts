@@ -1,15 +1,11 @@
 declare module "sap/m/SegmentedButtonItem" {
     import Item from "sap/ui/core/Item";
 
-    export = SegmentedButtonItem;
-
-
-
-
     /**
     
     */
-    class SegmentedButtonItem extends Item {
+    export default class SegmentedButtonItem extends Item {
+
 
         /**
             * Constructor for a new `SegmentedButtonItem`.
@@ -141,6 +137,5 @@ declare module "sap/m/SegmentedButtonItem" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

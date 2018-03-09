@@ -1,14 +1,10 @@
 declare module "sap/m/BusyIndicator" {
 
-    export = BusyIndicator;
-
-
-
-
     /**
     
     */
-    class BusyIndicator extends sap.ui.core.Control {
+    export default class BusyIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BusyIndicator.
@@ -248,6 +244,5 @@ declare module "sap/m/BusyIndicator" {
         public setTextDirection(sTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/OverlayContainer" {
     import Overlay from "sap/ui/ux3/Overlay";
 
-    export = OverlayContainer;
-
-
-
-
     /**
     
     */
-    class OverlayContainer extends Overlay {
+    export default class OverlayContainer extends Overlay {
+
 
         /**
             * Constructor for a new OverlayContainer.
@@ -88,6 +84,5 @@ declare module "sap/ui/ux3/OverlayContainer" {
         public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
     }
-
 
 }

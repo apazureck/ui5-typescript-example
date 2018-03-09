@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/CheckBox" {
 
-    export = CheckBox;
-
-
-
-
     /**
     
     */
-    class CheckBox extends sap.ui.core.Control {
+    export default class CheckBox extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new CheckBox.
@@ -292,6 +288,5 @@ declare module "sap/ui/commons/CheckBox" {
         public unbindChecked(): this;
 
     }
-
 
 }

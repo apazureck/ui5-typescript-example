@@ -1,19 +1,14 @@
 declare module "sap/m/Page" {
-    import sapmlibrary from "sap/m/library";
-    type PageBackgroundDesign = sapmlibrary.PageBackgroundDesign;
-    type IBar = sapmlibrary.IBar;
+    import { PageBackgroundDesign } from "sap/m/library";
+    import { IBar } from "sap/m/library";
     import PageAccessibleLandmarkInfo from "sap/m/PageAccessibleLandmarkInfo";
-    type ButtonType = sapmlibrary.ButtonType;
-
-    export = Page;
-
-
-
+    import { ButtonType } from "sap/m/library";
 
     /**
     
     */
-    class Page extends sap.ui.core.Control {
+    export default class Page extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Page.
@@ -543,6 +538,5 @@ declare module "sap/m/Page" {
         public setTitleLevel(sTitleLevel: sap.ui.core.TitleLevel): this;
 
     }
-
 
 }

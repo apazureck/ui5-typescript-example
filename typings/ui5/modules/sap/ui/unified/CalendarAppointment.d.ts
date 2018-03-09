@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/CalendarAppointment" {
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
 
-    export = CalendarAppointment;
-
-
-
-
     /**
     
     */
-    class CalendarAppointment extends DateTypeRange {
+    export default class CalendarAppointment extends DateTypeRange {
+
 
         /**
             * Constructor for a new `CalendarAppointment`.
@@ -173,6 +169,5 @@ declare module "sap/ui/unified/CalendarAppointment" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

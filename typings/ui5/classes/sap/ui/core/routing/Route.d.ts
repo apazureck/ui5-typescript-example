@@ -2,10 +2,11 @@ declare namespace sap.ui.core.routing {
 
     export class Route extends sap.ui.base.EventProvider {
 
+
         /**
             * Instantiates an SAPUI5 Route
         */
-        public constructor(The: sap.ui.core.routing.Router, oConfig: { name: string, pattern?: string, greedy?: boolean, parent?: string, target?: string | any[], view?: string, viewType?: string, viewPath?: string, targetParent?: string, targetControl?: string, targetAggregation?: string, clearTarget?: boolean, subroutes?: any, }, oParent: sap.ui.core.routing.Route);
+        public constructor(The: sap.ui.core.routing.Router, oConfig: { name: string, pattern?: string, greedy?: boolean, parent?: string, target?: string | any[], view?: string, viewType?: string, viewPath?: string, targetParent?: string, targetControl?: string, targetAggregation?: string, clearTarget?: boolean, subroutes?: any, }, oParent?: sap.ui.core.routing.Route);
 
 
         /**

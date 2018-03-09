@@ -1,12 +1,8 @@
 declare module "sap/ui/test/actions/EnterText" {
     import Action from "sap/ui/test/actions/Action";
 
-    export = EnterText;
+    export default class EnterText extends Action {
 
-
-
-
-    class EnterText extends Action {
 
         /**
             * The EnterText action is used to simulate a user entering texts to inputs. EnterText will be executed on a control's focus dom ref. Supported controls are (for other controls this action still might work):  * sap.m.Input * sap.m.SearchField * sap.m.TextArea 
@@ -83,6 +79,5 @@ declare module "sap/ui/test/actions/EnterText" {
         public setText(sText: string): this;
 
     }
-
 
 }

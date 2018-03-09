@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Float" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = Float;
-
-
-
-
     /**
     
     */
-    class Float extends SimpleType {
+    export default class Float extends SimpleType {
+
 
         /**
             * Constructor for a Float type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/Float" {
         public getMetadata(): any;
 
     }
-
 
 }

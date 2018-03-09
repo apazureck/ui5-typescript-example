@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/Callout" {
     import CalloutBase from "sap/ui/commons/CalloutBase";
 
-    export = Callout;
-
-
-
-
     /**
     
     */
-    class Callout extends CalloutBase {
+    export default class Callout extends CalloutBase {
+
 
         /**
             * Constructor for a new Callout.
@@ -88,6 +84,5 @@ declare module "sap/ui/commons/Callout" {
         public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
     }
-
 
 }

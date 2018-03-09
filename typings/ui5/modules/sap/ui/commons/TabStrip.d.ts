@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/TabStrip" {
     import Tab from "sap/ui/commons/Tab";
 
-    export = TabStrip;
-
-
-
-
     /**
     
     */
-    class TabStrip extends sap.ui.core.Control {
+    export default class TabStrip extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TabStrip.
@@ -248,6 +244,5 @@ declare module "sap/ui/commons/TabStrip" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

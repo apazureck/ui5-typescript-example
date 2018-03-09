@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/PaneContainer" {
 
-    export = PaneContainer;
-
-
-
-
     /**
     
     */
-    class PaneContainer extends sap.ui.core.Element {
+    export default class PaneContainer extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new PaneContainer.
@@ -111,6 +107,5 @@ declare module "sap/ui/layout/PaneContainer" {
         public setOrientation(sOrientation: sap.ui.core.Orientation): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/core/search/SearchProvider" {
 
-    export = SearchProvider;
-
-
-
-
     /**
     
     */
-    class SearchProvider extends sap.ui.core.Element {
+    export default class SearchProvider extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new search/SearchProvider.
@@ -69,6 +65,5 @@ declare module "sap/ui/core/search/SearchProvider" {
         public suggest(sValue: string, fnCallback: Function): any;
 
     }
-
 
 }

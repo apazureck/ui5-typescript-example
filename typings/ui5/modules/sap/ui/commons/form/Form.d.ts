@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/Form" {
     import sap_ui_layout_form_Form from "sap/ui/layout/form/Form";
 
-    export = Form;
-
-
-
-
     import FormBase from 'sap/ui/layout/form/Form'
 
     /**
     
     */
-    class Form extends FormBase {
+    export default class Form extends FormBase {
+
 
         /**
             * Constructor for a new form/Form.
@@ -78,6 +74,5 @@ declare module "sap/ui/commons/form/Form" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

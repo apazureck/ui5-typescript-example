@@ -2,15 +2,11 @@ declare module "sap/m/P13nFilterPanel" {
     import P13nPanel from "sap/m/P13nPanel";
     import P13nFilterItem from "sap/m/P13nFilterItem";
 
-    export = P13nFilterPanel;
-
-
-
-
     /**
     
     */
-    class P13nFilterPanel extends P13nPanel {
+    export default class P13nFilterPanel extends P13nPanel {
+
 
         /**
             * Constructor for a new P13nFilterPanel.
@@ -312,6 +308,5 @@ declare module "sap/m/P13nFilterPanel" {
         public validateConditions(): boolean;
 
     }
-
 
 }

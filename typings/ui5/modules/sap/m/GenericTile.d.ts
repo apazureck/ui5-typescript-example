@@ -1,21 +1,16 @@
 declare module "sap/m/GenericTile" {
-    import sapmlibrary from "sap/m/library";
-    type GenericTileScope = sapmlibrary.GenericTileScope;
+    import { GenericTileScope } from "sap/m/library";
     import TileContent from "sap/m/TileContent";
-    type FrameType = sapmlibrary.FrameType;
-    type GenericTileMode = sapmlibrary.GenericTileMode;
-    type Size = sapmlibrary.Size;
-    type LoadState = sapmlibrary.LoadState;
-
-    export = GenericTile;
-
-
-
+    import { FrameType } from "sap/m/library";
+    import { GenericTileMode } from "sap/m/library";
+    import { Size } from "sap/m/library";
+    import { LoadState } from "sap/m/library";
 
     /**
     
     */
-    class GenericTile extends sap.ui.core.Control {
+    export default class GenericTile extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.m.GenericTile control.
@@ -388,6 +383,5 @@ declare module "sap/m/GenericTile" {
         public unbindTileContent(): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/TablePersoDialog" {
     import Table from "sap/m/Table";
 
-    export = TablePersoDialog;
-
-
-
-
     /**
     
     */
-    class TablePersoDialog extends sap.ui.base.ManagedObject {
+    export default class TablePersoDialog extends sap.ui.base.ManagedObject {
+
 
         /**
             * The TablePersoDialog can be used to display and allow modification of personalization settings relating to a Table. It displays the columns of the table that it refers to by using * The result of calling sap.m.TablePersoProvider's 'getCaption' callback if it is implemented and delivers a non-null value for a column * the column header control's 'text' property if no caption property is available * the column header control's 'title' property if neither 'text' nor 'caption' property are available * the column id is displayed as last fallback, if none of the above is at hand. In that case, a warning is logged.
@@ -228,6 +224,5 @@ declare module "sap/m/TablePersoDialog" {
         public setShowSelectAll(bShowSelectAll: boolean): this;
 
     }
-
 
 }

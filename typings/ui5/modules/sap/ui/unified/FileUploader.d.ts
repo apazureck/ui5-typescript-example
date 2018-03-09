@@ -2,15 +2,11 @@ declare module "sap/ui/unified/FileUploader" {
     import FileUploaderParameter from "sap/ui/unified/FileUploaderParameter";
     import FileUploaderXHRSettings from "sap/ui/unified/FileUploaderXHRSettings";
 
-    export = FileUploader;
-
-
-
-
     /**
     
     */
-    class FileUploader extends sap.ui.core.Control {
+    export default class FileUploader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FileUploader.
@@ -987,6 +983,5 @@ declare module "sap/ui/unified/FileUploader" {
         public upload(bPreProcessFiles?: boolean): any;
 
     }
-
 
 }

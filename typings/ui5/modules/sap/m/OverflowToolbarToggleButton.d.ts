@@ -1,15 +1,11 @@
 declare module "sap/m/OverflowToolbarToggleButton" {
     import ToggleButton from "sap/m/ToggleButton";
 
-    export = OverflowToolbarToggleButton;
-
-
-
-
     /**
     
     */
-    class OverflowToolbarToggleButton extends ToggleButton {
+    export default class OverflowToolbarToggleButton extends ToggleButton {
+
 
         /**
             * Constructor for a new `OverflowToolbarToggleButton`.
@@ -47,6 +43,5 @@ declare module "sap/m/OverflowToolbarToggleButton" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

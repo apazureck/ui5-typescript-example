@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class Fragment extends sap.ui.base.ManagedObject {
 
+
         /**
             * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */

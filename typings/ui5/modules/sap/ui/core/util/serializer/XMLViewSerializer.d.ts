@@ -1,14 +1,10 @@
 declare module "sap/ui/core/util/serializer/XMLViewSerializer" {
 
-    export = XMLViewSerializer;
-
-
-
-
     /**
     
     */
-    class XMLViewSerializer extends sap.ui.base.EventProvider {
+    export default class XMLViewSerializer extends sap.ui.base.EventProvider {
+
 
         /**
             * XML view serializer class. Serializes a given view.
@@ -46,6 +42,5 @@ declare module "sap/ui/core/util/serializer/XMLViewSerializer" {
         public getMetadata(): any;
 
     }
-
 
 }

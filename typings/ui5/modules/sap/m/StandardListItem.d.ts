@@ -1,15 +1,11 @@
 declare module "sap/m/StandardListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = StandardListItem;
-
-
-
-
     /**
     
     */
-    class StandardListItem extends ListItemBase {
+    export default class StandardListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new StandardListItem.
@@ -249,6 +245,5 @@ declare module "sap/m/StandardListItem" {
         public setTitleTextDirection(sTitleTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

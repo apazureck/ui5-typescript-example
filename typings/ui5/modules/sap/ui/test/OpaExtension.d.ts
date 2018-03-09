@@ -1,14 +1,10 @@
 declare module "sap/ui/test/OpaExtension" {
 
-    export = OpaExtension;
-
-
-
-
     /**
     
     */
-    class OpaExtension {
+    export default class OpaExtension {
+
 
         /**
             * OPA extension interface.
@@ -44,6 +40,5 @@ declare module "sap/ui/test/OpaExtension" {
         public static onBeforeExit(): any;
 
     }
-
 
 }

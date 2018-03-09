@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Byte" {
     import Int from "sap/ui/model/odata/type/Int";
 
-    export = Byte;
-
-
-
-
     /**
     
     */
-    class Byte extends Int {
+    export default class Byte extends Int {
+
 
         /**
             * Constructor for a primitive type `Edm.Byte`.
@@ -47,6 +43,5 @@ declare module "sap/ui/model/odata/type/Byte" {
         protected getRange(): any;
 
     }
-
 
 }

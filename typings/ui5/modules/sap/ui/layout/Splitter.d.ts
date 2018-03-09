@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/Splitter" {
 
-    export = Splitter;
-
-
-
-
     /**
     
     */
-    class Splitter extends sap.ui.core.Control {
+    export default class Splitter extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Splitter.
@@ -225,6 +221,5 @@ declare module "sap/ui/layout/Splitter" {
         public triggerResize(forceDirectly?: boolean): any;
 
     }
-
 
 }

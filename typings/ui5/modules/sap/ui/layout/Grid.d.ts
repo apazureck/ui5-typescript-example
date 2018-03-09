@@ -1,16 +1,11 @@
 declare module "sap/ui/layout/Grid" {
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type GridPosition = sapuilayoutlibrary.GridPosition;
-
-    export = Grid;
-
-
-
+    import { GridPosition } from "sap/ui/layout/library";
 
     /**
     
     */
-    class Grid extends sap.ui.core.Control {
+    export default class Grid extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Grid.
@@ -254,6 +249,5 @@ declare module "sap/ui/layout/Grid" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

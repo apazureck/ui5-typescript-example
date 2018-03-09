@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/BlockLayoutCellData" {
 
-    export = BlockLayoutCellData;
-
-
-
-
     /**
     
     */
-    class BlockLayoutCellData extends sap.ui.core.LayoutData {
+    export default class BlockLayoutCellData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new BlockLayoutCellData.
@@ -133,6 +129,5 @@ declare module "sap/ui/layout/BlockLayoutCellData" {
         public setXlSize(iXlSize: number): this;
 
     }
-
 
 }

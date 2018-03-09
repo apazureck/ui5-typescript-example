@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/calendar/YearPicker" {
 
-    export = YearPicker;
-
-
-
-
     /**
     
     */
-    class YearPicker extends sap.ui.core.Control {
+    export default class YearPicker extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new YearPicker.
@@ -215,6 +211,5 @@ declare module "sap/ui/unified/calendar/YearPicker" {
         public setYears(iYears: number): this;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/m/Switch" {
-    import sapmlibrary from "sap/m/library";
-    type SwitchType = sapmlibrary.SwitchType;
-
-    export = Switch;
-
-
-
+    import { SwitchType } from "sap/m/library";
 
     /**
     
     */
-    class Switch extends sap.ui.core.Control {
+    export default class Switch extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Switch.
@@ -226,6 +221,5 @@ declare module "sap/m/Switch" {
         public setType(sType: SwitchType): this;
 
     }
-
 
 }

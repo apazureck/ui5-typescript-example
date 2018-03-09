@@ -2,18 +2,13 @@ declare module "sap/m/Select" {
     import Item from "sap/ui/core/Item";
     import Popover from "sap/m/Popover";
     import Dialog from "sap/m/Dialog";
-    import sapmlibrary from "sap/m/library";
-    type SelectType = sapmlibrary.SelectType;
-
-    export = Select;
-
-
-
+    import { SelectType } from "sap/m/library";
 
     /**
     
     */
-    class Select extends sap.ui.core.Control {
+    export default class Select extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `sap.m.Select`.
@@ -522,6 +517,5 @@ declare module "sap/m/Select" {
         public unbindItems(): this;
 
     }
-
 
 }

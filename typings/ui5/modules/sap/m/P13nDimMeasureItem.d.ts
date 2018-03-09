@@ -1,15 +1,11 @@
 declare module "sap/m/P13nDimMeasureItem" {
     import Item from "sap/ui/core/Item";
 
-    export = P13nDimMeasureItem;
-
-
-
-
     /**
     
     */
-    class P13nDimMeasureItem extends Item {
+    export default class P13nDimMeasureItem extends Item {
+
 
         /**
             * Constructor for a new P13nDimMeasureItem.
@@ -117,6 +113,5 @@ declare module "sap/m/P13nDimMeasureItem" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

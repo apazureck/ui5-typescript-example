@@ -3,7 +3,8 @@ declare namespace sap.ui.base {
     /**
     
     */
-    export class EventProvider extends sap.ui.base.Object {
+    export abstract class EventProvider extends sap.ui.base.Object {
+
 
         /**
             * Creates an instance of EventProvider.

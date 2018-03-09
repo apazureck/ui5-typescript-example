@@ -1,17 +1,12 @@
 declare module "sap/m/FlexItemData" {
-    import sapmlibrary from "sap/m/library";
-    type FlexAlignSelf = sapmlibrary.FlexAlignSelf;
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-
-    export = FlexItemData;
-
-
-
+    import { FlexAlignSelf } from "sap/m/library";
+    import { BackgroundDesign } from "sap/m/library";
 
     /**
     
     */
-    class FlexItemData extends sap.ui.core.LayoutData {
+    export default class FlexItemData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new `sap.m.FlexItemData`.
@@ -326,6 +321,5 @@ declare module "sap/m/FlexItemData" {
         public setStyleClass(sValue: string): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/Tab" {
     import Panel from "sap/ui/commons/Panel";
 
-    export = Tab;
-
-
-
-
     /**
     
     */
-    class Tab extends Panel {
+    export default class Tab extends Panel {
+
 
         /**
             * Constructor for a new Tab.
@@ -129,6 +125,5 @@ declare module "sap/ui/commons/Tab" {
         public setVerticalScrolling(sVerticalScrolling: sap.ui.core.Scrolling): this;
 
     }
-
 
 }

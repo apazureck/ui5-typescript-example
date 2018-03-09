@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/ToolbarSeparator" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type ToolbarSeparatorDesign = sapuicommonslibrary.ToolbarSeparatorDesign;
-
-    export = ToolbarSeparator;
-
-
-
+    import { ToolbarSeparatorDesign } from "sap/ui/commons/library";
 
     /**
     
     */
-    class ToolbarSeparator extends sap.ui.core.Element {
+    export default class ToolbarSeparator extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ToolbarSeparator.
@@ -86,6 +81,5 @@ declare module "sap/ui/commons/ToolbarSeparator" {
         public setDisplayVisualSeparator(bDisplayVisualSeparator: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/Breadcrumbs" {
     import Link from "sap/m/Link";
 
-    export = Breadcrumbs;
-
-
-
-
     /**
     
     */
-    class Breadcrumbs extends sap.ui.core.Control {
+    export default class Breadcrumbs extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Breadcrumbs
@@ -104,6 +100,5 @@ declare module "sap/m/Breadcrumbs" {
         public setCurrentLocationText(sCurrentLocationText: string): this;
 
     }
-
 
 }

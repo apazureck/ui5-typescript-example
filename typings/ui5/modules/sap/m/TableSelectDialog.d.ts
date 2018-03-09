@@ -3,15 +3,11 @@ declare module "sap/m/TableSelectDialog" {
     import Column from "sap/m/Column";
     import ColumnListItem from "sap/m/ColumnListItem";
 
-    export = TableSelectDialog;
-
-
-
-
     /**
     
     */
-    class TableSelectDialog extends sap.ui.core.Control {
+    export default class TableSelectDialog extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TableSelectDialog.
@@ -513,6 +509,5 @@ declare module "sap/m/TableSelectDialog" {
         public unbindItems(): this;
 
     }
-
 
 }

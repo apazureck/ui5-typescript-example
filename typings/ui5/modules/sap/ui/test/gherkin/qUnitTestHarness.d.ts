@@ -1,9 +1,8 @@
 declare module "sap/ui/test/gherkin/qUnitTestHarness" {
+    /**
 
-    export = qUnitTestHarness;
-
-
-
+*/
+    export default qUnitTestHarness;
     namespace qUnitTestHarness {
 
         // Methods
@@ -12,5 +11,4 @@ declare module "sap/ui/test/gherkin/qUnitTestHarness" {
             */
         export function test(args: { featurePath: string, steps: Function, }): any;
     }
-
 }

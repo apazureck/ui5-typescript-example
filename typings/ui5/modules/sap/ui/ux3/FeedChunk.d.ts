@@ -2,15 +2,11 @@ declare module "sap/ui/ux3/FeedChunk" {
     import MenuItemBase from "sap/ui/unified/MenuItemBase";
     import MenuItem from "sap/ui/commons/MenuItem";
 
-    export = FeedChunk;
-
-
-
-
     /**
     
     */
-    class FeedChunk extends sap.ui.core.Control {
+    export default class FeedChunk extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FeedChunk.
@@ -740,6 +736,5 @@ declare module "sap/ui/ux3/FeedChunk" {
         public unbindComments(): this;
 
     }
-
 
 }

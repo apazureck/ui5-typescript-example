@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/ODataMessageParser" {
     import MessageParser from "sap/ui/core/message/MessageParser";
 
-    export = ODataMessageParser;
-
-
-
-
     /**
     
     */
-    class ODataMessageParser extends MessageParser {
+    export default abstract class ODataMessageParser extends MessageParser {
+
 
         /**
             * OData implementation of the sap.ui.core.message.MessageParser class. Parses message responses from the back-end.
@@ -54,6 +50,5 @@ declare module "sap/ui/model/odata/ODataMessageParser" {
         public setHeaderField(sFieldName: string): this;
 
     }
-
 
 }

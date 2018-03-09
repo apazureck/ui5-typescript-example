@@ -1,16 +1,11 @@
 declare module "sap/ui/unified/ColorPicker" {
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type ColorPickerMode = sapuiunifiedlibrary.ColorPickerMode;
-
-    export = ColorPicker;
-
-
-
+    import { ColorPickerMode } from "sap/ui/unified/library";
 
     /**
     
     */
-    class ColorPicker extends sap.ui.core.Control {
+    export default class ColorPicker extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ColorPicker`.
@@ -198,6 +193,5 @@ declare module "sap/ui/unified/ColorPicker" {
         public setMode(sMode: ColorPickerMode, bSuppressInvalidate: boolean): any;
 
     }
-
 
 }

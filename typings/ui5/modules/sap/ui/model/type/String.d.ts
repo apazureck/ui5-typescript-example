@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/String" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = String;
-
-
-
-
     /**
     
     */
-    class String extends SimpleType {
+    export default class String extends SimpleType {
+
 
         /**
             * Constructor for a String type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/String" {
         public getMetadata(): any;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/IndexLayout" {
 
-    export = IndexLayout;
-
-
-
-
     /**
     
     */
-    class IndexLayout extends sap.ui.core.Control {
+    export default class IndexLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new IndexLayout.
@@ -147,6 +143,5 @@ declare module "sap/ui/demokit/IndexLayout" {
         public setItemWidth(sItemWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

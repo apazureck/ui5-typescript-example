@@ -5,6 +5,7 @@ declare namespace sap.ui.model {
     */
     export class Filter extends sap.ui.base.Object {
 
+
         /**
             * Constructor for Filter.
          * 
@@ -12,7 +13,7 @@ declare namespace sap.ui.model {
          * 
          * The filter operators `Any` and `All` are only supported in V4 OData models. When creating a filter instance with these filter operators, the argument `variable` only accepts a string identifier and `condition` needs to be another filter instance.
         */
-        public constructor(vFilterInfo: { path: string, test: Function, comparator: Function, operator: sap.ui.model.FilterOperator, value1: any, value2?: any, variable?: string, condition?: sap.ui.model.Filter, filters: any[], and: boolean, }, vOperator: sap.ui.model.FilterOperator | Function | boolean, vValue1: any, vValue2: any);
+        public constructor(vFilterInfo: { path: string, test: Function, comparator: Function, operator: sap.ui.model.FilterOperator, value1: any, value2?: any, variable?: string, condition?: sap.ui.model.Filter, filters: any[], and: boolean, }, vOperator?: sap.ui.model.FilterOperator | Function | boolean, vValue1?: any, vValue2?: any);
 
 
         /**

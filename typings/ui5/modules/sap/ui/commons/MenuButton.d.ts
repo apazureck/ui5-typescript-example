@@ -4,15 +4,11 @@ declare module "sap/ui/commons/MenuButton" {
     import sap_ui_commons_MenuItemBase from "sap/ui/commons/MenuItemBase";
     import Menu from "sap/ui/unified/Menu";
 
-    export = MenuButton;
-
-
-
-
     /**
     
     */
-    class MenuButton extends Button {
+    export default class MenuButton extends Button {
+
 
         /**
             * Constructor for a new MenuButton.
@@ -172,6 +168,5 @@ declare module "sap/ui/commons/MenuButton" {
         public setMenu(oMenu: Menu): this;
 
     }
-
 
 }

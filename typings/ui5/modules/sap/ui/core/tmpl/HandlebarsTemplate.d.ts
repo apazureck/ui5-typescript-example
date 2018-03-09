@@ -1,14 +1,10 @@
 declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
 
-    export = HandlebarsTemplate;
-
-
-
-
     /**
     
     */
-    class HandlebarsTemplate extends sap.ui.core.tmpl.Template {
+    export default abstract class HandlebarsTemplate extends sap.ui.core.tmpl.Template {
+
 
         /**
             * Creates and initializes a new handlebars template with the given `sId` and settings.
@@ -43,6 +39,5 @@ declare module "sap/ui/core/tmpl/HandlebarsTemplate" {
         public getMetadata(): any | sap.ui.base.Metadata;
 
     }
-
 
 }

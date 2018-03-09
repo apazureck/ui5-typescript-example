@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/DateTimeBase" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = DateTimeBase;
-
-
-
-
     /**
     
     */
-    class DateTimeBase extends ODataType {
+    export default abstract class DateTimeBase extends ODataType {
+
 
         /**
             * Base constructor for the primitive types `Edm.DateTime` and `Edm.DateTimeOffset`.
@@ -62,6 +58,5 @@ declare module "sap/ui/model/odata/type/DateTimeBase" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

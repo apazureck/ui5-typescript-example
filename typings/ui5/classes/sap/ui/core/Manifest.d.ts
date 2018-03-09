@@ -5,10 +5,11 @@ declare namespace sap.ui.core {
     */
     export class Manifest extends sap.ui.base.Object {
 
+
         /**
             * Creates and initializes a manifest wrapper which provides API access to the content of the manifest.
         */
-        public constructor(oManifest: any, mOptions: { componentName?: string, baseUrl?: string, process?: boolean, });
+        public constructor(oManifest: any, mOptions?: { componentName?: string, baseUrl?: string, process?: boolean, });
 
 
         /**

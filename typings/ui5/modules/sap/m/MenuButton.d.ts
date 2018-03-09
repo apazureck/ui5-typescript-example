@@ -1,18 +1,13 @@
 declare module "sap/m/MenuButton" {
-    import sapmlibrary from "sap/m/library";
-    type MenuButtonMode = sapmlibrary.MenuButtonMode;
+    import { MenuButtonMode } from "sap/m/library";
     import Menu from "sap/m/Menu";
-    type ButtonType = sapmlibrary.ButtonType;
-
-    export = MenuButton;
-
-
-
+    import { ButtonType } from "sap/m/library";
 
     /**
     
     */
-    class MenuButton extends sap.ui.core.Control {
+    export default class MenuButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MenuButton.
@@ -309,6 +304,5 @@ declare module "sap/m/MenuButton" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

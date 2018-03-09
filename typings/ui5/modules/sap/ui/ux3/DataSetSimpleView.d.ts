@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/DataSetSimpleView" {
     import DataSetItem from "sap/ui/ux3/DataSetItem";
 
-    export = DataSetSimpleView;
-
-
-
-
     /**
     
     */
-    class DataSetSimpleView extends sap.ui.core.Control {
+    export default class DataSetSimpleView extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new DataSetSimpleView.
@@ -287,6 +283,5 @@ declare module "sap/ui/ux3/DataSetSimpleView" {
         protected updateView(aDiff: any[]): any;
 
     }
-
 
 }

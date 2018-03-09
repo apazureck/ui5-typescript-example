@@ -1,15 +1,11 @@
 declare module "sap/ui/core/util/ExportTypeCSV" {
     import ExportType from "sap/ui/core/util/ExportType";
 
-    export = ExportTypeCSV;
-
-
-
-
     /**
     
     */
-    class ExportTypeCSV extends ExportType {
+    export default class ExportTypeCSV extends ExportType {
+
 
         /**
             * Constructor for a new ExportTypeCSV.
@@ -67,6 +63,5 @@ declare module "sap/ui/core/util/ExportTypeCSV" {
         public setSeparatorChar(sSeparatorChar: string): this;
 
     }
-
 
 }

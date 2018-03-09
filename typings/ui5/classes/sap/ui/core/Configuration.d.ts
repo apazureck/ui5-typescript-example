@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class Configuration extends sap.ui.base.Object {
 
+
         /**
             * Creates a new Configuration object.
         */

@@ -2,6 +2,7 @@ declare namespace sap.ui.core.routing {
 
     export class Views extends sap.ui.base.EventProvider {
 
+
         /**
             * Instantiates a view repository that creates and caches views. If it is destroyed, all the Views it created are destroyed. Usually you do not have to create instances of this class, it is used by the {@link sap.ui.core.routing.Router}. If you are using {@link sap.ui.core.routing.Targets} without using a {@link sap.ui.core.UIComponent} you have to create an instance of this class. They will create an instance on their own, or if they are used with a {@link sap.ui.core.UIComponent} they will share the same instance of Views.
         */

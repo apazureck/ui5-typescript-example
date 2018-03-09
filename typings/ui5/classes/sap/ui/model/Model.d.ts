@@ -3,7 +3,8 @@ declare namespace sap.ui.model {
     /**
     
     */
-    export class Model extends sap.ui.core.message.MessageProcessor {
+    export abstract class Model extends sap.ui.core.message.MessageProcessor {
+
 
         /**
             * Constructor for a new Model.

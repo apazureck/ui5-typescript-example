@@ -1,15 +1,11 @@
 declare module "sap/ui/ux3/NavigationItem" {
     import Item from "sap/ui/core/Item";
 
-    export = NavigationItem;
-
-
-
-
     /**
     
     */
-    class NavigationItem extends Item {
+    export default class NavigationItem extends Item {
+
 
         /**
             * Constructor for a new NavigationItem.
@@ -124,6 +120,5 @@ declare module "sap/ui/ux3/NavigationItem" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

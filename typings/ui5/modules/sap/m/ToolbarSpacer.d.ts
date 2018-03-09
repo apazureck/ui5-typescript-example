@@ -1,14 +1,10 @@
 declare module "sap/m/ToolbarSpacer" {
 
-    export = ToolbarSpacer;
-
-
-
-
     /**
     
     */
-    class ToolbarSpacer extends sap.ui.core.Control {
+    export default class ToolbarSpacer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ToolbarSpacer`.
@@ -68,6 +64,5 @@ declare module "sap/m/ToolbarSpacer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

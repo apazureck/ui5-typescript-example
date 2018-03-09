@@ -1,14 +1,10 @@
 declare module "sap/ui/core/EnabledPropagator" {
 
-    export = EnabledPropagator;
-
-
-
-
     /**
     
     */
-    class EnabledPropagator {
+    export default class EnabledPropagator {
+
 
         /**
             
@@ -17,6 +13,5 @@ declare module "sap/ui/core/EnabledPropagator" {
 
 
     }
-
 
 }

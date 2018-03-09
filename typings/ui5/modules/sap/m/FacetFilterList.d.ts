@@ -1,18 +1,13 @@
 declare module "sap/m/FacetFilterList" {
     import List from "sap/m/List";
-    import sapmlibrary from "sap/m/library";
-    type FacetFilterListDataType = sapmlibrary.FacetFilterListDataType;
-    type ListMode = sapmlibrary.ListMode;
-
-    export = FacetFilterList;
-
-
-
+    import { FacetFilterListDataType } from "sap/m/library";
+    import { ListMode } from "sap/m/library";
 
     /**
     
     */
-    class FacetFilterList extends List {
+    export default class FacetFilterList extends List {
+
 
         /**
             * Constructor for a new `FacetFilterList`.
@@ -353,6 +348,5 @@ declare module "sap/m/FacetFilterList" {
         public setWordWrap(bWordWrap: boolean): this;
 
     }
-
 
 }

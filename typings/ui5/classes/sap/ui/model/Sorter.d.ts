@@ -5,10 +5,11 @@ declare namespace sap.ui.model {
     */
     export class Sorter extends sap.ui.base.Object {
 
+
         /**
             * Constructor for Sorter
         */
-        public constructor(sPath: string, bDescending: boolean, vGroup?: boolean | Function, fnComparator?: Function);
+        public constructor(sPath: string, bDescending?: boolean, vGroup?: boolean | Function, fnComparator?: Function);
 
 
         /**

@@ -1,16 +1,11 @@
 declare module "sap/m/Button" {
-    import sapmlibrary from "sap/m/library";
-    type ButtonType = sapmlibrary.ButtonType;
-
-    export = Button;
-
-
-
+    import { ButtonType } from "sap/m/library";
 
     /**
     
     */
-    class Button extends sap.ui.core.Control {
+    export default class Button extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Button`.
@@ -320,6 +315,5 @@ declare module "sap/m/Button" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

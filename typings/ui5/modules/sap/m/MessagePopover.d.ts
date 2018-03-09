@@ -2,19 +2,14 @@ declare module "sap/m/MessagePopover" {
     import MessagePopoverItem from "sap/m/MessagePopoverItem";
     import MessageItem from "sap/m/MessageItem";
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type VerticalPlacementType = sapmlibrary.VerticalPlacementType;
-    type PlacementType = sapmlibrary.PlacementType;
-
-    export = MessagePopover;
-
-
-
+    import { VerticalPlacementType } from "sap/m/library";
+    import { PlacementType } from "sap/m/library";
 
     /**
     
     */
-    class MessagePopover extends sap.ui.core.Control {
+    export default class MessagePopover extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MessagePopover.
@@ -467,6 +462,5 @@ declare module "sap/m/MessagePopover" {
         public toggle(oControl: sap.ui.core.Control): this;
 
     }
-
 
 }

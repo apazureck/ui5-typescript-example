@@ -1,15 +1,11 @@
 declare module "sap/ui/table/ColumnMenu" {
     import Menu from "sap/ui/unified/Menu";
 
-    export = ColumnMenu;
-
-
-
-
     /**
     
     */
-    class ColumnMenu extends Menu {
+    export default class ColumnMenu extends Menu {
+
 
         /**
             * Constructor for a new ColumnMenu.
@@ -49,6 +45,5 @@ declare module "sap/ui/table/ColumnMenu" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

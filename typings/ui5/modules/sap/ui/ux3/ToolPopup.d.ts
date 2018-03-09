@@ -1,16 +1,11 @@
 declare module "sap/ui/ux3/ToolPopup" {
-    import sapuicorePopup from "sap/ui/core/Popup";
-    type Dock = sapuicorePopup.Dock;
-
-    export = ToolPopup;
-
-
-
+    import { Dock } from "sap/ui/core/Popup";
 
     /**
     
     */
-    class ToolPopup extends sap.ui.core.Control {
+    export default class ToolPopup extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ToolPopup.
@@ -543,6 +538,5 @@ declare module "sap/ui/ux3/ToolPopup" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

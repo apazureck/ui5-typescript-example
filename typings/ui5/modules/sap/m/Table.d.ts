@@ -1,19 +1,14 @@
 declare module "sap/m/Table" {
     import ListBase from "sap/m/ListBase";
     import Column from "sap/m/Column";
-    import sapmlibrary from "sap/m/library";
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-    type PopinLayout = sapmlibrary.PopinLayout;
-
-    export = Table;
-
-
-
+    import { BackgroundDesign } from "sap/m/library";
+    import { PopinLayout } from "sap/m/library";
 
     /**
     
     */
-    class Table extends ListBase {
+    export default class Table extends ListBase {
+
 
         /**
             * Constructor for a new Table.
@@ -206,6 +201,5 @@ declare module "sap/m/Table" {
         public setShowOverlay(bShowOverlay: boolean): this;
 
     }
-
 
 }

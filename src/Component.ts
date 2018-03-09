@@ -1,11 +1,11 @@
-import Device from "sap/ui/Device";
+import { support } from "sap/ui/Device";
 import models from "typescript/example/ui5app/model/models";
 import ListSelector from "typescript/example/ui5app/controller/ListSelector";
 import ErrorHandler from "typescript/example/ui5app/controller/ErrorHandler";
 import Model from "sap/ui/model/Model";
 
 @UI5("typescript.example.ui5app.Component")
-export default class Component extends sap.ui.core.UIComponent {
+ export default class Component extends sap.ui.core.UIComponent {
     public static metadata: any = {
         manifest: "json"
     };
@@ -56,7 +56,7 @@ export default class Component extends sap.ui.core.UIComponent {
             // check whether FLP has already set the content density class; do nothing in this case
             if ($(document.body).hasClass("sapUiSizeCozy") || $(document.body).hasClass("sapUiSizeCompact")) {
                 this._sContentDensityClass = "";
-            } else if (!Device.support.touch) { // apply "compact" mode if touch is not supported
+            } else if (!support.touch) { // apply "compact" mode if touch is not supported
                 this._sContentDensityClass = "sapUiSizeCompact";
             } else {
                 // "cozy" in case of touch support; default for most sap.m controls, but needed for desktop-first controls like sap.ui.table.Table

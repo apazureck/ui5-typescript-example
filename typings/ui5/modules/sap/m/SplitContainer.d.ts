@@ -1,16 +1,11 @@
 declare module "sap/m/SplitContainer" {
-    import sapmlibrary from "sap/m/library";
-    type SplitAppMode = sapmlibrary.SplitAppMode;
-
-    export = SplitContainer;
-
-
-
+    import { SplitAppMode } from "sap/m/library";
 
     /**
     
     */
-    class SplitContainer extends sap.ui.core.Control {
+    export default class SplitContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SplitContainer.
@@ -782,6 +777,5 @@ declare module "sap/m/SplitContainer" {
         public toMaster(sPageId: string, sTransitionName: string, oData: any, oTransitionParameters: any): this;
 
     }
-
 
 }

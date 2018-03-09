@@ -1,9 +1,8 @@
 declare module "sap/ui/core/util/File" {
+    /**
 
-    export = File;
-
-
-
+*/
+    export default File;
     namespace File {
 
         // Methods
@@ -20,5 +19,4 @@ declare module "sap/ui/core/util/File" {
             */
         export function save(sData: string, sFileName: string, sFileExtension: string, sMimeType: string, sCharset: string, bByteOrderMark?: boolean): any;
     }
-
 }

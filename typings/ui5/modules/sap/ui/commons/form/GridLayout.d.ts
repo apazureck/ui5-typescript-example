@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/GridLayout" {
     import sap_ui_layout_form_GridLayout from "sap/ui/layout/form/GridLayout";
 
-    export = GridLayout;
-
-
-
-
     import GridLayoutBase from 'sap/ui/layout/form/GridLayout'
 
     /**
     
     */
-    class GridLayout extends GridLayoutBase {
+    export default class GridLayout extends GridLayoutBase {
+
 
         /**
             * Constructor for a new form/GridLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/form/GridLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

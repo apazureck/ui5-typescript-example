@@ -1,15 +1,11 @@
 declare module "sap/ui/core/ListItem" {
     import Item from "sap/ui/core/Item";
 
-    export = ListItem;
-
-
-
-
     /**
     
     */
-    class ListItem extends Item {
+    export default class ListItem extends Item {
+
 
         /**
             * Constructor for a new ListItem.
@@ -81,6 +77,5 @@ declare module "sap/ui/core/ListItem" {
         public setIcon(sIcon: string): this;
 
     }
-
 
 }

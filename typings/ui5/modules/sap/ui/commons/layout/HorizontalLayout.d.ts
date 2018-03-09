@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/layout/HorizontalLayout" {
     import sap_ui_layout_HorizontalLayout from "sap/ui/layout/HorizontalLayout";
 
-    export = HorizontalLayout;
-
-
-
-
     import HorizontalLayoutBase from 'sap/ui/layout/HorizontalLayout'
 
     /**
     
     */
-    class HorizontalLayout extends HorizontalLayoutBase {
+    export default class HorizontalLayout extends HorizontalLayoutBase {
+
 
         /**
             * Constructor for a new layout/HorizontalLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/layout/HorizontalLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

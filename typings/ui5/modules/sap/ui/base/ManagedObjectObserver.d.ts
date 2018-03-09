@@ -1,14 +1,10 @@
 declare module "sap/ui/base/ManagedObjectObserver" {
 
-    export = ManagedObjectObserver;
-
-
-
-
     /**
     
     */
-    class ManagedObjectObserver {
+    export default class ManagedObjectObserver {
+
 
         /**
             * Constructor for a new ManagedObjectObserver.
@@ -51,6 +47,5 @@ declare module "sap/ui/base/ManagedObjectObserver" {
         private unobserve(oObject: sap.ui.base.ManagedObject, oConfiguration: { properties?: boolean | any[], aggregations?: boolean | any[], associations?: boolean | any[], bindings?: boolean | any[], events?: boolean | any[], destroy?: boolean, }): any;
 
     }
-
 
 }

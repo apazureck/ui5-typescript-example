@@ -1,18 +1,13 @@
 declare module "sap/m/List" {
     import ListBase from "sap/m/ListBase";
     import Column from "sap/m/Column";
-    import sapmlibrary from "sap/m/library";
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-
-    export = List;
-
-
-
+    import { BackgroundDesign } from "sap/m/library";
 
     /**
     
     */
-    class List extends ListBase {
+    export default class List extends ListBase {
+
 
         /**
             * Constructor for a new List.
@@ -111,6 +106,5 @@ declare module "sap/m/List" {
         public setBackgroundDesign(sBackgroundDesign: BackgroundDesign): this;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/m/Label" {
-    import sapmlibrary from "sap/m/library";
-    type LabelDesign = sapmlibrary.LabelDesign;
-
-    export = Label;
-
-
-
+    import { LabelDesign } from "sap/m/library";
 
     /**
     
     */
-    class Label extends sap.ui.core.Control {
+    export default class Label extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Label.
@@ -225,6 +220,5 @@ declare module "sap/m/Label" {
         public setWrapping(bWrapping: boolean): this;
 
     }
-
 
 }

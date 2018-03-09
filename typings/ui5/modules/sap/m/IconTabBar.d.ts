@@ -1,19 +1,14 @@
 declare module "sap/m/IconTabBar" {
     import IconTabFilter from "sap/m/IconTabFilter";
-    import sapmlibrary from "sap/m/library";
-    type IconTab = sapmlibrary.IconTab;
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
-    type IconTabHeaderMode = sapmlibrary.IconTabHeaderMode;
-
-    export = IconTabBar;
-
-
-
+    import { IconTab } from "sap/m/library";
+    import { BackgroundDesign } from "sap/m/library";
+    import { IconTabHeaderMode } from "sap/m/library";
 
     /**
     
     */
-    class IconTabBar extends sap.ui.core.Control {
+    export default class IconTabBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new IconTabBar.
@@ -714,6 +709,5 @@ declare module "sap/m/IconTabBar" {
         protected validateAggregation(sAggregationName: string, oObject: sap.ui.base.ManagedObject | any, bMultiple: boolean): sap.ui.base.ManagedObject | any;
 
     }
-
 
 }

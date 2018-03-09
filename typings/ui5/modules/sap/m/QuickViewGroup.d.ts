@@ -1,15 +1,11 @@
 declare module "sap/m/QuickViewGroup" {
     import QuickViewGroupElement from "sap/m/QuickViewGroupElement";
 
-    export = QuickViewGroup;
-
-
-
-
     /**
     
     */
-    class QuickViewGroup extends sap.ui.core.Element {
+    export default class QuickViewGroup extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new QuickViewGroup.
@@ -140,6 +136,5 @@ declare module "sap/m/QuickViewGroup" {
         public unbindElements(): this;
 
     }
-
 
 }

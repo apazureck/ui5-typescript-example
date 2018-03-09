@@ -1,16 +1,11 @@
 declare module "sap/m/Bar" {
-    import sapmlibrary from "sap/m/library";
-    type BarDesign = sapmlibrary.BarDesign;
-
-    export = Bar;
-
-
-
+    import { BarDesign } from "sap/m/library";
 
     /**
     
     */
-    class Bar extends sap.ui.core.Control {
+    export default class Bar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Bar`.
@@ -247,6 +242,5 @@ declare module "sap/m/Bar" {
         public setTranslucent(bTranslucent: boolean): this;
 
     }
-
 
 }

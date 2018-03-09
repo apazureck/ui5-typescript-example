@@ -1,11 +1,7 @@
 declare module "sap/m/routing/TargetHandler" {
 
-    export = TargetHandler;
+    export default class TargetHandler {
 
-
-
-
-    class TargetHandler {
 
         /**
             * Instantiates a TargetHandler, a class used for closing dialogs and showing transitions in NavContainers when targets are displayed.
@@ -37,6 +33,5 @@ declare module "sap/m/routing/TargetHandler" {
         public setCloseDialogs(bCloseDialogs: boolean): this;
 
     }
-
 
 }

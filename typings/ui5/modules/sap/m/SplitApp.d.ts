@@ -1,15 +1,11 @@
 declare module "sap/m/SplitApp" {
     import SplitContainer from "sap/m/SplitContainer";
 
-    export = SplitApp;
-
-
-
-
     /**
     
     */
-    class SplitApp extends SplitContainer {
+    export default class SplitApp extends SplitContainer {
+
 
         /**
             * Constructor for a new SplitApp.
@@ -115,6 +111,5 @@ declare module "sap/m/SplitApp" {
         public setHomeIcon(oHomeIcon: any): this;
 
     }
-
 
 }

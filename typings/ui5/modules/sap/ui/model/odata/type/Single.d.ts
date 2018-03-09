@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Single" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Single;
-
-
-
-
     /**
     
     */
-    class Single extends ODataType {
+    export default class Single extends ODataType {
+
 
         /**
             * Constructor for a primitive type `Edm.Single`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Single" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

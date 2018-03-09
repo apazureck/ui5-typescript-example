@@ -1,9 +1,8 @@
 declare module "sap/ui/core/BusyIndicator" {
+    /**
 
-    export = BusyIndicator;
-
-
-
+*/
+    export default BusyIndicator;
     namespace BusyIndicator {
 
         // Methods
@@ -27,5 +26,4 @@ declare module "sap/ui/core/BusyIndicator" {
     */
         export function show(iDelay?: number): any;
     }
-
 }

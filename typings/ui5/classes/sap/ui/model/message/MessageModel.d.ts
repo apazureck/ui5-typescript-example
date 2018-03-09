@@ -5,6 +5,7 @@ declare namespace sap.ui.model.message {
     */
     export class MessageModel extends sap.ui.model.ClientModel {
 
+
         /**
             * Constructor for a new JSONModel.
         */

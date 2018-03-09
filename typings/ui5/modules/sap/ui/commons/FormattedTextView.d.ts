@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/FormattedTextView" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type FormattedTextViewControl = sapuicommonslibrary.FormattedTextViewControl;
-
-    export = FormattedTextView;
-
-
-
+    import { FormattedTextViewControl } from "sap/ui/commons/library";
 
     /**
     
     */
-    class FormattedTextView extends sap.ui.core.Control {
+    export default class FormattedTextView extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FormattedTextView.
@@ -133,6 +128,5 @@ declare module "sap/ui/commons/FormattedTextView" {
         public setHtmlText(sText: string): any;
 
     }
-
 
 }

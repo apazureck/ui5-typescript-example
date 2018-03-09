@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/GridData" {
 
-    export = GridData;
-
-
-
-
     /**
     
     */
-    class GridData extends sap.ui.core.LayoutData {
+    export default class GridData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new GridData.
@@ -576,6 +572,5 @@ declare module "sap/ui/layout/GridData" {
         public setVisibleXL(bVisibleXL: boolean): this;
 
     }
-
 
 }

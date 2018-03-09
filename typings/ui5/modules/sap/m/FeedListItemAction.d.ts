@@ -1,14 +1,10 @@
 declare module "sap/m/FeedListItemAction" {
 
-    export = FeedListItemAction;
-
-
-
-
     /**
     
     */
-    class FeedListItemAction extends sap.ui.core.Element {
+    export default class FeedListItemAction extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new FeedListItemAction.
@@ -134,6 +130,5 @@ declare module "sap/m/FeedListItemAction" {
         public setText(sText: string): this;
 
     }
-
 
 }

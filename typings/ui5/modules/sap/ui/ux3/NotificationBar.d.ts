@@ -1,16 +1,11 @@
 declare module "sap/ui/ux3/NotificationBar" {
-    import sapuiux3library from "sap/ui/ux3/library";
-    type NotificationBarStatus = sapuiux3library.NotificationBarStatus;
-
-    export = NotificationBar;
-
-
-
+    import { NotificationBarStatus } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class NotificationBar extends sap.ui.core.Control {
+    export default class NotificationBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new NotificationBar.
@@ -233,6 +228,5 @@ declare module "sap/ui/ux3/NotificationBar" {
         public setVisibleStatus(sVisibleStatus: NotificationBarStatus): this;
 
     }
-
 
 }

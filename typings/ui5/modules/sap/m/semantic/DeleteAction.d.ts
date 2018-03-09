@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/DeleteAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = DeleteAction;
-
-
-
-
     /**
     
     */
-    class DeleteAction extends SemanticButton {
+    export default class DeleteAction extends SemanticButton {
+
 
         /**
             * Constructor for a new DeleteAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/DeleteAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

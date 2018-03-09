@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/calendar/MonthPicker" {
 
-    export = MonthPicker;
-
-
-
-
     /**
     
     */
-    class MonthPicker extends sap.ui.core.Control {
+    export default class MonthPicker extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MonthPicker.
@@ -199,6 +195,5 @@ declare module "sap/ui/unified/calendar/MonthPicker" {
         public setPrimaryCalendarType(sPrimaryCalendarType: sap.ui.core.CalendarType): this;
 
     }
-
 
 }

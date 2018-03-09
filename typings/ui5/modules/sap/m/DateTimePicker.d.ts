@@ -1,15 +1,11 @@
 declare module "sap/m/DateTimePicker" {
     import DatePicker from "sap/m/DatePicker";
 
-    export = DateTimePicker;
-
-
-
-
     /**
     
     */
-    class DateTimePicker extends DatePicker {
+    export default class DateTimePicker extends DatePicker {
+
 
         /**
             * Constructor for a new `DateTimePicker`.
@@ -54,6 +50,5 @@ declare module "sap/m/DateTimePicker" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

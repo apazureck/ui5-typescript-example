@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/layout/AbsoluteLayout" {
     import PositionContainer from "sap/ui/commons/layout/PositionContainer";
 
-    export = AbsoluteLayout;
-
-
-
-
     /**
     
     */
-    class AbsoluteLayout extends sap.ui.core.Control {
+    export default class AbsoluteLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new layout/AbsoluteLayout.
@@ -208,6 +204,5 @@ declare module "sap/ui/commons/layout/AbsoluteLayout" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

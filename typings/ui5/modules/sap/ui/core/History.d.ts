@@ -1,14 +1,10 @@
 declare module "sap/ui/core/History" {
 
-    export = History;
-
-
-
-
     /**
     
     */
-    class History extends sap.ui.base.Object {
+    export default class History extends sap.ui.base.Object {
+
 
         /**
             * Creates an instance of the History.
@@ -38,6 +34,5 @@ declare module "sap/ui/core/History" {
         public getMetadata(): any;
 
     }
-
 
 }

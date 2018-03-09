@@ -5,6 +5,7 @@ declare namespace jQuery {
     */
     export class Event {
 
+
         /**
             * Constructor for a jQuery.Event object.
          *  See "http://www.jquery.com" and "http://api.jquery.com/category/events/event-object/".

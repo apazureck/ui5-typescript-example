@@ -1,14 +1,10 @@
 declare module "sap/ui/model/FormatException" {
 
-    export = FormatException;
-
-
-
-
     /**
     
     */
-    class FormatException {
+    export default class FormatException {
+
 
         /**
             * Creates a new FormatException.
@@ -17,6 +13,5 @@ declare module "sap/ui/model/FormatException" {
 
 
     }
-
 
 }

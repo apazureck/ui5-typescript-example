@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/RichTooltip" {
 
-    export = RichTooltip;
-
-
-
-
     /**
     
     */
-    class RichTooltip extends sap.ui.core.TooltipBase {
+    export default class RichTooltip extends sap.ui.core.TooltipBase {
+
 
         /**
             * Constructor for a new RichTooltip.
@@ -111,6 +107,5 @@ declare module "sap/ui/commons/RichTooltip" {
         public setValueStateText(sText: string): this;
 
     }
-
 
 }

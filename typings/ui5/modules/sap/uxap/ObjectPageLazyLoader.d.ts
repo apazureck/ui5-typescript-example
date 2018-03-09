@@ -1,14 +1,10 @@
 declare module "sap/uxap/ObjectPageLazyLoader" {
 
-    export = ObjectPageLazyLoader;
-
-
-
-
     /**
     
     */
-    class ObjectPageLazyLoader extends sap.ui.core.Control {
+    export default class ObjectPageLazyLoader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectPageLazyLoader.
@@ -87,6 +83,5 @@ declare module "sap/uxap/ObjectPageLazyLoader" {
         public removeContent(vContent: number | string | sap.ui.core.Control): sap.ui.core.Control;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/P13nFilterItem" {
     import Item from "sap/ui/core/Item";
 
-    export = P13nFilterItem;
-
-
-
-
     /**
     
     */
-    class P13nFilterItem extends Item {
+    export default class P13nFilterItem extends Item {
+
 
         /**
             * Constructor for a new P13nFilterItem.
@@ -133,6 +129,5 @@ declare module "sap/m/P13nFilterItem" {
         public setValue2(sValue2: string): this;
 
     }
-
 
 }

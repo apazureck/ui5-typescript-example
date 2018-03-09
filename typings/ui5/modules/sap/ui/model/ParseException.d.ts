@@ -1,14 +1,10 @@
 declare module "sap/ui/model/ParseException" {
 
-    export = ParseException;
-
-
-
-
     /**
     
     */
-    class ParseException {
+    export default class ParseException {
+
 
         /**
             * Create a new ParseException.
@@ -17,6 +13,5 @@ declare module "sap/ui/model/ParseException" {
 
 
     }
-
 
 }

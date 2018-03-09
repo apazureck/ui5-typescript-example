@@ -3,15 +3,11 @@ declare module "sap/ui/unified/calendar/MonthsRow" {
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
 
-    export = MonthsRow;
-
-
-
-
     /**
     
     */
-    class MonthsRow extends sap.ui.core.Control {
+    export default class MonthsRow extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `MonthsRow`. It shows a calendar with month granularity
@@ -357,6 +353,5 @@ declare module "sap/ui/unified/calendar/MonthsRow" {
         public setStartDate(oStartDate: any): this;
 
     }
-
 
 }

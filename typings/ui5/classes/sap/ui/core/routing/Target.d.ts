@@ -2,6 +2,7 @@ declare namespace sap.ui.core.routing {
 
     export class Target extends sap.ui.base.EventProvider {
 
+
         /**
             * Provides a convenient way for placing views into the correct containers of your application.
          *  The main benefit of Targets is lazy loading: you do not have to create the views until you really need them.
@@ -9,7 +10,7 @@ declare namespace sap.ui.core.routing {
          *  If you are using the mobile library, please use the {@link sap.m.routing.Targets} constructor, please read the documentation there.
          * 
         */
-        public constructor(oOptions: any, oViews: sap.ui.core.routing.Views, oParent: sap.ui.core.routing.Target);
+        public constructor(oOptions: any, oViews: sap.ui.core.routing.Views, oParent?: sap.ui.core.routing.Target);
 
 
         /**

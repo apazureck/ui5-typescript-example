@@ -1,17 +1,12 @@
 declare module "sap/m/IconTabFilter" {
     import Item from "sap/ui/core/Item";
-    import sapmlibrary from "sap/m/library";
-    type IconTabFilterDesign = sapmlibrary.IconTabFilterDesign;
-
-    export = IconTabFilter;
-
-
-
+    import { IconTabFilterDesign } from "sap/m/library";
 
     /**
     
     */
-    class IconTabFilter extends Item {
+    export default class IconTabFilter extends Item {
+
 
         /**
             * Constructor for a new IconTabFilter.
@@ -250,6 +245,5 @@ declare module "sap/m/IconTabFilter" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

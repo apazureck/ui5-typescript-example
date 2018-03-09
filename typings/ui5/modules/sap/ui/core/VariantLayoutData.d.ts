@@ -1,14 +1,10 @@
 declare module "sap/ui/core/VariantLayoutData" {
 
-    export = VariantLayoutData;
-
-
-
-
     /**
     
     */
-    class VariantLayoutData extends sap.ui.core.LayoutData {
+    export default class VariantLayoutData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new VariantLayoutData.
@@ -87,6 +83,5 @@ declare module "sap/ui/core/VariantLayoutData" {
         public removeMultipleLayoutData(vMultipleLayoutData: number | string | sap.ui.core.LayoutData): sap.ui.core.LayoutData;
 
     }
-
 
 }

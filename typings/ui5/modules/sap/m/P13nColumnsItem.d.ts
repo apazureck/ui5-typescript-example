@@ -1,15 +1,11 @@
 declare module "sap/m/P13nColumnsItem" {
     import Item from "sap/ui/core/Item";
 
-    export = P13nColumnsItem;
-
-
-
-
     /**
     
     */
-    class P13nColumnsItem extends Item {
+    export default class P13nColumnsItem extends Item {
+
 
         /**
             * Constructor for a new P13nColumnsItem.
@@ -129,6 +125,5 @@ declare module "sap/m/P13nColumnsItem" {
         public setWidth(sWidth: string): this;
 
     }
-
 
 }

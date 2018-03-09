@@ -3,15 +3,11 @@ declare module "sap/ui/unified/calendar/TimesRow" {
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
 
-    export = TimesRow;
-
-
-
-
     /**
     
     */
-    class TimesRow extends sap.ui.core.Control {
+    export default class TimesRow extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `TimesRow`. It shows a calendar with time granularity (normally hours)
@@ -385,6 +381,5 @@ declare module "sap/ui/unified/calendar/TimesRow" {
         public setStartDate(oStartDate: any): this;
 
     }
-
 
 }

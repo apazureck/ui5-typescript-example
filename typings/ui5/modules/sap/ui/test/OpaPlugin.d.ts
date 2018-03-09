@@ -1,14 +1,10 @@
 declare module "sap/ui/test/OpaPlugin" {
 
-    export = OpaPlugin;
-
-
-
-
     /**
     
     */
-    class OpaPlugin {
+    export default class OpaPlugin {
+
 
         /**
             
@@ -65,6 +61,5 @@ declare module "sap/ui/test/OpaPlugin" {
         public getView(sViewName: string): sap.ui.core.mvc.View;
 
     }
-
 
 }

@@ -1,15 +1,17 @@
 declare module "sap/ui/model/odata/type/ODataType" {
     import SimpleType from "sap/ui/model/SimpleType";
+    /**
 
-    export = ODataType;
+*/
+    namespace type {
 
-
-
+    }
 
     /**
     
     */
-    class ODataType extends SimpleType {
+    export default abstract class ODataType extends SimpleType {
+
 
         /**
             * Constructor for a new `ODataType`.
@@ -47,6 +49,5 @@ declare module "sap/ui/model/odata/type/ODataType" {
         public getMetadata(): any;
 
     }
-
 
 }

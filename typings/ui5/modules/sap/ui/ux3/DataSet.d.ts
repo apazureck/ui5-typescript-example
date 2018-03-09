@@ -1,19 +1,13 @@
 declare module "sap/ui/ux3/DataSet" {
     import DataSetItem from "sap/ui/ux3/DataSetItem";
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type ToolbarItem = sapuicommonslibrary.ToolbarItem;
-    import sapuiux3library from "sap/ui/ux3/library";
-    type DataSetView = sapuiux3library.DataSetView;
-
-    export = DataSet;
-
-
-
+    import { ToolbarItem } from "sap/ui/commons/library";
+    import { DataSetView } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class DataSet extends sap.ui.core.Control {
+    export default class DataSet extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new DataSet.
@@ -396,6 +390,5 @@ declare module "sap/ui/ux3/DataSet" {
         public unbindItems(): this;
 
     }
-
 
 }

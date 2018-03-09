@@ -1,20 +1,16 @@
 declare module "sap/m/semantic/SemanticPage" {
     import Button from "sap/m/Button";
-    import sapmlibrary from "sap/m/library";
-    type PageBackgroundDesign = sapmlibrary.PageBackgroundDesign;
+    import { PageBackgroundDesign } from "sap/m/library";
     import PageAccessibleLandmarkInfo from "sap/m/PageAccessibleLandmarkInfo";
-    type SemanticRuleSetType = sapmlibrary.semantic.SemanticRuleSetType;
-    type IBar = sapmlibrary.IBar;
-
-    export = SemanticPage;
-
-
-
+    import { semantic } from "sap/m/library";
+    type SemanticRuleSetType = semantic.SemanticRuleSetType;
+    import { IBar } from "sap/m/library";
 
     /**
     
     */
-    class SemanticPage extends sap.ui.core.Control {
+    export default abstract class SemanticPage extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `SemanticPage`.
@@ -413,6 +409,5 @@ declare module "sap/m/semantic/SemanticPage" {
         public setTitleLevel(sTitleLevel: sap.ui.core.TitleLevel): this;
 
     }
-
 
 }

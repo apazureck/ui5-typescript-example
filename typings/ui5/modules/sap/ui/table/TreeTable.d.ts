@@ -1,15 +1,11 @@
 declare module "sap/ui/table/TreeTable" {
     import Table from "sap/ui/table/Table";
 
-    export = TreeTable;
-
-
-
-
     /**
     
     */
-    class TreeTable extends Table {
+    export default class TreeTable extends Table {
+
 
         /**
             * Constructor for a new TreeTable.
@@ -327,6 +323,5 @@ declare module "sap/ui/table/TreeTable" {
         public setUseGroupMode(bUseGroupMode: boolean): this;
 
     }
-
 
 }

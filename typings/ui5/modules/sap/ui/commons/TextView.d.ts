@@ -1,17 +1,12 @@
 declare module "sap/ui/commons/TextView" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type TextViewDesign = sapuicommonslibrary.TextViewDesign;
-    type TextViewColor = sapuicommonslibrary.TextViewColor;
-
-    export = TextView;
-
-
-
+    import { TextViewDesign } from "sap/ui/commons/library";
+    import { TextViewColor } from "sap/ui/commons/library";
 
     /**
     
     */
-    class TextView extends sap.ui.core.Control {
+    export default class TextView extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new TextView.
@@ -300,6 +295,5 @@ declare module "sap/ui/commons/TextView" {
         public unbindText(): this;
 
     }
-
 
 }

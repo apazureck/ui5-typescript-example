@@ -2,15 +2,11 @@ declare module "sap/m/MessageItem" {
     import Item from "sap/ui/core/Item";
     import Link from "sap/m/Link";
 
-    export = MessageItem;
-
-
-
-
     /**
     
     */
-    class MessageItem extends Item {
+    export default class MessageItem extends Item {
+
 
         /**
             * Constructor for a new MessageItem.
@@ -209,6 +205,5 @@ declare module "sap/m/MessageItem" {
         public setType(sType: sap.ui.core.MessageType): this;
 
     }
-
 
 }

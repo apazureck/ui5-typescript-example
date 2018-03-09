@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/VerticalLayout" {
 
-    export = VerticalLayout;
-
-
-
-
     /**
     
     */
-    class VerticalLayout extends sap.ui.core.Control {
+    export default class VerticalLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new VerticalLayout.
@@ -124,6 +120,5 @@ declare module "sap/ui/layout/VerticalLayout" {
         public setWidth(width: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

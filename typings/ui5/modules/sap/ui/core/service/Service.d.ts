@@ -1,14 +1,10 @@
 declare module "sap/ui/core/service/Service" {
 
-    export = Service;
-
-
-
-
     /**
     
     */
-    class Service extends sap.ui.base.Object {
+    export default abstract class Service extends sap.ui.base.Object {
+
 
         /**
             * Creates a service for the given context.
@@ -89,6 +85,5 @@ declare module "sap/ui/core/service/Service" {
         protected init(): any;
 
     }
-
 
 }

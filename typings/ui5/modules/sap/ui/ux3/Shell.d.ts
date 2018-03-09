@@ -2,21 +2,16 @@ declare module "sap/ui/ux3/Shell" {
     import Item from "sap/ui/core/Item";
     import NavigationItem from "sap/ui/ux3/NavigationItem";
     import ToolPopup from "sap/ui/ux3/ToolPopup";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type ShellDesignType = sapuiux3library.ShellDesignType;
-    type ShellHeaderType = sapuiux3library.ShellHeaderType;
+    import { ShellDesignType } from "sap/ui/ux3/library";
+    import { ShellHeaderType } from "sap/ui/ux3/library";
     import NotificationBar from "sap/ui/ux3/NotificationBar";
     import SearchField from "sap/ui/commons/SearchField";
-
-    export = Shell;
-
-
-
 
     /**
     
     */
-    class Shell extends sap.ui.core.Control {
+    export default class Shell extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Shell.
@@ -879,6 +874,5 @@ declare module "sap/ui/ux3/Shell" {
         public setShowTools(bShowTools: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/HBox" {
     import FlexBox from "sap/m/FlexBox";
 
-    export = HBox;
-
-
-
-
     /**
     
     */
-    class HBox extends FlexBox {
+    export default class HBox extends FlexBox {
+
 
         /**
             * Constructor for a new HBox.
@@ -47,6 +43,5 @@ declare module "sap/m/HBox" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

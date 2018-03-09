@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/GroupAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = GroupAction;
-
-
-
-
     /**
     
     */
-    class GroupAction extends SemanticButton {
+    export default class GroupAction extends SemanticButton {
+
 
         /**
             * Constructor for a new GroupAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/GroupAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

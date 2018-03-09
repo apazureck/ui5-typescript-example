@@ -1,9 +1,7 @@
-declare module "sap/ui/core/dnd/DragAndDrop/DragSession" {
+declare module "sap/ui/core/dnd/DragAndDrop" {
+    /**
 
-    export = DragSession;
-
-
-
+*/
     namespace DragSession {
 
         // Methods
@@ -33,5 +31,4 @@ declare module "sap/ui/core/dnd/DragAndDrop/DragSession" {
         */
         export const dropControl: sap.ui.core.Element;
     }
-
 }

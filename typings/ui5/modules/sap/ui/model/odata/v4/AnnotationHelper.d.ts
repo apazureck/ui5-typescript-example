@@ -1,10 +1,9 @@
 declare module "sap/ui/model/odata/v4/AnnotationHelper" {
     import ValueListType from "sap/ui/model/odata/v4/ValueListType";
+    /**
 
-    export = AnnotationHelper;
-
-
-
+*/
+    export default AnnotationHelper;
     namespace AnnotationHelper {
 
         // Methods
@@ -34,5 +33,4 @@ declare module "sap/ui/model/odata/v4/AnnotationHelper" {
     */
         export function value(vRawValue: any, oDetails: { context: sap.ui.model.Context, }): string;
     }
-
 }

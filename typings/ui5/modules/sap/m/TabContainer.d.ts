@@ -1,15 +1,11 @@
 declare module "sap/m/TabContainer" {
     import TabContainerItem from "sap/m/TabContainerItem";
 
-    export = TabContainer;
-
-
-
-
     /**
     
     */
-    class TabContainer extends sap.ui.core.Control {
+    export default class TabContainer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `TabContainer`.
@@ -232,6 +228,5 @@ declare module "sap/m/TabContainer" {
         public unbindItems(): this;
 
     }
-
 
 }

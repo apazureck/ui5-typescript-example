@@ -1,19 +1,14 @@
 declare module "sap/m/Toolbar" {
-    import sapmlibrary from "sap/m/library";
-    type IBar = sapmlibrary.IBar;
-    type ToolbarDesign = sapmlibrary.ToolbarDesign;
-    type IBarHTMLTag = sapmlibrary.IBarHTMLTag;
+    import { IBar } from "sap/m/library";
+    import { ToolbarDesign } from "sap/m/library";
+    import { IBarHTMLTag } from "sap/m/library";
     import Title from "sap/m/Title";
-
-    export = Toolbar;
-
-
-
 
     /**
     
     */
-    class Toolbar extends sap.ui.core.Control {
+    export default class Toolbar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `Toolbar`.
@@ -291,6 +286,5 @@ declare module "sap/m/Toolbar" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

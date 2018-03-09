@@ -3,15 +3,11 @@ declare module "sap/ui/model/odata/v4/Context" {
     import ODataListBinding from "sap/ui/model/odata/v4/ODataListBinding";
     import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 
-    export = Context;
-
-
-
-
     /**
     
     */
-    class Context extends sap.ui.model.Context {
+    export default class Context extends sap.ui.model.Context {
+
 
         /**
             * Do ** NOT ** call this private constructor. In the OData V4 model you cannot create contexts at will: retrieve them from a binding or a view element instead.
@@ -110,6 +106,5 @@ declare module "sap/ui/model/odata/v4/Context" {
         public toString(): string;
 
     }
-
 
 }

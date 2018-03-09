@@ -1,14 +1,10 @@
 declare module "sap/m/UploadCollectionParameter" {
 
-    export = UploadCollectionParameter;
-
-
-
-
     /**
     
     */
-    class UploadCollectionParameter extends sap.ui.core.Element {
+    export default class UploadCollectionParameter extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new UploadCollectionParameter.
@@ -80,6 +76,5 @@ declare module "sap/m/UploadCollectionParameter" {
         public setValue(sValue: string): this;
 
     }
-
 
 }

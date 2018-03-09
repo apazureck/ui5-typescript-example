@@ -4,15 +4,11 @@ declare module "sap/m/DatePicker" {
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
 
-    export = DatePicker;
-
-
-
-
     /**
     
     */
-    class DatePicker extends DateTimeField {
+    export default class DatePicker extends DateTimeField {
+
 
         /**
             * Constructor for a new `DatePicker`.
@@ -295,6 +291,5 @@ declare module "sap/m/DatePicker" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

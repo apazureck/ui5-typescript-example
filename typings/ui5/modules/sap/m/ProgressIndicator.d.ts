@@ -1,14 +1,10 @@
 declare module "sap/m/ProgressIndicator" {
 
-    export = ProgressIndicator;
-
-
-
-
     /**
     
     */
-    class ProgressIndicator extends sap.ui.core.Control {
+    export default class ProgressIndicator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ProgressIndicator.
@@ -225,6 +221,5 @@ declare module "sap/m/ProgressIndicator" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

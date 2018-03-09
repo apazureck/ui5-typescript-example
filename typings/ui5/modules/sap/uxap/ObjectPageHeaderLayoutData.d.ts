@@ -1,14 +1,10 @@
 declare module "sap/uxap/ObjectPageHeaderLayoutData" {
 
-    export = ObjectPageHeaderLayoutData;
-
-
-
-
     /**
     
     */
-    class ObjectPageHeaderLayoutData extends sap.ui.core.LayoutData {
+    export default class ObjectPageHeaderLayoutData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new ObjectPageHeaderLayoutData.
@@ -168,6 +164,5 @@ declare module "sap/uxap/ObjectPageHeaderLayoutData" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

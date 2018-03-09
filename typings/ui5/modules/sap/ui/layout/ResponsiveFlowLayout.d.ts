@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/ResponsiveFlowLayout" {
 
-    export = ResponsiveFlowLayout;
-
-
-
-
     /**
     
     */
-    class ResponsiveFlowLayout extends sap.ui.core.Control {
+    export default class ResponsiveFlowLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ResponsiveFlowLayout.
@@ -127,6 +123,5 @@ declare module "sap/ui/layout/ResponsiveFlowLayout" {
         public setResponsive(bResponsive: boolean): this;
 
     }
-
 
 }

@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/NegativeAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = NegativeAction;
-
-
-
-
     /**
     
     */
-    class NegativeAction extends SemanticButton {
+    export default class NegativeAction extends SemanticButton {
+
 
         /**
             * Constructor for a new NegativeAction.
@@ -65,6 +61,5 @@ declare module "sap/m/semantic/NegativeAction" {
         public setText(sText: string): this;
 
     }
-
 
 }

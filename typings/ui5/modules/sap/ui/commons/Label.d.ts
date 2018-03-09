@@ -1,16 +1,11 @@
 declare module "sap/ui/commons/Label" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type LabelDesign = sapuicommonslibrary.LabelDesign;
-
-    export = Label;
-
-
-
+    import { LabelDesign } from "sap/ui/commons/library";
 
     /**
     
     */
-    class Label extends sap.ui.core.Control {
+    export default class Label extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Label.
@@ -237,6 +232,5 @@ declare module "sap/ui/commons/Label" {
         public setWrapping(bWrapping: boolean): this;
 
     }
-
 
 }

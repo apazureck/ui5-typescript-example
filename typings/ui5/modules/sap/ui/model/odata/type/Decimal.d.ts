@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Decimal" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Decimal;
-
-
-
-
     /**
     
     */
-    class Decimal extends ODataType {
+    export default class Decimal extends ODataType {
+
 
         /**
             * Constructor for a primitive type `Edm.Decimal`.
@@ -72,6 +68,5 @@ declare module "sap/ui/model/odata/type/Decimal" {
         public validateValue(oValue: any): any;
 
     }
-
 
 }

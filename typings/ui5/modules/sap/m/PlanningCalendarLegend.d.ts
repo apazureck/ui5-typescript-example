@@ -1,15 +1,11 @@
 declare module "sap/m/PlanningCalendarLegend" {
     import CalendarLegendItem from "sap/ui/unified/CalendarLegendItem";
 
-    export = PlanningCalendarLegend;
-
-
-
-
     /**
     
     */
-    class PlanningCalendarLegend extends sap.ui.core.Control {
+    export default class PlanningCalendarLegend extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `PlanningCalendarLegend`.
@@ -148,6 +144,5 @@ declare module "sap/m/PlanningCalendarLegend" {
         public setStandardItems(sStandardItems: any[]): this;
 
     }
-
 
 }

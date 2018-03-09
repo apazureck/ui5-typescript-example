@@ -3,15 +3,11 @@ declare module "sap/ui/model/odata/v4/ODataMetaModel" {
     import ValueListType from "sap/ui/model/odata/v4/ValueListType";
     import ODataModel from "sap/ui/model/odata/v4/ODataModel";
 
-    export = ODataMetaModel;
-
-
-
-
     /**
     
     */
-    class ODataMetaModel extends sap.ui.model.MetaModel {
+    export default class ODataMetaModel extends sap.ui.model.MetaModel {
+
 
         /**
             * Do ** NOT ** call this private constructor, but rather use {@link sap.ui.model.odata.v4.ODataModel#getMetaModel} instead.
@@ -196,6 +192,5 @@ declare module "sap/ui/model/odata/v4/ODataMetaModel" {
         public toString(): string;
 
     }
-
 
 }

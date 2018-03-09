@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/CodeViewer" {
 
-    export = CodeViewer;
-
-
-
-
     /**
     
     */
-    class CodeViewer extends sap.ui.core.Control {
+    export default class CodeViewer extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new CodeViewer.
@@ -231,6 +227,5 @@ declare module "sap/ui/demokit/CodeViewer" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

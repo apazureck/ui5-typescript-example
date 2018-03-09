@@ -1,17 +1,12 @@
 declare module "sap/m/StandardTile" {
     import Tile from "sap/m/Tile";
-    import sapmlibrary from "sap/m/library";
-    type StandardTileType = sapmlibrary.StandardTileType;
-
-    export = StandardTile;
-
-
-
+    import { StandardTileType } from "sap/m/library";
 
     /**
     
     */
-    class StandardTile extends Tile {
+    export default class StandardTile extends Tile {
+
 
         /**
             * Constructor for a new StandardTile.
@@ -229,6 +224,5 @@ declare module "sap/m/StandardTile" {
         public setType(sType: StandardTileType): this;
 
     }
-
 
 }

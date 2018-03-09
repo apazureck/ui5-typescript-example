@@ -1,17 +1,12 @@
 declare module "sap/ui/commons/MenuBar" {
     import MenuItem from "sap/ui/unified/MenuItem";
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type MenuBarDesign = sapuicommonslibrary.MenuBarDesign;
-
-    export = MenuBar;
-
-
-
+    import { MenuBarDesign } from "sap/ui/commons/library";
 
     /**
     
     */
-    class MenuBar extends sap.ui.core.Control {
+    export default class MenuBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new MenuBar.
@@ -150,6 +145,5 @@ declare module "sap/ui/commons/MenuBar" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

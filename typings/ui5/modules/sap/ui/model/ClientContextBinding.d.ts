@@ -1,14 +1,10 @@
 declare module "sap/ui/model/ClientContextBinding" {
 
-    export = ClientContextBinding;
-
-
-
-
     /**
     
     */
-    class ClientContextBinding extends sap.ui.model.ContextBinding {
+    export default abstract class ClientContextBinding extends sap.ui.model.ContextBinding {
+
 
         /**
             * Constructor for ClientContextBinding
@@ -36,6 +32,5 @@ declare module "sap/ui/model/ClientContextBinding" {
         public getMetadata(): any;
 
     }
-
 
 }

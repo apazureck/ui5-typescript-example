@@ -1,15 +1,11 @@
 declare module "sap/ui/test/matchers/AggregationLengthEquals" {
     import Matcher from "sap/ui/test/matchers/Matcher";
 
-    export = AggregationLengthEquals;
-
-
-
-
     /**
     
     */
-    class AggregationLengthEquals extends Matcher {
+    export default class AggregationLengthEquals extends Matcher {
+
 
         /**
             * AggregationLengthEquals - checks if an aggregation contains at least one entry.
@@ -88,6 +84,5 @@ declare module "sap/ui/test/matchers/AggregationLengthEquals" {
         public setName(sName: string): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/demokit/UI5EntityCueCard" {
 
-    export = UI5EntityCueCard;
-
-
-
-
     /**
     
     */
-    class UI5EntityCueCard extends sap.ui.core.Control {
+    export default class UI5EntityCueCard extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new UI5EntityCueCard.
@@ -184,6 +180,5 @@ declare module "sap/ui/demokit/UI5EntityCueCard" {
         public setStyle(sStyle: any): this;
 
     }
-
 
 }

@@ -3,7 +3,8 @@ declare namespace sap.ui.core {
     /**
     
     */
-    export class UIComponent extends sap.ui.core.Component {
+    export abstract class UIComponent extends sap.ui.core.Component {
+
 
         /**
             * Base Class for UIComponent.
@@ -12,7 +13,7 @@ declare namespace sap.ui.core {
          * 
          * Accepts an object literal `mSettings` that defines initial property values, aggregated and associated objects as well as event handlers. See {@link sap.ui.base.ManagedObject#constructor} for a general description of the syntax of the settings object.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

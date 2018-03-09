@@ -1,15 +1,11 @@
 declare module "sap/ui/commons/SegmentedButton" {
     import Button from "sap/ui/commons/Button";
 
-    export = SegmentedButton;
-
-
-
-
     /**
     
     */
-    class SegmentedButton extends sap.ui.core.Control {
+    export default class SegmentedButton extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SegmentedButton.
@@ -157,6 +153,5 @@ declare module "sap/ui/commons/SegmentedButton" {
         public setSelectedButton(oSelectedButton: sap.ui.core.ID | Button): this;
 
     }
-
 
 }

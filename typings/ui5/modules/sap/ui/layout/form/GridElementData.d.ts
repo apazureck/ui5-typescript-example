@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/form/GridElementData" {
 
-    export = GridElementData;
-
-
-
-
     /**
     
     */
-    class GridElementData extends sap.ui.core.LayoutData {
+    export default class GridElementData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.GridElementData.
@@ -104,6 +100,5 @@ declare module "sap/ui/layout/form/GridElementData" {
         public setVCells(iVCells: number): this;
 
     }
-
 
 }

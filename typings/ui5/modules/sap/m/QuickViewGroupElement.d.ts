@@ -1,16 +1,11 @@
 declare module "sap/m/QuickViewGroupElement" {
-    import sapmlibrary from "sap/m/library";
-    type QuickViewGroupElementType = sapmlibrary.QuickViewGroupElementType;
-
-    export = QuickViewGroupElement;
-
-
-
+    import { QuickViewGroupElementType } from "sap/m/library";
 
     /**
     
     */
-    class QuickViewGroupElement extends sap.ui.core.Element {
+    export default class QuickViewGroupElement extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new QuickViewGroupElement.
@@ -210,6 +205,5 @@ declare module "sap/m/QuickViewGroupElement" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

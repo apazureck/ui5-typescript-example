@@ -3,15 +3,11 @@ declare module "sap/ui/unified/Shell" {
     import ShellHeadItem from "sap/ui/unified/ShellHeadItem";
     import ShellHeadUserItem from "sap/ui/unified/ShellHeadUserItem";
 
-    export = Shell;
-
-
-
-
     /**
     
     */
-    class Shell extends ShellLayout {
+    export default class Shell extends ShellLayout {
+
 
         /**
             * Constructor for a new Shell.
@@ -319,6 +315,5 @@ declare module "sap/ui/unified/Shell" {
         public setUser(oUser: ShellHeadUserItem): this;
 
     }
-
 
 }

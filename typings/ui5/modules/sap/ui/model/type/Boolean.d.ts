@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Boolean" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = Boolean;
-
-
-
-
     /**
     
     */
-    class Boolean extends SimpleType {
+    export default class Boolean extends SimpleType {
+
 
         /**
             * Constructor for a Boolean type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/Boolean" {
         public getMetadata(): any;
 
     }
-
 
 }

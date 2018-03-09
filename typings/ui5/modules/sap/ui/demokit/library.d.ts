@@ -1,21 +1,19 @@
 declare module "sap/ui/demokit/library" {
+    /**
 
-    export = demokit;
-
+*/
+    export default demokit;
     namespace demokit {
 
     }
-
-    namespace demokit {
-
-        /** 
-    * Different styles for an entity cue card. 
-    */
-        enum UI5EntityCueCardStyle {
-            Demokit = "Demokit",
-            Standard = "Standard",
-        }
+    /** 
+* Different styles for an entity cue card. 
+*/
 
 
+    export enum UI5EntityCueCardStyle {
+        Demokit = "Demokit",
+        Standard = "Standard",
     }
+
 }

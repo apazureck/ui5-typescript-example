@@ -3,15 +3,11 @@ declare module "sap/ui/layout/form/Form" {
     import FormLayout from "sap/ui/layout/form/FormLayout";
     import Title from "sap/ui/core/Title";
 
-    export = Form;
-
-
-
-
     /**
     
     */
-    class Form extends sap.ui.core.Control {
+    export default class Form extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.Form.
@@ -209,6 +205,5 @@ declare module "sap/ui/layout/form/Form" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

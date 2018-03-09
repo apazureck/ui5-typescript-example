@@ -1,15 +1,11 @@
 declare module "sap/ui/model/json/JSONTreeBinding" {
     import JSONModel from "sap/ui/model/json/JSONModel";
 
-    export = JSONTreeBinding;
-
-
-
-
     /**
     
     */
-    class JSONTreeBinding {
+    export default class JSONTreeBinding {
+
 
         /**
             
@@ -23,6 +19,5 @@ declare module "sap/ui/model/json/JSONTreeBinding" {
 
 
     }
-
 
 }

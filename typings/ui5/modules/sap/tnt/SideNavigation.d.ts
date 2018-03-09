@@ -3,15 +3,11 @@ declare module "sap/tnt/SideNavigation" {
     import NavigationList from "sap/tnt/NavigationList";
     import NavigationListItem from "sap/tnt/NavigationListItem";
 
-    export = SideNavigation;
-
-
-
-
     /**
     
     */
-    class SideNavigation extends sap.ui.core.Control {
+    export default class SideNavigation extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SideNavigation.
@@ -183,6 +179,5 @@ declare module "sap/tnt/SideNavigation" {
         public unbindItem(): this;
 
     }
-
 
 }

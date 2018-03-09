@@ -4,15 +4,11 @@ declare module "sap/m/ComboBox" {
     import Popover from "sap/m/Popover";
     import Dialog from "sap/m/Dialog";
 
-    export = ComboBox;
-
-
-
-
     /**
     
     */
-    class ComboBox extends ComboBoxBase {
+    export default class ComboBox extends ComboBoxBase {
+
 
         /**
             * Constructor for a new ComboBox.
@@ -260,6 +256,5 @@ declare module "sap/m/ComboBox" {
         protected synchronizeSelection(): any;
 
     }
-
 
 }

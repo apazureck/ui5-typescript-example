@@ -1,24 +1,19 @@
 declare module "sap/m/ListBase" {
     import ListItemBase from "sap/m/ListItemBase";
-    import sapmlibrary from "sap/m/library";
-    type ListGrowingDirection = sapmlibrary.ListGrowingDirection;
-    type ListHeaderDesign = sapmlibrary.ListHeaderDesign;
+    import { ListGrowingDirection } from "sap/m/library";
+    import { ListHeaderDesign } from "sap/m/library";
     import Toolbar from "sap/m/Toolbar";
     import ItemNavigation from "sap/ui/core/delegate/ItemNavigation";
-    type ListKeyboardMode = sapmlibrary.ListKeyboardMode;
-    type ListMode = sapmlibrary.ListMode;
-    type ListSeparators = sapmlibrary.ListSeparators;
-    type SwipeDirection = sapmlibrary.SwipeDirection;
-
-    export = ListBase;
-
-
-
+    import { ListKeyboardMode } from "sap/m/library";
+    import { ListMode } from "sap/m/library";
+    import { ListSeparators } from "sap/m/library";
+    import { SwipeDirection } from "sap/m/library";
 
     /**
     
     */
-    class ListBase extends sap.ui.core.Control {
+    export default class ListBase extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ListBase.
@@ -980,6 +975,5 @@ declare module "sap/m/ListBase" {
         public unbindItems(): this;
 
     }
-
 
 }

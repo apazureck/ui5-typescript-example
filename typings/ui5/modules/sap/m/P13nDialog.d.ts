@@ -2,15 +2,11 @@ declare module "sap/m/P13nDialog" {
     import Dialog from "sap/m/Dialog";
     import P13nPanel from "sap/m/P13nPanel";
 
-    export = P13nDialog;
-
-
-
-
     /**
     
     */
-    class P13nDialog extends Dialog {
+    export default class P13nDialog extends Dialog {
+
 
         /**
             * Constructor for a new P13nDialog.
@@ -268,6 +264,5 @@ declare module "sap/m/P13nDialog" {
         public unbindPanels(): this;
 
     }
-
 
 }

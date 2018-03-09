@@ -3,15 +3,11 @@ declare module "sap/ui/model/odata/v2/ODataListBinding" {
     import CountMode from "sap/ui/model/odata/CountMode";
     import OperationMode from "sap/ui/model/odata/OperationMode";
 
-    export = ODataListBinding;
-
-
-
-
     /**
     
     */
-    class ODataListBinding extends sap.ui.model.ListBinding {
+    export default class ODataListBinding extends sap.ui.model.ListBinding {
+
 
         /**
             
@@ -85,6 +81,5 @@ declare module "sap/ui/model/odata/v2/ODataListBinding" {
         public sort(aSorters: sap.ui.model.Sorter | any[], bReturnSuccess?: boolean): sap.ui.model.ListBinding;
 
     }
-
 
 }

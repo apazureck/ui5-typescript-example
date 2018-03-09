@@ -1,17 +1,12 @@
 declare module "sap/uxap/ObjectPageSectionBase" {
     import Button from "sap/m/Button";
-    import sapuxaplibrary from "sap/uxap/library";
-    type Importance = sapuxaplibrary.Importance;
-
-    export = ObjectPageSectionBase;
-
-
-
+    import { Importance } from "sap/uxap/library";
 
     /**
     
     */
-    class ObjectPageSectionBase extends sap.ui.core.Control {
+    export default abstract class ObjectPageSectionBase extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ObjectPageSectionBase.
@@ -170,6 +165,5 @@ declare module "sap/uxap/ObjectPageSectionBase" {
         public setVisible(bVisible: boolean): sap.ui.core.Control;
 
     }
-
 
 }

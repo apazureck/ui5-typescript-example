@@ -3,15 +3,11 @@ declare module "sap/m/P13nDimMeasurePanel" {
     import Item from "sap/ui/core/Item";
     import P13nDimMeasureItem from "sap/m/P13nDimMeasureItem";
 
-    export = P13nDimMeasurePanel;
-
-
-
-
     /**
     
     */
-    class P13nDimMeasurePanel extends P13nPanel {
+    export default class P13nDimMeasurePanel extends P13nPanel {
+
 
         /**
             * Constructor for a new P13nDimMeasurePanel.
@@ -221,6 +217,5 @@ declare module "sap/m/P13nDimMeasurePanel" {
         public unbindDimMeasureItems(): this;
 
     }
-
 
 }

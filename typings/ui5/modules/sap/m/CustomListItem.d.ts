@@ -1,15 +1,11 @@
 declare module "sap/m/CustomListItem" {
     import ListItemBase from "sap/m/ListItemBase";
 
-    export = CustomListItem;
-
-
-
-
     /**
     
     */
-    class CustomListItem extends ListItemBase {
+    export default class CustomListItem extends ListItemBase {
+
 
         /**
             * Constructor for a new CustomListItem.
@@ -100,6 +96,5 @@ declare module "sap/m/CustomListItem" {
         public unbindContent(): this;
 
     }
-
 
 }

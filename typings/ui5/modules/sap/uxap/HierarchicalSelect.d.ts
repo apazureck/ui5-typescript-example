@@ -1,15 +1,11 @@
 declare module "sap/uxap/HierarchicalSelect" {
     import Select from "sap/m/Select";
 
-    export = HierarchicalSelect;
-
-
-
-
     /**
     
     */
-    class HierarchicalSelect extends Select {
+    export default class HierarchicalSelect extends Select {
+
 
         /**
             * Constructor for a new HierarchicalSelect.
@@ -69,6 +65,5 @@ declare module "sap/uxap/HierarchicalSelect" {
         public setUpperCase(bUpperCase: boolean): this;
 
     }
-
 
 }

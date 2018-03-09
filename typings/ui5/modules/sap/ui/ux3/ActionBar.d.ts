@@ -1,17 +1,12 @@
 declare module "sap/ui/ux3/ActionBar" {
     import ThingAction from "sap/ui/ux3/ThingAction";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type FollowActionState = sapuiux3library.FollowActionState;
-
-    export = ActionBar;
-
-
-
+    import { FollowActionState } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class ActionBar extends sap.ui.core.Control {
+    export default class ActionBar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ActionBar.
@@ -369,6 +364,5 @@ declare module "sap/ui/ux3/ActionBar" {
         public setUpdateState(bUpdateState: boolean): this;
 
     }
-
 
 }

@@ -3,15 +3,11 @@ declare module "sap/ui/unified/Calendar" {
     import DateTypeRange from "sap/ui/unified/DateTypeRange";
     import CalendarLegend from "sap/ui/unified/CalendarLegend";
 
-    export = Calendar;
-
-
-
-
     /**
     
     */
-    class Calendar extends sap.ui.core.Control {
+    export default class Calendar extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Calendar.
@@ -533,6 +529,5 @@ declare module "sap/ui/unified/Calendar" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

@@ -1,16 +1,11 @@
 declare module "sap/m/FormattedText" {
-    import sapmlibrary from "sap/m/library";
-    type LinkConversion = sapmlibrary.LinkConversion;
-
-    export = FormattedText;
-
-
-
+    import { LinkConversion } from "sap/m/library";
 
     /**
     
     */
-    class FormattedText extends sap.ui.core.Control {
+    export default class FormattedText extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FormattedText.
@@ -142,6 +137,5 @@ declare module "sap/m/FormattedText" {
         public setWidth(sWidth: sap.ui.core.CSSSize): this;
 
     }
-
 
 }

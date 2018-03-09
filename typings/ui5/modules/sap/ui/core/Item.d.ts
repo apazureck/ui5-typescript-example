@@ -1,14 +1,10 @@
 declare module "sap/ui/core/Item" {
 
-    export = Item;
-
-
-
-
     /**
     
     */
-    class Item extends sap.ui.core.Element {
+    export default class Item extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new Item.
@@ -124,6 +120,5 @@ declare module "sap/ui/core/Item" {
         public setTextDirection(sTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

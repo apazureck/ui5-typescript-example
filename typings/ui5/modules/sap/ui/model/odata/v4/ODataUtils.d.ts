@@ -1,9 +1,8 @@
 declare module "sap/ui/model/odata/v4/ODataUtils" {
+    /**
 
-    export = ODataUtils;
-
-
-
+*/
+    export default ODataUtils;
     namespace ODataUtils {
 
         // Methods
@@ -21,5 +20,4 @@ declare module "sap/ui/model/odata/v4/ODataUtils" {
     */
         export function parseTimeOfDay(sTimeOfDay: string): any;
     }
-
 }

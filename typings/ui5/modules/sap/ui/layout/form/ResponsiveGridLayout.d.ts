@@ -1,15 +1,11 @@
 declare module "sap/ui/layout/form/ResponsiveGridLayout" {
     import FormLayout from "sap/ui/layout/form/FormLayout";
 
-    export = ResponsiveGridLayout;
-
-
-
-
     /**
     
     */
-    class ResponsiveGridLayout extends FormLayout {
+    export default class ResponsiveGridLayout extends FormLayout {
+
 
         /**
             * Constructor for a new `sap.ui.layout.form.ResponsiveGridLayout`.
@@ -401,6 +397,5 @@ declare module "sap/ui/layout/form/ResponsiveGridLayout" {
         public setSingleContainerFullSize(bSingleContainerFullSize: boolean): this;
 
     }
-
 
 }

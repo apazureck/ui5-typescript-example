@@ -2,10 +2,11 @@ declare namespace sap.ui.core.message {
 
     export class Message extends sap.ui.base.Object {
 
+
         /**
             * Constructor for a new Message.
         */
-        public constructor(mParameters: { id?: string, message?: string, description?: string, descriptionUrl?: string, additionalText?: string, type?: sap.ui.core.MessageType, code?: string, technical?: boolean, processor?: sap.ui.core.message.MessageProcessor, target?: string, persistent?: boolean, date?: number, });
+        public constructor(mParameters?: { id?: string, message?: string, description?: string, descriptionUrl?: string, additionalText?: string, type?: sap.ui.core.MessageType, code?: string, technical?: boolean, processor?: sap.ui.core.message.MessageProcessor, target?: string, persistent?: boolean, date?: number, });
 
 
         /**

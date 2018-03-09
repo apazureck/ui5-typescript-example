@@ -1,15 +1,11 @@
 declare module "sap/ui/demokit/HexagonButtonGroup" {
     import HexagonButton from "sap/ui/demokit/HexagonButton";
 
-    export = HexagonButtonGroup;
-
-
-
-
     /**
     
     */
-    class HexagonButtonGroup extends sap.ui.core.Control {
+    export default class HexagonButtonGroup extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new HexagonButtonGroup.
@@ -108,6 +104,5 @@ declare module "sap/ui/demokit/HexagonButtonGroup" {
         public setColspan(iColspan: number): this;
 
     }
-
 
 }

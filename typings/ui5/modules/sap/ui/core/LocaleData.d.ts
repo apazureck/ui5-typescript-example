@@ -1,14 +1,10 @@
 declare module "sap/ui/core/LocaleData" {
 
-    export = LocaleData;
-
-
-
-
     /**
     
     */
-    class LocaleData extends sap.ui.base.Object {
+    export default class LocaleData extends sap.ui.base.Object {
+
 
         /**
             * Creates an instance of LocaleData for the given locale.
@@ -326,6 +322,5 @@ declare module "sap/ui/core/LocaleData" {
         public getWeekendStart(): number;
 
     }
-
 
 }

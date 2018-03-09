@@ -5,10 +5,11 @@ declare namespace sap.ui.core.mvc {
     */
     export class JSView extends sap.ui.core.mvc.View {
 
+
         /**
             * Constructor for a new mvc/JSView.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

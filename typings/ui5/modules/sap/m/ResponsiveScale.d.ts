@@ -1,14 +1,10 @@
 declare module "sap/m/ResponsiveScale" {
 
-    export = ResponsiveScale;
-
-
-
-
     /**
     
     */
-    class ResponsiveScale extends sap.ui.core.Element {
+    export default class ResponsiveScale extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new `ResponsiveScale`.
@@ -68,6 +64,5 @@ declare module "sap/m/ResponsiveScale" {
         public setTickmarksBetweenLabels(iTickmarksBetweenLabels: number): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/m/Shell" {
 
-    export = Shell;
-
-
-
-
     /**
     
     */
-    class Shell extends sap.ui.core.Control {
+    export default class Shell extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new Shell.
@@ -307,6 +303,5 @@ declare module "sap/m/Shell" {
         public setTitleLevel(sTitleLevel: sap.ui.core.TitleLevel): this;
 
     }
-
 
 }

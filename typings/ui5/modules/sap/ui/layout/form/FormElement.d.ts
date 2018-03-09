@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/form/FormElement" {
 
-    export = FormElement;
-
-
-
-
     /**
     
     */
-    class FormElement extends sap.ui.core.Element {
+    export default class FormElement extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.FormElement.
@@ -138,6 +134,5 @@ declare module "sap/ui/layout/form/FormElement" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

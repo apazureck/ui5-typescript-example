@@ -1,17 +1,12 @@
 declare module "sap/ui/layout/BlockLayoutRow" {
     import BlockLayoutCell from "sap/ui/layout/BlockLayoutCell";
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type BlockRowColorSets = sapuilayoutlibrary.BlockRowColorSets;
-
-    export = BlockLayoutRow;
-
-
-
+    import { BlockRowColorSets } from "sap/ui/layout/library";
 
     /**
     
     */
-    class BlockLayoutRow extends sap.ui.core.Control {
+    export default class BlockLayoutRow extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BlockLayoutRow.
@@ -142,6 +137,5 @@ declare module "sap/ui/layout/BlockLayoutRow" {
         public setScrollable(bScrollable: boolean): this;
 
     }
-
 
 }

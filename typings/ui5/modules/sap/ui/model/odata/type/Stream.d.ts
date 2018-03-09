@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/Stream" {
     import ODataType from "sap/ui/model/odata/type/ODataType";
 
-    export = Stream;
-
-
-
-
     /**
     
     */
-    class Stream extends ODataType {
+    export default class Stream extends ODataType {
+
 
         /**
             * Constructor for an OData primitive type `Edm.Stream`.
@@ -62,6 +58,5 @@ declare module "sap/ui/model/odata/type/Stream" {
         public validateValue(): any;
 
     }
-
 
 }

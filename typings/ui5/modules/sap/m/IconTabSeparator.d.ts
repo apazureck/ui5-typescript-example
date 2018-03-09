@@ -1,14 +1,10 @@
 declare module "sap/m/IconTabSeparator" {
 
-    export = IconTabSeparator;
-
-
-
-
     /**
     
     */
-    class IconTabSeparator extends sap.ui.core.Element {
+    export default class IconTabSeparator extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new IconTabSeparator.
@@ -122,6 +118,5 @@ declare module "sap/m/IconTabSeparator" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

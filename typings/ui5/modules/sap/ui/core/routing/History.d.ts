@@ -1,12 +1,8 @@
 declare module "sap/ui/core/routing/History" {
     import HashChanger from "sap/ui/core/routing/HashChanger";
 
-    export = History;
+    export default class History {
 
-
-
-
-    class History {
 
         /**
             * Used to determine the {@link sap.ui.core.routing.HistoryDirection} of the current or a future navigation, done with a {@link sap.ui.core.routing.Router} or {@link sap.ui.core.routing.HashChanger}.
@@ -32,6 +28,5 @@ declare module "sap/ui/core/routing/History" {
         public getPreviousHash(): string;
 
     }
-
 
 }

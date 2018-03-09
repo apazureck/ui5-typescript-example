@@ -1,17 +1,12 @@
 declare module "sap/ui/layout/BlockLayoutCell" {
-    import sapuilayoutlibrary from "sap/ui/layout/library";
-    type BlockLayoutCellColorSet = sapuilayoutlibrary.BlockLayoutCellColorSet;
-    type BlockLayoutCellColorShade = sapuilayoutlibrary.BlockLayoutCellColorShade;
-
-    export = BlockLayoutCell;
-
-
-
+    import { BlockLayoutCellColorSet } from "sap/ui/layout/library";
+    import { BlockLayoutCellColorShade } from "sap/ui/layout/library";
 
     /**
     
     */
-    class BlockLayoutCell extends sap.ui.core.Control {
+    export default class BlockLayoutCell extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new BlockLayoutCell.
@@ -198,6 +193,5 @@ declare module "sap/ui/layout/BlockLayoutCell" {
         public setWidth(iWidth: number): this;
 
     }
-
 
 }

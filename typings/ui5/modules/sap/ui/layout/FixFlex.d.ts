@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/FixFlex" {
 
-    export = FixFlex;
-
-
-
-
     /**
     
     */
-    class FixFlex extends sap.ui.core.Control {
+    export default class FixFlex extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new FixFlex.
@@ -184,6 +180,5 @@ declare module "sap/ui/layout/FixFlex" {
         public setVertical(bVertical: boolean): this;
 
     }
-
 
 }

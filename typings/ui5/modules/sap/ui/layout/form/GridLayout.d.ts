@@ -1,15 +1,11 @@
 declare module "sap/ui/layout/form/GridLayout" {
     import FormLayout from "sap/ui/layout/form/FormLayout";
 
-    export = GridLayout;
-
-
-
-
     /**
     
     */
-    class GridLayout extends FormLayout {
+    export default class GridLayout extends FormLayout {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.GridLayout.
@@ -73,6 +69,5 @@ declare module "sap/ui/layout/form/GridLayout" {
         public setSingleColumn(bSingleColumn: boolean): this;
 
     }
-
 
 }

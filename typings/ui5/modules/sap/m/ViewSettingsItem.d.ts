@@ -1,15 +1,11 @@
 declare module "sap/m/ViewSettingsItem" {
     import Item from "sap/ui/core/Item";
 
-    export = ViewSettingsItem;
-
-
-
-
     /**
     
     */
-    class ViewSettingsItem extends Item {
+    export default class ViewSettingsItem extends Item {
+
 
         /**
             * Constructor for a new ViewSettingsItem.
@@ -107,6 +103,5 @@ declare module "sap/m/ViewSettingsItem" {
         public setSelected(bSelected: boolean): this;
 
     }
-
 
 }

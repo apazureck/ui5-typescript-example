@@ -1,14 +1,10 @@
 declare module "sap/m/ToolbarSeparator" {
 
-    export = ToolbarSeparator;
-
-
-
-
     /**
     
     */
-    class ToolbarSeparator extends sap.ui.core.Control {
+    export default class ToolbarSeparator extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ToolbarSeparator`.
@@ -50,6 +46,5 @@ declare module "sap/m/ToolbarSeparator" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

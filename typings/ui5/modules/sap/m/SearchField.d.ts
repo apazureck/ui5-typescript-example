@@ -1,15 +1,11 @@
 declare module "sap/m/SearchField" {
     import SuggestionItem from "sap/m/SuggestionItem";
 
-    export = SearchField;
-
-
-
-
     /**
     
     */
-    class SearchField extends sap.ui.core.Control {
+    export default class SearchField extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new SearchField.
@@ -497,6 +493,5 @@ declare module "sap/m/SearchField" {
         public unbindValue(): this;
 
     }
-
 
 }

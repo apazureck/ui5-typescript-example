@@ -1,16 +1,12 @@
 declare module "sap/ui/commons/layout/BorderLayoutArea" {
-    import sapuicommonslibrary from "sap/ui/commons/library";
-    type BorderLayoutAreaTypes = sapuicommonslibrary.layout.BorderLayoutAreaTypes;
-
-    export = BorderLayoutArea;
-
-
-
+    import { layout } from "sap/ui/commons/library";
+    type BorderLayoutAreaTypes = layout.BorderLayoutAreaTypes;
 
     /**
     
     */
-    class BorderLayoutArea extends sap.ui.core.Element {
+    export default class BorderLayoutArea extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new layout/BorderLayoutArea.
@@ -209,6 +205,5 @@ declare module "sap/ui/commons/layout/BorderLayoutArea" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

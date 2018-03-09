@@ -1,16 +1,11 @@
 declare module "sap/ui/unified/CalendarLegendItem" {
-    import sapuiunifiedlibrary from "sap/ui/unified/library";
-    type CalendarDayType = sapuiunifiedlibrary.CalendarDayType;
-
-    export = CalendarLegendItem;
-
-
-
+    import { CalendarDayType } from "sap/ui/unified/library";
 
     /**
     
     */
-    class CalendarLegendItem extends sap.ui.core.Element {
+    export default class CalendarLegendItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new CalendarLegendItem.
@@ -102,6 +97,5 @@ declare module "sap/ui/unified/CalendarLegendItem" {
         public setType(sType: CalendarDayType): this;
 
     }
-
 
 }

@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/ResponsiveLayout" {
     import sap_ui_layout_form_ResponsiveLayout from "sap/ui/layout/form/ResponsiveLayout";
 
-    export = ResponsiveLayout;
-
-
-
-
     import ResponsiveLayoutBase from 'sap/ui/layout/form/ResponsiveLayout'
 
     /**
     
     */
-    class ResponsiveLayout extends ResponsiveLayoutBase {
+    export default class ResponsiveLayout extends ResponsiveLayoutBase {
+
 
         /**
             * Constructor for a new form/ResponsiveLayout.
@@ -49,6 +45,5 @@ declare module "sap/ui/commons/form/ResponsiveLayout" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

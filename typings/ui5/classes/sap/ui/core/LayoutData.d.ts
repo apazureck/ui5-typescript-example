@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class LayoutData extends sap.ui.core.Element {
 
+
         /**
             * Constructor for a new LayoutData.
          * 
@@ -12,7 +13,7 @@ declare namespace sap.ui.core {
          * 
          * This class does not have its own settings, but all settings applicable to the base type {@link sap.ui.core.Element#constructor sap.ui.core.Element} can be used.
         */
-        public constructor(sId: string, mSettings: any);
+        public constructor(sId?: string, mSettings?: any);
 
 
         /**

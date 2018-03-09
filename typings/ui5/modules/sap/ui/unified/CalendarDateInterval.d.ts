@@ -1,15 +1,11 @@
 declare module "sap/ui/unified/CalendarDateInterval" {
     import Calendar from "sap/ui/unified/Calendar";
 
-    export = CalendarDateInterval;
-
-
-
-
     /**
     
     */
-    class CalendarDateInterval extends Calendar {
+    export default class CalendarDateInterval extends Calendar {
+
 
         /**
             * Constructor for a new `CalendarDateInterval`.
@@ -170,6 +166,5 @@ declare module "sap/ui/unified/CalendarDateInterval" {
         public setStartDate(oStartDate: any): this;
 
     }
-
 
 }

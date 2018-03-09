@@ -1,15 +1,11 @@
 declare module "sap/ui/model/type/Integer" {
     import SimpleType from "sap/ui/model/SimpleType";
 
-    export = Integer;
-
-
-
-
     /**
     
     */
-    class Integer extends SimpleType {
+    export default class Integer extends SimpleType {
+
 
         /**
             * Constructor for an Integer type.
@@ -37,6 +33,5 @@ declare module "sap/ui/model/type/Integer" {
         public getMetadata(): any;
 
     }
-
 
 }

@@ -1,17 +1,13 @@
 declare module "sap/ui/commons/form/FormContainer" {
     import sap_ui_layout_form_FormContainer from "sap/ui/layout/form/FormContainer";
 
-    export = FormContainer;
-
-
-
-
     import FormContainerBase from 'sap/ui/layout/form/FormContainer'
 
     /**
     
     */
-    class FormContainer extends FormContainerBase {
+    export default class FormContainer extends FormContainerBase {
+
 
         /**
             * Constructor for a new form/FormContainer.
@@ -63,6 +59,5 @@ declare module "sap/ui/commons/form/FormContainer" {
         public setVisible(bVisible: boolean): this;
 
     }
-
 
 }

@@ -4,15 +4,11 @@ declare module "sap/ui/test/Opa5" {
     import Matcher from "sap/ui/test/matchers/Matcher";
     import Action from "sap/ui/test/actions/Action";
 
-    export = Opa5;
-
-
-
-
     /**
     
     */
-    class Opa5 extends sap.ui.base.Object {
+    export default class Opa5 extends sap.ui.base.Object {
+
 
         /**
             * Helps you when writing tests for UI5 applications. Provides convenience to wait and retrieve for UI5 controls without relying on global IDs. Makes it easy to wait until your UI is in the state you need for testing, e.g.: waiting for backend data.
@@ -179,6 +175,5 @@ declare module "sap/ui/test/Opa5" {
         public waitFor(options: { id?: string | RegExp, viewName?: string, viewNamespace?: string, matchers?: Function | any[] | Matcher, controlType?: string, searchOpenDialogs?: boolean, visible?: boolean, timeout?: number, debugTimeout?: number, pollingInterval?: number, check?: Function, success?: Function, error?: Function, errorMessage?: string, actions: Function | any[] | Action | any[], autoWait?: boolean, }): any;
 
     }
-
 
 }

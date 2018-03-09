@@ -8,15 +8,11 @@ declare module "sap/m/ComboBoxBase" {
     import SelectList from "sap/m/SelectList";
     import Input from "sap/m/Input";
 
-    export = ComboBoxBase;
-
-
-
-
     /**
     
     */
-    class ComboBoxBase extends ComboBoxTextField {
+    export default abstract class ComboBoxBase extends ComboBoxTextField {
+
 
         /**
             * Constructor for a new `sap.m.ComboBoxBase`.
@@ -235,6 +231,5 @@ declare module "sap/m/ComboBoxBase" {
         public unbindItems(): this;
 
     }
-
 
 }

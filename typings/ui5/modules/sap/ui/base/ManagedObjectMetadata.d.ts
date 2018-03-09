@@ -1,14 +1,10 @@
 declare module "sap/ui/base/ManagedObjectMetadata" {
 
-    export = ManagedObjectMetadata;
-
-
-
-
     /**
     
     */
-    class ManagedObjectMetadata {
+    export default class ManagedObjectMetadata {
+
 
         /**
             * Creates a new metadata object that describes a subclass of ManagedObject.
@@ -227,6 +223,5 @@ declare module "sap/ui/base/ManagedObjectMetadata" {
         public static uid(sIdPrefix: string): string;
 
     }
-
 
 }

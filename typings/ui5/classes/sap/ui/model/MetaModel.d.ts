@@ -3,7 +3,8 @@ declare namespace sap.ui.model {
     /**
     
     */
-    export class MetaModel extends sap.ui.model.Model {
+    export abstract class MetaModel extends sap.ui.model.Model {
+
 
         /**
             * Constructor for a new MetaModel.

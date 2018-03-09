@@ -1,15 +1,11 @@
 declare module "sap/ui/model/odata/type/DateTimeOffset" {
     import DateTimeBase from "sap/ui/model/odata/type/DateTimeBase";
 
-    export = DateTimeOffset;
-
-
-
-
     /**
     
     */
-    class DateTimeOffset extends DateTimeBase {
+    export default class DateTimeOffset extends DateTimeBase {
+
 
         /**
             * Constructor for a primitive type `Edm.DateTimeOffset`.
@@ -77,6 +73,5 @@ declare module "sap/ui/model/odata/type/DateTimeOffset" {
         public validateValue(vValue: any): any;
 
     }
-
 
 }

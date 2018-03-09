@@ -1,18 +1,13 @@
 declare module "sap/ui/ux3/ExactBrowser" {
     import ExactAttribute from "sap/ui/ux3/ExactAttribute";
     import Menu from "sap/ui/commons/Menu";
-    import sapuiux3library from "sap/ui/ux3/library";
-    type ExactOrder = sapuiux3library.ExactOrder;
-
-    export = ExactBrowser;
-
-
-
+    import { ExactOrder } from "sap/ui/ux3/library";
 
     /**
     
     */
-    class ExactBrowser extends sap.ui.core.Control {
+    export default class ExactBrowser extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ExactBrowser.
@@ -381,6 +376,5 @@ declare module "sap/ui/ux3/ExactBrowser" {
         public setTopListWidth(iTopListWidth: number): this;
 
     }
-
 
 }

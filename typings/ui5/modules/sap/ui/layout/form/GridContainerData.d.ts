@@ -1,14 +1,10 @@
 declare module "sap/ui/layout/form/GridContainerData" {
 
-    export = GridContainerData;
-
-
-
-
     /**
     
     */
-    class GridContainerData extends sap.ui.core.LayoutData {
+    export default class GridContainerData extends sap.ui.core.LayoutData {
+
 
         /**
             * Constructor for a new sap.ui.layout.form.GridContainerData.
@@ -68,6 +64,5 @@ declare module "sap/ui/layout/form/GridContainerData" {
         public setHalfGrid(bHalfGrid: boolean): this;
 
     }
-
 
 }

@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/RowRepeaterFilter" {
 
-    export = RowRepeaterFilter;
-
-
-
-
     /**
     
     */
-    class RowRepeaterFilter extends sap.ui.core.Element {
+    export default class RowRepeaterFilter extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new RowRepeaterFilter.
@@ -96,6 +92,5 @@ declare module "sap/ui/commons/RowRepeaterFilter" {
         public setText(sText: string): this;
 
     }
-
 
 }

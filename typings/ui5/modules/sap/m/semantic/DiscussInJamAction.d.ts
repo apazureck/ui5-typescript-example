@@ -1,15 +1,11 @@
 declare module "sap/m/semantic/DiscussInJamAction" {
     import SemanticButton from "sap/m/semantic/SemanticButton";
 
-    export = DiscussInJamAction;
-
-
-
-
     /**
     
     */
-    class DiscussInJamAction extends SemanticButton {
+    export default class DiscussInJamAction extends SemanticButton {
+
 
         /**
             * Constructor for a new DiscussInJamAction.
@@ -47,6 +43,5 @@ declare module "sap/m/semantic/DiscussInJamAction" {
         public static getMetadata(): sap.ui.base.Metadata;
 
     }
-
 
 }

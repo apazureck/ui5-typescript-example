@@ -1,14 +1,10 @@
 declare module "sap/ui/core/message/MessageParser" {
 
-    export = MessageParser;
-
-
-
-
     /**
     
     */
-    class MessageParser extends sap.ui.base.Object {
+    export default abstract class MessageParser extends sap.ui.base.Object {
+
 
         /**
             * Abstract MessageParser class to be inherited in back-end specific implementations.
@@ -51,6 +47,5 @@ declare module "sap/ui/core/message/MessageParser" {
         protected setProcessor(oProcessor: sap.ui.core.message.MessageProcessor): this;
 
     }
-
 
 }

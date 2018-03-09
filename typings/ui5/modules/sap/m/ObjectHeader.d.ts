@@ -2,20 +2,15 @@ declare module "sap/m/ObjectHeader" {
     import ObjectNumber from "sap/m/ObjectNumber";
     import ObjectAttribute from "sap/m/ObjectAttribute";
     import ObjectMarker from "sap/m/ObjectMarker";
-    import sapmlibrary from "sap/m/library";
-    type BackgroundDesign = sapmlibrary.BackgroundDesign;
+    import { BackgroundDesign } from "sap/m/library";
     import ObjectStatus from "sap/m/ObjectStatus";
-    type ObjectHeaderContainer = sapmlibrary.ObjectHeaderContainer;
-
-    export = ObjectHeader;
-
-
-
+    import { ObjectHeaderContainer } from "sap/m/library";
 
     /**
     
     */
-    class ObjectHeader extends sap.ui.core.Control {
+    export default class ObjectHeader extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new `ObjectHeader`.
@@ -964,6 +959,5 @@ declare module "sap/m/ObjectHeader" {
         public setTitleTextDirection(sTitleTextDirection: sap.ui.core.TextDirection): this;
 
     }
-
 
 }

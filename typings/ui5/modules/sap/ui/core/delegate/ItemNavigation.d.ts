@@ -1,14 +1,10 @@
 declare module "sap/ui/core/delegate/ItemNavigation" {
 
-    export = ItemNavigation;
-
-
-
-
     /**
     
     */
-    class ItemNavigation extends sap.ui.base.EventProvider {
+    export default class ItemNavigation extends sap.ui.base.EventProvider {
+
 
         /**
             * Creates an `ItemNavigation` delegate that can be attached to controls requiring capabilities for keyboard navigation between items.
@@ -114,6 +110,5 @@ declare module "sap/ui/core/delegate/ItemNavigation" {
         public setTableMode(bTableMode: boolean, bTableList?: boolean): this;
 
     }
-
 
 }

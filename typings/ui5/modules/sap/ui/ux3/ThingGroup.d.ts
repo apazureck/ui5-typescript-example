@@ -1,14 +1,10 @@
 declare module "sap/ui/ux3/ThingGroup" {
 
-    export = ThingGroup;
-
-
-
-
     /**
     
     */
-    class ThingGroup extends sap.ui.core.Element {
+    export default class ThingGroup extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new ThingGroup.
@@ -162,6 +158,5 @@ declare module "sap/ui/ux3/ThingGroup" {
         public setTitle(sTitle: string): this;
 
     }
-
 
 }

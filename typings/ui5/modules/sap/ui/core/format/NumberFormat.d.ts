@@ -1,17 +1,21 @@
 declare module "sap/ui/core/format/NumberFormat" {
+    /**
 
-    export = NumberFormat;
+*/
+    namespace format {
 
+    }
 
     /**
     
     */
-    class NumberFormat extends sap.ui.base.Object {
+    export default class NumberFormat extends sap.ui.base.Object {
+
 
         /**
             * Constructor for NumberFormat - must not be used: To get a NumberFormat instance, please use getInstance, getFloatInstance or getIntegerInstance.
         */
-        public constructor(oFormatOptions?: { minIntegerDigits?: number, maxIntegerDigits?: number, minFractionDigits?: number, maxFractionDigits?: number, decimals?: number, shortDecimals?: number, shortLimit?: number, shortRefNumber?: number, showScale?: boolean, precision?: number, pattern?: string, groupingEnabled?: boolean, groupingSeparator?: string, groupingSize?: number, groupingBaseSize?: number, decimalSeparator?: string, plusSign?: string, minusSign?: string, parseAsString?: boolean, style?: string, roundingMode?: NumberFormat.RoundingMode, showMeasure?: boolean, currencyCode?: boolean, currencyContext?: string, emptyString?: number, });
+        public constructor(oFormatOptions?: { minIntegerDigits?: number, maxIntegerDigits?: number, minFractionDigits?: number, maxFractionDigits?: number, decimals?: number, shortDecimals?: number, shortLimit?: number, shortRefNumber?: number, showScale?: boolean, precision?: number, pattern?: string, groupingEnabled?: boolean, groupingSeparator?: string, groupingSize?: number, groupingBaseSize?: number, decimalSeparator?: string, plusSign?: string, minusSign?: string, parseAsString?: boolean, style?: string, roundingMode?: RoundingMode, showMeasure?: boolean, currencyCode?: boolean, currencyContext?: string, emptyString?: number, });
 
 
         /**
@@ -81,23 +85,20 @@ declare module "sap/ui/core/format/NumberFormat" {
 
     }
 
-
-    namespace NumberFormat {
-
-        /** 
-    * Specifies a rounding behavior for numerical operations capable of discarding precision. Each rounding mode in this object indicates how the least significant returned digits of rounded result is to be calculated. 
-    */
-        enum RoundingMode {
-            AWAY_FROM_ZERO = "AWAY_FROM_ZERO",
-            CEILING = "CEILING",
-            FLOOR = "FLOOR",
-            HALF_AWAY_FROM_ZERO = "HALF_AWAY_FROM_ZERO",
-            HALF_CEILING = "HALF_CEILING",
-            HALF_FLOOR = "HALF_FLOOR",
-            HALF_TOWARDS_ZERO = "HALF_TOWARDS_ZERO",
-            TOWARDS_ZERO = "TOWARDS_ZERO",
-        }
+    /** 
+* Specifies a rounding behavior for numerical operations capable of discarding precision. Each rounding mode in this object indicates how the least significant returned digits of rounded result is to be calculated. 
+*/
 
 
+    export enum RoundingMode {
+        AWAY_FROM_ZERO = "AWAY_FROM_ZERO",
+        CEILING = "CEILING",
+        FLOOR = "FLOOR",
+        HALF_AWAY_FROM_ZERO = "HALF_AWAY_FROM_ZERO",
+        HALF_CEILING = "HALF_CEILING",
+        HALF_FLOOR = "HALF_FLOOR",
+        HALF_TOWARDS_ZERO = "HALF_TOWARDS_ZERO",
+        TOWARDS_ZERO = "TOWARDS_ZERO",
     }
+
 }

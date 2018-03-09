@@ -1,11 +1,9 @@
 declare module "sap/m/MessageToast" {
-    import sapuicorePopup from "sap/ui/core/Popup";
-    type Dock = sapuicorePopup.Dock;
+    import { Dock } from "sap/ui/core/Popup";
+    /**
 
-    export = MessageToast;
-
-
-
+*/
+    export default MessageToast;
     namespace MessageToast {
 
         // Methods
@@ -16,5 +14,4 @@ declare module "sap/m/MessageToast" {
             */
         export function show(sMessage: string, mOptions?: { duration?: number, width?: sap.ui.core.CSSSize, my?: Dock, at?: Dock, of?: sap.ui.core.Control | any | any | any | any, offset?: string, collision?: string, onClose?: Function, autoClose?: boolean, animationTimingFunction?: string, animationDuration?: number, closeOnBrowserNavigation?: boolean, }): any;
     }
-
 }

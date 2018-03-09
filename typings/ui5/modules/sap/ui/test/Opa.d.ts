@@ -1,14 +1,10 @@
 declare module "sap/ui/test/Opa" {
 
-    export = Opa;
-
-
-
-
     /**
     
     */
-    class Opa {
+    export default class Opa {
+
 
         /**
             * This class will help you write acceptance tests in one page or single page applications. You can wait for certain conditions to be met.
@@ -88,6 +84,5 @@ declare module "sap/ui/test/Opa" {
         public waitFor(options: { timeout?: number, debugTimeout?: number, pollingInterval?: number, check?: Function, success?: Function, errorMessage?: string, }): any;
 
     }
-
 
 }

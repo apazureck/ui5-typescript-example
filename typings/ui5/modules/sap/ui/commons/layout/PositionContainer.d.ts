@@ -1,14 +1,10 @@
 declare module "sap/ui/commons/layout/PositionContainer" {
 
-    export = PositionContainer;
-
-
-
-
     /**
     
     */
-    class PositionContainer extends sap.ui.core.Element {
+    export default class PositionContainer extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new layout/PositionContainer.
@@ -174,6 +170,5 @@ declare module "sap/ui/commons/layout/PositionContainer" {
         public updatePosition(oPos: any): any;
 
     }
-
 
 }

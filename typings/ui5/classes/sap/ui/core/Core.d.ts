@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class Core extends sap.ui.base.Object {
 
+
         /**
             
         */

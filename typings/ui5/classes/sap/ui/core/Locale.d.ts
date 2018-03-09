@@ -5,6 +5,7 @@ declare namespace sap.ui.core {
     */
     export class Locale extends sap.ui.base.Object {
 
+
         /**
             * Creates an instance of the Locale.
         */

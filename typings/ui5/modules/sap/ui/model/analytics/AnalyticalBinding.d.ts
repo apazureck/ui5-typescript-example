@@ -1,16 +1,11 @@
 declare module "sap/ui/model/analytics/AnalyticalBinding" {
-    import sapuimodelanalyticsodata4analytics from "sap/ui/model/analytics/odata4analytics";
-    type QueryResult = sapuimodelanalyticsodata4analytics.QueryResult;
-
-    export = AnalyticalBinding;
-
-
-
+    import { QueryResult } from "sap/ui/model/analytics/odata4analytics";
 
     /**
     
     */
-    class AnalyticalBinding extends sap.ui.model.TreeBinding {
+    export default class AnalyticalBinding extends sap.ui.model.TreeBinding {
+
 
         /**
             
@@ -208,6 +203,5 @@ declare module "sap/ui/model/analytics/AnalyticalBinding" {
         protected updateAnalyticalInfo(aColumns: any[]): any;
 
     }
-
 
 }

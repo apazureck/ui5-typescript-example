@@ -1,14 +1,10 @@
 declare module "sap/ui/unified/ShellLayout" {
 
-    export = ShellLayout;
-
-
-
-
     /**
     
     */
-    class ShellLayout extends sap.ui.core.Control {
+    export default class ShellLayout extends sap.ui.core.Control {
+
 
         /**
             * Constructor for a new ShellLayout.
@@ -203,6 +199,5 @@ declare module "sap/ui/unified/ShellLayout" {
         public setShowPane(bShowPane: boolean): this;
 
     }
-
 
 }

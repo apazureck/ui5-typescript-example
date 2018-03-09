@@ -1,14 +1,10 @@
 declare module "sap/m/LightBoxItem" {
 
-    export = LightBoxItem;
-
-
-
-
     /**
     
     */
-    class LightBoxItem extends sap.ui.core.Element {
+    export default class LightBoxItem extends sap.ui.core.Element {
+
 
         /**
             * Constructor for a new LightBoxItem.
@@ -104,6 +100,5 @@ declare module "sap/m/LightBoxItem" {
         public setTitle(title: string): this;
 
     }
-
 
 }
