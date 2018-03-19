@@ -26,7 +26,7 @@ export default class BaseController extends Controller
      * @param {string} sName the model name
      * @returns {sap.ui.model.Model} the model instance
      */
-    public getModel<T extends Model = Model>(sName?: string): T {
+    public getModel<T extends Model>(sName?: string): T {
         return <T>this.getView().getModel(sName);
     }
 

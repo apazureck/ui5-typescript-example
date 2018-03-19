@@ -14,15 +14,17 @@ function define(aDependencies: string[], vFactory: (...args: any[]) => any): any
     // - a new object with an empty "default" property as "exports"
     //and returns the default export of the typescript generated module
     var newFactory = (...args: any[]) => {
-        var exports: { default: any } = { default: undefined };
-        vFactory(null, exports, ...args.map((d: any) => ({ default: d })));
-        return exports.default;
+        var exports: any = {};
+        var result = vFactory(null, exports, ...args.map((d: any) => {
+            if (!d.hasOwnProperty("default"))
+                Object.defineProperty(d, "default", { value: d });
+            return d;
+        }));
+        return result || exports;
     };
 
-    const ret = sap.ui.define(newDependencies, newFactory);
-
     //call the original sap.ui.define() function, with adapted dependencies and factory
-    return ret;
+    return sap.ui.define(newDependencies, newFactory);
 }
 
 /**
